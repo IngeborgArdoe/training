@@ -1,0 +1,13 @@
+- name: Komme i gang
+  href: index.md
+- name: Installasjon av SQL Server Management Studio
+  href: installasjon-av-sql-server-mgmt-studio.md
+- name: Casebeskrivelse Genus CRM
+  href: casebeskrivelse-genus-crm.md
+- name: Oppgaver
+  href: oppgaver.md
+  items:
+  - name: Oppgave 1 - Genus Desktop
+    href: oppgave-01.md
+  - name: Oppgave 2 - Enkel modellering - Object Class og Properties
+    href: oppgave-02.md

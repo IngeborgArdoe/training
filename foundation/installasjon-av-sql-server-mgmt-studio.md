@@ -1,0 +1,3 @@
+# Installasjon av SQL Server Management Studio
+
+Tekst inn her...

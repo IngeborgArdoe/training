@@ -1,0 +1,10 @@
+- name: Foundation
+  href: foundation/
+  homepage: foundation/index.md
+- name: Discovery
+  href: discovery/
+  homepage: discovery/index.md
+- name: Advanced
+  href: advanced/
+  homepage: advanced/index.md
+

@@ -1,13 +1,49 @@
-- name: Komme i gang
-  href: index.md
-- name: Installasjon av SQL Server Management Studio
-  href: installasjon-av-sql-server-mgmt-studio.md
-- name: Casebeskrivelse Genus CRM
-  href: casebeskrivelse-genus-crm.md
-- name: Oppgaver
-  href: oppgaver.md
+- name: Installasjon og oppsett
+  href: installasjon-av-genus-app-platform.md
   items:
-  - name: Oppgave 1 - Genus Desktop
+  - name: Installasjon av Genus App Platform og lenker
+    href: installasjon-av-genus-app-platform.md
+  - name: Installasjon av SQL Server Management Studio
+    href: installasjon-av-sql-server-mgmt-studio.md
+- name: Oppgaver Del I - Case og introduksjon til modellering og klienten
+  href: casebeskrivelse-genus-crm.md
+  items:
+  - name: 1 - Klienten
     href: oppgave-01.md
-  - name: Oppgave 2 - Enkel modellering - Object Class og Properties
-    href: oppgave-02.md
+  - name: 2 - Object Classes og Properties
+    href: oppgave-02.md  
+- name: Oppgaver Del II - Forms, handlinger og Tables (3-4)
+  href: oppgaver3-4.md
+  items:
+  - name: 3 - Forms
+    href: oppgave-03.md
+  - name: 4 - Tables
+    href: oppgave-04.md
+- name: Oppgaver del III - Ribbon, logikk og regler (5-7)
+  href: oppgave-05.md
+  items:
+  - name: 5 - Ribbon
+    href: oppgave-05.md
+  - name: 6 - Logikk og tasks
+    href: oppgave-06.md
+  - name: 7 - Rules
+    href: oppgave-07.md
+- name: Oppgaver Del III - Avansert modellering (8-14)
+  href: oppgave-08.md
+  items:
+  - name: 8 - Documents, Mail
+    href: oppgave-08.md
+  - name: 9 - Request
+    href: oppgave-09.md
+  - name: 10 - Analyser og rapporter
+    href: oppgave-10.md
+  - name: 11 - Genus Apps
+    href: oppgave-11.md
+  - name: 12 - Mail Merge
+    href: oppgave-12.md
+  - name: 13 - Agenter
+    href: oppgave-13.md
+  - name: 14 - Diverse
+    href: oppgave-14.md
+  - name: 15 - Web Services
+    href: oppgave-14.md

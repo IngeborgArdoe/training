@@ -9,6 +9,6 @@ Fasitløsningen er Genus CRM: En CRM-løsning à la SuperOffice som i hovedsak t
 Startløsningen du får utdelt inneholder deler av fasitløsningen. Din oppgave er å utvide løsningen med nye objekter, skjermbilder og funksjonalitet. 
 
 Løsningen er i et «sandbox-miljø» og kan nullstilles etter opplæringsprogrammet – du kan med andre ord leke deg fritt i tildelt løsning.
-Oppgavene legger opp til at Genus App Platforms hjelpetekst benyttes til en viss grad, eller at du spør veileder dersom du står fast. Genus App Platforms hjelpetekst er å finne på: docs.genus.no Hjelpeteksten vil nok ikke svare på alle spørsmål, men her er det bare å ta veileder og andre kursdeltakere i bruk!
+Oppgavene legger opp til at Genus App Platforms hjelpetekst benyttes til en viss grad, eller at du spør veileder dersom du står fast. Genus App Platforms hjelpetekst finner du på [docs.genus.no](https://docs.genus.no/). Hjelpeteksten vil nok ikke svare på alle spørsmål, men her er det bare å ta veileder og andre kursdeltakere i bruk!
 
 Oppgavene er skrevet på norsk. Løsningene er på engelsk, samt at modelleringsverktøyet Genus Studio er på engelsk. Det vil bli benyttet engelsk i referanse til objekter i løsningen, samt når vi refererer til egenskaper ved Genus Studio.

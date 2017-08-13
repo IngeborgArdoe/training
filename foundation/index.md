@@ -1,14 +1,16 @@
-# Velkommen på kurs!
-For å lære å modellere opp løsninger i Genus App Platform, har vi skreddersydd et relevant og pedagogisk opplæringsprogram for dette formålet.
+# Welcome to our course in the Foundations of Genus App Platform!
 
-Opplæringsprogrammet gir deltakere en halvferdig løsning, samt tilgang til en «fasit»-løsning. Deltakere får i gjennom disse oppgavene veiledning til å modellere den halvferdige løsningen i retning av fasitløsningen. Merk at ordet «fasit» ikke er strengt – det er mer et løsningsforslag. Deltakere kan logge seg på fasitløsningen for å se hvordan den fungerer samt hvordan den er laget – dette for å kunne få litt hjelp når man står fast.
+To learn how to model solutions using Genus App Platform, we have tailored a relevant and educational training program for this purpose.
 
-Opplæringsprogrammet består at en kombinasjon av sesjoner / presentasjoner fra kursholder – tema for tema – etterfulgt av oppgavejobbing. Oppgavene finner du her og starter med steg-for-steg beskrivelser av hva som skal gjøres og blir friere underveis i programmet. Du har alltid løsningsforslag tilgjengelig. Det bør legges vekt på å forstå hva du gjør fremfor å «rase igjennom og se på fasiten» - spør heller veileder om det er konsepter og oppgaver du synes er uklare.
+The training program gives participants a half-finished solution, as well as access to a "blueprint" solution. Through assigned tasks, the participants get guidance to model the half-finished solution in the direction of the blueprint solution. Note that the word "blueprint" is not strict - it is more a _suggested_ solution out of many possible. Participants can log on to the blueprint solution at any time to see how it works and how it is designed - to get some help if stuck.
 
-Fasitløsningen er Genus CRM: En CRM-løsning à la SuperOffice som i hovedsak tilbyr salgsstøtte og håndtering av kunderelasjoner og kundeforespørsler, dokumentarkiv, epostarkiv & utsending.
-Startløsningen du får utdelt inneholder deler av fasitløsningen. Din oppgave er å utvide løsningen med nye objekter, skjermbilder og funksjonalitet. 
+The training program consists of a combination of sessions and presentations from the trainer - theme by theme - followed by task-solving. The tasks can be found here at the menu to the left. The tasks start with step-by-step descriptions of what to do and become less restricted along the way in the program. You always have the suggested solution available. Emphasis should be placed on understanding _what you do_ rather than _rushing through, looking at the blueprint_. Ask your supervisor if there are concepts and tasks that seem unclear.
 
-Løsningen er i et «sandbox-miljø» og kan nullstilles etter opplæringsprogrammet – du kan med andre ord leke deg fritt i tildelt løsning.
-Oppgavene legger opp til at Genus App Platforms hjelpetekst benyttes til en viss grad, eller at du spør veileder dersom du står fast. Genus App Platforms hjelpetekst finner du på [docs.genus.no](https://docs.genus.no/). Hjelpeteksten vil nok ikke svare på alle spørsmål, men her er det bare å ta veileder og andre kursdeltakere i bruk!
+The suggested solution is _Genus CRM_: A Customer Relationship Management solution similar to e.g. [SuperOffice](https://www.superoffice.com/), which mainly offers sales support, customer relationship management, customer request handling, document archives, email archives & mailing etc.
+The half-finished solution you start with, contains parts of the blueprint solution. Your task is to expand the solution with new objects, functionality and user interface forms.
 
-Oppgavene er skrevet på norsk. Løsningene er på engelsk, samt at modelleringsverktøyet Genus Studio er på engelsk. Det vil bli benyttet engelsk i referanse til objekter i løsningen, samt når vi refererer til egenskaper ved Genus Studio.
+The solution is in a "sandbox environment" and will be reset after the training program - in other words - you can play freely in your solution.
+
+The assigned tasks assume to some extent that you refer to Genus App Platform's documentation, or that you ask your supervisor if you are stuck. Genus App Platform's documentation can be found at [docs.genus.no] (https://docs.genus.no/). The documentation may not answer all your questions, so please ask your supervisor - or the other course participants!
+
+The assigned tasks are currently only available in Norwegian, but will be translated to English at a later time. The other material is in English, i.e. the half-finished and the blueprint solutions, the Genus Studio modeling tool and Genus App Platform documentation.

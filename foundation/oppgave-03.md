@@ -9,7 +9,7 @@
     ![oppg3fig1.JPG](media/oppg3fig1.JPG)
   3.	Views: Gå til View (Default). Endre Name til «Contact».
   4.	Legg Container «Tab Sheets» ytterst. Trykk inne i den første arkfanen (du markerer med andre ord Group-en som ligger her). Endre Label til “General”. 
-  Gå et nivå ut (tips: trykk Esc-knappen), og legg på Group og gi denne navn «Activities» (her kommer innhold senere). Dette blir en ny arkfane på Tab Sheet’en. (Nærmere beskrivelse i oppgave 2b om dette ikke ga mening.)
+  Gå et nivå ut (tips: trykk Esc-knappen), og legg på Group og gi denne navn «Activities» (her kommer innhold senere). Dette blir en ny arkfane på Tab Sheet’en. (Nærmere beskrivelse i oppgave 2.2 om dette ikke ga mening.)
   Legg også på en arkfane med navn «Mail» (innhold kommer senere).
   5.	I Arkfane «General»: Her skal feltene for Contact legges til. 
   *Veiledning: I en oppgave senere skal man også liste ut «Contact log» nederst i dette skjermbildet, så vi anbefaler følgende oppdeling av «General»:*
@@ -101,7 +101,7 @@
     2.	Name: Open, Tip: Activity
     3.	Husk filtrering!
     4.	Legg til event på Griden som gjør commanden på Context Menu Item Click: Open in New Window.
-  3.	Legg også til command + event for «New» og «Delete» på Griden for Activities. Legg på eventer på disse (tilsvarende som i oppgave 3.3 c), d) og e)). Pass på å få satt Default verdier på «New» slik at Activity kobles både til Contact og til Company. For new kan symbol #1198 passe og for delete #1195. For oppsett for «New» går det an å hente inspirasjon fra oppgave 3c.
+  3.	Legg også til command + event for «New» og «Delete» på Griden for Activities. Legg på eventer på disse (tilsvarende som i oppgave 3.3.3, ..4 og ..5). Pass på å få satt Default verdier på «New» slik at Activity kobles både til Contact og til Company. For new kan symbol #1198 passe og for delete #1195. For oppsett for «New» går det an å hente inspirasjon fra oppgave 3.3.
   4.	Deploy løsningen til deg selv og test at du får opprettet Activities på en kontaktperson.
 8. Vi skal også liste ut Mail på en Contact. Muligheten for å legge til ny Mail i en liste er i Company Formen løst med en handling som paster inn ny Mail fra Clipboard (mao., drag & drop). Vi skal lage dette i en senere oppgave, for nå skal vi kun legge til utlisting og åpning av epost på kontaktperson
     1.	Lag en utlisting av Mail i arkfane «Mail» i Contact Form’en )som lister ut Mail hvor Mail.Contact = Contact)

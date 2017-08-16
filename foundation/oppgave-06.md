@@ -50,8 +50,8 @@ Denne tasken skal ta som input en eller flere Contacts, og endre Responsible på
   6. Gå til table «Contacts». Under «Events» legger du til en event for å kjøre tasken
       -	Effect Type = «Run a Task (Global Scope)»
       -	Effect = “Change Responsible for Contact”
-      -	Arkfane Enabling: Huk av for “On selected objects” (tasken skal være enabled ved valg av flere rader)
-      -	Arkfane «Data Filters» sett «Two way binding to objects in the data source: Contact» med Objects: Selected.
+      -	Enabling: Huk av for “On selected objects” (tasken skal være enabled ved valg av flere rader)
+      -	Filter Data: sett «Two way binding to objects in the data source: Contact» med Objects: Selected.
 
       *Merk: Setting av data filter på denne måten er en hurtig måte å si at «tasken sin datasouce Contacts input skal populeres med de kontaktpersonene jeg har valgt i tabellen min». Valgte kontaktpersoner vil nå i klienten, ved trykke på Action «Change Responsible for Contact» i Actions pane, kopieres inn i tasken «Change Responsible for Contact» og tasken vil eksekvere effektene sine og avslutte.*
       -	Legg til Change Responsible for Contact i Ribbon

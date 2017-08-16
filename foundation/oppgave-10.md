@@ -1,4 +1,4 @@
-# Oppgave 10 Business Intelligence)
+# Oppgave 10 Business Intelligence
 *SESJON FRA VEILEDER: Før oppgaven starter skal veileder ha holdt sesjon på BI-verktøyet Genus Discover sin rapportfunksjonalitet i Genus App Platform.*
 
 I Genus App Platform har vi et produkt «Genus Discovery». Dette er et rapporterings og analyseverktøy. Rapporteringsdelen benyttes i hovedsak for å sette opp forhåndsdefinerte rapporter  for sluttbrukere. 

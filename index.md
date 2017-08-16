@@ -11,4 +11,3 @@ This site contains the training material for Genus App Platform courses.
 **Quick links**
 * [Terminology](https://docs.genus.no/terminology.html)
 
-Tester igjen

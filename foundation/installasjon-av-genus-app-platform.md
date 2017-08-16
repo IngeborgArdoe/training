@@ -1,4 +1,5 @@
-## Installasjon av Genus App Platform og lenker til miljø
+# Installasjon av Genus App Platform og lenker til miljø
+
 1.	Dersom du ikke har installert Genus App Platform før på maskinen: Åpne nettleseren, og skriv inn http://edufasit.genus.net/GenusCRM/Download/GenusSetup.exe . Dette henter ned Genus App Platform.
 2.	Du får tildelt et miljø. Vi har 16 miljøer: 
     
@@ -15,7 +16,7 @@
   * “genuslink:http://edufasit.genus.net/GenusCRM/” 
 (Navn: Genus CRM Fasit)
 
-Den første snarveien er til [IDE-en](https://en.wikipedia.org/wiki/Integrated_development_environment) til Genus App Platform: Vårt utviklinggsverktøy Genus Studio. Den andre er til selve sluttbrukerapplikasjonen (også referert til som “klienten” eller Genus Desktop). Snarvei nummer 3 og 4 er tilsvarende for fasitløsningen.
+Den første snarveien er til [IDE-en](https://en.wikipedia.org/wiki/Integrated_development_environment) til Genus App Platform: Vårt utviklingsverktøy Genus Studio. Den andre er til selve sluttbrukerapplikasjonen (også referert til som “klienten” eller Genus Desktop). Snarvei nummer 3 og 4 er tilsvarende for fasitløsningen.
 
 **Innlogging til din løsning:** Dersom du har fått tildelt miljø edu1a, er brukernavn og passord hhv usr1a / usrusr. Tilsvarende for resterende miljøer eduXY: 
 

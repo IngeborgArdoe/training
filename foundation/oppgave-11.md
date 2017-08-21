@@ -2,6 +2,7 @@
 
 *SESJON FRA VEILEDER: Før oppgaven starter skal veileder ha holdt sesjon med intro til modellering av Genus Apps-forms.*
 
+##Enkelt web-grensesnitt
 I denne oppgaven skal du lage et enkelt web-grensesnitt for å vise aktuelle aktiviteter for selskaper innlogget bruker er ansvarlig for – med mulighet for å sette status til Completed.
 1. Klargjør for Genus Apps:
   1. I Studio: Gi Super Users privilege: Sign in as an app user
@@ -59,4 +60,19 @@ I denne oppgaven skal du lage et enkelt web-grensesnitt for å vise aktuelle akt
   7. Deploy og sjekk at knappen fungerer. 
   8. Flytt litt rundt på og juster til du er fornøyd med utlistingen
   ![oppg11fig5.JPG](media/oppg11fig5.JPG)
- 
+  
+##Open Data, Local Objects and Map
+In this exercise, we will fetch open data from multiple public API’s, store it in local objects and visualize the aggregate data in a map. Note that we do not store any of the data in the database, everything is stored in memory as the client uses the app.
+  1.	Create a new App-form and set the following layout:
+    a.	Mark the view and name it “Main - map”
+    b.	Check all Platforms for the views
+    c.	Save the form and name it “OSLO”, close the form.
+  2.	Select Apps in the navigation pane in the “User Interface” section
+    a.	Right click and new App
+    b.	Name it “OSLO”
+    c.	Select form OSLO
+    d.	Check all default views and set Main - map as default, the app will be available from all devices.
+    e.	Give the app appropriate security
+  3.	Deploy to all and check the website to verify that the app is published and available.
+  4.	Create the following local data sources (note: occurrences=unbounded and datatypes):
+

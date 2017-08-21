@@ -2,7 +2,7 @@
 
 *SESJON FRA VEILEDER: Før oppgaven starter skal veileder ha holdt sesjon med intro til modellering av Genus Apps-forms.*
 
-##Enkelt web-grensesnitt
+## Enkelt web-grensesnitt
 I denne oppgaven skal du lage et enkelt web-grensesnitt for å vise aktuelle aktiviteter for selskaper innlogget bruker er ansvarlig for – med mulighet for å sette status til Completed.
 1. Klargjør for Genus Apps:
   1. I Studio: Gi Super Users privilege: Sign in as an app user
@@ -61,18 +61,44 @@ I denne oppgaven skal du lage et enkelt web-grensesnitt for å vise aktuelle akt
   8. Flytt litt rundt på og juster til du er fornøyd med utlistingen
   ![oppg11fig5.JPG](media/oppg11fig5.JPG)
   
-##Open Data, Local Objects and Map
+## Open Data, Local Objects and Map
 In this exercise, we will fetch open data from multiple public API’s, store it in local objects and visualize the aggregate data in a map. Note that we do not store any of the data in the database, everything is stored in memory as the client uses the app.
-  1.	Create a new App-form and set the following layout:
-    a.	Mark the view and name it “Main - map”
-    b.	Check all Platforms for the views
-    c.	Save the form and name it “OSLO”, close the form.
-  2.	Select Apps in the navigation pane in the “User Interface” section
-    a.	Right click and new App
-    b.	Name it “OSLO”
-    c.	Select form OSLO
-    d.	Check all default views and set Main - map as default, the app will be available from all devices.
-    e.	Give the app appropriate security
-  3.	Deploy to all and check the website to verify that the app is published and available.
+  1.  Create a new App-form and set the following layout:
+      - Mark the view and name it “Main - map”
+      - Check all Platforms for the views
+      - Save the form and name it “OSLO”, close the form.
+  2.  Select Apps in the navigation pane in the “User Interface” section
+      * Right click and new App
+      * Name it “OSLO”
+      * Select form OSLO
+      * Check all default views and set Main - map as default, the app will be available from all devices.
+      * Give the app appropriate security
+  3. Deploy to all and check the website to verify that the app is published and available.
   4.	Create the following local data sources (note: occurrences=unbounded and datatypes):
+  5.	Visualization in Map-control
+      * Add Map as Control
+      * Edit layers on the Map-control
+        - Add Layer, Type = Map and Server Type = OSM
+        - Add Layer
+          - Type = Point
+          - DS = Bike Stations
+          - Location fields
+            - Northing = longitude
+            - Easting = latitude
+            - Coordinate system = WGS84
+        - Select an appropriate symbol and set the size to 32px and a color of your choice.
+      * Add Layer
+        - Type = Point 
+        - DS = Bus Stops
+        - Location fields
+          - Northing = longitude
+          - Easting = latitude
+          - Coordinate system = UTM32N
+        - Select an appropriate symbol and set the size to 32px and a color of your choice.
+  6.	Create the following local tasks: Get stops, Get bikes. Give the tasks appropriate security (Properties > security).
+  7.	The first source of data is Ruter (which plans, coordinates, orders and markets public transport in Oslo and Akershus). Link to API documentation: https://ruter.no/labs/.
+  * Open the Get stops-task
+  * In the Actions-pane add Consume a REST Service-effect
+  * URL: http://reisapi.ruter.no/Line/GetStopsByLineId/30
+  * Click the Test-button and click Send. The response of the API call is shown in Response Body. Click Handle Current Response. Open the entry in Response Handlers. Genus has created a mapping from the test-run (this is VERY time consuming for the developer of the app, appreciate Genus :smile:).
 

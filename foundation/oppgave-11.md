@@ -5,60 +5,61 @@
 ## Enkelt web-grensesnitt
 I denne oppgaven skal du lage et enkelt web-grensesnitt for å vise aktuelle aktiviteter for selskaper innlogget bruker er ansvarlig for – med mulighet for å sette status til Completed.
 1. Klargjør for Genus Apps:
-  1. I Studio: Gi Super Users privilege: Sign in as an app user
-  2. Deploy to all (du må deploye to all for at det du gjør skal vises i nettleser. Det tar omtrent ti sekunder fra du deployer til endringene blir gjenspeilet på web).
-  3. Verifiser at du når følgende side: 
-    * For dere på edu1: http://edu1.genus.net/edu1Y/edu1Y, hvor Y erstattes med bokstav fra brukernavn (feks http://edu1.genus.net/edu1a/edu1a for usr1a).
-    *	For dere på edu2: http://edu2.genus.net/edu2Y/edu2Y, hvor Y erstattes med bokstav fra brukernavn (feks http://edu2.genus.net/edu2a/edu2a for usr2a).
+    * I Studio: Gi Super Users privilege: Sign in as an app user
+    * Deploy to all (du må deploye to all for at det du gjør skal vises i nettleser. Det tar omtrent ti sekunder fra du deployer til endringene blir gjenspeilet på web).
+    * Verifiser at du når følgende side:
+      * For dere på edu1: http://edu1.genus.net/edu1Y/edu1Y, hvor Y erstattes med bokstav fra brukernavn (feks http://edu1.genus.net/edu1a/edu1a for usr1a).
+      *	For dere på edu2: http://edu2.genus.net/edu2Y/edu2Y, hvor Y erstattes med bokstav fra brukernavn (feks http://edu2.genus.net/edu2a/edu2a for usr2a).
     
-    Per nå vil det kun stå "CRM Edu1" med mulighet for å logge ut og lukke - det er ikke så rart siden vi ikke har laget noen app ennå.
+      Per nå vil det kun stå "CRM Edu1" med mulighet for å logge ut og lukke - det er ikke så rart siden vi ikke har laget noen app ennå.
 2.	Opprett en ny Form ment til App og sett basic layout på denne:
-  1. Opprett en ny Form: "My tasks | APP"
-      * Først gå til View. 
+    * Opprett en ny Form: "My tasks | APP"
+      * Først gå til View.
       * Name: "My Activities - Main".
       * Huk av for Platforms: Tablet, Web on Phone, Web on Tablet, Web on Desktop.
       *  Padding: 24
 3.	Legg til en overskrift
-  2. Dra inn en Text-controller fra App Controls:
+    * Dra inn en Text-controller fra App Controls:
       ![oppg11fig1.JPG](media/oppg11fig1.JPG)
       * Content: My Activities
       * Foreground Color: Navy
       * Font Size 24
 4. Legg til en repeating section som repeterer over aktiviteter (Not started or In Progress) som tilhører Companies som innlogget bruker er ansvarlig for. Vis selskapsnavn, Activity’s subject og status vises ut til bruker.
-  1. Legg til Activity-datakilde
+   * Legg til Activity-datakilde
   ![oppg11fig2.JPG](media/oppg11fig2.JPG)
-  2. Lag en Repeating Section som repeterer over Activity
-    * Dra inn en GroupBox i Viewet. Denne GroupBox-en må dras inn fra App Controls
-    * Sett Vertical Alignment: Top
-    * Bind GroupBoxen til Activity-datakilden.
-    * Huk av for “Repeat Content under properties på GroupBox-en.
-    * Sett på sortering på GroupBox-en med sorteringsnøkkel Due Time (Descending).
-  3. Legg inn tekstfelter for selskapsnavn, aktivitetens Subject, frist og aktivitetens State: 
-    * Dra eller dobbeltklikk inn fire tekstfelt i GroupBox-en.
-    * Bind den første til Datasource: Activity Field: Company.Name og gjør tilsvarende for Activity.Subject, Due(Fx) og Activity.State.Display Name
-    *Merk: Selv om Activity er en unbounded datasource og feltet bare skal vise ett enkelt tekstfelt trenger vi ikke spesifisere Active Object i DataSource. Dette er fordi vi allerede er i kontekst av et aktivt Activity-objekt når vi er i repeating section over Activity.
+   * Lag en Repeating Section som repeterer over Activity
+      * Dra inn en GroupBox i Viewet. Denne GroupBox-en må dras inn fra App Controls
+      * Sett Vertical Alignment: Top
+      * Bind GroupBoxen til Activity-datakilden.
+      * Huk av for “Repeat Content under properties på GroupBox-en.
+      * Sett på sortering på GroupBox-en med sorteringsnøkkel Due Time (Descending).
+    * Legg inn tekstfelter for selskapsnavn, aktivitetens Subject, frist og aktivitetens State: 
+      * Dra eller dobbeltklikk inn fire tekstfelt i GroupBox-en.
+      * Bind den første til Datasource: Activity Field: Company.Name og gjør tilsvarende for Activity.Subject, Due(Fx) og Activity.State.Display Name
+        
+        Merk: Selv om Activity er en unbounded datasource og feltet bare skal vise ett enkelt tekstfelt trenger vi ikke spesifisere Active Object i DataSource. Dette er fordi vi allerede er i kontekst av et aktivt Activity-objekt når vi er i repeating section over Activity.
 5. Opprett en App som bindes til Formen du akkurat lagde
-  1. Gå til Apps under User Interface i Genus Studio.
-  2. Opprett en ny som du kaller My ACctivities. Form My Activities
-  3. Huk av for default view for Web og Tablet
-  4. Sett AppBar Foreground til Navy
-  5. Etter du har lagret, sett security på Appen. (Properties=> Super 
+    * Gå til Apps under User Interface i Genus Studio.
+    * Opprett en ny som du kaller My ACctivities. Form My Activities
+    * Huk av for default view for Web og Tablet
+    * Sett AppBar Foreground til Navy
+    * Etter du har lagret, sett security på Appen. (Properties=> Super 
   Users skal kunne Find and List og Read and Execute).
 6. Deploy to all og sjekk i browseren at du får forventede resultater (noe a la dette)
 ![oppg11fig3.JPG](media/oppg11fig3.JPG)
  
 7. Legg til knapp i repeating section for å endre state på aktiviteten til Complete 
-  1. Legg til en ny task med input Activity (Name: T.Activity, Max Occurences: One). Husk å sett private=false.
-  2. Under General sett “Enable on Application Server”=true
-  3. Under Actions: Legg til et Scope med en Modify Object som setter State til Completed.
-  4. Lagre og sett security på tasken:
+    * Legg til en ny task med input Activity (Name: T.Activity, Max Occurences: One). Husk å sett private=false.
+    * Under General sett “Enable on Application Server”=true
+    * Under Actions: Legg til et Scope med en Modify Object som setter State til Completed.
+    * Lagre og sett security på tasken:
   ![oppg11fig4.JPG](media/oppg11fig4.JPG)
-  5. Dra inn en Button fra App Controls inn i repeating section over Acitivities. 
-    * Sett background color white, foreground color navy og border color navy, show boarder=true.
-    * Name: Complete Activity
-  6. Sett command og event på knappen for å kjøre tasken. Husk Two-Way Binding til Activity.Single Selected.
-  7. Deploy og sjekk at knappen fungerer. 
-  8. Flytt litt rundt på og juster til du er fornøyd med utlistingen
+    * Dra inn en Button fra App Controls inn i repeating section over Acitivities. 
+      * Sett background color white, foreground color navy og border color navy, show boarder=true.
+      * Name: Complete Activity
+    * Sett command og event på knappen for å kjøre tasken. Husk Two-Way Binding til Activity.Single Selected.
+    * Deploy og sjekk at knappen fungerer. 
+    * Flytt litt rundt på og juster til du er fornøyd med utlistingen
   ![oppg11fig5.JPG](media/oppg11fig5.JPG)
   
 ## Open Data, Local Objects and Map
@@ -75,6 +76,8 @@ In this exercise, we will fetch open data from multiple public API’s, store it
       * Give the app appropriate security
   3. Deploy to all and check the website to verify that the app is published and available.
   4.	Create the following local data sources (note: occurrences=unbounded and datatypes):
+    ![oppg11fig6.JPG](media/oppg11fig6.JPG)
+    ![oppg11fig7.JPG](media/oppg11fig7.JPG)
   5.	Visualization in Map-control
       * Add Map as Control
       * Edit layers on the Map-control
@@ -101,4 +104,5 @@ In this exercise, we will fetch open data from multiple public API’s, store it
   * In the Actions-pane add Consume a REST Service-effect
   * URL: http://reisapi.ruter.no/Line/GetStopsByLineId/30
   * Click the Test-button and click Send. The response of the API call is shown in Response Body. Click Handle Current Response. Open the entry in Response Handlers. Genus has created a mapping from the test-run (this is VERY time consuming for the developer of the app, appreciate Genus :smile:).
+  ![oppg11fig8.JPG](media/oppg11fig8.JPG)
 

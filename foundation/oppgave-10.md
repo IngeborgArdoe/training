@@ -61,3 +61,6 @@ skal telle antall fullførte aktiviteter per måned per Company Speciality hitti
 5. **VALGFRI OPPGAVE: Legg til snarveier til rapportene i Navigation Pane.**
 *Kommentar: Alle rapportene (gitt at du har rettigheter på dem – det ligger i likhet med Tasks sikkerhet per rapport også) er uansett tilgjengelig fra meny «Discover» i klienten. Men enkelte rapporter av høy viktighetgrad eller som benyttes ofte kan man legge inn snarveier til i Navigation Pane. Se eventuelt fasitløsningen hvordan det er valgt å legge ut rapporter her.*
 
+<table>
+   <tr><td><a href="oppgave-9.md"><- Previous exercise</a></td><td align="right"><a href="oppgave-11.md">Next exercise -></a></td></tr>
+</table>

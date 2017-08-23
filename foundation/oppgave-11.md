@@ -120,7 +120,7 @@ In this exercise, we will fetch open data from multiple public API’s, store it
    10.	Add popup context to the point layers to show the information (for instance id and name) on click. Customize it (try to be creative, maybe we don’t need label?) 
    ![oppg11fig11.JPG](media/oppg11fig11.JPG)
 
-   Now we see bus stops (for line 30) and all bike stations. The next step is to show number of bikes available and when the next departure of the bus is. 
+      Now we see bus stops (for line 30) and all bike stations. The next step is to show number of bikes available and when the next departure of the bus is. 
 
    11.	We need a new Local Object to store the data temporarily as it is collected in 2 rounds, first stations and then availability. Create the local object inside the local task: name: “availability”, unbounded and fields id, bikes and locks all String. See screenshots.
    ![oppg11fig12.JPG](media/oppg11fig12.JPG)

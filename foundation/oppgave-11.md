@@ -136,4 +136,4 @@ In this exercise, we will fetch open data from multiple public API’s, store it
       * Get departure data for the bus and display it in the form (hint: use http://reisapi.ruter.no/StopVisit/GetDepartures/3010146). The solution modell contains a partial implementation of this, look at it if you are stuck.
       * Get weather forcasts from YR and dispay bus stops if rain and bike stations otherwise (https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Fwww.yr.no%2Fsted%2Fnorge%2FOslo%2Foslo%2Foslo%2Fvarsel.rss).
       
-[Next exercise](oppgave12.md)
+[Next exercise](oppgave-12.md)

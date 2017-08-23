@@ -20,7 +20,7 @@ I denne oppgaven skal du lage et enkelt web-grensesnitt for å vise aktuelle akt
       *  Padding: 24
 3.	Legg til en overskrift
     * Dra inn en Text-controller fra App Controls:
-      ![oppg11fig1.JPG](media/oppg11fig1.JPG)
+         ![oppg11fig1.JPG](media/oppg11fig1.JPG)
       * Content: My Activities
       * Foreground Color: Navy
       * Font Size 24
@@ -91,7 +91,7 @@ In this exercise, we will fetch open data from multiple public API’s, store it
                   - Coordinate system = WGS84
                - Select an appropriate symbol and set the size to 32px and a color of your choice.
             * Add Layer
-               - Type = Point 
+               - Type = Point
                - DS = Bus Stops
                - Location fields
                   - Northing = longitude
@@ -105,10 +105,11 @@ In this exercise, we will fetch open data from multiple public API’s, store it
          * URL: http://reisapi.ruter.no/Line/GetStopsByLineId/30
          * Click the Test-button and click Send. The response of the API call is shown in Response Body. Click Handle Current Response. Open the entry in Response Handlers. Genus has created a mapping from the test-run (this is VERY time consuming for the developer of the app, appreciate Genus :smile:).
          * Configure the response handler as the screenshot illustrates:
-  ![oppg11fig8.JPG](media/oppg11fig8.JPG)  
+         ![oppg11fig8.JPG](media/oppg11fig8.JPG)  
          * When the task “Get stops” is executed, the API is called and the return data is mapped to the specified data source, creating X number of Bus stops with its associated data.
          * To see the result of the call, create a command executing the Get stops task and add it as a On Load Form event. Data will be populated when the form is accessed. Deploy to all and see that the map contains Bus stops.
-   ![oppg11fig9.JPG](media/oppg11fig9.JPG)  
+         ![oppg11fig9.JPG](media/oppg11fig9.JPG)
+   
 8. The second source of data is Oslo Bysykkel. Link to API documentation: https://developer.oslobysykkel.no/api
 9. Open the Get bikes-task.
          * In the Actions-pane add Consume a REST Service-effect

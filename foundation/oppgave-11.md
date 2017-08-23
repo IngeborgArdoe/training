@@ -110,8 +110,8 @@ In this exercise, we will fetch open data from multiple public API’s, store it
          * To see the result of the call, create a command executing the Get stops task and add it as a On Load Form event. Data will be populated when the form is accessed. Deploy to all and see that the map contains Bus stops.
    ![oppg11fig9.JPG](media/oppg11fig9.JPG)
    
-8.	The second source of data is Oslo Bysykkel. Link to API documentation: https://developer.oslobysykkel.no/api
-9.	Open the Get bikes-task.
+8. The second source of data is Oslo Bysykkel. Link to API documentation: https://developer.oslobysykkel.no/api
+9. Open the Get bikes-task.
          * In the Actions-pane add Consume a REST Service-effect
          * URL: https://oslobysykkel.no/api/v1/stations/
          * Header (both in test and request): Client-Identifier:9d0c945ef25d6f01ccc382df111437cc
@@ -133,3 +133,6 @@ In this exercise, we will fetch open data from multiple public API’s, store it
 13.	Add the local task as On Load Form event as the others. Add bikes and locks to popup content. Deploy to all and verify that you can see name and availability of bikes on the map.
    ![oppg11fig16.JPG](media/oppg11fig16.JPG)
    
+14. Optional points for talented business developers:
+      * Get departure data for the bus and display it in the form (hint: use http://reisapi.ruter.no/StopVisit/GetDepartures/3010146). The solution modell contains a partial implementation of this, look at it if you are stuck.
+      * Get weather forcasts from YR and dispay bus stops if rain and bike stations otherwise (https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Fwww.yr.no%2Fsted%2Fnorge%2FOslo%2Foslo%2Foslo%2Fvarsel.rss).

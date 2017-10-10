@@ -58,7 +58,7 @@ Før vi modellerer opp Request lager vi objektene for kodeverket etc til Request
 9.	La en ny Table for Requests med et view som lister ut alle «Open» Requests.
   Veiledning: Se eventuelt tidligere Table oppgave. Pass på å få med et fornuftig kolonneutvalg i Layout, og på View’et setter du Data Filter og at Search skal være enabled. Under Events legger til til Event for «Open a Form» ved menu «New» (husk Create Data) og «Open in New Window» (husk Data Filter).
 10.	Lag en ny View Button i Navigation Pane (navn «Requests»). Legg til snarvei til «Open Requests» table viewet under denne menyen. Husk å legge på sikkerhet på View Button først, da arver menyinnslagene under sikkerheten. Velg et passende symbol (f eks 1972).
-  ![oppg9fig2.JPG](media/oppg9fig2.JPG)
+  ![oppg9fig3.JPG](media/oppg9fig2.JPG)
 11.	VALGFRI OPPGAVE: Lag en Rule: **Set Closed Date and Canceled Date when State changed**. Denne skal endre Closed Date hvis State er satt til Closed (og til NULL ellers) samt sette Canceled Date hvis State er satt til Canceled (og til NULL ellers).
 12.	VALGFRI OPPGAVE: Gjør feltet Request.State «Read Only» og lag handling for «Close Request», «Re-open Request» og «Cancel Request» som endrer State på Requests i henhold. Publiser handlingene på en knapp i Request Form’en (ved siden av State feks) samt i Company Form’en (under Grid’en). Legg også på enabling conditions på knappene som sier feks at «Close Request» er enabled hvis State = Open, «Re-open Request» er enabled hvis State er Closed eller Canceled, «Cancel Request» er enabled hvis State er Open eller Closed.
 13.	VALGFRI OPPGAVE: Gjør feltene i Request Form’en **Read Only** dersom State ikke er lik Open.

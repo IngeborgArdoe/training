@@ -1,6 +1,6 @@
-# Welcome to our course in the Foundations of Genus App Platform!
+# Welcome to our course in the Foundations of Genus Apps!
 
-To learn how to model solutions using Genus App Platform, we have tailored a relevant and educational training program for this purpose.
+To learn how to model solutions using Genus Apps, we have tailored a relevant and educational training program for this purpose.
 
 The training program gives participants a half-finished solution, as well as access to a "blueprint" solution. Through assigned tasks, the participants get guidance to model the half-finished solution in the direction of the blueprint solution. Note that the word "blueprint" is not strict - it is more a _suggested_ solution out of many possible. Participants can log on to the blueprint solution at any time to see how it works and how it is designed - to get some help if stuck.
 
@@ -11,6 +11,6 @@ The half-finished solution you start with, contains parts of the blueprint solut
 
 The solution is in a "sandbox environment" and will be reset after the training program - in other words - you can play freely in your solution.
 
-The assigned tasks assume to some extent that you refer to Genus App Platform's documentation, or that you ask your supervisor if you are stuck. Genus App Platform's documentation can be found at [docs.genus.no] (https://docs.genus.no/). The documentation may not answer all your questions, so please ask your supervisor - or the other course participants!
+The assigned tasks assume to some extent that you refer to Genus Apps' documentation, or that you ask your supervisor if you are stuck. Genus Apps' documentation can be found at [docs.genus.no] (https://docs.genus.no/). The documentation may not answer all your questions, so please ask your supervisor - or the other course participants!
 
-The assigned tasks are currently only available in Norwegian, but will be translated to English at a later time. The other material is in English, i.e. the half-finished and the blueprint solutions, the Genus Studio modeling tool and Genus App Platform documentation.
+The assigned tasks are currently only available in Norwegian, but will be translated to English at a later time. The other material is in English, i.e. the half-finished and the blueprint solutions, the Genus Studio modeling tool and Genus Apps documentation.

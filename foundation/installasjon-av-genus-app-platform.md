@@ -6,7 +6,7 @@
     edu1a, edu1b, .., edu1h samt edu2a, edu2b, .., edu2h. 
     
     Miljøet du får tildelt er miljøet du skal utføre opplæringsoppgavene i. Du får i tillegg tilgang til fasitløsningen for å kunne se hvordan ting er løst der (pass på å ikke gjøre endringer i fasitløsningen!)
-3.	Opprett 4 snarveier på PCen din med følgende targets. Merk at teksten i rødt under må byttes ut med nummeret på miljøet du har fått tildelt (eksempelvis, om du har fått miljø 2a, bytter du ut «1» med «2» og «1a» med «2a» i linkene under):  
+3.	Opprett 4 snarveier på PCen din med følgende targets. Merk at "1a" i lenkene under må byttes ut med nummeret på miljøet du har fått tildelt (eksempelvis om du har fått miljø 2b, bytter du ut «edu1a» med «edu2b»):  
   * “genusstudiolink:http://edu1.genus.net/edu1a/?LinkType=OpenStudio” 
 (Navn: Genus CRM Edu1a Studio)
  “genuslink:http://edu1.genus.net/edu1a/?RunAsAdmin=1” 

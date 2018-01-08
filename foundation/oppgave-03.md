@@ -9,7 +9,7 @@
     ![oppg3fig1.JPG](media/oppg3fig1.JPG)
   3.	Views: Gå til View (Default). Endre Name til «Contact».
   4.	Legg Container «Tab Sheets» ytterst. Trykk inne i den første arkfanen (du markerer med andre ord Group-en som ligger her). Endre Label til “General”. 
-  Gå et nivå ut (tips: trykk Esc-knappen), og legg på Group og gi denne navn «Activities» (her kommer innhold senere). Dette blir en ny arkfane på Tab Sheet’en. (Nærmere beskrivelse i oppgave 2.2 om dette ikke ga mening.)
+  Legg til en til fane: Gå et nivå ut (tips: trykk Esc-knappen), og dobbeltklikk på "Group" i komponentvelgeren. Gi den nye fanen navn «Activities» (her kommer innhold senere). Dette blir en ny arkfane på Tab Sheet’en. (Nærmere beskrivelse i oppgave 2.2 om dette ikke ga mening.)
   Legg også på en arkfane med navn «Mail» (innhold kommer senere).
   5.	I Arkfane «General»: Her skal feltene for Contact legges til. 
   *Veiledning: I en oppgave senere skal man også liste ut «Contact log» nederst i dette skjermbildet, så vi anbefaler følgende oppdeling av «General»:*

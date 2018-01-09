@@ -57,7 +57,7 @@
     7.	Filter Data: Velg «one way binding to objects in the data source».  Trykk Modify. I dialogen velger du datasourcen det skal filtreres mot (Contact), samt «Single Selected Object». Dette gjør at aktiv (valgt) rad i Contacts Griden filtreres inn i formen «Contact». Huk også av for «Enable Browse Object» (hvilket gjør at du kan bruke pilene opp / ned for å bla deg gjennom en liste av kontaktpersoner).
   2.	Legg til Event på grid-en:
     1.	Type: On Context Meny Item Click
-    2.	Menu: Open in a New Window (når skal eventet inntreffe – ved dobbeltklikke (som default trigger verb «Open in a New Window» i Genus).
+    2.	Menu Item: Open in a New Window (når skal eventet inntreffe – ved dobbeltklikke (som default trigger verb «Open in a New Window» i Genus).
     3.	Command: Open Contact
     Trykk OK
   3.  Legg til Command for å opprette ny Contact. Denne skal ligge på arkfanen til Contacts. Dette kan eksempelvis gjøres ved å markere grid-en for Contacts og trykke Esc. Vi legger Commanden her fordi vi ønsker at denne Commanden skal være tilgjengelig både fra grid-en og senere også fra Ribbon.

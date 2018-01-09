@@ -31,7 +31,7 @@
  
   *Merk: I Formen ser du at navnet på arkfanene samt header er «Company label» etc. Ikke bry deg med det per nå – dette vil si at Labelen på controllen er bundet til feltet i et objekt som viser et dynamisk navn på Labelen (på arkfanene vises navn + antall i listen i parantes). Formen «Company» inneholder også forsinket opplesning av data som gjør at feks «Activity History» ikke leses opp før man trykker på arkfanen. Dette er den del av mer avansert modellering som du ikke trenger å tenke på nå.*
   3.	Gi navn (Name + Label) på den nye arkfanen: «Contacts». Høyreklikk på arkfanen, og velg «Sort tabsheets». Flytt denne frem et hakk.
-  4.	Under «Data Sources»: Legg til Contacts (OK med default verdier her, denne skal være Private og “Allow many objects”). På properties på denne datasourcen, gå til Data Filter. Legg til filter på at Contact.Company = Company (mao., les opp Contact tilhørende Company’et i Formen).
+  4.	Under «Data Sources»: Legg til Contacts ("Private" og “Unbounded” - dette er forhåndsvalgt). På properties på denne datasourcen, gå til Data Filter. Legg til filter på at Contact.Company = Company (mao., les opp Contact tilhørende Company’et i Formen).
   *Veiledning: Se screenshot under:*
   ![oppg3fig5.JPG](media/oppg3fig5.JPG)
   Data filteret kjøres når Formen «Company» åpnes, og kontaktpersoner leses opp.

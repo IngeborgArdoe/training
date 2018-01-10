@@ -48,12 +48,12 @@
   For å gjøre oppgavene under kan det virke mer naturlig å legge Command på samme controller som eventen skal ligge på. Dette ville også fungert helt utmerket, men vi velger ofte å legge command på et annet nivå av grunner som vi skal se nærmere på i Oppgave 5: Ribbon. Ribbon er også grunnen til at vi velger et symbol til Commands og endrer navnet til eksempelvis «New Contact» heller enn å bruke Name: «Open Contact»
 3.	Legg til handlinger i Form-en «Company»
   1.	Velg Griden for Contacts. Under Properties, klikker du på «Commands». Legg til en ny Command av typen «Open a Form»:
-    1.	Name: Open
-    2.	Tip: Contact (Dette er et tips som kun vises til deg som modellerer.)
-    3.	Type: Open a Form
-    4.	Effect: Contact (Formen som skal åpnes)
-    5.	View: Default (hvis det finnes flere Views i formen kan man velge her)
-    6.	Data Binding: Default (One Way. Hvis Two-way velges, vil Formen åpnes modalt, og endringene vil tas med tilbake til Company Formen, hvor de må lagres med lagre-knappen)
+    1. Name: Open
+    2. Tip: Contact (Dette er et tips som kun vises til deg som modellerer.)
+    3. Type: Open a Form
+    4. Effect: Contact (Formen som skal åpnes)
+    5. View: Default (hvis det finnes flere Views i formen kan man velge her)
+    6. Data Binding: Default (One Way. Hvis Two-way velges, vil Formen åpnes modalt, og endringene vil tas med tilbake til Company Formen, hvor de må lagres med lagre-knappen)
     7.	Filter Data: Velg «one way binding to objects in the data source».  Trykk Modify. I dialogen velger du datasourcen det skal filtreres mot (Contact), samt «Single Selected Object». Dette gjør at aktiv (valgt) rad i Contacts Griden filtreres inn i formen «Contact». Huk også av for «Enable Browse Object» (hvilket gjør at du kan bruke pilene opp / ned for å bla deg gjennom en liste av kontaktpersoner).
   2.	Legg til Event på grid-en:
     1.	Type: On Context Meny Item Click

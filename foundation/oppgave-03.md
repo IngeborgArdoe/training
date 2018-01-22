@@ -21,7 +21,7 @@
   Etter at endringen over er gjort, kan man dra inn Properties fra Contact inn i Groupene i «General»-arkfanen. Det vil da default foreslås riktig layoutcontrol (feks, TextEdit foreslås for «First Name»). Men hvis du drar inn Company vil ComboboxEdit foreslås – en dropdown – dette kan være uheldig om det er mange objekter i listen. Hvis du holder inne Shift når du drar over Company vil SeachBoxEdit foreslås isteden, som er mer gunstig for sluttbrukeren.
   6.	Formen for Contact er nå ferdig i sin første versjon. Du kan eventuelt gå til ytterste nivå i View’et og endre Width og Height til 800 og 600. For å se hvordan dette ser ut, endre Alignment til «Fixed». Dette gjør at sluttbruker ikke kan endre størrelsen, så endre tilbake igjen til «Stretch» før du lagrer.
   Det er litt luft nederst i Form’en, hvilket er OK (her kommer innhold senere). 
-  Vi skal nå legge til utlisting av Contacts inne på et Company (ved hjelp av en GRID), og legge handlinger for å lage ny Contact, samt åpne eksisterende Contact.
+  Vi skal nå legge til utlisting av Contacts inne på et Company (ved hjelp av en GRID), og legge handlinger for å lage ny Contact, samt åpne eksisterende Contact..
 
 2.	Legg til utlisting av Contacts i en egen arkfane i Form-en «Company»
   1.	I Studio, gå til User Interface -> Forms. Åpne «Company».

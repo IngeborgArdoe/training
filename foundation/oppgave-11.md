@@ -86,16 +86,16 @@ In this exercise, we will fetch open data from multiple public API’s, store it
                - Type = Point
                - DS = Bike Stations
                - Location fields
-                  - Northing = longitude
-                  - Easting = latitude
+                  - Northing = latitude
+                  - Easting = longitude
                   - Coordinate system = WGS84
                - Select an appropriate symbol and set the size to 32px and a color of your choice.
             * Add Layer
                - Type = Point
                - DS = Bus Stops
                - Location fields
-                  - Northing = longitude
-                  - Easting = latitude
+                  - Northing = longitude (!)
+                  - Easting = latitude   (!)
                   - Coordinate system = UTM32N
                - Select an appropriate symbol and set the size to 32px and a color of your choice.
   6.	Create the following local tasks: Get stops, Get bikes. Give the tasks appropriate security (Properties > security).

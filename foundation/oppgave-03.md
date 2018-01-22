@@ -3,9 +3,9 @@
 1.  Lag en ny Form: «Contact»
   1.  I Studio, gå til User Interface -> Forms. Høyreklikk -> New -> Desktop Form. Lagre denne med en gang med navn «Contact».
   2.  Data Sources (øverst til venstre): Velg denne. Her legger man inn objektet (eller objektene) man skal vise eller benytte i Formen. Legg til «Contact» som en Data Source. *Veiledning: Se screenshot under. Merk at:*
-    1.  *Data Source «Contact» må endres til å ikke være Private (huke vekk). Grunnen er at man skal åpne skjermbildet (formen) Contact fra andre steder, og da skal Contact filtreres inn til Formen (input til Formen, slik at Formen vet hvilken kontaktperson den skal vise data for).*
-    2.  *Data Source «Contact» må settes til «Max Occurences» = “One”. Dette for at det skal være mulig å vise properties for Contact i et felt – “Unbounded” brukes om data sources som skal listes ut i GRIDs.*
-    3.  *Huk også av for «Is Master» og «Enable Read Audit Trail» - dette for at endringshistorikk skal være tilgjengelig når du åpner skjermbildet for en kontaktperson, samt at Formen er «master» Formen for visning av 1 Kontaktperson (Formen kan med andre ord brukes som Default form for Contact).*
+    1.  Data Source «Contact» må endres til å ikke være Private (huke vekk). Grunnen er at man skal åpne skjermbildet (formen) Contact fra andre steder, og da skal Contact filtreres inn til Formen (input til Formen, slik at Formen vet hvilken kontaktperson den skal vise data for).
+    2.  Data Source «Contact» må settes til «Max Occurences» = “One”. Dette for at det skal være mulig å vise properties for Contact i et felt – “Unbounded” brukes om data sources som skal listes ut i GRIDs.
+    3.  Huk også av for «Is Master» og «Enable Read Audit Trail» - dette for at endringshistorikk skal være tilgjengelig når du åpner skjermbildet for en kontaktperson, samt at Formen er «master» Formen for visning av 1 Kontaktperson (Formen kan med andre ord brukes som Default form for Contact).
     ![oppg3fig1.JPG](media/oppg3fig1.JPG)
   3.  Views: Gå til View (Default). Endre Name til «Contact».
   4.  Legg Container «Tab Sheets» ytterst. Trykk inne i den første arkfanen (du markerer med andre ord Group-en som ligger her). Endre Label til “General”. 

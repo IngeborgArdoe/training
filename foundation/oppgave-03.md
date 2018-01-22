@@ -1,17 +1,17 @@
 ##Oppgave 3
 
-1.	Lag en ny Form: «Contact»
-  1.	I Studio, gå til User Interface -> Forms. Høyreklikk -> New -> Desktop Form. Lagre denne med en gang med navn «Contact».
-  2.	Data Sources (øverst til venstre): Velg denne. Her legger man inn objektet (eller objektene) man skal vise eller benytte i Formen. Legg til «Contact» som en Data Source. *Veiledning: Se screenshot under. Merk at:*
-    1. *Data Source «Contact» må endres til å ikke være Private (huke vekk). Grunnen er at man skal åpne skjermbildet (formen) Contact fra andre steder, og da skal Contact filtreres inn til Formen (input til Formen, slik at Formen vet hvilken kontaktperson den skal vise data for).*
-    2.	*Data Source «Contact» må settes til «Max Occurences» = “One”. Dette for at det skal være mulig å vise properties for Contact i et felt – “Unbounded” brukes om data sources som skal listes ut i GRIDs.*
-    3.	*Huk også av for «Is Master» og «Enable Read Audit Trail» - dette for at endringshistorikk skal være tilgjengelig når du åpner skjermbildet for en kontaktperson, samt at Formen er «master» Formen for visning av 1 Kontaktperson (Formen kan med andre ord brukes som Default form for Contact).*
+1.  Lag en ny Form: «Contact»
+  1.  I Studio, gå til User Interface -> Forms. Høyreklikk -> New -> Desktop Form. Lagre denne med en gang med navn «Contact».
+  2.  Data Sources (øverst til venstre): Velg denne. Her legger man inn objektet (eller objektene) man skal vise eller benytte i Formen. Legg til «Contact» som en Data Source. *Veiledning: Se screenshot under. Merk at:*
+    1.  *Data Source «Contact» må endres til å ikke være Private (huke vekk). Grunnen er at man skal åpne skjermbildet (formen) Contact fra andre steder, og da skal Contact filtreres inn til Formen (input til Formen, slik at Formen vet hvilken kontaktperson den skal vise data for).*
+    2.  *Data Source «Contact» må settes til «Max Occurences» = “One”. Dette for at det skal være mulig å vise properties for Contact i et felt – “Unbounded” brukes om data sources som skal listes ut i GRIDs.*
+    3.  *Huk også av for «Is Master» og «Enable Read Audit Trail» - dette for at endringshistorikk skal være tilgjengelig når du åpner skjermbildet for en kontaktperson, samt at Formen er «master» Formen for visning av 1 Kontaktperson (Formen kan med andre ord brukes som Default form for Contact).*
     ![oppg3fig1.JPG](media/oppg3fig1.JPG)
-  3.	Views: Gå til View (Default). Endre Name til «Contact».
-  4.	Legg Container «Tab Sheets» ytterst. Trykk inne i den første arkfanen (du markerer med andre ord Group-en som ligger her). Endre Label til “General”. 
+  3.  Views: Gå til View (Default). Endre Name til «Contact».
+  4.  Legg Container «Tab Sheets» ytterst. Trykk inne i den første arkfanen (du markerer med andre ord Group-en som ligger her). Endre Label til “General”. 
   Legg til en til fane: Gå et nivå ut (tips: trykk Esc-knappen), og dobbeltklikk på "Group" i komponentvelgeren. Gi den nye fanen navn «Activities» (her kommer innhold senere). Dette blir en ny arkfane på Tab Sheet’en. (Nærmere beskrivelse i oppgave 2.2 om dette ikke ga mening.)
   Legg også på en arkfane med navn «Mail» (innhold kommer senere).
-  5.	I Arkfane «General»: Her skal feltene for Contact legges til. 
+  5.  I Arkfane «General»: Her skal feltene for Contact legges til. 
   *Veiledning: I en oppgave senere skal man også liste ut «Contact log» nederst i dette skjermbildet, så vi anbefaler følgende oppdeling av «General»:*
   ![oppg3fig2.JPG](media/oppg3fig2.JPG)
 
@@ -19,7 +19,7 @@
   Felter kan legges til ved «drag and drop» fra høyresiden etter at man har endret som følger:
   ![oppg3fig3.JPG](media/oppg3fig3.JPG)
   Etter at endringen over er gjort, kan man dra inn Properties fra Contact inn i Groupene i «General»-arkfanen. Det vil da default foreslås riktig layoutcontrol (feks, TextEdit foreslås for «First Name»). Men hvis du drar inn Company vil ComboboxEdit foreslås – en dropdown – dette kan være uheldig om det er mange objekter i listen. Hvis du holder inne Shift når du drar over Company vil SeachBoxEdit foreslås isteden, som er mer gunstig for sluttbrukeren.
-  6.	Formen for Contact er nå ferdig i sin første versjon. Du kan eventuelt gå til ytterste nivå i View’et og endre Width og Height til 800 og 600. For å se hvordan dette ser ut, endre Alignment til «Fixed». Dette gjør at sluttbruker ikke kan endre størrelsen, så endre tilbake igjen til «Stretch» før du lagrer.
+  6.  Formen for Contact er nå ferdig i sin første versjon. Du kan eventuelt gå til ytterste nivå i View’et og endre Width og Height til 800 og 600. For å se hvordan dette ser ut, endre Alignment til «Fixed». Dette gjør at sluttbruker ikke kan endre størrelsen, så endre tilbake igjen til «Stretch» før du lagrer.
   Det er litt luft nederst i Form’en, hvilket er OK (her kommer innhold senere). 
   Vi skal nå legge til utlisting av Contacts inne på et Company (ved hjelp av en GRID), og legge handlinger for å lage ny Contact, samt åpne eksisterende Contact..
 

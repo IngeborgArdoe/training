@@ -41,12 +41,13 @@
   ![oppg3fig6.JPG](media/oppg3fig6.JPG)
   Du har nå lagt til utlisting av Contacts på Company. Nå skal det legges til eventer for å åpne den nylig opprettede Formen «Contact» ved dobbeltklikke på en rad i GRID’en, samt en knapp med event for å lage en ny Contact.
 
-  #Handlinger i Genus App Platform: Commands og Events:
+#Handlinger i Genus App Platform: Commands og Events:
 
-  I Genus App Platform er Commands brukt til å spesifisere effekter som skal skje i en Form. En Command kan bli startet/trigget av en Event eller fra Ribbon. En Command kan være av mange ulike typer – blant annet «Open a Form», «Apply Changes», «Delete Object» eller «Run a Task». Flere Commands kan også settes sammen (Combined) og en Command kan kalle en annen Command. 
+I Genus App Platform er Commands brukt til å spesifisere effekter som skal skje i en Form. En Command kan bli startet/trigget av en Event eller fra Ribbon. En Command kan være av mange ulike typer – blant annet «Open a Form», «Apply Changes», «Delete Object» eller «Run a Task». Flere Commands kan også settes sammen (Combined) og en Command kan kalle en annen Command. 
 
-  Eventer kan trigge Commands ved at en for eksempel legger en Event av typen «On Click» på en Button og peker den til en Command som er handlingen som skal skje når knappen blir trykket på.
-  For å gjøre oppgavene under kan det virke mer naturlig å legge Command på samme controller som eventen skal ligge på. Dette ville også fungert helt utmerket, men vi velger ofte å legge command på et annet nivå av grunner som vi skal se nærmere på i Oppgave 5: Ribbon. Ribbon er også grunnen til at vi velger et symbol til Commands og endrer navnet til eksempelvis «New Contact» heller enn å bruke Name: «Open Contact»
+Eventer kan trigge Commands ved at en for eksempel legger en Event av typen «On Click» på en Button og peker den til en Command som er handlingen som skal skje når knappen blir trykket på.
+For å gjøre oppgavene under kan det virke mer naturlig å legge Command på samme controller som eventen skal ligge på. Dette ville også fungert helt utmerket, men vi velger ofte å legge command på et annet nivå av grunner som vi skal se nærmere på i Oppgave 5: Ribbon. Ribbon er også grunnen til at vi velger et symbol til Commands og endrer navnet til eksempelvis «New Contact» heller enn å bruke Name:Open Contact.
+  
 3. Legg til handlinger i Form-en «Company»
    1. Velg Griden for Contacts. Under Properties, klikker du på «Commands». Legg til en ny Command av typen «Open a Form»:
       1. Name: Open

@@ -56,12 +56,12 @@ For å gjøre oppgavene under kan det virke mer naturlig å legge Command på sa
       4. Effect: Contact (Formen som skal åpnes)
       5. View: Default (hvis det finnes flere Views i formen kan man velge her)
       6. Data Binding: Default (One Way. Hvis Two-way velges, vil Formen åpnes modalt, og endringene vil tas med tilbake til Company Formen, hvor de må lagres med lagre-knappen)
-      7. Filter Data: Velg «one way binding to objects in the data source».  Trykk Modify. I dialogen velger du datasourcen det skal filtreres mot (Contact), samt «Single Selected Object». Dette gjør at aktiv (valgt) rad i Contacts Griden filtreres inn i formen «Contact». Huk også av for «Enable Browse Object» (hvilket gjør at du kan bruke pilene opp / ned for å bla deg gjennom en liste av kontaktpersoner).
+      7. Filter Data: Velg «one way binding to objects in the data source». Trykk Modify. I dialogen velger du datasourcen det skal filtreres mot (Contact), samt «Single Selected Object». Dette gjør at aktiv (valgt) rad i Contacts Griden filtreres inn i formen «Contact». Huk også av for «Enable Browse Object» (hvilket gjør at du kan bruke pilene opp / ned for å bla deg gjennom en liste av kontaktpersoner).
    2. Legg til Event på grid-en:
       1. Type: On Context Meny Item Click
       2. Menu Item: Open in a New Window (når skal eventet inntreffe – ved dobbeltklikke (som default trigger verb «Open in a New Window» i Genus).
       3. Command: Open Contact
-    Trykk OK
+         Trykk OK
    3. Legg til Command for å opprette ny Contact. Denne skal ligge på arkfanen til Contacts. Dette kan eksempelvis gjøres ved å markere grid-en for Contacts og trykke Esc. Vi legger Commanden her fordi vi ønsker at denne Commanden skal være tilgjengelig både fra grid-en og senere også fra Ribbon.
       1. Name: New Contact
       2. Type: Open a Form
@@ -71,19 +71,19 @@ For å gjøre oppgavene under kan det virke mer naturlig å legge Command på sa
       6. Create Data: Klikk … og velg “Add”. Under «Default Values» må du huske å sette Contact.Company = Company (mao, Contact’en som skal opprettes får satt Company fra Form’en du er i når knappen «New» trykkes)
       7. Velg et symbol: Dette vil også vise seg å være nyttig senere. Et godt symbol kan være det som dukker opp dersom du gjør søk på «1081». Merk at du kan velge både hovedsymbol og «Overlay». Forsøk å også sett på et overlay, men før du trykker OK, høyreklikk på overlayvalget du gjorde og trykk «Clear».
       8. Trykk OK og lagre Commanden.
-   4.	Legg til Event på grid-en for å opprette ny kontakt.
+   4. Legg til Event på grid-en for å opprette ny kontakt.
       1. Type: On Context Menu Item Click
       2. Menu Item: New
       3. Command: New Contact (Command-en du akkurat lagde)
    5. Vi ønsker også å kunne slette kontakter. Legg til Command for å slette kontakt på arkfanen.
-  *Veiledning: Se på Commanden «Delete» som ligger under ActivitiesTab-arkfanen for veiledning: For vårt tilfelle skal Delete-commanden ha Data Binding mot Data Source «Contact». Tips: Bruk symbol #1195. Enabling: Conditional hvis Contact.Single Selected Object has value. (Bilde under)*
+     *Veiledning: Se på Commanden «Delete» som ligger under ActivitiesTab-arkfanen for veiledning: For vårt tilfelle skal Delete-commanden ha Data Binding mot Data Source «Contact». Tips: Bruk symbol #1195. Enabling: Conditional hvis Contact.Single Selected Object has value. (Bilde under)*
   ![oppg3fig7.JPG](media/oppg3fig7.JPG)
 
    6. Legg til Event på grid-en med Type: On Context Meny Item Click, Menu Item: Delete som peker til Command-en. 
    7. Vi ønsker nå å teste det vi har laget så langt: I Genus Studio velg File (øverst) - >Deploy to this computer. Endringene deployes nå til din egen PC for test. Gå til klienten, åpne et Company og forsøk å legge til en ny Contact, endre en Contact eller slette en Contact. Sjekk at Default verdier ved opprettelse av Contact er som forventet.
   Kommentar: Hvis dette hadde vært et test- eller produksjonsmiljø kunne du valgt «Deploy to all» med et valgt tidspunkt. På dette tidspunktet ville endringene du har gjort så lagt blitt tilgjengelig for alle brukere av løsningen.
-
-  Vi har nå laget Contact og verifisert at det fungerer. Vi ønsker nå å kunne liste ut Activities og Mail på Contact. For at dette skal fungerer trenger disse to objektklassene en referanse til Contact.
+  
+   Vi har nå laget Contact og verifisert at det fungerer. Vi ønsker nå å kunne liste ut Activities og Mail på Contact. For at dette skal fungerer trenger disse to objektklassene en referanse til Contact.
 4. Legg til et nytt felt på Object Class «Activity»: Contact
   Veiledning: Vi legger nå feltet til i databasen først. Du kan kjøre SQL «alter table Activity add ContactID uniqueidentifier» (legger til et felt ContactID på Activity tabellen i databasen. Datatypen er lik primærnøkkelen til Contact).
   

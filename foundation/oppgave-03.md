@@ -3,9 +3,9 @@
 1. Lag en ny Form: «Contact»
    1. I Studio, gå til User Interface -> Forms. Høyreklikk -> New -> Desktop Form. Lagre denne med en gang med navn «Contact».
    2. Data Sources (øverst til venstre): Velg denne. Her legger man inn objektet (eller objektene) man skal vise eller benytte i Formen. Legg til «Contact» som en Data Source. *Veiledning: Se screenshot under. Merk at:*
-      1. *Data Source «Contact» må endres til å ikke være Private (huke vekk). Grunnen er at man skal åpne skjermbildet (formen) Contact fra andre steder, og da skal Contact filtreres inn til Formen (input til Formen, slik at Formen vet hvilken kontaktperson den skal vise data for).*
-      2.  *Data Source «Contact» må settes til «Max Occurences» = “One”. Dette for at det skal være mulig å vise properties for Contact i et felt – “Unbounded” brukes om data sources som skal listes ut i GRIDs*.
-      3.  *Huk også av for «Is Master» og «Enable Read Audit Trail» - dette for at endringshistorikk skal være tilgjengelig når du åpner skjermbildet for en kontaktperson, samt at Formen er «master» Formen for visning av 1 Kontaktperson (Formen kan med andre ord brukes som Default form for Contact).*
+      1. Data Source «Contact» må endres til å ikke være Private (huke vekk). Grunnen er at man skal åpne skjermbildet (formen) Contact fra andre steder, og da skal Contact filtreres inn til Formen (input til Formen, slik at Formen vet hvilken kontaktperson den skal vise data for).
+      2.  Data Source «Contact» må settes til «Max Occurences» = “One”. Dette for at det skal være mulig å vise properties for Contact i et felt – “Unbounded” brukes om data sources som skal listes ut i GRIDs.
+      3.  Huk også av for «Is Master» og «Enable Read Audit Trail» - dette for at endringshistorikk skal være tilgjengelig når du åpner skjermbildet for en kontaktperson, samt at Formen er «master» Formen for visning av 1 Kontaktperson (Formen kan med andre ord brukes som Default form for Contact).
     ![oppg3fig1.JPG](media/oppg3fig1.JPG)
    3. Views: Gå til View (Default). Endre Name til «Contact».
    4. Legg Container «Tab Sheets» ytterst. Trykk inne i den første arkfanen (du markerer med andre ord Group-en som ligger her). Endre Label til “General”. 
@@ -81,7 +81,7 @@ For å gjøre oppgavene under kan det virke mer naturlig å legge Command på sa
 
    6. Legg til Event på grid-en med Type: On Context Meny Item Click, Menu Item: Delete som peker til Command-en. 
    7. Vi ønsker nå å teste det vi har laget så langt: I Genus Studio velg File (øverst) - >Deploy to this computer. Endringene deployes nå til din egen PC for test. Gå til klienten, åpne et Company og forsøk å legge til en ny Contact, endre en Contact eller slette en Contact. Sjekk at Default verdier ved opprettelse av Contact er som forventet.
-  Kommentar: Hvis dette hadde vært et test- eller produksjonsmiljø kunne du valgt «Deploy to all» med et valgt tidspunkt. På dette tidspunktet ville endringene du har gjort så lagt blitt tilgjengelig for alle brukere av løsningen.
+  *Kommentar: Hvis dette hadde vært et test- eller produksjonsmiljø kunne du valgt «Deploy to all» med et valgt tidspunkt. På dette tidspunktet ville endringene du har gjort så lagt blitt tilgjengelig for alle brukere av løsningen.*
   
       Vi har nå laget Contact og verifisert at det fungerer. Vi ønsker nå å kunne liste ut Activities og Mail på Contact. For at dette skal fungerer trenger disse to objektklassene en referanse til Contact.
 4. Legg til et nytt felt på Object Class «Activity»: Contact

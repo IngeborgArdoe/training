@@ -15,10 +15,11 @@
   *Veiledning: I en oppgave senere skal man også liste ut «Contact log» nederst i dette skjermbildet, så vi anbefaler følgende oppdeling av «General»:*
   ![oppg3fig2.JPG](media/oppg3fig2.JPG)
 
-  Velg så GroupBox1, og endre «Container Type» til «Group» - dette for å fjerne rammen rundt. Gjør tilsvarende for Groupbox3 og Groupbox4 (eller hva nå enn disse er navngitt default i din løsning).
+      Velg så GroupBox1, og endre «Container Type» til «Group» - dette for å fjerne rammen rundt. Gjør tilsvarende for Groupbox3 og Groupbox4 (eller hva nå enn disse er navngitt default i din løsning).
   Felter kan legges til ved «drag and drop» fra høyresiden etter at man har endret som følger:
   ![oppg3fig3.JPG](media/oppg3fig3.JPG)
-  Etter at endringen over er gjort, kan man dra inn Properties fra Contact inn i Groupene i «General»-arkfanen. Det vil da default foreslås riktig layoutcontrol (feks, TextEdit foreslås for «First Name»). Men hvis du drar inn Company vil ComboboxEdit foreslås – en dropdown – dette kan være uheldig om det er mange objekter i listen. Hvis du holder inne Shift når du drar over Company vil SeachBoxEdit foreslås isteden, som er mer gunstig for sluttbrukeren.
+  
+      Etter at endringen over er gjort, kan man dra inn Properties fra Contact inn i Groupene i «General»-arkfanen. Det vil da default foreslås riktig layoutcontrol (feks, TextEdit foreslås for «First Name»). Men hvis du drar inn Company vil ComboboxEdit foreslås – en dropdown – dette kan være uheldig om det er mange objekter i listen. Hvis du holder inne Shift når du drar over Company vil SeachBoxEdit foreslås isteden, som er mer gunstig for sluttbrukeren.
    6. Formen for Contact er nå ferdig i sin første versjon. Du kan eventuelt gå til ytterste nivå i View’et og endre Width og Height til 800 og 600. For å se hvordan dette ser ut, endre Alignment til «Fixed». Dette gjør at sluttbruker ikke kan endre størrelsen, så endre tilbake igjen til «Stretch» før du lagrer.
   Det er litt luft nederst i Form’en, hvilket er OK (her kommer innhold senere). 
   Vi skal nå legge til utlisting av Contacts inne på et Company (ved hjelp av en GRID), og legge handlinger for å lage ny Contact, samt åpne eksisterende Contact..

@@ -83,21 +83,21 @@ For å gjøre oppgavene under kan det virke mer naturlig å legge Command på sa
    7. Vi ønsker nå å teste det vi har laget så langt: I Genus Studio velg File (øverst) - >Deploy to this computer. Endringene deployes nå til din egen PC for test. Gå til klienten, åpne et Company og forsøk å legge til en ny Contact, endre en Contact eller slette en Contact. Sjekk at Default verdier ved opprettelse av Contact er som forventet.
   Kommentar: Hvis dette hadde vært et test- eller produksjonsmiljø kunne du valgt «Deploy to all» med et valgt tidspunkt. På dette tidspunktet ville endringene du har gjort så lagt blitt tilgjengelig for alle brukere av løsningen.
   
-   Vi har nå laget Contact og verifisert at det fungerer. Vi ønsker nå å kunne liste ut Activities og Mail på Contact. For at dette skal fungerer trenger disse to objektklassene en referanse til Contact.
+      Vi har nå laget Contact og verifisert at det fungerer. Vi ønsker nå å kunne liste ut Activities og Mail på Contact. For at dette skal fungerer trenger disse to objektklassene en referanse til Contact.
 4. Legg til et nytt felt på Object Class «Activity»: Contact
   Veiledning: Vi legger nå feltet til i databasen først. Du kan kjøre SQL «alter table Activity add ContactID uniqueidentifier» (legger til et felt ContactID på Activity tabellen i databasen. Datatypen er lik primærnøkkelen til Contact).
   
-  Deretter høyreklikker vi på Activity og velger «Add Object Class Properties». I veiviserens steg «Property Definition» må du igjen passe på å sette Data Interpretation til «Contact»
+   Deretter høyreklikker vi på Activity og velger «Add Object Class Properties». I veiviserens steg «Property Definition» må du igjen passe på å sette Data Interpretation til «Contact»
 5. Legg til et nytt felt på Object Class «Mail»: Contact
-  Veiledning: Som oppgave 3.3 over (bytt «Activity» med «Mail» i SQL’en)
+   Veiledning: Som oppgave 3.3 over (bytt «Activity» med «Mail» i SQL’en)
 6. Vi må også gjøre feltet Activity.Contact tilgjengelig i brukergrensesnittet. 
    1. Åpne Form «Activity» og legg til «Contact» Fra Activity-datakilden som et felt (ComboBox) under Company i grensesnittet.
    2. Vi ønsker også drop-down’en skal begrenses til Contacts som tilhører aktivitetens Company, og kun Aktive kontakter. Sett «Data Restriction» på feltet.
-  Veiledning: Se screenshot under:
-  ![oppg3fig8.JPG](media/oppg3fig8.JPG)
+      Veiledning: Se screenshot under:
+      ![oppg3fig8.JPG](media/oppg3fig8.JPG)
 7. Vi skal nå liste ut Activities på en Contact, samt lage mulighet for å registrere Activities på en kontaktperson.
    1. Lag en utlisting av Activities i arkfane «Activities» i Contact Formen.	
-  Veiledning: Du må ha Activities som en Data Source i Formen først. Sett på data filter på denne (les opp Activities hvor Activity.Contact = Contact og Activity.State ulik Canceled). Legg deretter en Grid i arkfanene som du binder mot Data Source «Activity». Sett opp Columns. Pass også på å få Sorting (feks etter Due Date descending). Du kan også feks sette på Grouping (på State).
+      Veiledning: Du må ha Activities som en Data Source i Formen først. Sett på data filter på denne (les opp Activities hvor Activity.Contact = Contact og Activity.State ulik Canceled). Legg deretter en Grid i arkfanene som du binder mot Data Source «Activity». Sett opp Columns. Pass også på å få Sorting (feks etter Due Date descending). Du kan også feks sette på Grouping (på State).
    2. Legg til Command på arkfane Activity for å åpne Activity:
       1. Command: Open a Form
       2. Name: Open, Tip: Activity
@@ -108,22 +108,22 @@ For å gjøre oppgavene under kan det virke mer naturlig å legge Command på sa
 8. Vi skal også liste ut Mail på en Contact. Muligheten for å legge til ny Mail i en liste er i Company Formen løst med en handling som paster inn ny Mail fra Clipboard (mao., drag & drop). Vi skal lage dette i en senere oppgave, for nå skal vi kun legge til utlisting og åpning av epost på kontaktperson
    1. Lag en utlisting av Mail i arkfane «Mail» i Contact Form’en )som lister ut Mail hvor Mail.Contact = Contact)
    2. Legg på event i Grid’en med Event Type «On Activate» og Effect Type «Invoke a File».
-    Kommentar: Denne gjør at Mailen, ved dobbelklikk på en rad, åpnes i outlook. Dette er bygget inn i plattformen  – hvis objektklassen inneholder File Data, File Size, File Type og File Name så åpnes objektet i «default» program ved «Invoke a File» effekten. Se eventuelt hvordan dette er løst i Grid’en «Mail» i Company Form’en
+     *Kommentar: Denne gjør at Mailen, ved dobbelklikk på en rad, åpnes i outlook. Dette er bygget inn i plattformen  – hvis objektklassen inneholder File Data, File Size, File Type og File Name så åpnes objektet i «default» program ved «Invoke a File» effekten. Se eventuelt hvordan dette er løst i Grid’en «Mail» i Company Form’en*
 
 9. VALGFRI OPPGAVE: «Logg» på kontaktperson
-  Denne er ikke strengt nødvendig for resten av oppgavesettet. Men den inneholder et nytt konsept «Part of composition», så vi anbefaler at oppgaven ihvertfall leses gjennom.
+   Denne er ikke strengt nødvendig for resten av oppgavesettet. Men den inneholder et nytt konsept «Part of composition», så vi anbefaler at oppgaven ihvertfall leses gjennom.
 
-  Vi ønsker å kunne skrive logginnslag på kontaktpersoner (tilsvarende «Company Log» som finnes under Company). 
+   Vi ønsker å kunne skrive logginnslag på kontaktpersoner (tilsvarende «Company Log» som finnes under Company). 
    1. Opprett en ny Object Class «Contact Log». Når du går gjennom wizarden for å legge til ny Object Class, pass på å sette Data Interpretation på Created By (User) og Contact. I siste steg i wizarden velger du Part Of Composition “Contact”
- Veiledning: Du kan benytte SQL: 
-  Create table ContactLog (ContactLogID uniqueidentifier PRIMARY KEY, "Subject" varchar(1000), CreatedDate datetime, CreatedByUserID uniqueidentifier, ContactID uniqueidentifier)
-  Når du setter Part of Composition betyr dette at dataene i Contact Log (som henger under en Contact) alltid leses opp sammen med Contact og samtidig arver sikkerhet og “audit trail» fra Contact. Sett opp part of composition ihht screenshot under:
-   ![oppg3fig9.JPG](media/oppg3fig9.JPG)
+      Veiledning: Du kan benytte SQL: 
+      Create table ContactLog (ContactLogID uniqueidentifier PRIMARY KEY, "Subject" varchar(1000), CreatedDate datetime, CreatedByUserID uniqueidentifier, ContactID uniqueidentifier)
+      Når du setter Part of Composition betyr dette at dataene i Contact Log (som henger under en Contact) alltid leses opp sammen med Contact og samtidig arver sikkerhet og “audit trail» fra Contact. Sett opp part of composition ihht screenshot under:
+      ![oppg3fig9.JPG](media/oppg3fig9.JPG)
    2. Sett Default verdier på Created by og Created Date, samt sett Subject påkrevd.
    3. Lag en Form «Contact Log»
       1. Denne har kun 1 Data Source: Contact Log (husk: Huk vekk «Private» og sett Occurence = Allow one object)
       2. View (properties): Her endrer du Style til «Dialog Box» og Buttons til «OK and Cancel». Endre også Alignment til «Fixed» og Width = 800 og Height = 600 (feks). 
-      *Kommentar: Grunnen er at denne Formen ikke skal ha noen lagre knapp. Den skal åpnes modalt fra utlistingen av Log på Contact, og ved trykk på «OK» vil denne Form’en lukkes og endrinene lagres i Contact Form’en.*
+     *Kommentar: Grunnen er at denne Formen ikke skal ha noen lagre knapp. Den skal åpnes modalt fra utlistingen av Log på Contact, og ved trykk på «OK» vil denne Form’en lukkes og endrinene lagres i Contact Form’en.*
       3. View: Denne skal kun vise feltet «Subject». Dra inn dette. Endre følgende egenskaper ved Subject:
          1.	Huk av Multiline og Word Wrap
          2.	Sett Vertical Alignment til «Stretch»
@@ -131,12 +131,12 @@ For å gjøre oppgavene under kan det virke mer naturlig å legge Command på sa
    4. Åpne Form «Contact». 
       1. Legg til en ny Group Box nederst. Gi denne Label «Log:». Huk av for «Is Collapsible» og “Transparent Title Area”. Under “Border Thickness” setter du 0.
       2. Legg en Grid inni denne. Bind Griden mot Data Source = Contact, Field = Contact Log. Legg på Columns og sett Sorting (Created date, descending). **NB: Det kan være du må starte Genus Studio på nytt før du gjør denne!**
-      *Kommentar: I og med at Contact Log er part of composition og vi ikke skal filtrere vekk noe trenger denne ikke være en egen Data Source. Griden er nå bundet mot gruppen av logginnslag som henger under kontaktpersonen og kan vise kolonner derfra.*
+     *Kommentar: I og med at Contact Log er part of composition og vi ikke skal filtrere vekk noe trenger denne ikke være en egen Data Source. Griden er nå bundet mot gruppen av logginnslag som henger under kontaktpersonen og kan vise kolonner derfra.*
       3. Legg på Command i GeneralTab for å åpne en Contact Log i Formen «Contact Log». Denne skal kun være enablet hvis Contact Log.Single Selected har verdi. Legg til event for å utføre command i grid-en.
-    Veiledning: I og med at Formen «Contact Log» er en dialogboks har den ikke mulighet til å lagre endringene selv. Velg derfor ved oppsett av event inn Two Way binding som vist nedenfor:
-    ![oppg3fig10.JPG](media/oppg3fig10.JPG)
-    Data Binding: 
-    ![oppg3fig11.JPG](media/oppg3fig11.JPG)
+      Veiledning: I og med at Formen «Contact Log» er en dialogboks har den ikke mulighet til å lagre endringene selv. Velg derfor ved oppsett av event inn Two Way binding som vist nedenfor:
+      ![oppg3fig10.JPG](media/oppg3fig10.JPG)
+      Data Binding: 
+      ![oppg3fig11.JPG](media/oppg3fig11.JPG)
       4. Legg også till command og event for New og Delete. Her legges også Command på GeneralTab og Event på selve griden.
          1. Veiledning New: Åpningen av Contact Log i «Create» modus er også two-way bundet. Det betyr at et nytt objekt opprettes i Contact Log formen, men lagringen av dette tas med tilbake til Contact Form’en (hvor man kan trykke lagre knappen). Se screenshot under:
       ![oppg3fig12.JPG](media/oppg3fig12.JPG)

@@ -35,7 +35,7 @@ Dette krever at vi modellerer opp et objekt Document (a la «Mail») som lar oss
 
 2. Legg til Document.File Data som et søkefelt på Company.
 
-   *Veiledning: Dette gjør at man fra søk i Selskap kan gjøre fritekstsøk i fildataene på tilhørende dokumenter. Dette setter du opp ved å legge til Document.File Data i «Search» arkfanen på egenskapene for Object Class «Company». *
+   *Veiledning: Dette gjør at man fra søk i Selskap kan gjøre fritekstsøk i fildataene på tilhørende dokumenter. Dette setter du opp ved å legge til Document.File Data i «Search» arkfanen på egenskapene for Object Class «Company».*
 
    OBS: For at man skal få opp «Full text» søkeoperatorer når man søker i feltet, må man inn på Object Class Property «Document.File Data» og sette på «Full Text and Like operators» i arkfane «Data Filtering».
 

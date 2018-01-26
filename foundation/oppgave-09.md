@@ -16,11 +16,11 @@ Vi ønsker også å ha et «ordrenummer» som settes ved opprettelse av Request,
   
    *Veiledning: Opprett tabellen i databasen først, og samtidig insert innslaget for «første ordrenummer» i tabellen ved å kjøre følgende script*:
 
-  create table OrderNoCounter (OrderNo int)
+   create table OrderNoCounter (OrderNo int)
 
-  go
+   go
 
-  insert into OrderNoCounter values (10000)
+   insert into OrderNoCounter values (10000)
   
   I wizarden for opprettelse av nytt Identifier Domain, velger du «Sequential Counter» i steg 2:
   ![oppg9fig1.JPG](media/oppg9fig1.JPG)
@@ -28,6 +28,7 @@ Vi ønsker også å ha et «ordrenummer» som settes ved opprettelse av Request,
   Og i steg 3 velger du kolonnen som skal inneholder telleren:
   ![oppg9fig2.JPG](media/oppg9fig2.JPG)
   Trykk Finish.
+  
 4. Opprett Object Class «Request». Husk å sette korrekt Data Interpretation i wizarden ved opprettelse av nytt objekt.
 
    *Kommentar: SQL Script for opprettelse er allerede kjørt i databasen din – dette for at vi kunne generere litt data å gjøre rapporter/analyser på i senere oppgave.*
@@ -37,10 +38,10 @@ Vi ønsker også å ha et «ordrenummer» som settes ved opprettelse av Request,
    *Kommentar: Sistnevnte gjør at man ved opprettelse setter ordernummer som det siste nummeret som ligger lagret i «Order No Counter» tabellen, og deretter oppdaterer (øker) verdien lagret i «Order No Counter» tabellen med 1 automatisk.*
    
    2. På egenskapene ved Objektklassen «Request» (høyreklikk -> Open på Object Class «Request») setter du på 
-    - Search (setter søkeegenskaper, under «Search Properties» på arkfane «Search») 
-    -	Events -> Auditing (ønsker å loggføre alle endringer på Request objekter, huk av for «Enable Auditing» under arkfane «Events») 
-    -	Display -> Naming (Feltet «Subject» før ihvertfall være en del av navngivningen, dette angir du i arkfane «Display»)
-    -	Data Sorting (Feks default sortering på «Company» ascending og «Received Date» descending, finnes i arkfane «Data Sorting»).
+      - Search (setter søkeegenskaper, under «Search Properties» på arkfane «Search») 
+      -	Events -> Auditing (ønsker å loggføre alle endringer på Request objekter, huk av for «Enable Auditing» under arkfane «Events») 
+      -	Display -> Naming (Feltet «Subject» før ihvertfall være en del av navngivningen, dette angir du i arkfane «Display»)
+      -	Data Sorting (Feks default sortering på «Company» ascending og «Received Date» descending, finnes i arkfane «Data Sorting»).
   
 Vi har nå opprettet objektet Request. Vi ønsker også å kunne dra inn dokumenter og epost på en Request.
 

@@ -47,6 +47,7 @@ En ting vi ikke har pratet så mye om ennå (kommer i senere sesjon) er sikkerhe
 3. Gå til File -> Properties (øverst til venstre i tasken) og legg til Security Group «Users» i arkfane Security. Huk av for «Find and List» og «Read and Execute».
 
 *Tasken er ferdig, men er ikke tilgjengelig for sluttbrukere ennå – den må kobles inn i et User Interface som en event.*
+
 4. Gå til table «Contacts». Under «Events» legger du til en event for å kjøre tasken
    1. Effect Type = «Run a Task (Global Scope)»
    2. Effect = “Change Responsible for Contact”

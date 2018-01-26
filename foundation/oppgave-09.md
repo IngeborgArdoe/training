@@ -1,4 +1,5 @@
 #Oppgave 9: Request
+
 Vi ønsker nå å lage et nytt forretningsobjekt «Request» som lar oss registrere forespørsler fra kunder. Request skal brukes videre i oppgavesettet til blant annet å generere ordrebekreftelse og i rapporter, så her er det viktigst at objektet modelleres opp. Oppgavene vil bestå av noen påkrevde og noen valgfrie oppgaver – de valgfrie tar du dersom tid og lyst.
 
 Før vi modellerer opp Request lager vi objektene for kodeverket etc til Request, slik at vi kan sette Data Interpretation korrekt umiddelbart ved modellering av objektklasse Request.

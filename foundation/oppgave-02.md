@@ -107,7 +107,7 @@ Vi har nå laget objektet «Contact» nesten ferdig. Siste steg er å sette noen
 
 Merk at man når som helst kan gå tilbake og justere egenskapene ved Object Class og Object Class Properties med noen få unntak (feks Data Interpretation på Object Class Property – hvis denne skal endres i etterkant nå propertyen slettes og legges til på nytt). Man kan også legge til ny Object Class Properties på en Object Class i etterkant (feks om man ønsker å legge til Photo på Contact) ved å kjøre wizard «Add object class properties» fra høyreklikk på objektklassen i Studio – men man må da ha utvidet tabellen i databasen med det nye feltet i forkant.
 
-7.	Vi kom nå på at vi mangler et felt for ansvarlig bruker på kontaktperson. 
+7. Vi kom nå på at vi mangler et felt for ansvarlig bruker på kontaktperson. 
    1. Lag et nytt felt på Contact: Responsible.
    *Veiledning: Feltet må legges til i databasen først: Det kan gjøres ved å kjøre SQL «alter table Contact add ResponsibleUserID uniqueidentifier». Gå deretter til Object Class «Contact» -> Høyreklikk -> «Add Object Class Properties..». Trykk Next i første dialog. I andre dialog leser Genus opp felter fra tabellen som ikke er modellert opp ennå. Trykk Next. I dialogen «Property Definitions», dobbeltklikk på raden og endre Data Interpretation til «User» (pass på å endre Display Name til «Responsible» igjen etterpå). Trykk OK og Finish*.
    2. Sett Default verdi for Responsible til  «User (User Account)» (Active User Account).

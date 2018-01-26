@@ -7,7 +7,9 @@ Vi skal nå lage en enkel Rule som gjør følgende: Dersom man huker av «Is Cus
    *Kommentar: Dette vil si at Rulen lytter etter endringer på objektklasse Company og felt «Is Customer». Kun etter lagring endring på feltet «Is Customer» vil denne Rulen kjøres. Man kan (selv om det ikke er relevant i denne Rulen) legge til andre Data Sources som leses opp ved kjøring av Rulen, dersom man skal lage logikk mot andre data sourcer enn Company.*
    3. Actions: 
       1. Vi må ha en Decision ytterst med Condition at «Is Customer» må være satt til True og at State er Inactive.
+      
       *Merk: Det er kun da vi trenger å endre State til Active.*
+      
       2. Legg deretter til en Modify Objects som endrer State til Active
 
       *Husk Scope rundt, ellers vil ikke endringene tre i kraft.*

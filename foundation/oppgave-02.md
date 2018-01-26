@@ -56,15 +56,14 @@ Når man legger til en ny draft Property angir man Logical Name (navnet på felt
 
 Best Practice på navn på felter i databasen (Physical Name): Samme som Logical Name, men uten space og «camel case». Feks: Logical Name «First Name» får «FirstName» som Physical Name. Unntaket er referanser til andre objekter: Propertyen “Company” bør ha Physical Name “CompanyID” for å indikere at feltet er en referanse til ID’en til et annet objekt.
 
-3.	Gå til menyen «Actions» (øverst i Studio)-> «Forward Engineering» og velg objektet «Contact» i dialogen. Trykk Next to ganger. Du får nå generert opp et SQL script for å opprette tabellen «Contact» i databasen. Kopier dette scriptet og kjør det (i SQL Server Management Studio) mot databasen (GenusCRM_EDUXY_Data).
+3. Gå til menyen «Actions» (øverst i Studio)-> «Forward Engineering» og velg objektet «Contact» i dialogen. Trykk Next to ganger. Du får nå generert opp et SQL script for å opprette tabellen «Contact» i databasen. Kopier dette scriptet og kjør det (i SQL Server Management Studio) mot databasen (GenusCRM_EDUXY_Data).
 
 Vi har nå laget tabellen for «Contact» i databasen. Vi skal nå modellere opp selve Object Class’en for Contact.
 
 Vi presiserer igjen at man ikke må opprette Draft objektklasser, men at vi her gjør det da det er god rutine for å verifisere objektmodellen sin mot andre (internt / kunder) før man oppretter tabeller i databasen og modellerer opp de faktiske objektklassene. Det er lettere å endre en Draftmodell enn det er å endre objektmodellen straks objektene ikke er drafts lenger. Vi bruker alltid en del tid på objektmodellen når vi designer forretningsapplikasjoner – da det som kjent er mer kostbart å endre en applikasjon på «datalaget» straks brukergrensesnitt og logikk har blitt lagt på.
 
-4.	Opprett objektklassen «Contact» i Studio.
-   *Veiledning: Gå til noden Object Classes i Studio og høyreklikk -> New -> Object Domain. Gå gjennom wizarden.* 
-
+4. Opprett objektklassen «Contact» i Studio.
+  *Veiledning: Gå til noden Object Classes i Studio og høyreklikk -> New -> Object Domain. Gå gjennom wizarden.* 
    1. Første steg: Velg databasen det skal leses fra (settes default dersom kun 1 database, men en applikasjon i Genus kan ha tabeller liggende i flere ulike databaser.)
    2. Andre steg: Velg tabellen du skal modellere opp («Contact»). Her har man mulighet til å overstyre navnet på objektet vist i Genus CRM (feks dersom tabellen har et teknisk navn)
    3. Steg «Table columns»: Velg her hvilke av kolonnene i databasetabellen du ønsker å modellere opp. Her er default alle valgt, trykk Next.

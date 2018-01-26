@@ -5,7 +5,7 @@ Dette krever at vi modellerer opp et objekt Document (a la «Mail») som lar oss
 
 1. Modeller opp Object Class «Document».
 
-  *Veiledning: Vedlagt er SQL’en for å opprette tabellen for å spare tid. Viktig ved modellering er at Data Interpretation på File Name, Fila Data, File Extension og File Size settes (til de innebygde data typene i Genus med samme navn).*
+   *Veiledning: Vedlagt er SQL’en for å opprette tabellen for å spare tid. Viktig ved modellering er at Data Interpretation på File Name, Fila Data, File Extension og File Size settes (til de innebygde data typene i Genus med samme navn).*
 
   SQL: 
 
@@ -35,9 +35,9 @@ Dette krever at vi modellerer opp et objekt Document (a la «Mail») som lar oss
 
 2. Legg til Document.File Data som et søkefelt på Company.
 
-  *Veiledning: Dette gjør at man fra søk i Selskap kan gjøre fritekstsøk i fildataene på tilhørende dokumenter. Dette setter du opp ved å legge til Document.File Data i «Search» arkfanen på egenskapene for Object Class «Company». *
+   *Veiledning: Dette gjør at man fra søk i Selskap kan gjøre fritekstsøk i fildataene på tilhørende dokumenter. Dette setter du opp ved å legge til Document.File Data i «Search» arkfanen på egenskapene for Object Class «Company». *
 
-  OBS: For at man skal få opp «Full text» søkeoperatorer når man søker i feltet, må man inn på Object Class Property «Document.File Data» og sette på «Full Text and Like operators» i arkfane «Data Filtering».
+   OBS: For at man skal få opp «Full text» søkeoperatorer når man søker i feltet, må man inn på Object Class Property «Document.File Data» og sette på «Full Text and Like operators» i arkfane «Data Filtering».
 
 3. KJØR EN DEPLOY TO ALL. Grunnen er at det snart skal settes opp et «File Preview» - og da benyttes noen kall mot serveren som krever at serveren har kjennskap til denne nye objektklassen.
 4. Lag en ny Task: **Paste new Document from File** som tar Company og File(s) som input, og oppretter Document(s).

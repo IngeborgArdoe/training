@@ -59,6 +59,7 @@ skal telle antall fullførte aktiviteter per måned per Company Speciality hitti
    Pass også på at du på measure for Sales filtrerer kun Requests i State «Closed» og Type «Order». Dette kan du gjøre «per measure» (høyreklikk -> Local Filters) ELLER du kan legge inn Request State og Request Type i seksjon «Filters» i rapporten og sette filter her. Sistnevnte gjør at hvis Measurene (for Sales) har en connection mot disse, og disse har filtrering vil også measurene filtreres i henhold. For å slippe å sette opp Connection «hver gang» for hvert measure for sales kan du på Object Class «Request» sette opp default connections i arkfane «Data Aggregation» - da settes connections for deg i rapporter.*
 
 5. **VALGFRI OPPGAVE: Legg til snarveier til rapportene i Navigation Pane.**
+
    *Kommentar: Alle rapportene (gitt at du har rettigheter på dem – det ligger i likhet med Tasks sikkerhet per rapport også) er uansett tilgjengelig fra meny «Discover» i klienten. Men enkelte rapporter av høy viktighetgrad eller som benyttes ofte kan man legge inn snarveier til i Navigation Pane. Se eventuelt fasitløsningen hvordan det er valgt å legge ut rapporter her.*
 
 <br>

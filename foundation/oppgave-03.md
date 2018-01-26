@@ -1,7 +1,5 @@
 ##Oppgave 3
 
-test
-
 1. Lag en ny Form: «Contact»
    1. I Studio, gå til User Interface -> Forms. Høyreklikk -> New -> Desktop Form. Lagre denne med en gang med navn «Contact».
    2. Data Sources (øverst til venstre): Velg denne. Her legger man inn objektet (eller objektene) man skal vise eller benytte i Formen. Legg til «Contact» som en Data Source. *Veiledning: Se screenshot under. Merk at:*

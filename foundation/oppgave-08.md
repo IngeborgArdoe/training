@@ -55,6 +55,7 @@ Dette krever at vi modellerer opp et objekt Document (a la «Mail») som lar oss
    Tips: Ny Section under Context Tab Group Document, Tab Document Management: Tab Section Manage for Delete og Tab Section Clipboard for paste. Husk symboler og enabling condition (for Delete).
 
 Vi skal nå lage funksjonalitet for å sende epost til en kontaktperson og lagre eposten som «Mail». Denne oppgaven er også valgfri, men det anbefales å i det minste se i fasitløsningen hvordan denne er løst.
+
 8. VALGFRI OPPAVE: Opprett en ny task: «Send Mail to Contact» som du publiserer til en knapp på Contact form’en samt på en knapp i Griden for kontaktpersoner i Company Formen. 
    1. Opprett tasken. Tasken skal åpne et mailvindu, og ved trykk på send skal mailen lagres som et Mail objekt.
   

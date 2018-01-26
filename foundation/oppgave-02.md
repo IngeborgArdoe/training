@@ -73,7 +73,7 @@ Vi presiserer igjen at man ikke må opprette Draft objektklasser, men at vi her 
 
 Hvis du nå utvider noden «Object Classes» i Studio ser du objektet Contact. Hvis du utvider noden Contact og trykker på Properties, finner du listen med Object Class Properties for Contact objektklassen.
 
-5.	Endre følgende innstillinger på Property-ene til Contact (ved å dobbelklikke på property-en):
+5. Endre følgende innstillinger på Property-ene til Contact (ved å dobbelklikke på property-en):
    1. Company, First Name og Last Name: Arkfane «Data Validation», huk vekk «Allow blank value». Feltet blir med andre ord påkrevd.
    2. Created Date:
       1. Arkfane “Security”, huk av for “Read”. Feltet blir med andre ord Read Only for sluttbruker. 

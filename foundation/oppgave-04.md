@@ -5,7 +5,7 @@ Vi skal nå lage en table for utlisting av mine kontaktpersoner, og tilgjengelig
    *Veiledning: Fra Studio -> User Interface -> Tables -> New (Basic Table)*.
    1. Under Data Sources: Legg til “Contact”. Huk bort “Private”.
    2. Layout: Her legger til hvilke rader og kolonner som skal være tilgjengelig. Dra inn Data Sourcen (fra høyre) inn i Rows, og dra inn First Name, Last Name, Company, Mobile, Mail, Responsible, State, Position, Created og Modify-feltene inn som Columns.
-   3. Views: 
+   3. Views:
       *Et View er en tilpasning av Layout inkludert filtrering av data og innstillinger rundt søk etc. Det er Viewene som benyttes når en Table legges ut i navigation pane, eller når table legges inn i en Form.*
       1. General: Endre navn på Viewet til My Contacts. Under “Columns” huker du bort “Visible” på Created og Modified feltene.
       Kommentar: Dette gjør at feltene default ikke vises, men kan velges inn.

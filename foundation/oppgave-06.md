@@ -42,7 +42,7 @@ Denne tasken skal ta som input en eller flere Contacts, og endre Responsible på
   *Veiledning: Sett opp som i screenshot under. Dette vil ved kjøring generere en SQL som setter Responsible på alle Contacts som finnes i data sourcen «Contacts input».*
      ![oppg6fig2.JPG](media/oppg6fig2.JPG)
  
-   En ting vi ikke har pratet så mye om ennå (kommer i senere sesjon) er sikkerhet. Det gis tilgang til sikkerhetsgrupper per task. Alle brukere av Genus CRM er medlem av sikkehetsgruppe «Users» og skal ha tilgang til denne tasken. 
+En ting vi ikke har pratet så mye om ennå (kommer i senere sesjon) er sikkerhet. Det gis tilgang til sikkerhetsgrupper per task. Alle brukere av Genus CRM er medlem av sikkehetsgruppe «Users» og skal ha tilgang til denne tasken. 
 
 3. Gå til File -> Properties (øverst til venstre i tasken) og legg til Security Group «Users» i arkfane Security. Huk av for «Find and List» og «Read and Execute».
 

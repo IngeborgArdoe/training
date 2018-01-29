@@ -143,4 +143,4 @@ For å gjøre oppgavene under kan det virke mer naturlig å legge Command på sa
          2. *Veiledning Delete: Se screenshot under: (hhv Command og Event)*
       ![oppg3fig13.JPG](media/oppg3fig13.JPG)
  
-   5. Deploy og test opprettelse, endring og sletting av logginnslag på kontaktperson i klienten.
+   5. Deploy og test opprettelse, endring og sletting av logginnslag på kontaktperson i klienten. 

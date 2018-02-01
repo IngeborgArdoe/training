@@ -140,7 +140,7 @@ For å gjøre oppgavene under kan det virke mer naturlig å legge Command på sa
       4. Legg også till command og event for New og Delete. Her legges også Command på GeneralTab og Event på selve griden.
          1. *Veiledning New: Åpningen av Contact Log i «Create» modus er også two-way bundet. Det betyr at et nytt objekt opprettes i Contact Log formen, men lagringen av dette tas med tilbake til Contact Form’en (hvor man kan trykke lagre knappen). Se screenshot under:*
       ![oppg3fig12.JPG](media/oppg3fig12.JPG)
-         2. *Veiledning Delete: Se screenshot under: (hhv Command og Event)*
+         2. *Veiledning Delete: Se screenshot under: (h.h.v Command og Event)*
       ![oppg3fig13.JPG](media/oppg3fig13.JPG)
  
    5. Deploy og test opprettelse, endring og sletting av logginnslag på kontaktperson i klienten.

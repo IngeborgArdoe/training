@@ -1,6 +1,6 @@
 # Installasjon av Genus App Platform og lenker til miljø
 
-1.	Dersom du ikke har installert Genus App Platform før på maskinen: Åpne nettleseren, og skriv inn http://edufasit.genus.net/GenusCRM/Download/GenusSetup.exe . Dette henter ned Genus App Platform.
+1.	Dersom du ikke har installert Genus App Platform før på maskinen: Åpne nettleseren, og skriv inn http://edufasit.genus.net/GenusCRM/Download/Setup.exe . Dette henter ned Genus App Platform.
 2.	Du får tildelt et miljø. Vi har 16 miljøer: 
     
     edu1a, edu1b, .., edu1h samt edu2a, edu2b, .., edu2h. 

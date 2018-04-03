@@ -13,7 +13,7 @@ Bli kjent med egen løsning (EDU-løsningen du har fått tildelt). Åpne løsnin
    1. I fane Home: Trykk på Open in Default Application for å få utlistingen åpnet i MS Excel.
    2. Velg fane View. Refine: Søkebegrensninger av objekter i listen, enten ved CTRL + F, eller ved valg av en Refiner i panelet til høyre.
    3. Explore: Naviger til andre objekter i løsningen som er knyttet mot valgt(e) Companies
-   4. Discover: Åpne en forhåndsdefinert rapport ved å velge «Åpne en rapport». 
+   4. Discovery: Åpne en forhåndsdefinert rapport ved å velge Discovery i navigasjonsmenyen->Reports og dobbeltklikke på rapporten.
 6.	Gå til Administration. Se på Users og General Codes
 
  

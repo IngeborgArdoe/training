@@ -5,9 +5,8 @@
 ## Enkelt web-grensesnitt
 I denne oppgaven skal du lage et enkelt web-grensesnitt for å vise aktuelle aktiviteter for selskaper innlogget bruker er ansvarlig for – med mulighet for å sette status til Completed.
 1. Klargjør for Genus Apps:
-   1. I Studio: Gi Super Users privilege: Sign in as an app user
-   2. Deploy to all (du må deploye to all for at det du gjør skal vises i nettleser. Det tar omtrent ti sekunder fra du deployer til endringene blir gjenspeilet på web).
-   3. Verifiser at du når følgende side:
+   1. Deploy to all (du må deploye to all for at det du gjør skal vises i nettleser. Det tar omtrent ti sekunder fra du deployer til endringene blir gjenspeilet på web).
+   2. Verifiser at du når følgende side:
       * For dere på edu1: http://edu1.genus.net/edu1Y/edu1Y, hvor Y erstattes med bokstav fra brukernavn (feks http://edu1.genus.net/edu1a/edu1a for usr1a).
       *	For dere på edu2: http://edu2.genus.net/edu2Y/edu2Y, hvor Y erstattes med bokstav fra brukernavn (feks http://edu2.genus.net/edu2a/edu2a for usr2a).
     

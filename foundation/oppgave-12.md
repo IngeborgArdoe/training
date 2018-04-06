@@ -7,7 +7,7 @@ Oppgaven er valgfri og man må se an tiden man har til rådighet litt. Det anbef
 
 1. Opprett et schema “Order Confirmation” med “OrderConfirmation” som rotnode og feltene i beskrivelsen over som Elements (alle kan være av data type String)
 
-   *Veiledning: Her kreves at du har fått gjennomgang i hvordan sette opp Schemas. Et Schema er en beskrivelse av hvordan en xml skal se ut. Når man senere benytter «Create Objects» mot dette schemaet som en data source, vil det laget en xml. Denne xml’en kan brukes som input til «Merga Data to a Document» effekten sammen med en word fil. Denne word-filen inneholder tag’er med samme navn som xml-elementene, og da vil effekten flette inn data i disse feltene. Se eventuelt fasitløsningen på hvordan dette schemaet skal se ut.*
+   *Veiledning: Her kreves at du har fått gjennomgang i hvordan sette opp Schemas. Et Schema er en beskrivelse av hvordan en xml skal se ut. Når man senere benytter «Create Objects» mot dette schemaet som en data source, vil det bli laget en xml. Denne xml’en kan brukes som input til «Merga Data to a Document» effekten sammen med en word fil. Denne word-filen inneholder tag’er med samme navn som xml-elementene, og da vil effekten flette inn data i disse feltene. Se eventuelt fasitløsningen på hvordan dette schemaet skal se ut.*
 
 2. Opprett et Word dokument for Order Confirmation med flettefelter ihht navn på feltene i schema i punktet over. 
    *Veilening: Du setter inn «merge field» i word ved å markere stedet du vil legge inn feltet i dokumentet og deretter gå til meny Insert -> Quick Parts -> Field. Deretter velger du «Merge Field» fra lista, og skriver inn feltnavnet (samme som i schema) i «Field Name».*

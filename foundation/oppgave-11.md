@@ -61,7 +61,7 @@ I denne oppgaven skal du lage et enkelt web-grensesnitt for å vise aktuelle akt
    * Flytt litt rundt på og juster til du er fornøyd med utlistingen
   ![oppg11fig5.JPG](media/oppg11fig5.JPG)
   
-## Open Data, Local Objects and Map
+## Open Data, Local Objects and Map (engelsk)
 In this exercise, we will fetch open data from multiple public API’s, store it in local objects and visualize the aggregate data in a map. Note that we do not store any of the data in the database, everything is stored in memory as the client uses the app.
 1. Create a new App-form and set the following layout:
    * Mark the view and name it “Main - map”

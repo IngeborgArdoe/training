@@ -80,7 +80,9 @@ In this exercise, we will fetch open data from multiple public API’s, store it
 5.	Visualization in Map-control
    * Add Map as Control
      * Edit layers on the Map-control
-       - Add Layer, Type = Map and Server Type = OSM
+       - Add Layer
+         - Type = Map
+         - Server Type = OSM
        - Add Layer
          - Type = Point
          - DS = Bike Stations

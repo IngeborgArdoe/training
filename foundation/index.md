@@ -13,4 +13,4 @@ The solution is in a "sandbox environment" and will be reset after the training 
 
 The assigned tasks assume to some extent that you refer to Genus Apps' documentation, or that you ask your supervisor if you are stuck. Genus Apps' documentation can be found at [docs.genus.no] (https://docs.genus.no/). The documentation may not answer all your questions, so please ask your supervisor - or the other course participants!
 
-The assigned tasks are currently only available in Norwegian, but will be translated to English at a later time. The other material is in English, i.e. the half-finished and the blueprint solutions, the Genus Studio modeling tool and Genus Apps documentation.
+The assigned tasks are currently only available in Norwegian, but will be translated to English at a later time. The other material is in English, i.e. the half-finished and the blueprint solutions, the Genus Studio modeling tool and Genus Apps documentation. Translation is ongoing...

@@ -1,15 +1,15 @@
-# Installasjon av SQL Server Management Studio
+# Installation of SQL Server Management Studio
 
-For å utvikle («modellere») i Genus App Platform må man ofte lage nye tabeller og felter i databasen. Til dette trengs SQL Server Management Studio installert på egen PC.
+To be able to develop/model in Genus Apps, you often have to create new tables and columns in the associated database. For this you will need SQL Server Management Studio (SSMS) on your computer.
 
-Hvis du ikke ønsker å installere dette eller ikke har mulighet, vil det stå en PC i kurslokalet hvor du kan kjøre SQL’ene dine på (det er ikke så mange av dem), eller du kan be veileder kjøre dem for deg. Men vi anbefaler, hvis mulig, at du installerer dette på egen PC.
+If you for some reason don't want to (or are not allowed to) install SSMS on your computer, you will find one in the training room on which you can run your SQL querys, or you can ask the instructor to run them for you. That being said, we do recommend you to install it on your own computer if possible.
 
-## Last ned siste release av SQL Server Management Studio (SSMS) 
-https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms
-*Etter installasjon, start SQL Server Management Studio lag en ny connection med connection string: “192.168.121.109,1458» (merk, samme connection string brukes for alle miljøer – alle databaser er samlet på samme databaseserver), som i eksempelet under:*
+## Download the latest release of SQL Server Management Studio (SSMS)
+https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms . 
+*After installation, launch SSMS and create a new connection with connection string "192.168.121.109,1458". (Note: The same connection string is used for all environments as all databases are located on the same database server):
 
 ![installklient1.JPG](media/installklient1.JPG) 
  
-Benytt «din» bruker for innlogging “eduXY” (hvor XY er nummeret på miljøet du har fått utdelt) med passord “L3arn1ng!”. Spørringene skal kjøres mot database «GenusCRM_EDUXY_Data». Dette velger du etter innlogging i boksen øverst til venstre, etter at du har trykket på «New Query»:
+Utilize username "eduXY" (where XY is your assigned environment number) and password "L3arn1ng!". All querys will be run against database «GenusCRM_EDUXY_Data». After login, you will have to click on "New Query" and select the correct database in the box located in upper left corner:  
  
  ![installklient2.JPG](media/installklient2.JPG) 

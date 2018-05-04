@@ -1,36 +1,37 @@
-## Casebeskrivelse: Genus CRM
+## Case description: Genus CRM
 
 ###Fasitløsningen Genus CRM inneholder følgende forretningsobjekter
-- Company & Log (loggføring av viktige hendelser mot selskapet)
+###Provided solution Genus CRM contains the following business objects:
+- 	Company & Log (logging of important company events)
 -	Contacts & Log
 -	Activities
 -	Mail
 -	Document
--	Request (forespørsler fra kunder)
--	Users (brukerne som har tilgang til løsningen)
--	Codes (ulike kodeverk)
+-	Request (requests from customers)
+-	Users (users that have access to the solution)
+-	Codes (various code domains)
 
-Companies har et flagg som sier om de er kunde eller ei. Dette for å holde på basen av aktive kunder samt tidligere kunder eller «prospects».
-Under et Company ligger en eller flere Contacts (kontaktpersoner), som er de man holder kontakten med, gjennomfører salgsmøter med, mottar forespørsler fra etc.
-Activities benyttes for å planlegge møter, og de «completes» når aktiviteten er gjennomført. Det er drag / drop av aktiviteter mellom egen outlook og Genus CRM. Activities har en ansvarlig bruker samt at de kan være knyttet mot en kontaktperson.
+Companies have a flag that indicates whether they are customers or not. This is to keep track of active customers, in addition to earlier customers and/or prospects.
+Each company has one or more Contacts, which are the persons to contact, conduct sales meeting with, receive requests from and so on.
+Activities are used to plan meetings. When executed, their status is set to "completed". It is possible to drag-and-drop activities between Outlook and Genus CRM. Activities also have a responsible user and can be linked to a contact.
 
-Mail benyttes for å dra viktige dialoger og bekreftelser inn på selskapet i Genus CRM. Man kan også sende epost fra systemet, som lagres både i egen outlook og på selskapet i Genus CRM.
-Documents benyttes for å dra inn viktige dokumenter inn på selskapet i Genus CRM. Man kan også generere noen dokumenter fra Genus, som feks Ordrebekreftelse (fra en Request som er blitt en bekreftet ordre)
-Alle brukere av løsningen ligger inne som Users, for å sette ansvarlige for aktiviteter, selskaper etc.
+The Mail object allows the user to drag important e-mail conversations and confirmations from Outlook into Genus CRM and to the respective company. One can also send e-mail from the system. These will be stored both in Outlook and on the company in Genus CRM.
+Similarly, important Documents can be dragged into Genus CRM and stored on the company. One can also generate some documents from Genus, e.g. order confirmations (from a Request that has been confirmed as an order).
+All users of the solution are stored as Users, and can be responsible for activities, companies and so on.
 
-I tillegg ligger det kodeverk i løsningen, som feks Activity Code, for at sluttbrukere (superbrukere) skal kunne justere dette kodeverket selv.
+In addition, there are Code-objects in the solution (e.g. Activity Code), which will allow end/super users to modify code domains themselves.
 
 ### Case
-Du, som bruker av løsningen, jobber i et selskap som selger sykkeldeler til en rekke sykkelbutikker rundt om. Sykkelbutikkene er definert som Companies og kontaktpersonene ved butikkene ligger som Contacts.
+You, as a user of the solution, works in a company that sells bike parts to various bike stores around the country/world. The bike stores are defined as Companies and the contact persons at these stores are defined as Contacts.
 
-Ditt daglige arbeid består i å skaffe nye kunder og følge opp eksisterende kunder. Til dette trengs salgsstøtte; du trenger et system for å 
--	Holde track på kunder og kontaktpersoner
--	Loggføring av hva som har foregått / foregår på disse kundene
--	Registrering av salgsaktiviteter, og ha en oversikt over egne og andres aktiviteter mot kundene
--	Loggføre viktige dokumenter og epost
--	Registrere forespørsler fra kunder om sykkeldeler, status på forespørselen, og detaljering av forespørselen.
--	Ta ut statistikker på salg og aktiviteter
--	Effektivt søke i databasene
--	Generere ordrebekreftelser og sende ut dette til kundene.
+Your daily work consists of getting new customers and to follow up existing ones. In order to do this, you need a sales support system to
+-	Keep track of customers and contact persons.
+-	Log what is going on / has been going on with each customer.
+-	Register sales activities, and get an overview of your own and others activities towards the customers.
+-	Log important documents and e-mail.
+-	Register requests from customers about bike parts, statuses of requests, and detailing of requests.
+-	Show statistics on sales and activities.
+-	Search data effectively.
+-	Generate order confirmations and send these to customers.
 
-Startløsningen du får utdelt inneholder noen av hovedobjektene i løsningen, men ellers lite funksjonalitet. Startløsningen inneholder ikke kontaktpersoner, forespørsler og dokumenter, og heller ikke all funksjonalitet som trengs rundt disse nye og eksisterende objekter i løsningen.
+The solution you have been given - and will now work on - already contains some of the main objects of the system, but other than that little functionality. In this course you will be asked to create objects Contacts, Requests and Documents, and eventually most of the functionality needed for the different parts of the system.

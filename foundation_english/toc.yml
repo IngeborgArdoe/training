@@ -1,0 +1,49 @@
+- name: Installation and setup
+  href: installation-of-genus-app-platform.md
+  items:
+  - name: Installation of Genus App Platform og URLs
+    href: installation-of-genus-app-platform.md
+  - name: Installation of SQL Server Management Studio
+    href: installation-of-sql-server-mgmt-studio.md
+- name: Exercises Part I - The case and modeling / client introduction
+  href: casedescription-genus-crm.md
+  items:
+  - name: 1 - The client
+    href: exercise-01.md
+  - name: 2 - Object Classes og Properties
+    href: exercise-02.md  
+- name: Exercises Part II - Forms, Tables and actions (3-4)
+  href: exercises3-4.md
+  items:
+  - name: 3 - Forms
+    href: exercise-03.md
+  - name: 4 - Tables
+    href: exercise-04.md
+- name: Exercises Part III - Ribbon, logic and rules (5-7)
+  href: exercise-05.md
+  items:
+  - name: 5 - Ribbon
+    href: exercise-05.md
+  - name: 6 - Logic and tasks
+    href: exercise-06.md
+  - name: 7 - Rules
+    href: exercise-07.md
+- name: Exercises Part IV - Advanced modeling (8-14)
+  href: exercise-08.md
+  items:
+  - name: 8 - Documents, Mail
+    href: exercise-08.md
+  - name: 9 - Request
+    href: exercise-09.md
+  - name: 10 - Analysis and reports
+    href: exercise-10.md
+  - name: 11 - Genus Apps
+    href: exercise-11.md
+  - name: 12 - Mail Merge
+    href: exercise-12.md
+  - name: 13 - Agents
+    href: exercise-13.md
+  - name: 14 - Miscellaneous
+    href: exercise-14.md
+  - name: 15 - Web Services
+    href: exercise-15.md

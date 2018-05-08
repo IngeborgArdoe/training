@@ -1,19 +1,18 @@
-# Klienten
+# The Genus CRM client
+**SESSION BY INSTRUCTOR:** *The instructor will start of by giving you a brief introduction of the topic. The session will include a review of the client's functionality (i.e. objects, navigation, search, etc) and - to help you get started with modeling - a general look at Genus Studio.*
 
-**SESJON FRA VEILEDER:** *Før oppgavene startes vil veileder holder en sesjon. Tema blir bruk og funksjonalitet av klienten til Genus CRM (objekter i løsningen, navigering, søk etc), samt en overordnet gjennomgang av Genus Studio som hjelp til å komme igang å modellere.*
+## Exercise 1
+Familiarize yourself with your own EDU-solution. Use the shortcut that you defined earlier to open it (point 3 under Installation of Genus Apps and URLs to the environments).
 
-## Oppgave 1 (Stikkord: Klienten)
-Bli kjent med egen løsning (EDU-løsningen du har fått tildelt). Åpne løsningen du har fått tildelt ved å starte snarveien du har opprettet (punkt 3 under «Komme igang» kapittelet)
-
-1. Åpne et Company. Endre på felter, lagre. Registrer en ny aktivitet.
-2. Dra inn en epost på Company. Dobbeltklikk på denne for å åpne. Se på preview pane.
-3. Legg til en ny logglinje på selskap
-4. Søk: Gå til utlistingen av Companies. Søk opp Companies basert på f.eks. navn.
-5. Bli kjent med Ribbon
-   1. I fane Home: Trykk på Open in Default Application for å få utlistingen åpnet i MS Excel.
-   2. Velg fane View. Refine: Søkebegrensninger av objekter i listen, enten ved CTRL + F, eller ved valg av en Refiner i panelet til høyre.
-   3. Explore: Naviger til andre objekter i løsningen som er knyttet mot valgt(e) Companies
-   4. Discovery: Åpne en forhåndsdefinert rapport ved å velge Discovery i navigasjonsmenyen->Reports og dobbeltklikke på rapporten.
-6.	Gå til Administration. Se på Users og General Codes
+1. Open a Company. Change some of the fields. Save. Register a new Activity.
+2. Drag an e-mail onto a Company. Double-click to open it. Take a look at the preview pane.
+3. Add a new line to the company's log.
+4. Search: Navigate to the list of Companies. Search for spesific ones, for instance based on their names.
+5. Get to know the Ribbon
+   1. In the Home tab: Click on "Open in Default Application" to open the list of Companies in MS Excel.
+   2. Select the View tab, and hit "Refine". Here you can add search limitations to objects, either by pressing CTRL + F or by choosing a Refiner in the panel on the right hand side.
+   3. Hit the Explore button. Navigate to other objects in the solution that are linked to the selected Companies.
+   4. Click on Discovery in the Navigation Pane on the left. Open a predefined report under Reports.
+6. Navigate to Administration. Take a look at Users and General Codes.
 
  

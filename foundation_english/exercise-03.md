@@ -1,146 +1,145 @@
-##Oppgave 3
+##Exercise 3
 
-1. Lag en ny Form: «Contact»
-   1. I Studio, gå til User Interface -> Forms. Høyreklikk -> New -> Desktop Form. Lagre denne med en gang med navn «Contact».
-   2. Data Sources (øverst til venstre): Velg denne. Her legger man inn objektet (eller objektene) man skal vise eller benytte i Formen. Legg til «Contact» som en Data Source. *Veiledning: Se screenshot under. Merk at:*
-      1. Data Source «Contact» må endres til å ikke være Private (huke vekk). Grunnen er at man skal åpne skjermbildet (formen) Contact fra andre steder, og da skal Contact filtreres inn til Formen (input til Formen, slik at Formen vet hvilken kontaktperson den skal vise data for).
-      2.  Data Source «Contact» må settes til «Max Occurences» = “One”. Dette for at det skal være mulig å vise properties for Contact i et felt – “Unbounded” brukes om data sources som skal listes ut i GRIDs.
-      3.  Huk også av for «Is Master» og «Enable Read Audit Trail» - dette for at endringshistorikk skal være tilgjengelig når du åpner skjermbildet for en kontaktperson, samt at Formen er «master» Formen for visning av 1 Kontaktperson (Formen kan med andre ord brukes som Default form for Contact).
+1. Make a new Form: «Contact»
+   1. In Studio, navigate to User Interface -> Forms. Right-click -> New -> Desktop Form. Save it right away with name «Contact».
+   2. Data Sources (upper-left corner): This is where you add the object(s) that you want to show or utilize in the Form. Add «Contact» as a Data Source. *Guidance: See screenshot below.* Note that:
+	  1. Data Source «Contact» has to be "public". Hence, uncheck the property named Private. The reason is that you want to open the Contact-form from other places and filter a Contact-object into it (input to the Form, so that the form "knows" which contact person to show).
+	  2. Data Source «Contact» must be set to «Max Occurences» = "One", which means that only one Contact-object can exist in the Form. This has to be done in order to allow the properties of Contact to be shown in fields. "Unbound" is used for data sources that you want to list (e.g. in a Grid, Table, etc).
+	  3. Check also the «Is Master» and «Enable Read Audit Trail» boxes. The former tells Genus that the current Form is the "master" form for showing a single Contact, i.e. you can use it as the default form for showing a Contact. The latter to make the Contact's change history available in the Form.
     ![oppg3fig1.JPG](media/oppg3fig1.JPG)
-   3. Views: Gå til View (Default). Endre Name til «Contact».
-   4. Legg Container «Tab Sheets» ytterst. Trykk inne i den første arkfanen (du markerer med andre ord Group-en som ligger her). Endre Label til “General”. 
-  Legg til en til fane: Gå et nivå ut (tips: trykk Esc-knappen), og dobbeltklikk på "Group" i komponentvelgeren. Gi den nye fanen navn «Activities» (her kommer innhold senere). Dette blir en ny arkfane på Tab Sheet’en. (Nærmere beskrivelse i oppgave 2.2 om dette ikke ga mening.)
-  Legg også på en arkfane med navn «Mail» (innhold kommer senere).
-   5. I Arkfane «General»: Her skal feltene for Contact legges til. 
+   3. Views: Go to View (Default). Change the name to «Contact».
+   4. Add Container «Tab Sheets». Click inside the first tab to mark the Group it contains. Change the name to "General".
+  Add a new tab: Move one level out (hint: press the Esc-button), and double-click on "Group" in the Desktop Control menu. Name the new tab «Activities» (content will come later). 
+  Add also a tab named «Mail» to the Tab Sheet (content will come later).
+   5. In tab «General», you will add the fields for Contact.
   *Veiledning: I en oppgave senere skal man også liste ut «Contact log» nederst i dette skjermbildet, så vi anbefaler følgende oppdeling av «General»:*
+  *Guidance: You will be asked to list «Contact log» at the bottom of this display in an upcoming task. Hence, we recommend the following layout for the «General»-tab:*
   ![oppg3fig2.JPG](media/oppg3fig2.JPG)
 
-      Velg så GroupBox1, og endre «Container Type» til «Group» - dette for å fjerne rammen rundt. Gjør tilsvarende for Groupbox3 og Groupbox4 (eller hva nå enn disse er navngitt default i din løsning).
-  Felter kan legges til ved «drag and drop» fra høyresiden etter at man har endret som følger:
+	  Select GroupBox1 and change «Container Type» to «Group» in the menu on the left. This will remove the frame of the box. Do the same for Groupbox3 and Groupbox4 (or whatever they are called by default in your solution).
+  Fields can be dragged from the right menu and dropped into the form after changing the following:
   ![oppg3fig3.JPG](media/oppg3fig3.JPG)
   
-      Etter at endringen over er gjort, kan man dra inn Properties fra Contact inn i Groupene i «General»-arkfanen. Det vil da default foreslås riktig layoutcontrol (feks, TextEdit foreslås for «First Name»). Men hvis du drar inn Company vil ComboboxEdit foreslås – en dropdown – dette kan være uheldig om det er mange objekter i listen. Hvis du holder inne Shift når du drar over Company vil SeachBoxEdit foreslås isteden, som er mer gunstig for sluttbrukeren.
-   6. Formen for Contact er nå ferdig i sin første versjon. Du kan eventuelt gå til ytterste nivå i View’et og endre Width og Height til 800 og 600. For å se hvordan dette ser ut, endre Alignment til «Fixed». Dette gjør at sluttbruker ikke kan endre størrelsen, så endre tilbake igjen til «Stretch» før du lagrer.
-  Det er litt luft nederst i Form’en, hvilket er OK (her kommer innhold senere). 
-  Vi skal nå legge til utlisting av Contacts inne på et Company (ved hjelp av en GRID), og legge handlinger for å lage ny Contact, samt åpne eksisterende Contact..
+	  After having made the change above, you can drag Properties from the Contact data source into the Groups located in the «General»-tab. A proposed layout control is selected by default (e.g. TextEdit is proposed for «First Name»). If you drag Company into the form, a ComboboxEdit - which is a dropdown - is suggested. This may be unfortunate when there are a lot of objects to choose from. Instead you can press Shift while dragging the Company into the form, and you will get a SearchBoxEdit rather than a ComboBoxEdit - increasing the user friendliness.
+   6. The initial version of the Contact-form is now complete. You can optionally navigate to the outermost layer of the View and set Width and Height to 800 and 600, respectively. To see what this looks like, change the Alignment to "Fixed". The latter alteration prevents the end user to change the size of the window, so Alignment back to "Stretch" before you save.
+  There is a bit of air at the bottom of the Form, which is OK for now (content will come later).
+  Next, you will add a list to the Company-form that shows all associated Contacts (using a grid). You will also make actions to create new Contacts and open existing ones.
 
-2. Legg til utlisting av Contacts i en egen arkfane i Form-en «Company»
-   1. I Studio, gå til User Interface -> Forms. Åpne «Company».
-   2. Legg til en ny arkfane på Tab Sheeten nederst i Formen. 
-  *Veiledning: Se screenshot under*
+2. Add a list of Contacts in a separate tab within form «Company».
+   1. In Studio, navigate to User Interface -> Forms. Open «Company».
+   2. Add a new tab to the Tab Sheet at the bottom of the form.
+  *Guidance: See screenshot below*
   ![oppg3fig4.JPG](media/oppg3fig4.JPG)
  
-   *Merk: I Formen ser du at navnet på arkfanene samt header er «Company label» etc. Ikke bry deg med det per nå – dette vil si at Labelen på controllen er bundet til feltet i et objekt som viser et dynamisk navn på Labelen (på arkfanene vises navn + antall i listen i parantes). Formen «Company» inneholder også forsinket opplesning av data som gjør at feks «Activity History» ikke leses opp før man trykker på arkfanen. Dette er den del av mer avansert modellering som du ikke trenger å tenke på nå.*
-   3. Gi navn (Name + Label) på den nye arkfanen: «Contacts». Høyreklikk på arkfanen, og velg «Sort tabsheets». Flytt denne frem et hakk.
-   4. Under «Data Sources»: Legg til Contacts ("Private" og “Unbounded” - dette er forhåndsvalgt). På properties på denne datasourcen, gå til Data Filter. Legg til filter på at Contact.Company = Company (mao., les opp Contact tilhørende Company’et i Formen).
-  *Veiledning: Se screenshot under:*
+   *Note: In the form, you will see the name of the tab and header is «Company label» etc. Don't worry about this yet - it simply means that the label of the control is bound to the field of an object and hence shows a dynamic name (both name and the number of objects in the list is shown). The form «Company» also contains delayed loading ("lazy loading") of data. This means that certain data, e.g. «Activity History», is not read before the user has actively selected the tab where it will be displayed. Again, you don't have to think about this yet, as it is a part of more advanced modeling.*
+   3. Name the new tab «Contacts» (both Name and Label). Right-click on the tab and select "Sort tabsheets". Move it one step forward.
+   4. Under «Data Sources», add Contacts ("Private" and "Unbounded", as by default). In the properties menu, navigate to Data Filter. Add filter Contact.Company = Company (in other words, only read Contacts belonging to the Company in the form).
+  *Guidance: See screenshot below:*
   ![oppg3fig5.JPG](media/oppg3fig5.JPG)
-  Data filteret kjøres når Formen «Company» åpnes, og kontaktpersoner leses opp.
-   5. Gå tilbake til arkfanen «Contacts» og legg til en Grid. Set Data Binding til denne mot Data Source «Contact». Legg til hvilke kolonner som skal vises under «Columns». Legg deretter på sortering (First Name, Last Name) under «Sorting». Sett også «Selection Mode» til «Multiple» (det blir med andre ord lov å markere flere kontakter i listen).
-  *Veiledning: Se screenshot under*
+  The Contacts are filtered and read when the Company-form opens.
+   5. Navigate back to the tab "Contacts" and add a Grid from the menu on the right. Set the Data Binding to Data Source «Contact». Select which columns to include under Columns. Define the sorting (First Name, Last Name) under Sorting, and set Selection Mode to "Multiple" (allows the user to mark several contacts in the list).
+  *Guidance: See screenshot below*
   ![oppg3fig6.JPG](media/oppg3fig6.JPG)
-  Du har nå lagt til utlisting av Contacts på Company. Nå skal det legges til eventer for å åpne den nylig opprettede Formen «Contact» ved dobbeltklikke på en rad i GRID’en, samt en knapp med event for å lage en ny Contact.
+  You have now added a list of Contacts to Company. Next you will have to add an event that opens the Contact-form you made (by double-clicking a row in the grid) and a button that allows the user to create a new Contact.
 
-#Handlinger i Genus App Platform: Commands og Events:
+#Actions in Genus Apps: Commands and Events:
 
-I Genus App Platform er Commands brukt til å spesifisere effekter som skal skje i en Form. En Command kan bli startet/trigget av en Event eller fra Ribbon. En Command kan være av mange ulike typer – blant annet «Open a Form», «Apply Changes», «Delete Object» eller «Run a Task». Flere Commands kan også settes sammen (Combined) og en Command kan kalle en annen Command. 
+In Genus Apps, Commands are used to specify effects that will happen in a form. A Command can be started/triggered by an Event or from the Ribbon. It can be of various types, such as «Open a Form», «Apply Changes», «Delete Object» or «Run a Task». Several Commands can also be put (Combined) together, and a Command can call another Command.
 
-Eventer kan trigge Commands ved at en for eksempel legger en Event av typen «On Click» på en Button og peker den til en Command som er handlingen som skal skje når knappen blir trykket på.
-For å gjøre oppgavene under kan det virke mer naturlig å legge Command på samme controller som eventen skal ligge på. Dette ville også fungert helt utmerket, men vi velger ofte å legge command på et annet nivå av grunner som vi skal se nærmere på i Oppgave 5: Ribbon. Ribbon er også grunnen til at vi velger et symbol til Commands og endrer navnet til eksempelvis «New Contact» heller enn å bruke Name:Open Contact.
+You can trigger a Command with an Event by for example adding the Event «On Click» to a button and point it to the Command. When the button is clicked, the actions defined by the Command is executed.
+When doing the exercises below, it may seem natural to place the Command on the same control as the Event that points to it. This will work brilliantly, but we often choose to place the Commands on a different level due to reasons we will have a closer look at in Exercise 5: Ribbon. The Ribbon is also the reason why we typically pick a symbol for each Command and change their names, e.g. from Name: Open Contact to "New Contact". 
   
-3. Legg til handlinger i Form-en «Company»
-   1. Velg Griden for Contacts. Under Properties, klikker du på «Commands». Legg til en ny Command av typen «Open a Form»:
-      1. Name: Open
-      2. Tip: Contact (Dette er et tips som kun vises til deg som modellerer.)
+3. Add actions to the Company-form:
+   1. Select the Grid of Contacts. Under Properties, click on Commands. Add a new Command of type "Open a Form": 
+	  1. Name: Open
+      2. Tip: Contact (this tip is only visble for the ones modeling)
       3. Type: Open a Form
-      4. Effect: Contact (Formen som skal åpnes)
-      5. View: Default (hvis det finnes flere Views i formen kan man velge her)
-      6. Data Binding: Default (One Way. Hvis Two-way velges, vil Formen åpnes modalt, og endringene vil tas med tilbake til Company Formen, hvor de må lagres med lagre-knappen)
-      7. Filter Data: Velg «one way binding to objects in the data source». Trykk Modify. I dialogen velger du datasourcen det skal filtreres mot (Contact), samt «Single Selected Object». Dette gjør at aktiv (valgt) rad i Contacts Griden filtreres inn i formen «Contact». Huk også av for «Enable Browse Object» (hvilket gjør at du kan bruke pilene opp / ned for å bla deg gjennom en liste av kontaktpersoner).
-   2. Legg til Event på grid-en:
+      4. Effect: Contact (the form to open)
+      5. View: Default (if a form has several views, you can select one here)
+      6. Data Binding: Default (One Way. If Two-way is chosen, the form will open modally and changes will be brought back to the Company-form where they will have to be saved with the Save-button)
+	  7. Filter Data: Select "one way binding to objects in the data source". Click on Modify. In the dialog box, you will have to choose the data source to filter against (Contact) and "Single Selected Object". This allows the active (selected) row in the Contact-grid to be filtered into the Contact-form. Check also the "Enable Browse Object"-box (makes it possible to use the up / down arrows to browse through a list of contact persons).
+   2. Add an Event to the grid:
       1. Type: On Context Meny Item Click
-      2. Menu Item: Open in a New Window (når skal eventet inntreffe – ved dobbeltklikke (som default trigger verb «Open in a New Window» i Genus).
+      2. Menu Item: Open in a New Window (the event, which by default triggers «Open in a New Window» in Genus, will happen when a row is double-clicked.
       3. Command: Open Contact
-         Trykk OK
-   3. Legg til Command for å opprette ny Contact. Denne skal ligge på arkfanen til Contacts. Dette kan eksempelvis gjøres ved å markere grid-en for Contacts og trykke Esc. Vi legger Commanden her fordi vi ønsker at denne Commanden skal være tilgjengelig både fra grid-en og senere også fra Ribbon.
+         Click OK
+   3. Add a Command to create a new Contact. The Command should be placed on the Contacts-tab. To do this, you can mark the grid and press Esc. We place the Command here because we want it to be available both from the grid and later also from the Ribbon.
       1. Name: New Contact
       2. Type: Open a Form
       3. Effect: Contact
       4. View: Default
       5. Data Binding: Default
-      6. Create Data: Klikk … og velg “Add”. Under «Default Values» må du huske å sette Contact.Company = Company (mao, Contact’en som skal opprettes får satt Company fra Form’en du er i når knappen «New» trykkes)
-      7. Velg et symbol: Dette vil også vise seg å være nyttig senere. Et godt symbol kan være det som dukker opp dersom du gjør søk på «1081». Merk at du kan velge både hovedsymbol og «Overlay». Forsøk å også sett på et overlay, men før du trykker OK, høyreklikk på overlayvalget du gjorde og trykk «Clear».
-      8. Trykk OK og lagre Commanden.
-   4. Legg til Event på grid-en for å opprette ny kontakt.
+	  6. Create Data: Click … and push Add. Under Default Values you will have to set Contact.Company = Company (in other words, the new Contact's Company will be set to the Company that you have open when the "New"-button is clicked).
+	  7. Assign a symbol: This will turn out to be useful later. You will find a suitable symbol if you search for "1081". Notice that you can choose both a main symbol and an "overlay". Try putting on an overlay. Before you push OK, right-click on the overlay and hit "Clear".
+   4. Add an Event to the grid for creating a new contact.
       1. Type: On Context Menu Item Click
       2. Menu Item: New
-      3. Command: New Contact (Command-en du akkurat lagde)
-   5. Vi ønsker også å kunne slette kontakter. Legg til Command for å slette kontakt på arkfanen.
-     *Veiledning: Se på Commanden «Delete» som ligger under ActivitiesTab-arkfanen for veiledning: For vårt tilfelle skal Delete-commanden ha Data Binding mot Data Source «Contact». Tips: Bruk symbol #1195. Enabling: Conditional hvis Contact.Single Selected Object has value. (Bilde under)*
+      3. Command: New Contact (The Command you just made).
+   5. We also want to delete contacts. Add a Command to the Contacts-tab that does this.
+	 *Guidance: Look at the «Delete»-command which is placed on the ActivitiesTab-tab. In our case, the Delete-command should have Data Binding against Data Source «Contact». Tip: Use symbol #1195, and choose Enabling = Conditional with condition "Contact.Single Selected Object has value" (illustration below).*
   ![oppg3fig7.JPG](media/oppg3fig7.JPG)
-
-   6. Legg til Event på grid-en med Type: On Context Meny Item Click, Menu Item: Delete som peker til Command-en. 
-   7. Vi ønsker nå å teste det vi har laget så langt: I Genus Studio velg File (øverst) - >Deploy to this computer. Endringene deployes nå til din egen PC for test. Gå til klienten, åpne et Company og forsøk å legge til en ny Contact, endre en Contact eller slette en Contact. Sjekk at Default verdier ved opprettelse av Contact er som forventet.
-  *Kommentar: Hvis dette hadde vært et test- eller produksjonsmiljø kunne du valgt «Deploy to all» med et valgt tidspunkt. På dette tidspunktet ville endringene du har gjort så lagt blitt tilgjengelig for alle brukere av løsningen.*
+ 
+   6. Add an Event to the grid with Type = "On Context Menu Item Click" and Menu Item = "Delete" pointing to the Command. 
+   7. To test what you have done so far: In Genus Studio, select File (at the top) -> Deploy to this computer. The changes made to the EDU-solution is deployed to your own computer for testing. Open the client (or restart it if you already have it open) and try to add, edit and/or delete a Contact from a Company. Check that the default values on creation are as expected.
+  *Comment: If this had been a test or production environment, you could have chosen "Deploy to all" with a defined time. Changes would then become available for all users of the soultion.*
   
-      Vi har nå laget Contact og verifisert at det fungerer. Vi ønsker nå å kunne liste ut Activities og Mail på Contact. For at dette skal fungerer trenger disse to objektklassene en referanse til Contact.
-4. Legg til et nytt felt på Object Class «Activity»: Contact
-  *Veiledning: Vi legger nå feltet til i databasen først. Du kan kjøre SQL «alter table Activity add ContactID uniqueidentifier» (legger til et felt ContactID på Activity tabellen i databasen. Datatypen er lik primærnøkkelen til Contact).*
+	  You have now made Contact and verified that it works. Next, you will have to list Activities and Mail on Contacts. For this to work, both object classes need a reference to Contact.
+4. Add a new field to Object Class «Activity» named "Contact".
+  *Guidance: Add the field to the database by running SQL statement "alter table Activity add ContactID uniqueidentifier" (this adds a column ContactID to the Activity-table in the database, with data type identical to the primary key of Contact).*
   
-   Deretter høyreklikker vi på Activity og velger «Add Object Class Properties». I veiviserens steg «Property Definition» må du igjen passe på å sette Data Interpretation til «Contact»
-5. Legg til et nytt felt på Object Class «Mail»: Contact
-   *Veiledning: Som oppgave 3.3 over (bytt «Activity» med «Mail» i SQL’en)*
-6. Vi må også gjøre feltet Activity.Contact tilgjengelig i brukergrensesnittet. 
-   1. Åpne Form «Activity» og legg til «Contact» Fra Activity-datakilden som et felt (ComboBox) under Company i grensesnittet.
-   2. Vi ønsker også drop-down’en skal begrenses til Contacts som tilhører aktivitetens Company, og kun Aktive kontakter. Sett «Data Restriction» på feltet.
-      *Veiledning: Se screenshot under:*
+   Then, right-click on Activity and choose «Add Object Class Properties». Remember to set the Data Interpretation under «Property Definition» to «Contact»
+5. Add a new field called "Contact" to Object Class «Mail».
+   *Guidance: Same as exercise 3.4 above (substitute "Activity" with "Mail" in the SQL query)*  
+6. You also have to make Activity.Contact available in the user interface.
+   1. Open form Activity, and include property "Contact" - from the Activity data source - to it as a field (ComboBox) under Company.
+   2. The drop-down should be limited to show only Active Contacts belonging to the Company of the selected Activity. Hence, you will have to define the field's Data Restriction.
+	  *Guidance: See screenshot below:*
       ![oppg3fig8.JPG](media/oppg3fig8.JPG)
-7. Vi skal nå liste ut Activities på en Contact, samt lage mulighet for å registrere Activities på en kontaktperson.
-   1. Lag en utlisting av Activities i arkfane «Activities» i Contact Formen.	
-      *Veiledning: Du må ha Activities som en Data Source i Formen først. Sett på data filter på denne (les opp Activities hvor Activity.Contact = Contact og Activity.State ulik Canceled). Legg deretter en Grid i arkfanene som du binder mot Data Source «Activity». Sett opp Columns. Pass også på å få Sorting (feks etter Due Date descending). Du kan også feks sette på Grouping (på State).*
-   2. Legg til Command på arkfane Activity for å åpne Activity:
+7. It is now time to add activity-functionality to the Contact-form. First, you will have to make a list of all Activities associated with a contact person. Secondly, you will have to make it possible to register Activities on a contact.
+   1. Create a list (grid) of activities in the «Activities»-tab (Contact-form).
+	  *Guidance: You will have to add object Activities to the form's list of data sources. Define its data filter (read Activities where Activity.Contact = Contact and Activity.State <> Canceled), and add a Grid to the Activities-tab. The grid needs to bound to Data Source «Activity». Remember also to select Columns and determine Sorting (e.g. descending Due Date). Try Grouping (on State) as well if you want to.
+   2. Add a Command to the Activity-tab for opening Activities:
       1. Command: Open a Form
       2. Name: Open, Tip: Activity
-      3. Husk filtrering!
-      4. Legg til event på Griden som gjør commanden på Context Menu Item Click: Open in New Window.
-   3. Legg også til command + event for «New» og «Delete» på Griden for Activities. Legg på eventer på disse (tilsvarende som i oppgave 3.3.3, ..4 og ..5). Pass på å få satt Default verdier på «New» slik at Activity kobles både til Contact og til Company. For new kan symbol #1198 passe og for delete #1195. For oppsett for «New» går det an å hente inspirasjon fra oppgave 3.3.
-   4. Deploy løsningen til deg selv og test at du får opprettet Activities på en kontaktperson.
-8. Vi skal også liste ut Mail på en Contact. Muligheten for å legge til ny Mail i en liste er i Company Formen løst med en handling som paster inn ny Mail fra Clipboard (mao., drag & drop). Vi skal lage dette i en senere oppgave, for nå skal vi kun legge til utlisting og åpning av epost på kontaktperson
-   1. Lag en utlisting av Mail i arkfane «Mail» i Contact Form’en )som lister ut Mail hvor Mail.Contact = Contact)
-   2. Legg på event i Grid’en med Event Type «On Activate» og Effect Type «Invoke a File».
-     *Kommentar: Denne gjør at Mailen, ved dobbelklikk på en rad, åpnes i outlook. Dette er bygget inn i plattformen  – hvis objektklassen inneholder File Data, File Size, File Type og File Name så åpnes objektet i «default» program ved «Invoke a File» effekten. Se eventuelt hvordan dette er løst i Grid’en «Mail» i Company Form’en*
+      3. Remember filtering!
+	  4. Add an Event = Context Menu Item Click: Open in New Window to the grid which executes the above Command.
+   3. Additionally, create a Command + Event for «New» and «Delete». Place them on the Activities-grid. Remember to set Default values on «New» so that Activity is connected to both Contact and Company. Symbols #1198 and #1195 should suit «New» and «Delete», respectively. If you need inspiration, go back to exercise 3.3.
+   4. Deploy the solution to yourself and check that you are able to create Activities on a contact person.
+8. You will also have to list Mails associated with a Contact. The way of adding instances to the Mail-list in the Company-form is to paste new Mail from the Clipboard (i.e. drag-and-drop). You will make this functionality in a later task, so for now, you only need to focus on the list itself and how to open an e-mail from it.
+   1. Create a list (grid) in the «Mail»-tab of form «Contact» that shows Mail where Mail.Contact = Contact.
+   2. Add an Event of type "On Activate" to the grid. Set the Effect Type to be "Invoke a File".
+	 *Comment: This allows the Mail to open in Outlook when a row has been double-clicked. This is a built in function of the platform. If the object class contains File Data, File Size, File Type and File Name, the "Invoke a File"-effect will open it in its "default" program. You can look at how this is done in the Mail-grid of the Company-form.*
 
-9. VALGFRI OPPGAVE: «Logg» på kontaktperson
-   Denne er ikke strengt nødvendig for resten av oppgavesettet. Men den inneholder et nytt konsept «Part of composition», så vi anbefaler at oppgaven ihvertfall leses gjennom.
-
-   Vi ønsker å kunne skrive logginnslag på kontaktpersoner (tilsvarende «Company Log» som finnes under Company). 
-   1. Opprett en ny Object Class «Contact Log». Når du går gjennom wizarden for å legge til ny Object Class, pass på å sette Data Interpretation på Created By (User) og Contact. I siste steg i wizarden velger du Part Of Composition “Contact”
-      *Veiledning: Du kan benytte SQL: 
-      Create table ContactLog (ContactLogID uniqueidentifier PRIMARY KEY, "Subject" varchar(1000), CreatedDate datetime, CreatedByUserID uniqueidentifier, ContactID uniqueidentifier)*
-      Når du setter Part of Composition betyr dette at dataene i Contact Log (som henger under en Contact) alltid leses opp sammen med Contact og samtidig arver sikkerhet og “audit trail» fra Contact. Sett opp part of composition ihht screenshot under:
+9. OPTIONAL EXERCISE: A contact person's «Logg»
+   This exercise is not strictly necessary for the remaining set of tasks. However, it contains an interesting new consept - «Part of composition» - so we recommend you to at least read through it.
+ 
+   We want the user to be able to write and add lines to a Contact log (similar to «Company Log» which exist under Company).
+   1. Create a new Object Class called "Contact Log". When you run through the wizard to add the new Object Class, remember to define the Data Interpretation of Created By (User) and Contact (Contact). In the last step of the wizard, choose Part of Composition "Contact".
+	  *Guidance: You can use the following SQL query to create the database table: "Create table ContactLog (ContactLogID uniqueidentifier PRIMARY KEY, "Subject" varchar(1000), CreatedDate datetime, CreatedByUserID uniqueidentifier, ContactID uniqueidentifier)".*
+	  By setting Contact Log to be part of Contact's composition, Contact Log data will always be read together with Contact, and inherit both security and audit trail from it. Set it up like the screenshot below:
       ![oppg3fig9.JPG](media/oppg3fig9.JPG)
-   2. Sett Default verdier på Created by og Created Date, samt sett Subject påkrevd.
-   3. Lag en Form «Contact Log»
-      1. Denne har kun 1 Data Source: Contact Log (husk: Huk vekk «Private» og sett Occurence = Allow one object)
-      2. View (properties): Her endrer du Style til «Dialog Box» og Buttons til «OK and Cancel». Endre også Alignment til «Fixed» og Width = 800 og Height = 600 (feks). 
-     *Kommentar: Grunnen er at denne Formen ikke skal ha noen lagre knapp. Den skal åpnes modalt fra utlistingen av Log på Contact, og ved trykk på «OK» vil denne Form’en lukkes og endrinene lagres i Contact Form’en.*
-      3. View: Denne skal kun vise feltet «Subject». Dra inn dette. Endre følgende egenskaper ved Subject:
-         1.	Huk av Multiline og Word Wrap
-         2.	Sett Vertical Alignment til «Stretch»
-         3. Sett Label Position til «Top».
-   4. Åpne Form «Contact». 
-      1. Legg til en ny Group Box nederst. Gi denne Label «Log:». Huk av for «Is Collapsible» og “Transparent Title Area”. Under “Border Thickness” setter du 0.
-      2. Legg en Grid inni denne. Bind Griden mot Data Source = Contact, Field = Contact Log. Legg på Columns og sett Sorting (Created date, descending). **NB: Det kan være du må starte Genus Studio på nytt før du gjør denne!**
-     *Kommentar: I og med at Contact Log er part of composition og vi ikke skal filtrere vekk noe trenger denne ikke være en egen Data Source. Griden er nå bundet mot gruppen av logginnslag som henger under kontaktpersonen og kan vise kolonner derfra.*
-      3. Legg på Command i GeneralTab for å åpne en Contact Log i Formen «Contact Log». Denne skal kun være enablet hvis Contact Log.Single Selected har verdi. Legg til event for å utføre command i grid-en.
-      *Veiledning: I og med at Formen «Contact Log» er en dialogboks har den ikke mulighet til å lagre endringene selv. Velg derfor ved oppsett av event inn Two Way binding som vist nedenfor:
+   2. Assign Default values to Created By and Created Date, and set Subject to "required".
+   3. Make a form «Contact Log».
+	  1. This should only have one single Data Source: Contact Log (remember to uncheck Private and set Max Occurence = Allow one object).
+	  2. View (properties): Change Style to "Dialog Box" and Buttons to "OK and Cancel". Set Alignment = "Fixed", Width = 800 and Height = 600.
+	 *Comment: The reason for chosing "Dialog Box" is that we don't need a save-button in this form. It will be opened modally from the list of Log objects on Contact, and by clicking OK, the form will be closed and changes saved in the Contact-form instead.*
+	  3. View: This should only display the «Subject»-field. Drag it into the view, and change the following properties of the field:
+		 1. Check Multiline and Word Wrap
+         2.	Set Vertical Alignment to «Stretch»
+         3. Set Label Position to «Top».
+   4. Open form «Contact». 
+	  1. Add a new GroupBox at the bottom. Give it label "Log:", and check Is Collapsible and Transparent Title Area. Set Border Thickness to 0.
+	  2. Add a grid inside the GroupBox. Bind the grid to Data Source «Contact» and Field «Contact Log». Select Columns to show and define the Sorting (Created Date, descending). **NB: You may need to re-start Genus Studio to do this!**.
+	 *Comment: Since Contact Log is part of composition and we don't need to filter out anything, Contact Log don't have to be a Data Source on its own. The grid is now bound to the group of log objects that is "attached" to the Contact in the Data Source.* 
+	  3. Add a Command to the GeneralTab-tab for opening a Contact Log (in form «Contact Log»). This should be enabled if Contact.Log.Single Selected has value. Also add an event to the grid which executes the command.
+	  *Guidance: As the «Contact Log»-form is a dialog box, it can't save changes on its own. Accordingly, choose Two-Way binding (as shown below) when setting up the Event.
       ![oppg3fig10.JPG](media/oppg3fig10.JPG)
       Data Binding: 
       ![oppg3fig11.JPG](media/oppg3fig11.JPG)
-      4. Legg også till command og event for New og Delete. Her legges også Command på GeneralTab og Event på selve griden.
-         1. *Veiledning New: Åpningen av Contact Log i «Create» modus er også two-way bundet. Det betyr at et nytt objekt opprettes i Contact Log formen, men lagringen av dette tas med tilbake til Contact Form’en (hvor man kan trykke lagre knappen). Se screenshot under:*
+	  4. Add also a Command and an Event for New and Delete. Place the commands on GeneralTab and the events on the grid itself.
+		 1. New: *Guidance: The opening of Contact Log in "Create"-mode is also two-way bound. Consequently, a new object is created in the Contact Log-form, but is not saved before the object is brought back to the Contact-form and the Save-button is pressed. See screenshot below:*
       ![oppg3fig12.JPG](media/oppg3fig12.JPG)
-         2. *Veiledning Delete: Se screenshot under: (h.h.v Command og Event)*
+         2. Delete: *Guidance: Se screenshot below: (Command og Event, respectively)*
       ![oppg3fig13.JPG](media/oppg3fig13.JPG)
  
-   5. Deploy og test opprettelse, endring og sletting av logginnslag på kontaktperson i klienten.
+   5. Deploy and test creation, modification and deletion of a Contact's log objects in the client.

@@ -1,30 +1,26 @@
-# Oppgave 4 (Stikkord: Enkel modellering av brukergrensesnitt; Tables)
-Vi skal nå lage en table for utlisting av mine kontaktpersoner, og tilgjengeliggjøre denne for sluttbruker som en menysnarvei i navigasjonspanelet
-1. Lag en ny Table som du kaller «Contacts».
-
-   *Veiledning: Fra Studio -> User Interface -> Tables -> New (Basic Table)*.
-   1. Under Data Sources: Legg til “Contact”. Huk bort “Private”.
-   2. Layout: Her legger til hvilke rader og kolonner som skal være tilgjengelig. Dra inn Data Sourcen (fra høyre) inn i Rows, og dra inn First Name, Last Name, Company, Mobile, Mail, Responsible, State, Position, Created og Modify-feltene inn som Columns.
-   3. Views:
-      *Et View er en tilpasning av Layout inkludert filtrering av data og innstillinger rundt søk etc. Det er Viewene som benyttes når en Table legges ut i navigation pane, eller når table legges inn i en Form.*
-      1. General: Endre navn på Viewet til My Contacts. Under “Columns” huker du bort “Visible” på Created og Modified feltene.
-      Kommentar: Dette gjør at feltene default ikke vises, men kan velges inn.
-      2. Data Filters: Sett Default Filter til å være kontakter hvor Contact.Responsible = Active User Account. Sett også på sortering (First Name, Last Name).
-      *Kommentar: Default filtre kan endres av bruker i klienten. Med andre ord hvis man åpner tabellen i klienten kan man feks foresta et søk og få opp Contacts hvor du ikke er responsible. Hvis man setter på et Mandatory filter vil tabellen alltid begrenses til Contacts hvor du er responsible (dette kravet legges da alltid på søket du gjør).*
-      3. Search: Huk av for Enable Search, og legg til Contact under Data Sources her
-      *Kommentar: Dette gjør at det blir mulig å søke i Contacts når man står i utlistingen «My Contacts» i klienten.* 
-      4. Filter Pane: Huk av for «Show Filter Pane» og legg til Contact under Data Sources her.
-      *Kommentar: Dette gjør at man kan se Default Filteret nederst når man åpner «My Contacts» i klienten.*
+# Exercise 4 - Tables
+You will now make a Table that lists all contact persons associated with the logged in user. The Table will have to be made available as a shortcut in the navigation pane. 
+1. Create a new Table and name it «Contacts»
+   *Guidance: From Studio -> User Interface -> Tables -> New (Basic Table).*
+   1. Data Sources: Add "Contact". Uncheck "Private".
+   2. Layout: Here you define which rows and columns you want to make available. Drag the Data Source (from the right menu) into Rows. Then, drag fields First Name, Last Name, Mobile, Mail, Responsible, State, Position, Created and Modify into Columns.
+   3. Views: A View is a customization of the Layout, including filtering of data, search settings, etc. When you publish a table, either in a form or in the navigation pane, you will utilize a View.
+	  1. General: Change the name of the View to "My Contacts". Under Columns, uncheck Visible on the Created and Modified fields.
+	  *Comment: The two fields will be hidden by default, but can optionally be made visible by the user.*
+	  2. Data Filters: Set Default Filter on «Contact» to be "Contact.Resposible = Active User Account". Also add sorting to the View (First Name, Last Name, ascending).
+	  *Comment: Default filters can be changed by the user in the client. In other words, a user can perform a search in the table and get Contacts that he/she is not responsible for. If you make the same filter mandatory (i.e. set Mandatory filter instead of Default filter), the table will always be limited to Contacts that the user is responsible for.*
+	  3. Search: Check Enable Search and add Contact as a Data Source.
+	  *Comment: This makes it possible to search for Contacts in the «My Contacts»-list.*
+	  4. Filter Pane: Check Show Filter Pane and add Contact to Date Sources.
+	  *Comment: This allows the user to see the Default filter at the bottom of the client when the «My Contacts»-list is opened.*
    4. Events:
-      1. Legg til et Event for å åpne Formen for en Contact ved dobbeltklikk (Open in a New Window)
-         *Veiledning: Merk at Command og Event er sammenslått i Tables. Effect Type = Open a Form, Effect = «Contact», Meny = «Open in New Window». I tillegg må Data Filters settes iht screenshot under:*
+	  1. Add an event for opening the Contact-form by double-clicking a row ("Open in a New Window").
+		 *Guidance: Command and Event are put together in Tables. Set Effect Type = "Open a Form", Effect = "Contact" and Menu = "Open in New Window". Additionally, the Data Filter must be set in accordance with the screenshot below:*
         ![oppg4fig1.JPG](media/oppg4fig1.JPG)
-      2. Legg til event for å lage ny Contact.
-      Veiledning: Name: New Contact. Symbol: # 1081. Enabled: Yes. Visibility: Yes
-      Menu = «New» og Create Data settes iht screenshot under:
+	  2. Add an event for creating a new Contact.
+	  *Guidance: Name = "New Contact", Symbol = #1081, Enabled = "Yes", Visbility = "Yes", Menu = «New». Set Create Data in accordance with the screenshot below:*
       ![oppg4fig2.JPG](media/oppg4fig2.JPG)
-2. Lagre og lukk tabellen. Gå til Studio -> Navigation Pane. Høyreklikke på node «Companies» og legg til Shortcut til Table Contacts (View: My Contacts). Trykk Next. Endre navn her til “My Contacts” (navnet på snarveien i navigation pane slik den vises). Du kan også (valgfritt) legg på et ikon for snareveien. Trykk Finish.
-3. Deploy til deg selv og verifiser at du får opp dine kontakter, samt at du får åpnet disse og opprettet ny.
-4. Vi ønsker også å merke rader for Inaktive kontaktpersoner «grå». Hvis du går til Layout og velger Row «Contact» har du et valg nederst til venstre: «Automatic Formatting». Trykk på denne. Legg til en ny rule med Name =  «Inactive». Under «Foreground» velger du en gråfarge. Under «Condition» setter du Contact.State = Inactive.
-
-Deploy igjen og test dette ved å sette en kontaktperson inaktiv i klienten.
+2. Save and close the table. Navigate to Studio -> Navigation Pane. Right-click on "Companies", and add a Shortcut pointing to the Table that you made (Table: Contacts, View: My Contacts). Click Next. Change the name to "My Contacts", so that the name of the shortcut shown in the navigation pane matches the view. If you like, you can also add an icon to the shortcut. Click Finish.
+3. Deploy to yourself and verify that you can see all your contacts (Note: you may have to put yourself as responsible for some of them first). Check also that you can open and create Contacts.
+4. As a last addition, we wish to highlight inactive contact persons by coloring the rows gray. Navigate to Layout and mark the Row («Contact»). In the menu on the left, open Automatic Formatting and add a new rule named "Inactive". Finally, select some kind of gray as Foreground and use "Contact.State = Inactive" as Condition.
+5. Deploy again og verify your latest modification by setting a contact person to "inactive" in the client.

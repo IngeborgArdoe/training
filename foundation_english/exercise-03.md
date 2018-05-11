@@ -1,5 +1,4 @@
-##Exercise 3
-
+## Exercise 3 - Forms
 1. Make a new Form: «Contact»
    1. In Studio, navigate to User Interface -> Forms. Right-click -> New -> Desktop Form. Save it right away with name «Contact».
    2. Data Sources (upper-left corner): This is where you add the object(s) that you want to show or utilize in the Form. Add «Contact» as a Data Source. *Guidance: See screenshot below.* Note that:

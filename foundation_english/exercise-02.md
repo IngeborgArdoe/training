@@ -14,7 +14,7 @@ Fig.1.1.: The initial version of the Genus CRM object model. Click on «Object C
 NOTE: A diagram is just a drawing board where it is possible to visualize a selection of objects in the solution (all existing objects are listet under «Object Classes»). Here you will automatically see the object relations. If you delete an object from the diagram, it will only disappear from this particular view. The object itself is not deleted from the solution.
 
 
-##Exercise 2
+## Exercise 2 - Object Classes and Properties
 Your first task will be to model/create Object Class "Contact" with all its required and essential Object Class Properties. To construct an Object Class in Genus Studio, an equivalent table that the object class can refer to must exist in the database.
 
 There are two ways of making new Object Classes: 

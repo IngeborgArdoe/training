@@ -1,7 +1,7 @@
 # The Genus CRM client
 **SESSION BY INSTRUCTOR:** *The instructor will start of by giving you a brief introduction of the topic. The session will include a review of the client's functionality (i.e. objects, navigation, search, etc) and - to help you get started with modeling - a general look at Genus Studio.*
 
-## Exercise 1
+## Exercise 1 - The Client
 Familiarize yourself with your own EDU-solution. Use the shortcut that you defined earlier to open it (point 3 under Installation of Genus Apps and URLs to the environments).
 
 1. Open a Company. Change some of the fields. Save. Register a new Activity.

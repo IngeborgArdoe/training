@@ -2,7 +2,7 @@
 **SESSION BY INSTRUCTOR:** *The instructor will start of by giving you a brief introduction of the topic.*
 
  ![oppg5fig1.JPG](media/oppg5fig1.JPG)
-##Ribbon
+### Ribbon
 In this exercise, you will expand the Company-form with Ribbon-functionality. A Ribbon enhances the user's learning and understanding of a new display (i.e. Form or Table), as relevant actions/commands are made clearly visible.
 
 With a well-defined Ribbon, the user can quickly browse through available actions and get a perception of what the form/table offers in terms of functionality. Consequently, the user gets an incresed feeling of control.

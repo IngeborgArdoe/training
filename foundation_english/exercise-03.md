@@ -15,8 +15,7 @@
   *Guidance: You will be asked to list «Contact log» at the bottom of this display in an upcoming task. Hence, we recommend the following layout for the «General»-tab:*
   ![oppg3fig2.JPG](media/oppg3fig2.JPG)
 
-	  Select GroupBox1 and change «Container Type» to «Group» in the menu on the left. This will remove the frame of the box. Do the same for Groupbox3 and Groupbox4 (or whatever they are called by default in your solution).
-  Fields can be dragged from the right menu and dropped into the form after changing the following:
+	  Select GroupBox1 and change «Container Type» to «Group» in the menu on the left. This will remove the frame of the box. Do the same for Groupbox3 and Groupbox4 (or whatever they are called by default in your solution). Fields can be dragged from the right menu and dropped into the form after changing the following:
   ![oppg3fig3.JPG](media/oppg3fig3.JPG)
   
 	  After having made the change above, you can drag Properties from the Contact data source into the Groups located in the «General»-tab. A proposed layout control is selected by default (e.g. TextEdit is proposed for «First Name»). If you drag Company into the form, a ComboboxEdit - which is a dropdown - is suggested. This may be unfortunate when there are a lot of objects to choose from. Instead you can press Shift while dragging the Company into the form, and you will get a SearchBoxEdit rather than a ComboBoxEdit - increasing the user friendliness.

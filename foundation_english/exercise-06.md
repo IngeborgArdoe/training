@@ -1,50 +1,49 @@
-#Oppgave 6: Logikk og effekter
-**SESJON FRA VEILEDER: Før oppgaven starter skal veileder ha holdt sesjon Tasks og Effekter (Action Orchestration) i Genus App Platform.**
+## Exercise 6 - Logic og tasks
+**SESSION BY INSTRUCTOR:** *The instructor will start of by giving you a brief introduction of the topic.*
 
-##Modellering av logikk – prinsipiell oversikt
-Vi er nå klare for å legge til og utvide funksjonaliteten i løsningen. Med funksjonalitet i denne konteksten menes «Tasks» som er brukerinitierte handlinger som kjøres når brukeren velger handlingen i «Actions» pane eller trykker på en knapp (dersom handlingen er publisert til en knapp i en Form).
+###Modeling logic - Principal overview
 
-Tasks, eller «Handlinger» på norsk, tilsvarer på mange måter en metode eller funksjon i programmeringsverdenen; En metode kan ha input, og den kalles fra «et eller annet sted» for å eksekvere. Når den kalles eksekveres den sekvensielt, og den kan ha opprettelse av variabler og lister, ha «if»’er med betingelser og den kan ha løkker (for- eller while loops).
+You are now ready to add «Tasks», which are logical user initialized actions, to the solution. Tasks are executed when the user selects them from the Actions-pane or when he/she clicks on a button pointing to one of them in a Form.
 
-Tasks i Genus App Platform modelleres med samme tankesett som når man programmerer en metode; 
--	Man har et sett av Data Sourcer;  disse kan enten kan være input til Tasken (hvis Data Sourcen ikke er private) eller de kan brukes til lesing av data fra databasen, eller de kan brukes til å opprette data. 
--	Man setter sammen en sekvens av Effects (feks «Read Objects», «Create Object» eller «Modify Objects») som kan ligge inni Decision Blocks («IF»-blokker i programmeringsverdenen) eller Enumerator Blocks («For»-løkker i programmeringsverdenen).
--	En Task kan også kalle en annen Task, og data (objekter) kan overføres fram og tilbake.
--	En Task kan opererer kun «in memory» dersom man legger en Scope Block rundt det hele som ikke har Commit (med andre ord, endringer som gjøres persisteres da ikke til databasen), eller alle endringer som gjøres i effektene kan persisteres til databasen ved å ha dem inni en Scope Block som har Commit.
--	En Task kan også ha exception håndtering (Catch Exception, eller Throw Exception) hvis noe går galt
--	En Task kan også ha brukerdialog (vise dialogbokser til bruker med valg, som styrer hvor man skal gå videre i sekvensen av effekter).
-I Genus Studio ser du Tasks i seksjonen «Logic». Her ligger Rules, Tasks, Agents og Web Services. Disse settes opp på neste samme måte, men er i sin natur ulike: 
--	Tasks trigges av en brukerinitiert handling, som å trykke på en knapp etc. Unntaket her er tasks (som nevn tidligere kan tasks kalle andre tasks) som gjør noen generisk (feks lagrer et Mail objekt basert på fil-input og objekt-input) og som kalles fra andre tasks, rules, agenter eller web services
--	Rules trigges ved business eventer i løsningen, feks «etter endring av Company.Responsible, kjør denne regelen». Oppsettet av effekter tilsvarende som i tasks.
--	Agents trigges av et klokkeslett – dette er skjemalagte handlinger (feks, hver morgen send en epost til alle brukere med aktivitetspåminnelser)
--	Web Services kan settes opp og trigges av at det kommer inn et web service-kall fra feks et ekstern system. Web Services settes opp på logikknivå likt som tasks, men i tillegg har Web Services definerte Schemas som beskriver strukturen på input og output XMLen (mer om dette i senere sesjon)
+A Task corresponds in many ways to a method or a function in the programming world. It may have an input. It is executed with a call from somewhere. It executes sequentually. It may create variables and lists. And, it can include if-statements and loops (for and while). 
+
+Tasks in Genus Apps are modeled with the same mindset that you would use if you were programming a method:
+-	A Task has a set of Data Sources. Instances of these can be given to the Task as input (as long as the Data Sources are not private) or they can by read from the data base. The Data Sources are used to modify, delete or create data. 
+- 	A Task contains a sequence of Effects (e.g. «Read Objects», «Create Object» eller «Modify Objects»), which can be places within Decision Blocks (if-statements) or Enumerator Blocks (for-loops).
+- 	A Task may also call another Task, and data/objects can be transferred back and forth.
+-	A Task can operate in memory only. You will have to place everything within Scope Blocks that have the Commit-option checked (default), if you want to make changes to the database. If you, on the hand, uncheck the Commit-option or exclude the Scope Blocks completely, nothing gets persisted to the database.
+-	A Task can have user dialogs, e.g. show the user dialog boxes with options that be used to control the execution path through the sequence of effects.
+In Genus Studio, you will see Tasks in the «Logic»-section of the left menu. Here are also Rules, Agents and Web Services. Even though the 4 of them are set up similarly, they are by nature different:
+-	Tasks are triggered by a user initialized action, e.g. a click on a button. The exception is generic tasks that are called from other tasks, rules, agents or web services. 
+-	Rules are triggered by business events in the solution, e.g. "after Company.Responsible has been modified, run this rule". The setup of effects is equal to that of tasks.
+-	Agents are triggered by times, e.g. "every morning, send an e-mail to users with activity reminders". They are schematic actions.
+-	Web Services can be set up and triggered by a web-service call from for example an external system. The setup of Web Services are logic-wise equal to that of tasks, but Web Services have additionally defined Schemas which describes the structure of input and output XML (more about this later).
 
 
-Vi begynner med noen enkle tasks.
 ###Change Responsible for Contact
-Denne tasken skal ta som input en eller flere Contacts, og endre Responsible på disse.
-1. Data Sources: Her legger du til Object Class «Contact».
-   *Veiledning: Høyreklikk i panelet øverst til venstre -> Add -> Object. Velg Contact. I panelet nederst (General) huker du bort «Private». Endre også Name til «Contacts input» for å synliggjøre for «resten av løsningen» (når man skal koble inn denne tasken mot en tabell etc) hva som er input til tasken og kardinaliteten på denne (dette er god «Best Practice» men ikke noe krav).* 
-2. Actions: Det første vi ønsker å gjøre er å la brukere angi en input; Brukeren skal angi én User, valgbart fra en dropdown, som skal være ny ansvarlig for kontaktpersonene i data source «Contacts input». Deretter trenger vi en effekt som endrer ansvarlig for kontaktpersonen.
-   1. For å kunne la bruker velge en User og bruke dette valget videre trenger vi en «variabel» å lagre dette i. 
-      1. Gå til «Data Sources» igjen og legg til et «Local Object» (Add -> Local Object). Gi denne Name = «User Input»
-      2. I panelet til høyre legger til til et Field. Sett Display Name til å være «New Responsible» og Data Type til «User». Huk også vekk «Allow blank value» (feltet er påkrevet).
-   2. Gå tilbake til «Actions». 
-      1. Legg til Effect «Open a Form». 
-      2. Dobbeltklikk på effekten etter at den er lagt til, og sett Type = «Local Object Window» og Data Source = «User Input». Huk av for «Create» (vi skal opprette et lokalt objekt i minnet). Trykk på knappen «Modify...» og angi veiledningstekst som skal vises til sluttbruker i vinduet som skal åpnes ved kjøring, feks som under:
+You will now make a simple Task that can take one or more Contacts as input, and change their Resposible.
+1. Data Sources: Add Object Class «Contact».
+   *Guidance: Right-click in the upper-left pane -> Add -> Object. Select «Contact». In the bottom pane (General) uncheck Private. Change also the Name to "Contacts input" to highlight for the "rest of the solution" what the input is, and which cardinality it has. Although this is not required, it is good practice, as it makes it easier when you for example want to connect a table to the task.*
+2. Actions: The first thing that we want to do is to make it possible for the user to provide an input. The user should be able to select one person (User) - from a dropdown - which is to become the new resposible of all input contacts (Data Source "Contacts input").
+   1. First, you will need a "variable" in which you can store the Responsible person (User) that is chosen by the user.
+	  1. Go back to Data Sources and add a Local Object (Add -> Local Object). Name it "User Input".
+	  2. In the pane on the right-hand side, add a Field. Set Display Name = "New Resposible" and Data Type = "User". Uncheck "Allow blank values" (the field is required).
+   2. Navigate to Actions:
+	  1. Add the Effect "Open a Form".
+	  2. Double-click on the effect and set Type = "Local Object Window" and Data Source = "User Input". Check "Create" (we are creating a local object in memory). Click on button "Modify..." and write the text that will be showed to the end user when the window is opened. See below: 
       ![oppg6fig1.JPG](media/oppg6fig1.JPG)
  
-   Du skal nå legge til en effekt som endrer Contact.Responsible på alle objektene i data sourcen «Contact input» og som lagrere dette til databasen.
-
-   3. Legg til Block «Scope».
-      *Merk: Denne har default huket av for «Commit» som betyr at alle endringer (Create eller Modify Objects) som gjøres av effekter inni dette Scopet vil lagres til databasen.*
-   4. Legg til Effect «Modify Objects» inni dette Scopet, og sett denne til å endre Data Source «Contacts input» sitt felt «Responsible».
-  *Veiledning: Sett opp som i screenshot under. Dette vil ved kjøring generere en SQL som setter Responsible på alle Contacts som finnes i data sourcen «Contacts input».*
+   Next is the effect which changes Contact.Responsible for all objects in the data source "Contact input" and saves it to the database.
+   3. Add a Block "Scope".
+	  *Note: By default, the Commit-option is checked. This means that all changes (Create or Modify) done by effects within the Scope will be saved.*
+   4. Place Effect "Modify Objects" within in the Scope and parameterize it to change the "Responsible" field of Data Source "Contact input".
+  *Guidance: Set it up as illustrated below. This will generate a SQL query that changes the Responsible of all Contacts in "Contacts input".*
      ![oppg6fig2.JPG](media/oppg6fig2.JPG)
- 
-En ting vi ikke har pratet så mye om ennå er sikkerhet. Det gis tilgang til sikkerhetsgrupper per task. Alle brukere av Genus CRM er medlem av sikkehetsgruppe «Users» og skal ha tilgang til denne tasken. 
+  
+One important thing that we haven't considered yet is security. Access is given to security groups per task. All users of Genus CRM are members of security group "Users" og should have access to this task.
 
 3. Gå til File -> Properties (øverst til venstre i tasken) og legg til Security Group «Users» i arkfane Security. Huk av for «Find and List» og «Read and Execute». Merk: Tasken må først være lagret før du får tilgang til Security-arkfanen.
+3. Go to File -> Properties (in upper-left corner of the task) and in the Security-tab add security group "Users". Check "Find and List" and "Read and Execute". Note: The task has to be saved before you are allowed to open the Security-tab.
 
 *Tasken er ferdig, men er ikke tilgjengelig for sluttbrukere ennå – den må kobles inn i et User Interface som en event.*
 

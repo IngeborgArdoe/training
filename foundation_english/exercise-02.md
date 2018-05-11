@@ -97,11 +97,10 @@ The object «Contact» is now almost done. The last step is to assign a few prop
    2. Tab «Data Sorting»: Click Add.. and select First Name and Last Name. This will by default sort Contacts automatically by their first name and last name wherever Contacts are listed (e.g. tables, grids) without any sorting specified.
    3. Tab «Data Filtering»: Under "Auto Complete", click Add.. and select First Name, Last Name and Mail. This allows the user to type in a part of a Contact's first name, last name or e-mail in any field of type Contact, and hit Tab to lookup contact persons that match the written text.
    4. Tab «Data Integrity»: Click on Change under "Uniqueness Constraint", and then Add. In the window that opens you can set uniqueness requirements for the creation of contacts. Here you can for example say that "if e-mail has a value", check if another contact person with the same e-mail exists, and if so, qive a warning to the user.
-
-    *Guidance: See screenshot below*
+   *Guidance: See screenshot below*
     ![oppg2fig5.JPG](media/oppg2fig5.JPG)
  
-   This is where you meet Genus' "Condition editor" for the first time. It is used everytime you want to conditionalize something. In this case it will generate a SQL query that checks (prior to saving) whether a Contact in the database has the same e-mail address as the one you want to store, or not. If the query returns true, the user will get a warning. Notice that we have allowed the user to store the Contact nevertheless, as the "Notify user and ask for confimation to proceed"-box has been checked. By selecting the option above, however, you will deny users to store Contacts with identical e-mail addresses. 
+      This is where you meet Genus' "Condition editor" for the first time. It is used everytime you want to conditionalize something. In this case it will generate a SQL query that checks (prior to saving) whether a Contact in the database has the same e-mail address as the one you want to store, or not. If the query returns true, the user will get a warning. Notice that we have allowed the user to store the Contact nevertheless, as the "Notify user and ask for confimation to proceed"-box has been checked. By selecting the option above, however, you will deny users to store Contacts with identical e-mail addresses. 
    5. Tab «Search»: In the Search Properties section, click Modify and add the properties that you want to be searchable (at least Company, First Name and Last Name). This is where you define which properties should be visible in the search panel at the top of the client when you want to find certain Contacts.
    
   **Click OK.** The object «Contact» is now complete and ready to be included in the interace (and optionally get additional functionality).

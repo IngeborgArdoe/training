@@ -1,5 +1,15 @@
 - name: Overview
   href: index.md
   items: 
-  - name: Analysis Part One
+  - name: Introduction to the model
+    href: introduction_model.md
+  - name: Analysis Part One - Trips and visualization of data
     href: analysis_part1.md
+  - name: Analysis Part Two - Formula editor and data manipulation
+    href: analysis_part2.md
+  - name: Datamart Part One - Create a datamart
+    href: datamart_part1.md
+  - name: Datamart Part Two - Manipulate data
+    href: datamart_part2.md
+  - name: Analysis Part Three - Advanced analysis
+    href: analysis_part3.md

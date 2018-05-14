@@ -42,46 +42,42 @@ You will now make a simple Task that can take one or more Contacts as input, and
   
 One important thing that we haven't considered yet is security. Access is given to security groups per task. All users of Genus CRM are members of security group "Users" og should have access to this task.
 
-3. Gå til File -> Properties (øverst til venstre i tasken) og legg til Security Group «Users» i arkfane Security. Huk av for «Find and List» og «Read and Execute». Merk: Tasken må først være lagret før du får tilgang til Security-arkfanen.
-3. Go to File -> Properties (in upper-left corner of the task) and in the Security-tab add security group "Users". Check "Find and List" and "Read and Execute". Note: The task has to be saved before you are allowed to open the Security-tab.
+3. Go to File -> Properties (upper-left corner of the task). Under Security, add security group "Users". Check "Find and List" and "Read and Execute". Note: The task has to be saved before you are allowed to open the Security-tab.
 
-*Tasken er ferdig, men er ikke tilgjengelig for sluttbrukere ennå – den må kobles inn i et User Interface som en event.*
+*The task is finished, but not made available for the end user yet. To do so, you will have to publish it through an Event.*
 
-4. Gå til table «Contacts». Under «Events» legger du til en event for å kjøre tasken
-   1. Effect Type = «Run a Task (Global Scope)»
-   2. Effect = “Change Responsible for Contact”
-   3. Enabling: Huk av for “On selected objects” (tasken skal være enabled ved valg av flere rader)
-   4. Filter Data: sett «Two way binding to objects in the data source: Contact» med Objects: Selected.
+4. Navigate to table «Contacts». Add an Event that executes your task.
+   1. Effect Type = «Run a Task (Global Scope)».
+   2. Effect = "Change Responsible for Contact".
+   3. Enabling: Select "On selected objects" (the task should be enabled when one or more rows are marked).
+   4. Filter Data: Set "Two way binding to objects in the data source: Contact" with Objects: Selected.
 
-      *Merk: Setting av data filter på denne måten er en hurtig måte å si at «tasken sin datasouce Contacts input skal populeres med de kontaktpersonene jeg har valgt i tabellen min». Valgte kontaktpersoner vil nå i klienten, ved å trykke på Action «Change Responsible for Contact» i Actions pane, kopieres inn i tasken «Change Responsible for Contact» og tasken vil eksekvere effektene sine og avslutte.*
-5. Legg til Change Responsible for Contact i Ribbon
-   1. Navngi eventen i tabellen «Change Responsible»
-   2. Gi den symbol #692 med overlay #13
-   3. Åpne Customize Ribbon. Under Main Tabs legg til en ny Tab Section. Kall denne Responsible
-   4. Marker Responsible-Tab Section-en og dobbeltklikk på Change Responsible-eventen (ligger under «Table Commands».
+	  *Note: Defining a data filter like this is a quick way of saying "I want my task's data source «Contacts input» to be populated with all contact persons marked in the table by the user". When clicking the Action «Change Responsible for Contact» in the Action pane, the chosen contact persons are copied into the task «Change Responsible for Contact» and the task's effects are executed.* 
+5. Add «Change Responsible for Contact» to the Ribbon.
+   1. Name the event "Change Responsible".
+   2. Choose symbol #692 with overlay #13
+   3. Open Customize Ribbon. Under Main Tabs, add a new Tab Section. Call it "Responsible"
+   4. Mark tab section "Responsible" and double-click on the "Change Responsible"-event (located under Table Commands).
 
-6. VALGFRITT (men anbefalt!): Gå til Form «Company» og legg til en command for å kjøre tasken. Legg commanden på Contacts-grid-en med riktig enabling. Husk symbol. Legg på event for å kjøre tasken «Change Responsible for Contacts» i grid-en. Gjør kommandoen tilgjengelig også fra Ribbon (Context Tab Group Contact i en ny Section «Responsible Contact».
+6. OPTIONAL (but recommended!): Navigate to Form «Company», and add a command that runs your task. Place the command on the «Contacts»-grid and make sure the enabling is correct. Remember also to create an Event that triggers the command from the grid. The command should also be made available from the Ribbon (Context Tab Group Contact, in a new Tab Section called "Responsible Contact").
 
-*Merk: Under Filter Data for commanden setter du hva som skal filtreres inn til Tasken sin datasource «Contacts input». Denne settes Two-Way mot Data Source “Contact” sin Selected Objects.*
-  
-*At man setter noe “Two-Way” her betyr at endringene tas med tilbake, og hvis endringer i tasken ikke er persistert (committet/lagret) vil man få opp “Lagre” knappen enabled i Contact skjermbildet etter trykk på knappen.*
-
+*Note: Define the Data Filter of the command, i.e. what to filter into the task's data source «Contacts input». It should be a Two-Way binding to Selected Objects in the Data Source «Contact».* 
+*"Two-Way", in this context, means that if changes are not persisted (committed/saved) in the task, they are brought back to the Comapany-form and the "Save"-botton is made available.*
  
-Vi skal nå legge til muligheten for å opprette Mail på kontaktpersoner. Til dette formålet har vi fra før en task «Paste new Mail from file» som tar som input «Mail Message (input)» og «Company». Tasken skal utvides til å også ta «Contact» som mulig input, samt logikk for å lagre en Mail under Contact.
+### Paste new Mail from File - store e-mail under contact
+You will now make it possible to create Mail on contact persons. For this purpose, a task "Paste new Mail from file" - taking «Mail Message (input)» and «Company» as input - has already been created. You will have to expand this with logic to store Mail not only on Companies, but Contacts as well. For this, you must make it possible to input «Contact».
 
-### Paste new Mail from File - lagre e-post under kontakt
-«Paste new Mail from File» skal utvides til å kunne lagre epost under kontaktperson
-1. Åpne task «Paste new Mail from file». Legg til Contact som Data Source og navngi «Contact (input)»
-   *Merk: I og med at det kun pastes ny Mail på én Contact av gangen skal Occurrences på denne Data Sourcen settes til “Allow one object”.*
-2. Utvid logikk under Actions
-   1. Utvid Condition i den første “Decision” blocken til å også slå til hvis kun Contact (input) har verdi.
-   *Veiledning: Man kan lage Conditions med AND og OR. For å få satt opp «Mail Message input skal ha verdi OG (Company input eller Contact input skal ha verdi)» blir utrykket slik (Tips: «Add Group» knappen):*
+1. Open the task «Paste new Mail from file». Add «Contact» as a Data Source and name it "Contact (input)".
+   *Note: Given that Mail will be pasted on one single Contact at a time, the Occurences parameter of this Data Source should be set to "Allow one object".*
+2. Expand the logic under Actions
+   1. Expand the Condition of the first Decision-block to make it valid also when «Contact (input)» has value (and «Company (input)» has not).
+   *Guidance: You can make Conditions with AND and OR. The condition «Mail Message (input)» has value AND (Company input has value OR Contact input has value) is expressed as illustrated below (Tip: Add Group-button):*
    ![oppg6fig3.JPG](media/oppg6fig3.JPG)
-   2. Utvid logikken i Create Objects effekten til å sette feltet «Company» fra Company (input) hvis den har verdi, eller fra Contact (input).Company hvis Contact (input) har verdi. Sett også feltet Contact fra Contact (input).
+   2. Modify the Create Objects effect so that the field Company is set to «Company (input)» if this has value or «Contact (input)».Company if «Contact (input)» has value. Also set field Contact equal to «Contact (input)».
    ![oppg6fig4.JPG](media/oppg6fig4.JPG)
-3. Legg til command i Mail-tab i Contact Form som trigger på Menu «Paste» og som kjører task «Paste new Mail from File». Legg til event i grid. Legg til event i Ribbon (ny seksjon under Mail Management: Cliboard. Husk passende Name, Tip og Symbol (søk opp paste).
+3. Add a command to the Mail-tab in the Contact.form which runs the task «Paste new Mail from File». The command should be triggered by Menu item «Paste». Create the event and place it on the grid. Add the command to the Ribbon (New Tab Section under Mail Management: Clipboard. Remember to provide a suitable Name, Symbol and Tip).
 
-*Veiledning:  Denne settes opp med Effect Type = Run a Task (global scope) og Menu = Paste Special. Under Filter Data setter du tasken sin Mail Message (input) lik «Get objects from the clipboard» og Contact (input) lik Contact.*
-4. Legg samtidig på command i Mail-Tab som kaller eksisterende task “Copy Mail to Clipboard as Mail Message». Tilgjengeliggjør via event på grid og i Ribbon.
+*Guidance: The command is set up with Effect Type = Run a Task (global scope), and the Event with Menu = Past Special. The data filter of the command must be set to «Mail Message (input)» = "Get objects from the clipboard" and «Contact (input)» = Contact.*
+4. While you're at it, place a command on the Mail-tab that calls the existing task "Copy Mail to Clipboard as Mail Message". Make it available through an event on the grid and in the Ribbon.
 
-*Veiledning: Velg her Menu «Copy» og sett Data Filter til tasken sin Mail (input) lik selected objects fra Contact formen sin data source Mail. Ribbon: Søk opp «copy» for å finne passende symbol.*
+*Guidance: Set the event's Menu Item = Copy. The command's Data Filter must be set to «Mail Message (input)» = selected objects in data source Mail. Ribbon: Search for "copy" to find a suitable symbol.*

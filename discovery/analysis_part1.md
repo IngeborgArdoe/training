@@ -1,3 +1,65 @@
-#Analysis part one
+# Analysis Part One - Trips and visualization of data
 
-_Øvingsopplegg er under arbeid_
+**_Øvingsopplegg er under arbeid_**
+
+### SESSION BY INSTRUCTOR: 
+_The instructor will start of by giving you a brief introduction to the topic. The session will include how to create a new analysis, how to add and modify tiles and how to preview the analysis. After the preview the participants will recreate the analysis made in class._
+
+## Agenda for Analysis part one
+
+- How to preview analysis
+- Tiles: create, scale, customize appearance (header, background, etc.)
+	- Tiletypes
+		- Data
+		- Format 
+- Set up tile with selections (to filter data)
+- Ignore selection
+
+## Create and preview analysis
+
+To create an analysis open Genus Apps Discovery Desktop and choose the portal "Discovery". This is where both Datamarts and Analysis are available. In the Discovery-panel click on "Analysis" and "New". Remember to save.  
+
+To preview an analysis either: 
+
+- double click on the saved analysis in Discovery Desktop
+- in the analysis editor click on "Action". In the action dropdown there are two preview choices, one for Genus Desktop preview and one for internet browser preview.   
+
+## Analysis from class
+
+Try to recreate the analysis shown in class/postet on the screen. 
+These are the steps: 
+
+### Total number of trips
+
+1. In the Discovery-panel click "Analysis" and create a new analysis. Remember to save.  
+2. Create a new tile.
+3. Scale the tile to match the solution environment and give the tile a header.
+4. Choose tile type _Measure_.
+	a. In DATA - Value - choose the correct data source and aggregation. 
+	b. In FORMAT - Body - change font size and color.
+5. Save and preview 
+
+### Number of trips per weekday
+
+1. Create a new tile. Scale tile and give it a title. 
+2. Choose tile type _Lines_.
+	a. In DATA - Horizontal category - choose the correct data source. 
+	b. In DATA - Values - choose line/vertical data source.
+	c. In FORMAT - Legend - set a legend position.
+	d. In FORMAT - Axes - Primary Value Axis - Change number format to zero decimals.
+	e. In FORMAT - Values - change number format to zero decimals and change data series color. Also set data point label to _custom_ and write {value}. This will make the values of each datapoint visible. 
+3. Save and preview. 
+
+### Selections with dropdown
+
+1. Create a new tile. Scale tile and give it a title. 
+2. Choose a tile type _Dropdown_
+	a. Choose datasource for categories that should filter data. Choose at least three categories. 
+3. Save and preview. 
+
+
+## Extra work 
+
+- Create a tile that shows _% total amount per payment type_ 
+- Create a tile that shows _total amount per payment type_
+

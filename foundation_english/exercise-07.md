@@ -1,16 +1,16 @@
-#Oppgave 7 (Stikkord: Enkel modellering av logikk; Rules)
-Vi skal nå lage en enkel Rule som gjør følgende: Dersom man huker av «Is Customer» (til «true») på Company, skal også State på Company endres til Active (for å forenkle bruken og forbedre datakvalitet)
-1. Lag en ny Rule (fra Studio -> Rules -> New)
-   1. General: Denne skal hete «Set Company Active when set to Customer». Velg “On After Modify” i dropdown for å velge hvilken event som skal trigge rulen.
-   *Kommentar: Dette sier når Rulen skal kjøre – med andre ord etter lagring av endringene skal denne Rulen kjøres.*
-   2. Data Sources: Velg Company som object class øverst. Velg deretter  “Is Customer” som property.
-   *Kommentar: Dette vil si at Rulen lytter etter endringer på objektklasse Company og felt «Is Customer». Kun etter lagring endring på feltet «Is Customer» vil denne Rulen kjøres. Man kan (selv om det ikke er relevant i denne Rulen) legge til andre Data Sources som leses opp ved kjøring av Rulen, dersom man skal lage logikk mot andre data sourcer enn Company.*
+## Exercise 7 - Rules
+You will now make a Rule that does the following: If a user checks the «Is Customer» field of a Company, i.e. sets it to "true, the State of that Company should be changed to "Active" (this is to simplify the usage and improve the data quality).
+1. Create a new Rule (from Studio -> Rules -> New)
+   1. General: Name the rule "Set Company Active when set to Customer". Select "On After Modify" in the dropdown. This is the event that will trigger the rule. 
+   *Comment: By selecting "On After Modify", the Rule will execute after changes have been stored in the data base.*
+   2. Data Sources: Choose «Company» as object class. Then, select «Is Customer» as property.
+   *Comment: The Rule will now solely run when a change is made to the «Is Customer» field (and saved). If a property isn't provided, a change to any of the object's (e.g. Company) fields would trigger the Rule. It is also possible to add other Data Sources, which are read during execution, if you want to (even if it's not relevant in this Rule) create logic against these.*
    3. Actions: 
-      1. Vi må ha en Decision ytterst med Condition at «Is Customer» må være satt til True og at State er Inactive.
+	  1. You will need an outside Decision with a Condition that is valid when «Is Customer» is equal to "true" AND State is equal to "Inactive". 
       
-      *Merk: Det er kun da vi trenger å endre State til Active.*
+	  *Note: This is the only scenario where we need to change State to "Active".*
       
-      2. Legg deretter til en Modify Objects som endrer State til Active
+	  2. Add a Modify Objects effect that changes the State to "Active".
 
-      *Husk Scope rundt, ellers vil ikke endringene tre i kraft.*
-   4. Deploy endringene og test dette ved å sette et selskap (som ikke er kunde fra før) til  Inactive, deretter huk av for «Is Customer». Da skal State endres etter lagring.
+	  *Note: Remember to put it within a Commit Scope. Otherwise, the change will not be persisted.*
+   4. Deploy to yourself and verify that when you set a Company (which is inactive) to "Is Customer", and save, the State is automatically changed to "Active". 

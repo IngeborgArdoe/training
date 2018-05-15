@@ -1,7 +1,7 @@
 
 **_Øvingsopplegg er under arbeid_**
 
-#Analysis Part Two - Formula editor and data manipulation
+# Analysis Part Two - Formula editor and data manipulation
 
 ### SESSION BY INSTRUCTOR: 
 _After the lesson the participants will recreate the analysis made in class._
@@ -15,8 +15,6 @@ _After the lesson the participants will recreate the analysis made in class._
 
 ## Key Values 
 This goal of this tile is to show how to use the formula editor and how to display the calculated value in combination with self composed text. More on formula editor [here](https://docs.genus.no/users/analyze-report-and-discover/analysis/designer/formula-designer.html)  
-
-    d. In the tiletype panel write a text for each value in _markdown text_. To insert a parameter write {} and then the number of the parameter, i.e. {1} for average price of a trip calculated in the formula editor.  
 	
 1. Create a tile. Resize and set title. 
 
@@ -27,6 +25,8 @@ This goal of this tile is to show how to use the formula editor and how to displ
     b. Create a new parameter. This parameter should also calculate the average price of a trip, but now by using data source, field and aggregation. 
 
     c. Create a new parameter. Calculate the average duration of a trip. 
+
+    d. In the tiletype panel write a text for each value in _markdown text_. To insert a parameter write {} and then the number of the parameter, i.e. {1} for average price of a trip calculated in the formula editor.
 	
 3. Save and preview. Check if the two average prices are the same. If any of the value does not show a "correct" value, try changing the number format of the parameter. 
 

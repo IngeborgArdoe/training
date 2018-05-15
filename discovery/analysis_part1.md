@@ -1,13 +1,14 @@
-# Analysis Part One - Trips and visualization of data
 
 **_Øvingsopplegg er under arbeid_**
 
+# Analysis Part One - Trips and visualization of data
+
 ### SESSION BY INSTRUCTOR: 
-_The instructor will start of by giving you a brief introduction to the topic. The session will include how to create a new analysis, how to add and modify tiles and how to preview the analysis. After the preview the participants will recreate the analysis made in class._
+_The instructor will start of by giving you a brief introduction to the topic. The session will include how to create a new analysis, how to add and modify tiles and how to preview the analysis. After the lesson the participants will recreate the analysis made in class._
 
-## Agenda for Analysis part one
+#### Agenda 
 
-- How to preview analysis
+- How to create and preview analysis
 - Tiles: create, scale, customize appearance (header, background, etc.)
 	- Tiletypes
 		- Data
@@ -26,28 +27,41 @@ To preview an analysis either:
 
 ## Analysis from class
 
-Try to recreate the analysis shown in class/postet on the screen. 
+Try to recreate the analysis shown in class/posted on the screen. 
 These are the steps: 
 
 ### Total number of trips
 
 1. In the Discovery-panel click "Analysis" and create a new analysis. Remember to save.  
+
 2. Create a new tile.
+
 3. Scale the tile to match the solution environment and give the tile a header.
+
 4. Choose tile type _Measure_.
-	a. In DATA - Value - choose the correct data source and aggregation. 
-	b. In FORMAT - Body - change font size and color.
+	
+    a. In DATA - Value - choose a data source and aggregation. 
+	
+    b. In FORMAT - Body - change font size and color.
+
 5. Save and preview 
 
 ### Number of trips per weekday
 
 1. Create a new tile. Scale tile and give it a title. 
+
 2. Choose tile type _Lines_.
-	a. In DATA - Horizontal category - choose the correct data source. 
-	b. In DATA - Values - choose line/vertical data source.
-	c. In FORMAT - Legend - set a legend position.
-	d. In FORMAT - Axes - Primary Value Axis - Change number format to zero decimals.
-	e. In FORMAT - Values - change number format to zero decimals and change data series color. Also set data point label to _custom_ and write {value}. This will make the values of each datapoint visible. 
+
+    a. In DATA - Horizontal category - choose a data source.
+
+    b. In DATA - Values - choose line/vertical data source.
+
+    c. In FORMAT - Legend - set a legend position.
+
+    d. In FORMAT - Axes - Primary Value Axis - Change number format to zero decimals.
+
+    e. In FORMAT - Values - change number format to zero decimals and change data series color. Also set data point label to _custom_ and write {value}. This will make the values of each datapoint visible. 
+
 3. Save and preview. 
 
 ### Selections with dropdown
@@ -57,9 +71,10 @@ These are the steps:
 	a. Choose datasource for categories that should filter data. Choose at least three categories. 
 3. Save and preview. 
 
+While previewing, notice how the numbers in the different tiles change as selections are made. 
 
 ## Extra work 
 
-- Create a tile that shows _% total amount per payment type_ 
+- Create a tile that shows _% trips per borough type_ 
 - Create a tile that shows _total amount per payment type_
 

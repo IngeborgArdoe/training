@@ -62,4 +62,4 @@ The next thing for you to make is the functionality for sending e-mail to contac
    *Guidance: The task needs «Contact» as data source (cardinality=unbound). In addition, you will need a File data source (cardinality=one) of type "Mail Message". This is the Outlook-file which will be created in memory and sent out. After being sent, the e-mail has to be stored as a Mail-object - one instance per contact. Accordingly, you will have to include the data source Mail (cardinality=unbound) as well.*
    *The effects needed are Create a Mail Message (that creates a Mail Message file with the e-mail addresses of the contacts and saves the message to the data source «Mail Message»), Open a Form (that opens a Mail Message window from the file data field of «Mail Message») and Create Objects (that saves Mail objects).*
    
-   *Take a look at the solution for further guidance. Remember to set the security of the task!*
+   *Take a look at the provided solution for further guidance. Remember to set the security of the task!*

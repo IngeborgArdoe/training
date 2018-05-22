@@ -1,20 +1,20 @@
-#Oppgave 9: Request
+## Exercise 9 - Request
 
-Vi ønsker nå å lage et nytt forretningsobjekt «Request» som lar oss registrere forespørsler fra kunder. Request skal brukes videre i oppgavesettet til blant annet å generere ordrebekreftelse og i rapporter, så her er det viktigst at objektet modelleres opp. Oppgavene vil bestå av noen påkrevde og noen valgfrie oppgaver – de valgfrie tar du dersom tid og lyst.
+In this exercise, you will make a new business object «Request» that allows the user to register inquiries from customers. «Request» will be used in later exercises to generate order confirmations and reports, so the most important thing is to model the object. As you have seen before, some exercises are mandatory and some are optional. Do the optional ones if you have time.
 
-Før vi modellerer opp Request lager vi objektene for kodeverket etc til Request, slik at vi kan sette Data Interpretation korrekt umiddelbart ved modellering av objektklasse Request.
-1. Opprett et nytt Code Domain «Request State». Legg til verdier «Open» (value 10), «Closed» (value 20) og «Canceled» (value 30).
+Before modeling «Request», you will be asked to create a couple of Code Domains and an Identifier Domain. In this way, you can set all Data Interpretations correctly right away when you model the object class. 
+1. Create a new Code Domain named "Request State". Add values "Open" (value=10), "Closed" (value=20) and "Canceled" (value=30).
 
-   *Veiledning: I Genus Studio, høyreklikk på «Object Classes» -> Velg «Code Domain».*
-2. Opprett et nytt Code Domain «Request Type». Legg til verdier «Order» (value 10) og «Service» (value 20).
+   *Guidance: In Genus Studio, right-click on Object Classes -> New -> Select Code Domain.*
+2. Create a new Code Domain named "Request Type". Add values "Order" (value=10) and "Service" (value=20).
 
-   *Kommentar: Requestene kan dermed klassifiseres som enten bestillinger (Order) eller forespørsler om hjelp / annet (Service).*
+   *Comment: The requests can hence be classified as either orders ("Order") or inquiries for help / other ("Service").*
 
-Vi ønsker også å ha et «ordrenummer» som settes ved opprettelse av Request, og som er en sekvensiell teller. Til dette kan man opprette et «Identifier Domain» (fra Studio -> høyreklikke «Object Classes» -> New -> velg «Identifier Domain». Dette er en objektklasse i Genus App Platform som krever en tabell i databasen som holder på siste ordrenummer. Tabellen har et navn (feks «OrderNoCounter») og et felt (feks «Order No») av typen integer. Et Identifier Domain kan benyttes til kalkulering av felter, og Genus vil da hente siste nummer i sekvensen fra databasen, og samtidig oppdatere dette med 1.
+It would also be nice to have a sequential "order number" that is generated on the creation of a Request. For this, you can create an «Identifier Domain» (from Studio -> right-click on Object Classes -> New -> select Identifier Domain). Such an object class demands a table in the database containing the latest order number. The table has a name (e.g. "Order No Counter") and an integer field (e.g. "Order No"). When an Identifier Domain is used in the calculation of a field, Genus retrieves the latest number in the sequence and updates it incrementally with 1.
 
-3. Opprett et nytt Identifier Domain med navn «Order No Counter» med et felt «Order No» (int).
+3. Create a new Identifier Domain named "Order No Counter" with integer field "Order No".
   
-   *Veiledning: Opprett tabellen i databasen først, og samtidig insert innslaget for «første ordrenummer» i tabellen ved å kjøre følgende script*:
+   *Guidance: Create the table in the database and insert the first "order number" instance. Do it with the following SQL query:   
 
    create table OrderNoCounter (OrderNo int)
 
@@ -22,61 +22,60 @@ Vi ønsker også å ha et «ordrenummer» som settes ved opprettelse av Request,
 
    insert into OrderNoCounter values (10000)
   
-  I wizarden for opprettelse av nytt Identifier Domain, velger du «Sequential Counter» i steg 2:
+  In the wizard for creating a new Identifier Domain, choose "Sequential Counter" in step 2:
   ![oppg9fig1.JPG](media/oppg9fig1.JPG)
  
-  Og i steg 3 velger du kolonnen som skal inneholder telleren:
+  In step 3, select the column that will hold the counter:
   ![oppg9fig2.JPG](media/oppg9fig2.JPG)
-  Trykk Finish.
+  Click Finish.
   
-4. Opprett Object Class «Request». Husk å sette korrekt Data Interpretation i wizarden ved opprettelse av nytt objekt.
+4. Create Object Class «Request». In the New Object Domain wizard, remember to set correct Data Interpretations.
 
-   *Kommentar: SQL Script for opprettelse er allerede kjørt i databasen din – dette for at vi kunne generere litt data å gjøre rapporter/analyser på i senere oppgave.*
-   1. Sett også default verdi for feltet «Order No». Her velger du «Custom Id Generator» og velger «Order No Counter» i listen. Sett også Subject, State og Type påkrevd. Defaultverdier for State og Type bør også settes. I tillegg bør Received Date settes til «Now» som default, men være mulig å endre i etterkant. Agreed Delivery Date og Expected Delivery Date bør settes med data interpretation «Date» (ikke Date and Time) slik at brukeren ikke trenger å ta stilling til klokkeslett.
+   *Comment: The SQL script for creating table «Request» has already been run against your database. This is because we wanted to genereate some data in advance for making reports/analysis in later exercises.*
+   1. Set also default value for field «Order No». Select «Custom Id Generator» and «Order No Counter» from the list. Make Subject, State and Type mandatory. Default values for State and Type should also be defined. In addition, set the default value of Received Date to "Now", but let it be possible to change. Agreed Delivery Date and Expected Delivery Date should have Data Interpretation "Date" (not "Date and Time"), as we don't want the user to care about the time of the delivery.
    
-   Etter opprettelse av objektklassen, sett Default verdier for «Created» feltene, samt Data Calculation for «Modified» feltene . 
-   *Kommentar: Sistnevnte gjør at man ved opprettelse setter ordernummer som det siste nummeret som ligger lagret i «Order No Counter» tabellen, og deretter oppdaterer (øker) verdien lagret i «Order No Counter» tabellen med 1 automatisk.*
+   After creating the object class, sett Default Values for the «Created» fields and Data Calculations for the «Modified» fields.
+   *Comment: The former locks the values after creation (i.e. they remain unchanged after creation), while the latter allows the values to be automatically set whenever the Request object is modified.*
    
-   2. På egenskapene ved Objektklassen «Request» (høyreklikk -> Open på Object Class «Request») setter du på 
-      - Search (setter søkeegenskaper, under «Search Properties» på arkfane «Search») 
-      -	Events -> Auditing (ønsker å loggføre alle endringer på Request objekter, huk av for «Enable Auditing» under arkfane «Events») 
-      -	Display -> Naming (Feltet «Subject» før ihvertfall være en del av navngivningen, dette angir du i arkfane «Display»)
-      -	Data Sorting (Feks default sortering på «Company» ascending og «Received Date» descending, finnes i arkfane «Data Sorting»).
+   2. Open Object Class «Request» (right-click -> Open) and define the following properties:
+      - Search (set search properties, under «Search Properties» in tab «Search»).
+	  - Events -> Auditing (want to log all changes made on Request objects, check «Enable Auditing» in tab «Events»).
+	  -	Display -> Naming (field «Subject» should at least be a part of the naming, in tab «Display»).
+      -	Data Sorting (default sorting on «Company» ascending and «Received Date» descending, in tab «Data Sorting»).
   
-Vi har nå opprettet objektet Request. Vi ønsker også å kunne dra inn dokumenter og epost på en Request.
+You have now created the object itself. Next, you will make it possible to drag documents and e-mail into a Request.
 
-5. Utvid objektklassene Mail og Document med *nytt felt Request*
+5. Expand object classes Mail and Document with a new field "Request".
 
-   *Veiledning: SQL for å legge til nytt felt på Document tabellen: «alter table Document add RequestID uniqueidentifier». Kjør tilsvarende for Mail-tabellen. Modeller så opp feltet på begge Object Classene i Studio.*
-6. Utvid handlingene «Paste new Mail from file» og «Paste new Document from file» til å ta inn Request som input, og sette referanse til Request ved opprettelse.
+   *Guidance: Use the following SQL query to create a new column in the Document table: "alter table Document add RequestID uniqueidentifier". Run the equivalent query against the Mail Table. Add the two fields to their corresponding Object Classes in Studio.*
+6. Modify tasks «Paste new Mail from file» and «Paste new Document from file» to allow Request as input. Also, make sure that the reference to Request is correctly set on creation.
 
-   *Veiledning: Samme utvidelse som i oppgave 5.2.b): Utvid med å fylle inn fra Request (input) til Mail.Company, Mail.Contact og Mail.Request dersom Request (input) har verdi. *
+   *Guidance: Same modification as in the second part of exercise 6. Add Request to the list of data sources (name it "Request (input)") and use it - if it has value - to set Mail.Company, Mail.Contact and Mail.Request.*
 
-Vi er nå klare til å lage Formen for Requests, liste ut Requests i portalen (Navigation Pane) samt liste ut Requests i Company Formen.
+You are now ready to add Request to the interface, i.e. make a Request-form and list Requests under Company. In addition, you will be asked to make a list (table) of Requests that is accessible from the Navigation Pane.
 
-7. Opprett en **Form for Request**. Legg til Command+Eventer for opprettelse av Mail og Document ved Paste i de respektive Grid’er, samt for sletting og åpning av epost og dokument fra disse.
-   Tips: Formen bør ha en Tab Sheets container ytterst, med en generell arkfane først, deretter Documents og Mail. For å få en velfungerende Ribbon (valgfritt) vil det være lurt å legge command på de respektive arkfanene. Husk da også god navngiving av command og symbol.
-   Man kan bruke mye tid på en Form både på utseende, dynamikk (feks dynamiske labels og visibility conditions) og ytlsesoptimalisering (forsinket lesing).
+7. Create a **Form for Request**. Add commands+events for creating Mail and Documents (by Paste) in the corresponding Grids. Do the same for deletion and opening of e-mail/documents.
+   *Tip: Add a Tab Sheets container with tabs "General", "Documents" and "Mail" in that respective order. To get a meaningful Ribbon (optional), you should place the commands on the tabs. Remember to give the commands good names and symbols.*
    
-8. Legg til **Requests-utlisting** i en ny arkfane på Company Formen. Husk å få med command+event for opprettelse av Ny og for å åpne Request Formen (ved dobbeltklikk på rad). Vi tillater ikke sletting av Requests. Griden bør filtrere vekk Requests i State «Canceled».
-  *Veiledning: Gjerne også legg til «Ny»-handling i Ribbon. Finner du et godt symbol for Request?*
+8. Make a new "Requests" tab in the Company-form and add a **list of Requests**. Remember to create commands+events for creating new and opening existing requests through the Request-form. It should not be possible to delete Requests. However, the grid should filter out Requests with State="Canceled".
+  *Comment: Feel free to add the "New" command to the Ribbon. Find a meaningful symbol for Request.*
   
-9. La en ny Table for Requests med et view som lister ut alle «Open» Requests.
-   *Veiledning: Se eventuelt tidligere Table oppgave. Pass på å få med et fornuftig kolonneutvalg i Layout, og på View’et setter du Data Filter og at Search skal være enabled. Under Events legger til til Event for «Open a Form» ved menu «New» (husk Create Data) og «Open in New Window» (husk Data Filter).*
+9. Create a new Table for Requests with view that displays all Requests with State="Open". Name the view "Open Requests".
+   *Guidance: If needed, take a look at the earlier Table exercise. Make sure you include columns, define the Data Filter and enable Search. Under Events, add one "Open a Form" event with menu item = "New" (remember Create Data) and one with menu item 0 "Open in New Window (remember Data Filter).*
    
-10. Lag en ny View Button i Navigation Pane (navn «Requests»). Legg til snarvei til «Open Requests» table viewet under denne menyen. Husk å legge på sikkerhet på View Button først, da arver menyinnslagene under sikkerheten. Velg et passende symbol (f eks 1972).
+10. Make a new View Button in the Navigation Pane (name "Requests"), and add a shortcut to the "Open Requests"-table. Remember to define the security of the View Button first, so that the security is inherited by all its elements. Choose a suitable symbol (e.g. 1972).
   ![oppg9fig3.JPG](media/oppg9fig2.JPG)
   
-11. VALGFRI OPPGAVE: Lag en Rule: **Set Closed Date and Canceled Date when State changed**. Denne skal endre Closed Date hvis State er satt til Closed (og til NULL ellers) samt sette Canceled Date hvis State er satt til Canceled (og til NULL ellers).
+11. OPTIONAL EXERCISE: Male a rule "Set Closed Date and Canceled Date when State changed". This should change Closed Date if State is set to "Closed" (and NULL otherwise) and Canceled Date if State is set to "Canceled" (and NULL otherwise).
 
-12. VALGFRI OPPGAVE: Gjør feltet Request.State «Read Only» og lag handling for «Close Request», «Re-open Request» og «Cancel Request» som endrer State på Requests i henhold. Publiser handlingene på en knapp i Request Form’en (ved siden av State feks) samt i Company Form’en (under Grid’en). Legg også på enabling conditions på knappene som sier feks at «Close Request» er enabled hvis State = Open, «Re-open Request» er enabled hvis State er Closed eller Canceled, «Cancel Request» er enabled hvis State er Open eller Closed.
+12. OPTIONAL EXERCISE: Force field Request.State to be "Read Only" and make tasks - "Close Request", "Reopen Request" and "Cancel Request" - for setting the State of a Request. Publish the tasks through buttons in the Request-form (e.g. next to State) and in the Company-form (below the grid). Furthermore, add enabling conditions to the buttons, so that "Close Request" is enabled when State="Open", "Re-open Request" is enabled when State="Canceled"/"Closed", and "Cancel Request" is enabled when State="Open"/"Closed".
 
-13. VALGFRI OPPGAVE: Gjør feltene i Request Form’en **Read Only** dersom State ikke er lik Open.
-    *Tips: Når du er på en Control i Formen, har du mulighet til å sette condition for property «Read Only» til venstre i Form editoren. Dette trenger ikke settes «per felt» man kan settes på Group’en som ligger rundt feltene. Alt inni Groupen blir da Read Only dersom condition’en slår til.*
-    
-14. VALGFRI OPPGAVE: Gi arkfanene «Mail» og «Documents» i Request formen en **dynamisk label som teller antall objekter** listet ut (eksempelvis «Mail (3)» og «Documents (1)»).
-    *Veiledning:  Her kan det være lurt å bruke fasitløsningen som bistand.*
-    1. Du trenger en data source av type Local Object (navn: feks «Label values»). Denne får 2 felter: Mail Label og Documents Label med Type = Function og Data Calculation satt som en Formula (for eksempel, ‘’Mail  (‘’ + Misc.ifNull(mail.size(),0).toString() + ‘’)’’)
-    2. Data Filter på det lokale objektet kan ikke leses fra basen, men du kan her sette Data Filter = «Run a local task». Lag en Local Task (under «Tasks») som kun har en Create Objects (av objektet «Label Values»). Koble deretter inn denne tasken i Data Filter på «Label Values»
-    3. På property «Label» på arkfanene «Documents» og «Mail» kan du (istedenfor hardkodet navn på label) binde inn hhv feltet «Label Values.Documents Label» og «Label Values.Mail Label». 
-Deploy og test! Nå er navngivning av arkfanene dynamiske.
+13. OPTIONAL EXERCISE: Force all fields in the Request-form to be "Read Only" if State is not equal to "Open".
+    *Tip: You can determine when a Control is "Read Only" and not by defining conditions in the menu on the left-hand side of the editor. Luckily, you don't have to define one condition per field, you can also do it per Group. Everything placed within the Group will be "Read Only" if the condition is true.*
+	
+14. OPTIONAL EXERCISE: Give tabs «Mail» and «Documents» in the Request-form a **dynamic label which counts the number of objects** listed (e.g. "Mail (3)" and "Documents (1)").
+	*Guidance: It may be necessary to use the provided solution for aid.*
+	1. You will need a data source of type Local Object (name: "Label Values") in the Request-form. Create two fields "Mail Label" and "Document Label" of Type = Function. For Data Calculation, use Formula (e.g. "Mail  (" + Misc.ifNull(mail.size(),0).toString() + ")"  )
+	2. The local object's Data Filter can't be read from the database, but you can set Data Filter = "Run a Local Task". Create a Local Task (under «Tasks») which has a Create Objects («Label Values») effect. Use this task to filter the «Label Values» data source.
+	3. Bind the Label properties of tabs «Documents» and «Mail» to fields «Label Values.Documents Label» and «Label Values.Mail Label», respectively. 
+Deploy and verify! Check the naming of the tabs.

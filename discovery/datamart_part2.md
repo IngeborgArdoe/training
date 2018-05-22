@@ -1,3 +1,12 @@
+**_Øvingsopplegg er under arbeid_**
+
 #Datamart Part Two - Manipulate data
 
-_Øvingsopplegg er under arbeid_
+### Agenda 
+- Subset 
+- Data filter
+- Calculated field
+    - Keep
+    - IgnoreContext
+    - Ignore all selections
+    - Ignore selections

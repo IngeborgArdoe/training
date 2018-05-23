@@ -1,33 +1,31 @@
-# Oppgave 12 - Mail Merge
-*SESJON FRA VEILEDER: Før oppgaven starter skal veileder ha holdt sesjon rundt Mail Merge hvor konseptet forklares og schema-editoren i Genus App Platform vises.*
+## Exercise 12 - Mail Merge
+**SESSION BY INSTRUCTOR:** *The instructor will start off by giving you a brief introduction of the topic. He/she will explain the concept of Mail Merge and show the schema editor in Genus Apps.*
 
-Oppgaven er valgfri og man må se an tiden man har til rådighet litt. Det anbefales uansett å lese gjennom oppgaven.
+The exercises are optional and should be done only if time allows. That being said - we recommend you to at least read through the exercises.
 
-**VALGFRI OPPGAVE:** Lag en ny handling «Order Confirmation» som tar Request som input og som genererer en ordrebekreftelse (et word dokument) fra Requesten. Informasjon som skal flettes inn er Order No, Subject, Description, Expected Delivery Date, Order Value NOK og Company Name, Org No, Contact Name (bestiller), ResponsibleName (navn på brukeren).
+**OPTIONAL EXERCISE:** Make a new task "Order Confirmation", which takes a Request as input and from it generates an order confirmation (Word document). Information that will be merged into the document is Order No, Subject, Description, Expected Delivery Date, Order Value NOK, Company Name, Org No, Contact Name (name of person ordering) and ResponsibleName (name of user).
 
-1. Opprett et schema “Order Confirmation” med “OrderConfirmation” som rotnode og feltene i beskrivelsen over som Elements (alle kan være av data type String)
+1. Create a Schema "Order Confirmation" with "OrderConfirmation" as root node (Complex Type) and all the fields above as Elements (all can be of data type String).
 
-   *Veiledning: Her kreves at du har fått gjennomgang i hvordan sette opp Schemas. Et Schema er en beskrivelse av hvordan en xml skal se ut. Når man senere benytter «Create Objects» mot dette schemaet som en data source, vil det bli laget en xml. Denne xml’en kan brukes som input til «Merga Data to a Document» effekten sammen med en word fil. Denne word-filen inneholder tag’er med samme navn som xml-elementene, og da vil effekten flette inn data i disse feltene. Se eventuelt fasitløsningen på hvordan dette schemaet skal se ut.*
-
-2. Opprett et Word dokument for Order Confirmation med flettefelter ihht navn på feltene i schema i punktet over. 
-   *Veilening: Du setter inn «merge field» i word ved å markere stedet du vil legge inn feltet i dokumentet og deretter gå til meny Insert -> Quick Parts -> Field. Deretter velger du «Merge Field» fra lista, og skriver inn feltnavnet (samme som i schema) i «Field Name».*
-
-   Du må alltid starte dokumentet med et merge field med Field Name = «TableStart:OrderConfirmation» hvor «OrderConfirmation» er navnet på rotnoden i schemaet (eller noden som inneholder feltene du skal flette inn). Tilsvarende må det på slutten av dokumentet ligge et merge field med field name «TableEnd:OrderConfirmation». Imellom disse to flettefeltene kan du legge inn merge field med feks field name «OrderNo». Tips, du kan kopiere flettefelter og deretter høyreklikk og «Edit Field...», da går det raskere.
-
-   Spør eventuelt veileder om å få tilsendt dette word-dokumentet om du ikke ønsker å bruke tid på å lage en word mal for ordrebekreftelse.
+   *Guidance: This exercise requires that you have been through a Schema setup review. A Schema is basically a description of the XML layout. You will later generate XML with your schema through the "Create Objects" effect (data source = schema). This XML can then be used as input to the "Merge Data to a Document" effect along with a Word file. The Word file will contain "tags" (merge fields) with names identical to those of the XML elements, allowing data to be merged into the document. Take a look at the provided solution for inspiration.*
    
-3. Opprett task «Order Confirmation». Publiser denne på en knapp i Request Form’en.
+2. Create a Word document for Order Confirmation with merge fields equivalent to the element names of the schema just made.
+   *Guidance: Insert a "merge field" in Word by marking the spot where you want the data to be placed and navigate to menu Insert -> Quick Parts -> Field. Next, choose "Merge Field" from the list on the left-hand side and type in the "Field Name" (same as the element name in the schema!).*
 
-   *Veiledning: Tasken trenger data sources «OrderConfirmation» (xml schema), Request (input) og Document (to be created) og General File (temp, skal brukes som midlertidig output i flette-effekten før Document creates). Tasken trenger effektene «Create Objects» (som creater OrderConfirmation or mapper verdier til feltene), «Merge Data to a Document» (hvor du legger inn word dokumentet ditt som «Embedded file», OrderConfirmation som «XML Document» og General File som» Output Document») og en ny «Create Objects» (som oppretter et Document objekt med fildata fra General File objektet), samt til slutt en «Invoke a file» (som åpner Document.File Data i word).*
+   You are required to start the document with a merge field "TableStart:OrderConfirmation", where "OrderConfirmation" is the root node (Complex Type) of the schema (or the node that holds the fields that you want to merge). Equivalently, you will have to end the document with a field "TableEnd:OrderConfirmation". In between the latter two merge fields, you can add merge fields such as "OrderNo", "Subject" and so on. Note; to speed up the process you can copy merge fields, right-click and "Edit Field...".
 
-4. **EKSTRA:** Lag en handling «Send Order Confirmation» som lar bruker få blant eksisterende Order Confirmations (Documents på Requesten), og deretter åpner outlook med dokumentet som et attachment. Handlingen bør også lagre Mail objektet. Publiser tasken til Ribbon i Request formen.
+   Ask the instructor to send you the Word document if you don't want to spend time on the order confirmation template.
+   
+3. Create a task "Order Confirmation". Publish it through a button in the Request-form.
+
+   *Guidance: The task needs data sources "OrderConfirmation" (xml schema), Request (input), Document (to be created) and General File (temp, will be used as temporary output in the merge effect before Document is created). Necessary effects to include are a "Create Objects" (creating OrderConfirmation / mapping values), a "Merge Data to a Document" (where the Word document is the "Embedded file", the OrderConfirmation schema is the "XML Document" and the General File is the "Output Document"), another "Create Objects" (creating the Document object with data from the General File object), and fianlly an "Invoke a File" (opens Document.File Data in Word).*
+
+4. **EXTRA:** Make a task "Send Order Confirmation" which, after allowing the user to select among existing Order Confirmations (Documents on the Request), opens Outlook with the document attached. The task should also store the Mail object. Make the task available in the Ribbon of the Request-form.
   
-   *Veiledning: Tasken trenger data sources Request (input),, Mail (to be created), Document (bekreftelsesdokumentet som skal legges ved eposten), Mail Message (temp file som åpnes i outlook og som brukes til opprettelse av Mail-objektet etter sending).
+   *Guidance: Add data sources Request (input), Mail (to be created), Document (confirmation document to attach)and Mail Message (temporary file which opens in Outlook, and is used to generate the Mail object after send).
 
-   Tasken bør ha effektene:
-   * Effekt “Read Object” på data source Document med user interaction (la brukeren velge blant documents knyttet til requesten)
-   * Create a Mail Message (som setter verdier for To-feltet, Subject, legger ved attachment (Document.File Data) og setter forslag til eposttekst). Effekten skal ha innstilling «Write message to a data source» (Mail Message (temp)) slik at eposten ikke sendes ennå. 
-    
-   Dette for at vi skal ta vare på Mail Message filen i en datasource slik at det ved eksekvering lagres tilbake til tasken de endringer gjort i din outlook. Her kunne det vært brukt en Open a Form effekt direkte, men det er mer visuelt å lage epost-filen via «Create a Mail Message» effekten.
-   * Open a Form (velg Mail Message Window) og Modify. Huk av for “Wait until the form is closed”. Denne åpner outlook med foreslått epost og vedlegg (gitt av forrige effekt) og pauser eksekvering til brukeren har trykket på “Send” i outlook.
-   * Create Objects (Mail). Mapp inn felter fra Mail Message (temp) for å lagre epost objektet.*
+   The task should have the following effects:
+   * "Read Object": Data source = Document, with user interaction (let the user choose among documents associated with the request).
+   * "Create a Mail Message": Define "To", "Subject", "Attachments" (Document.File Data) and suggest a default e-mail text. Make sure the effect is set to "Write message to a data source" (Mail Message (temp)) so that the e-mail is not sent immediately. Note: The reason for keeping the Mail Message file in a data source is to avoid losing changes made by the user in Outlook before he/she press "Send". You could have used the "Open a Form" effect directly, but it's more visual to create an e-mail in the "Create a Mail Message" effect.
+   * "Open a Form": Choose Mail Message Window and Modify. Check "Wait until the form is closed". The effect will now open the suggested e-mail and pause the execution until the user has pressed "Send" in outlook. 
+   * "Create Objects": Data source = Mail. Map fields from Mail Message (temp). Put the effect in a Commit Scope to save the Mail object.

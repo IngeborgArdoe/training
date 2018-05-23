@@ -1,67 +1,67 @@
-# Oppgave 11 - Genus Apps
+## Exercise 11 - Genus Apps
 
-*SESJON FRA VEILEDER: Før oppgaven starter skal veileder ha holdt sesjon med intro til modellering av Genus Apps-forms.*
+**SESSION BY INSTRUCTOR:** *The instructor will start off by giving you a brief introduction to Genus App-form modeling.*
 
-## Enkelt web-grensesnitt
-I denne oppgaven skal du lage et enkelt web-grensesnitt for å vise aktuelle aktiviteter for selskaper innlogget bruker er ansvarlig for – med mulighet for å sette status til Completed.
-1. Klargjør for Genus Apps:
-   1. Deploy to all (du må deploye to all for at det du gjør skal vises i nettleser. Det tar omtrent ti sekunder fra du deployer til endringene blir gjenspeilet på web).
-   2. Verifiser at du når følgende side:
-      * For dere på edu1: http://edu1.genus.net/edu1Y/edu1Y, hvor Y erstattes med bokstav fra brukernavn (feks http://edu1.genus.net/edu1a/edu1a for usr1a).
-      *	For dere på edu2: http://edu2.genus.net/edu2Y/edu2Y, hvor Y erstattes med bokstav fra brukernavn (feks http://edu2.genus.net/edu2a/edu2a for usr2a).
+### Simple web interface
+In this exercise, you will make a simple web interface that shows current activities associated with companies for which the logged in user is responsible. It should also be possible to change the status to Completed.
+1. Preparation for Genus Apps:
+   1. Deploy to all (you need to deploy to all for things to show in the web browser. It takes about 10 seconds from deployment until changes are reflected on the web).
+   2. Verify that you reach the following site:
+      * For learners on edu1: http://edu1.genus.net/edu1Y/edu1Y, where Y corresponds to the letter from the username (e.g. http://edu1.genus.net/edu1a/edu1a for usr1a).
+      *	For learners on edu2: http://edu2.genus.net/edu2Y/edu2Y, where Y corresponds to the letter from the username (e.g. http://edu2.genus.net/edu2a/edu2a for usr2a).
     
-      Per nå vil det kun stå "CRM Edu1" med mulighet for å logge ut og lukke - det er ikke så rart siden vi ikke har laget noen app ennå.
-2.	Opprett en ny Form ment til App og sett basic layout på denne:
-   1. Opprett en ny Form: "My tasks | APP"
-      * Først gå til View.
+	  As of now, you should only see "CRM Edu1" and an option to log out and close - which is natural as you haven't made an app yet.
+2. Create a new App Form and give it a basic layout:
+   1. Add a new Form: "My tasks | APP" (Forms -> right-click App -> New)
+	  * Navigate to View
       * Name: "My Activities - Main".
-      * Huk av for Platforms: Tablet, Web on Phone, Web on Tablet, Web on Desktop.
-      *  Padding: 24
-3. Legg til en overskrift
-   1. Dra inn en Text-controller fra App Controls:
+      * Check Platform options: Tablet, Web on Phone, Web on Tablet, Web on Desktop.
+      * Padding: 24
+3. Add a headline
+   1. Drag in a Text-control from App Controls:
          ![oppg11fig1.JPG](media/oppg11fig1.JPG)
       * Content: My Activities
       * Foreground Color: Navy
       * Font Size 24
-4. Legg til en repeating section som repeterer over aktiviteter (Not started or In Progress) som tilhører Companies som innlogget bruker er ansvarlig for. Vis selskapsnavn, Activity’s subject og status vises ut til bruker.
-   1. Legg til Activity-datakilde
+4. Add a repeating section that iterates over Activities ("Not Started" or "In Progress") belonging to Companies which the logged in user is responsible for. Display company name, activity subject and activity status. 
+   1. Add data source Activity
   ![oppg11fig2.JPG](media/oppg11fig2.JPG)
-   2. Lag en Repeating Section som repeterer over Activity
-      * Dra inn en GroupBox i Viewet. Denne GroupBox-en må dras inn fra App Controls
-      * Sett Vertical Alignment: Top
-      * Bind GroupBoxen til Activity-datakilden.
-      * Huk av for “Repeat Content under properties på GroupBox-en.
-      * Sett på sortering på GroupBox-en med sorteringsnøkkel Due Time (Descending).
-   3. Legg inn tekstfelter for selskapsnavn, aktivitetens Subject, frist og aktivitetens State: 
-      * Dra eller dobbeltklikk inn fire tekstfelt i GroupBox-en.
-      * Bind den første til Datasource: Activity Field: Company.Name og gjør tilsvarende for Activity.Subject, Due(Fx) og Activity.State.Display Name
+   2. Create a Repeating Section that iterates over Activity
+      * Drag a GroupBox into the View. 
+      * Set Vertical Alignment: Top
+      * Bind the GroupBox to the Activity data source.
+      * Check "Repeat Content".
+      * Sort the GroupBox on Due Time (Descending).
+   3. Add text fields for company name, activity subject, deadline and activity state:
+      * Drag or double-click 4 Text-controls into the GroupBox.
+      * Bind the first to Datasource:Activity Field:Company.Name, and do the equivalent for Activity.Subject, Due(Fx) and Activity.State.Display Name.
         
-        *Merk: Selv om Activity er en unbounded datasource og feltet bare skal vise ett enkelt tekstfelt trenger vi ikke spesifisere Active Object i DataSource. Dette er fordi vi allerede er i kontekst av et aktivt Activity-objekt når vi er i repeating section over Activity.*
-5. Opprett en App som bindes til Formen du akkurat lagde
-   * Gå til Apps under User Interface i Genus Studio.
-   * Opprett en ny som du kaller My ACctivities. Form My Activities
-   * Huk av for default view for Web og Tablet
-   * Sett AppBar Foreground til Navy
-   * Etter du har lagret, sett security på Appen. (Properties=> Super Users skal kunne Find and List og Read and Execute).
+	    *Note: Although Activity is an unbounded data source and the field is only supposed to show one single text string, you don't have to specify Active Object in DataSource. This is because you are already in the context of an active Activity-object when you are within a repeating Activity section.*
+5. Build an App that is bound to the Form you just made.
+   * Navigate to Apps under User Interface in Genus Studio.
+   * Create a new one which you call "My Activities". Form "My Activities".
+   * Check default view for Web and Tablet.
+   * Set AppBar Foreground to Navy
+   * After saving, define the security of the App. (Properties -> Super Users should be able to "Find and List" and "Read and Execute").
    
-6. Deploy to all og sjekk i browseren at du får forventede resultater (noe a la dette)
+6. Deploy to all and verify that you get expected results in the browser. You should see something like this:
 ![oppg11fig3.JPG](media/oppg11fig3.JPG)
  
-7. Legg til knapp i repeating section for å endre state på aktiviteten til Complete 
-   * Legg til en ny task med input Activity (Name: T.Activity, Max Occurences: One). Husk å sett private=false.
-   * Under General sett “Enable on Application Server”=true
-   * Under Actions: Legg til et Scope med en Modify Object som setter State til Completed.
-   * Lagre og sett security på tasken:
+7. In the repeating section, add a button for changing the state of the activity to Complete.
+   * Add a new task with input Activity (Name: T.Activity, Max Occurences: One). Remember to set Private=false.
+   * Under General: set “Enable on Application Server”=true
+   * Under Actions: Add a Scope with a Modify Object that changes State to Completed.
+   * Save and add security:
   ![oppg11fig4.JPG](media/oppg11fig4.JPG)
-   * Dra inn en Button fra App Controls inn i repeating section over Acitivities. 
-     * Sett background color white, foreground color navy og border color navy, show boarder=true.
+   * Drag a Button from App Controls into the repeating section (Activities).
+     * Set background color = white, foreground color = navy and border color = navy, show border=true.
      * Name: Complete Activity
-   * Sett command og event på knappen for å kjøre tasken. Husk Two-Way Binding til Activity.Single Selected.
-   * Deploy og sjekk at knappen fungerer. 
-   * Flytt litt rundt på og juster til du er fornøyd med utlistingen
+   * To run the task, create a command+event and place them both on the button. Remember Two-Way Binding to Activity.Single Selected.
+   * Deploy and verify that the button works as expected.
+   * Move things around and adjust until you are happy with the display.
   ![oppg11fig5.JPG](media/oppg11fig5.JPG)
   
-## Open Data, Local Objects and Map (engelsk)
+## Open Data, Local Objects and Map
 In this exercise, we will fetch open data from multiple public API’s, store it in local objects and visualize the aggregate data in a map. Note that we do not store any of the data in the database, everything is stored in memory as the client uses the app.
 1. Create a new App-form and set the following layout:
    * Mark the view and name it “Main - map”

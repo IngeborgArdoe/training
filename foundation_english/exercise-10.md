@@ -1,68 +1,61 @@
-# Oppgave 10 Business Intelligence
-*SESJON FRA VEILEDER: Før oppgaven starter skal veileder ha holdt sesjon på BI-verktøyet Genus Discover sin rapportfunksjonalitet i Genus App Platform.*
+## Exercise 10 - Business Intelligence
+**SESSION BY INSTRUCTOR:** *The instructor will start off by giving you a brief introduction of the topic. The session will concern Genus App's report functionality.* 
 
-I Genus App Platform har vi et produkt «Genus Discovery». Dette er et rapporterings og analyseverktøy. Rapporteringsdelen benyttes i hovedsak for å sette opp forhåndsdefinerte rapporter  for sluttbrukere. 
+In Genus Apps, we have a product called "Genus Discovery". This is a report and analysis tool. The report part is mainly used for setting up predefined reports that benefits the end user.
 
-Verktøyet kan også være tilgjengelig fra klienten for dedikerte brukergrupper slik at også sluttbrukere kan sette opp rapporter selv eller endre eksisterende.
+The tool can also be made available from the client, so that dedicated groups of end users can set up or modify reports/analysis themselves.
 
-Vi skal nå gjennom et par oppgaver i oppsettet av rapporter. **En kort oppsummering av rapportfunksjonaliteten i Genus Discovery og hva som kreves for å sette opp rapporter er gjengitt her:**
+You will now go through a couple of exercises concerning the creation of reports. **A brief summary of Genus Discovery's report functionality is described here: *
 
-*Du lager en ny Rapport fra Genus Studio -> Discovery -> Reports -> New. Strukturen i verktøyet er logisk strukturert som i screenshot under:*
+*A new report is created from Genus Studio -> Discovery -> Reports -> New. The tool's structure is logically set up as shown below:*
 ![oppg10fig1.JPG](media/oppg10fig1.JPG)
  
-*For at en Object Class skal bli tilgjengelig som en dimensjon må dette være angitt på Object Class nivå (properties på objektklassen, arkfane «Data Aggregation». For at et Measure skal være mulig å telle på (ref No Of Activities i eksempelet over) må det finnes en Object Class Property ved samme navn som har huket av «Enable as  Measure» (fra eksempelet over: i arkfane «Data Aggregation» når du ser på properties på Activity.No of Activities skal dette være huket av).*
+*To make an Object Class available as a dimension in a report, you will have to specifically set it as property of the Object Class (right-click on the Object Class -> Open -> Data Aggregation). If you want to count on a Measure (ref No Of Activities in exercise 9), an Object Class Property with the same name - having "Enable as Measure" checked - must exist (look at the Data Aggregation properties of Activity.No of Activity - the "Enable as Measure" option should be checked).* 
 
-I tillegg må man i rapporten si hvordan No of Activities skal grupperes per måned (det kan jo være basert på «Created date» eller «Completed date». Denne koblingen («Connection») settes opp i rapporten. 
+In addition, you will have to specify how to group No of Activities per month, as this can be based either on «Created date» or «Completed date». You will have to set up these kinds of links ("Connections") in the report.
 
-Tilgjengelige koblinger defineres under objektklasse i Studio:
+Connections that will become available in the report are defined under Object Classes in Studio:
 ![oppg10fig2.JPG](media/oppg10fig2.JPG)
  
-*Merk: Man trenger ikke angi kobling fra Activity til Company da verktøyet selv skjønner at denne skal være tilgjengelig (da Activity har et felt Company). Men dersom No of Activities feks skal grupperes per Country, må man lage en Connection fra Activity til Country via Company.
+*Note: You don't have to specify the link between Activity and Company, as Activity has a Company-field (the tool understands). However, if No of Activities is to be grouped by for example Country, you will have to create a Connection from Activity to Country through Company.
 
-I rapporten settes koblinger fra No of Activities til “Month” og “Company” dimensjonene opp ved å høyreklikke på No of Activities -> Connections:*
+In the report, you can set up connections from No of Activities to the "Month" and "Company" dimensions by right-clicking No of Activities -> Connections:*
  ![oppg10fig3.JPG](media/oppg10fig3.JPG)
 
-I tillegg har vi satt på filtrering av Activities (kun de i state Completed) under «Local Filters» i screenshot over.
+As you can see, we also added a "Local Filter" which selects only Activities with State="Completed" to the report.
 
-Merk også at når du jobber i Genus Discovery så jobber du i klienten. 
+Note also that when you are working in Genus Discovery, you are working in the client. Accordingly, if you for example add a new connection to an Object Class, you will have to deploy in order to make the Connection available for reports.
 
-Hvis du legger til en ny Connection feks må du deploye endringene for at du skal ha den ny Connection’en tilgjengelig i rapporten.
+1. Create a new report "Activities per Company Speciality YTD". The report should count the number of completed activities per month per Company Speciality so far this year. It should also sum the number of activities both horizontally and vertically, and be presented to the end user either as a table or as a line chart.
 
-1. Lag en ny rapport «Activities per Company Speciality YTD». Rapporten
-skal telle antall fullførte aktiviteter per måned per Company Speciality hittil i år. Rapporten skal også summere opp antall aktiviteter horisontalt og vertikalt. Rapporten skal kunne vises som tabellform og som linjediagram for sluttbruker. 
+   *Tip: You will have to set up a new Connection from Activity to Company Speciality (through Company). You also need to make Object Class Company Speciality available as a dimension in reports (i.e. check the "Allow this Object Class to be used as a dimension when aggregating data" option under the object class' Data Aggregation properties).*
 
-   *Tips: Du trenger her å lage en ny Connection fra Activity til Company Speciality (via Company) slik at verktøyet skjønner hvordan den skal joine seg ut til Company Speciality ved kjøring. Du trenger også å gjøre objektklasse Company Speciality tilgjengelig som en dimensjon i rapporter («Allow this Object Class to be used as a dimension when aggregating data» huket av i arkfane «Data Aggregation» på objektklasse Company Speciality).*
-
-   For å sette på summering kan du høyreklikke på «No of Activities» i rapporten -> Series Calculation og velge å summere både for Months og for Company Specialities. For å få «sum av sum» nederst å høyre hjørnet (sum av aktiviteter for alle Company Specialities for alle måneder YTD) kan du gå inn på begge Sum-funksjonene og huke av for «Calculate intersections»:
+   In order to sum data, right-click on "No of Activities" in the report -> Series Calculation and choose to sum over both Month and Company Speciality. Check "Calculate intersections" in both sum functions to get the "sum of sums" (i.e. sum of activities for all Company Specialities for all months YTD) in the bottom right corner:
   ![oppg10fig4.JPG](media/oppg10fig4.JPG)
- 
-   For å styre hvilke knapper som skal være tilgjengelig for sluttbruker kan du huke av dette under «Buttons» (øverst til høyre). Velg her mulighet for å shifte periode fram og tilbake, Explore, Normal view (tabell,) Line (linjediagram) og Filter Pane. Merk at brukeren med dette (Normal View + Line) kan velge å se trenden som en linje per Company Speciality eller tabularisk per måned per Company Speciality.
 
-   *Kommentar: Vi har ikke sagt hvordan «No of Activities» er satt opp som Object Class Property – den er den del av «startløsningen» du har fått tildelt. Hvis du åpner Object Class Property «No of Activities» fra Studio kan du se at feltet er av type «Function» - det er med andre ord ikke referert til et feltnavn i databasen (Provider Name), men har i arkfane Data Calculation satt på et RDBMS expression «\*», samt at det i arkfane Data Aggregation er sagt «Count» som aggregation method. Det som skjer når No of Activities brukes som et measure i en rapport er at det lages en SQL som kjører en «select count(\*) from..» og grupperer på dimensjonene satt opp i rapporten.*
+  
+   You can control which buttons to show in the report by checking/unchecking them in the "Buttons" menu (upper right). Allow the user to shift period back and forth. In addition, check Explore, Normal view (table), Line (line chart) and Filter Pane. By adding both Normal View and Line, the user can choose to see the trend as a line per Company Speciality or as a table per month per Company Speciality.
 
-2. Lag en ny rapport «Sales per Company last 3 months”. Rapporten skal ha measure «Order Value NOK» og dimensjonene «Month» (velg forrige måned og to måneder tilbake) og «Company». Det skal kun vises Requests av typen «Order» og med state «Closed», og koblingen mot måned skal være basert på Received Date.
+   *Comment: We haven't said anything about the setup of "No of Activities" as an Object Class Property yet. If you open Object Class Property "No of Activities" from Studio, you will see that the field is of type "function". In other words, the field is not refering to a specific column in the database (Provider Name), but is instead calculated. The value is set according to the RDBMS expression ("\*") defined in the Data Calculation tab and the aggregation method ("count") selected under Data Aggregation. When "No of Activities" is used as a measure in a report, a SQL statement "select count(\*) from.." grouped on the report's dimensions is executed.* 
 
-   *Tips: Du må gjøre Request.Order Value NOK tilgjengelig som et measure først. Du må også lage Connections fra Request til Month. Sistnevnte finnes det en snarvei for i Genus Studio: Høyreklikk på Received Date -> Create Calendar Connections. Du må også huke av for at Request skal være tilgjengelig som en dimensjon i Data Aggregation.*
+2. Create a new report "Sales per Company last 3 months". The report should have measure "Order Value NOK" and dimensions "Month" (select last month and two months back) and "Company". Only Requests of type "Order" and state "Closed" should be shown, and the connection against month should based on Received Date.
 
-3. Lag en rapport «Company Benchmark» som viser measures «Annual Sales» og «Employees» fra Company, og benytter Company som vertikal dimensjon til å vise et Plot diagram.
+   *Tip: You need to make Request.Order Value NOK available as a measure first. In addition, you will have to make a Connection from Request to Month. There is a shortcut for doing the latter in Genus: Right-click on Received Date -> Create Calendar Connection. You also need to make sure that object class Request is available as a dimension (Data Aggregation).*
 
-   *Kommentar: Se eventuelt på fasiten. Denne rapporten kan benyttes til å spotte selskaper med potensiale og de man bør holde seg unna. Plot diagrammet viser alle Annual saled plotted mot Number of Employees for alle selkaper – et punkt «over kurven» er et selskap som gjør det bra (mye omsetning per ansatt)*
+3. Create a report "Company Benchmark" which shows measures "Annual Sales" and "Employees" from Company, and utilizes Company as vertical dimension to show a Plot diagram.
 
-4. VALGFRI OPPGAVE: Lag en rapport «Sales and Activities per Employee YTD» som har No of Activities, Sales (fra Request.Order Value NOK) og Avg Sales per Request (Formula basert på Order Value NOK / No of Requests).
+   *Comment: Take a look at the provided solution if needed. This report can be used to distinguish between companies with potential and companies to keep away from. As the diagram shows all Annual Sales plotted against Number of Employees for all companies, a point "above the curve" is a company doing well (i.e. generates a lot of revenue per employee).*
 
-   Legg også inn et Measure (formula) “Sales Increase” som viser økning eller reduksjon i salg i forhold til forrige måned.
+4. OPTIONAL EXERCISE: Create a report "Sales and Activities per Employee YTD" which has No of Activities, Sales (from Request.Order Value NOK) and Avg Sales per Request (formula based on Order Value NOK / NO of Requests).
 
-   *Tips: Du må lage en ny object class property på Request: No of Requests (tilsvarende No of Activities). For å få til Avg Sales per Request må du benytte en Formula i rapporteringsverktøyet. I en Formula kan du kun sette opp uttrykk basert på de Measures som er lagt ut i rapporten (under «Values») – derfor trenger du å legge inn No of Request her, og sette denne Hidden.
+   Add also a Measure (formula) "Sales Increase" that shows the increase or decrease of sales relative to last month.
 
-   For å lage formula for Sales Increase trenger du et Measure som viser Sales forrige måned. Du kan kopiere «Sales» (høyreklikk -> copy), rename denne til «Sales (last month)» deretter gå til instillingen «Period Shift» og legge til «-1». Deretter lager du Formula som «Sales» - «Sales (last month)».
+   *Tip: You need to make a new Object Class Property on Request: No of Requests (equivalent to No of Activities). To be able to calculate Avg Sales per Request, you must use a Formula in the report tool. In a Formula, you can set up an expression based on the published Measures of the report (under "Values"). Accordingly, you will have to add No of Request to the report and make it Hidden. 
 
-   Pass også på at du på measure for Sales filtrerer kun Requests i State «Closed» og Type «Order». Dette kan du gjøre «per measure» (høyreklikk -> Local Filters) ELLER du kan legge inn Request State og Request Type i seksjon «Filters» i rapporten og sette filter her. Sistnevnte gjør at hvis Measurene (for Sales) har en connection mot disse, og disse har filtrering vil også measurene filtreres i henhold. For å slippe å sette opp Connection «hver gang» for hvert measure for sales kan du på Object Class «Request» sette opp default connections i arkfane «Data Aggregation» - da settes connections for deg i rapporter.*
+   To make a formula for Sales Increase, you will need a Measure that shows Sales last month: Copy "Sales" (right-click -> copy), rename it to "Sales (last month)", navigate to the "Period Shift" setting and add "-1" (minus one). Then, make a Formula "Sales - Sales (last month)".
 
-5. **VALGFRI OPPGAVE: Legg til snarveier til rapportene i Navigation Pane.**
+   Make sure that the Sales measure only includes Requests in state "Closed" and of type "Order". You can do this "per measure" (right-click -> Local Filters) OR you can add Request State and Request Type to the "Filters" section of the report and define filters here. Measures that are connected to any (or all) of the latter filter objects will be filtered accordingly. If you don't want to define Connections every time you are using the sales measure, you can - in the Data Aggregation tab of Object Class Request - set up default connections. These are connections that will be set automatically in reports.*
 
-   *Kommentar: Alle rapportene (gitt at du har rettigheter på dem – det ligger i likhet med Tasks sikkerhet per rapport også) er uansett tilgjengelig fra meny «Discover» i klienten. Men enkelte rapporter av høy viktighetgrad eller som benyttes ofte kan man legge inn snarveier til i Navigation Pane. Se eventuelt fasitløsningen hvordan det er valgt å legge ut rapporter her.*
+5. **OPTIONAL EXERCISE: Add shortcuts to the reports in Navigation Pane.**
 
-<br>
-<table>
-   <tr><td><a href="oppgave-09.md"><- Previous exercise</a></td><td align="right"><a href="oppgave-11.md">Next exercise -></a></td></tr>
-</table>
+   *Comment: All reports (given that you have the rights to see them) are available from the Discovery menu in the client. In some cases, however, it can be useful to create shortcuts to reports in the Navigation Pane (e.g. reports are of high importance or are frequently used). Take a look at the provided solution if you want to see how reports have been published there.*

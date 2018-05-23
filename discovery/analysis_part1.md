@@ -18,12 +18,12 @@ _The instructor will start of by giving you a brief introduction to the topic. T
 
 ## Create, edit and preview analysis
 
-To create an analysis open Genus Apps Discovery Desktop and choose the portal _Discovery_. This is where both Datamarts and Analysis are available. In the Discovery-panel click on _Analysis_ and _New_. Remember to save. To reopen an analysis in edit mode, right click the analysis and choose _Edit_.  
+To create an analysis open Genus Desktop and choose the portal _Discovery_. This is where both data marts and Analysis are available. In the Discovery-panel click on _Analysis_ and _New_. Remember to save. To reopen an analysis in edit mode, right click the analysis and choose _Edit_.  
 
 To preview an analysis either: 
 
 - double click on the saved analysis in Discovery Desktop
-- in the analysis editor click on "Action". In the action dropdown there are two preview choices, one for Genus Desktop preview and one for internet browser preview.   
+- in the analysis editor click on _Action_. In the action dropdown there are two preview choices, one for Genus Desktop preview and one for internet browser preview.   
 
 ## Analysis from class
 
@@ -43,7 +43,7 @@ Try to recreate the analysis shown in class/analysis in the solution environment
 	
     b. In FORMAT - Body - change font size and colour.
 
-5. Save and preview 
+5. Save and preview.
 
 ### Number of trips per weekday
 

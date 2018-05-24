@@ -16,6 +16,8 @@ The data model used for this course represents New York City Yellow Cab`s taxi t
 * Taxi Zone
 * Vendor
 * Weekday
+* Day
+* Month
 
 
 The main object class is Yellow Trip, where each instance/row represents a single trip. Each trip has information on pick-up and drop off location, time and zone, and includes details on different payment amounts, payment type, duration of the trip and number of passengers. 

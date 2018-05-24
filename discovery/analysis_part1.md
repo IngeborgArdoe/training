@@ -18,26 +18,26 @@ _The instructor will start of by giving you a brief introduction to the topic. T
 
 ## Create, edit and preview analysis
 
-To create an analysis open Genus Desktop and choose the portal _Discovery_. This is where both data marts and Analysis are available. In the Discovery-panel click on _Analysis_ and _New_. Remember to save. To reopen an analysis in edit mode, right click the analysis and choose _Edit_.  
+To create an analysis open Genus Desktop and choose the portal **Discovery**. This is where both data marts and Analysis are available. In the Discovery-panel click on **Analysis** and **New**. Remember to save. To reopen an analysis in edit mode, right click the analysis and choose **Edit**.  
 
 To preview an analysis either: 
 
 - double click on the saved analysis in Discovery Desktop
-- in the analysis editor click on _Action_. In the action dropdown there are two preview choices, one for Genus Desktop preview and one for internet browser preview.   
+- in the analysis editor click on **Action**. In the action dropdown there are two preview choices, one for Genus Desktop preview and one for internet browser preview.   
 
 ## Analysis from class
 
-Try to recreate the analysis shown in class/analysis in the solution environment. These are the steps: 
+Try to recreate the analysis shown in class/analysis in the solution environment. If there are any questions  These are the steps: 
 
 ### Total number of trips
 
-1. In the Discovery-panel click _Analysis_ and create a new analysis. Remember to save.  
+1. In the Discovery-panel click **Analysis** and create a new analysis. Remember to save.  
 
 2. In the analysis edit mode, create a new tile.
 
 3. Scale the tile to match the solution environment and give the tile a header.
 
-4. Choose tile type _Measure_.
+4. Choose tile type **Measure**.
 	
     a. In DATA - Value - choose a data source and aggregation. 
 	
@@ -49,7 +49,7 @@ Try to recreate the analysis shown in class/analysis in the solution environment
 
 1. Create a new tile. Scale tile and give it a header. 
 
-2. Choose tile type _Lines_.
+2. Choose tile type **Lines**.
 
     a. In DATA - Horizontal category - choose a data source.
 
@@ -67,7 +67,7 @@ Try to recreate the analysis shown in class/analysis in the solution environment
 
 1. Create a new tile. Scale tile and give it a header. 
 
-2. Choose a tile type _Dropdown_
+2. Choose a tile type **Dropdown**
 	
     a. Create a dropdown and choose a data source. The data source will appear in the analysis and open for filtering the analysis. for 
 

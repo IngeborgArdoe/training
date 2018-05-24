@@ -1,22 +1,22 @@
-#Brukergrensesnitt i Genus App Platform: Forms, Tables, Ribbon og handlinger
-**SESJON FRA VEILEDER:** *Før oppgaven starter skal veileder ha holdt sesjon rundt oppsett av Forms og Tables i Genus. Gi beskjed dersom du kommer hit før sesjon er avholdt.
-Vi har nå laget objektet Contact, men det er ennå ikke mulig for sluttbruker å se eller å registrere Contacts – vi må legge dette ut i et brukergrensesnitt. Her kommer litt info om brukergrensesnitt i Genus – les dette før du går over på neste oppgave:*
+# User Interface in Genus Apps: Forms, Tables and Ribbon
+**SESSION BY INSTRUCTOR:** *The instructor will give you a brief introduction to the creation of Forms and Tables in Genus. Notify the instructor if you have reached this point before the session.
 
-I Genus App Platform har vi to hovedkonstruksjoner vi bruker til å vise informasjon; Tables og Forms. Både Tables og Forms kan bruke Ribbon. En Ribbon er en kommandolinje som viser relevante hjelpemidler og kommandoer i vinduet.
+You have made the object Contact, but still it is not possible for the end user to see or register them. For that to happen, you must add Contacts to the user interface. Read the following information about user interface in Genus before you do the next exercise:
+
+In Genus Apps there are two main constrcutions that is used to show information; Tables and Forms. Both Tables and Forms kan use Ribbon. A Ribbon is a command line situated at the top of the window which shows functionality relevant to the content.
 
 ##Table 
-Tables brukes for å lage enkle lister eller aggregerte utlistinger som brukes til filtrerte utlistinger eller søk etter data. Tables legges typisk ut i Navigasjonspanelet til venstre i klienten, slik som feks snarveien «Customers» i Genus CRM. 
-Tables kan også kobles inn i Forms (kan brukes til å feks liste ut Contacts på et selskap) med til dette formålet har Forms også en egen control (GRID) som er raskere å settes opp. Hvis derimot et objekt skal listes ut i mange Forms kan en table være nyttig å opprette pga gjenbruk på tvers av Forms.
+Tables are used to display simple lists or aggregated lists of data. One can do searches in them or apply various filters. Tables are typically placed in the Navigation Pane on the left-hand side of the client, e.g. "Customers" in Genus CRM.
+Tables can also be "plugged" into Forms (e.g. list Contacts associated with a Company), but for this purpose, Forms also has its own control (Grid) which is quicker to set up. However, if an object is going to be listed in several Forms, a Table may be the preferred solution (as you can reuse it).
 
 ##Forms 
-Forms er skreddersydde skjermbilder som kan vise felter, utlistinger, knapper, file-preview m.m. i et og samme skjermbilde, nærmest uten begrensninger på layout (en rekke tradisjonelle og «bleeding edge» layout controllere finnes i verktøykassa til Forms). Forms kan brukes til å vise data for ett til mange objekter i samme view, og man kan også bytte mellom ulike views (for å lage «wizard»-basert funksjonalitet). Man kan også vise grafer etc («dashboards» for sluttbruker). En Form kan være tilpasset Desktop, eller Apps – sistnevnte vil si at man kan modellere opp en hel plattformuavhengig mobil-app eller webside i Genus Studio.
+Forms are tailor-made displays that can show fields, lists, buttons, file-previews, etc., almost without limitations in terms of layout (a bunch of traditional and "bleeding edge" layout controls are available). Forms can be used to show data from one or multiple objects together in the same view. One can also switch between different views (to create "wizard"-like functionality). A Form can be customized to Desktop or Apps - the latter implies that you model a whole platform independent mobile app or website in Genus Studio.
 
-Forms kan i sitt enkleste format være visning av et objekt (feks skjermbildet for detaljer om 1 kontaktperson). Men Forms kan også være basert på Use Cases; For eksempel et skjermbilde for behandling av dine aktiviteter med utlistinger, advarsler, knapper, detaljinfo & preview etc i en og samme skjermflate. 
+Forms can, in their simplest form, be a display of one single object (e.g. display details about 1 contact person), but they can also be fairly advanced and based on Use Cases, e.g. big displays for managing activities with lists, warnings, buttons, detail information and previews in the same window.
 
-Inne i en Form finnes to konstruksjoner for utlistinger: GRID og TABLE. Sistnevnte kobler inn en eksisterende table i Formen (feks dersom man skal liste ut samme objekt i mange Forms, kan det være lurt å lage en Table pga vedlikehold og gjenbruk), mens førstnevnte settes opp per Form (man kan da tilpasse kolonneutvalg og tilgjengelige handlinger per Form, men det krever mer arbeid / vedlikehold dersom samme utlisting skal gjentas i ulike Forms).
+Within a Form, there are two constructions for listing objects: Grid and Table. The latter is a reference to an existing table (i.e. you would probably want to use this option if you want to list the same object in many forms - due to maintenance and reuse), while the former is set up per Form (i.e. you can customize column selections and available actions per Form - this demands more work / maintanance if you want to show the same list several places)
 
 ##Ribbon
-
-I både Forms og Tables er det mulig å lage en brukervennlig menystruktur ved bruk av Ribbon. En Ribbon minner om menystrukturer brukere er vant til å møte i Microsoft Office-verdenen og i Windows (10) generelt. Commands (kommandoer som er satt opp i formen) kan kjøres fra en Ribbon og en kan bruke Context for å vise ulike meny-elementer når en navigerer i ulike deler av grensesnittet.
-
-Oppgavene rundt brukergrensesnitt er ikke så strengt detaljert som resterende modellering, da man står mer fritt til å definere utseende selv. 
+Both Forms and Tables can get a user friendly menu structure through Ribbon. A Ribbon is a menu structure that most users are familiar with and see every day in Microsoft Office-products and in their operating system (Windows 10). Commands can be run from the Ribbon, and one can use Context to show different menu elements for different parts of the interface (when navigating).
+ 
+The exercises concerning user interface are not as detailed as those concerning the rest of the modeling. Hence, you are free to define much of the solution's appearance yourself. 

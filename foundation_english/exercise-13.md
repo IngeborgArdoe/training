@@ -1,20 +1,20 @@
-# Oppgave 13 - Agenter
+## Exercise 13 - Agents
 
-Oppgaven er valgfri og man må se an tiden man har til rådighet. Det anbefales uansett å lese gjennom oppgaven.
+This exercise is optional. We still recommend you to read through it. 
 
-**VALGFRI OPPGAVE:** Lag en agent som sender ut epost til ansvarlige for aktiviteter der aktiviteten sin Reminder Time har passert (samt at Last Reminder Sent er mindre enn Reminder Time for å unnga spam). Agenten må også oppdatere Last Reminder Sent på aktivitetene som blir varslet.
+**OPTIONAL EXERCISE:** Create an agent that sends out an e-mail to the responsible of an activity if its Reminder Time has passed (and Last Reminder Sent is less than Reminder Time - to avoid spam). The agent should also update Last Reminder Sent on the activity. 
 
-*Veiledning: Agenten bør sende 1 epost per ansvarlige (med andre ord å iterere over Activities og sende en epost per aktivitet er en dårlig ide).*
+*Guidance: The agent should send 1 e-mail per responsible (i.e. it's a bad idea to iterate over Activities and send one e-mail per activity).*
 
-Agenten bør ha data sources:
-  * Activities (all to be reminded) med data filter “alle ikke-fullførte eller kansellerte aktiviteter som har Reminder Time < Now og hvor Last Reminder Send ikke har verdi eller er mindre enn Reminder Time.
-  * Users (les opp fra Activities.Responsible)
-  * Activities (temp for user), brukes i effektene for å lese aktivitetene som skal påminnes for brukeren du itererer over.
+The agent should have the following data sources:
+  * Activities (all to be reminded) with data filter "all non-completed or canceled activities that have Reminder Time < Now and where Last Reminder Sent has no value or is less than Reminder Time".
+  * Users (read from Activities.Responsible)
+  * Activities (temp for user), to keep track of the activities that the user your are iterating over should be reminded about.
   
-Agenten ha en Enumerator effekt ytterst som itererer over Users. 
+The agent needs an Enumerator effect that iterates over Users at the top level. 
 
-For hver iterasjon skal aktivitene for brukere leses opp (i effekten kan du velge å lese «From Datasource: Activities (all to be reminded)» i tillegg til å sette data filter Activities (temp for user).Responsible = User – da leses dette opp i minnet istedenfor fra databasen, og du trenger heller ikke sette opp data filter på nytt. 
+For each iteration, all activities that the user is responsible for have to be read into Activities (temp for user) (in the Read Objects effect, you can choose to read "From Datasource: Activities (all to be reminded)" and set the data filter to "Activities (temp for user).Responsible = User". This way, objects are read in memory rather than from the database, and you don't have to set up the data filter again).
+ 
+After reading activities, add a "Create a Mail Message" effect. Compose an e-mail text and a sender (e.g. noreply@genus.nox), and list Activities with activity number and subject. Tip: In the e-mail Body, right-click -> Insert Repeating Section. Bind it to Activities (temp for user). This will generate a list. 
 
-Etter at dette er lest opp, kjør en Create a Mail Message effekt hvor skriver en tekst og avsender (feks noreply@genus.nox) samt lister ut Activities med aktivitetsnummer og subject. Tips for sistnevnte: I Body på eposten høyreklikk -> Insert Repeating Section som du binder til Activities (temp for user). Da vil det genereres en liste. 
-
-Til slutt kjører du en Modify Objects (husk Scope som commit’er) som setter Last Reminder Sent til Now.
+Last but not least, add a Modify Objects effect (remember to put it in a Commit Scope) which updates Last Reminder Sent to Now.

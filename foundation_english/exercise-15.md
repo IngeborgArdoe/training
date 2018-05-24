@@ -1,27 +1,27 @@
-# Oppgave 15 (Stikkord: Web Services)
-*SESJON FRA VEILEDER: Før oppgave 13 starter skal veileder ha holdt sesjon rundt oppsett av Web Services hvor konseptet forklares og schemaeditoren i Genus App Platform vises.*
+## Exercise 15 - Web Services
+**SESSION BY INSTRUCTOR:** *The instructor will give you a brief introduction to the concept of Web Services, how it is set up and how to use the schema editor in Genus Apps.*
 
-Hele denne oppgaven er valgfri, og du må se an på tiden du har til rådighet. Viktigst er det at du leser igjennom oppgaven.
+This is a fully optional exercise. As a minimum, we recommend you to read through it.
 
-Web Services settes enkelt opp i Genus App Platform. En Web Service satt opp i Genus App Platform ligger tilgjengelig på applikasjonsserveren slik at andre applikasjoner kan kalle løsningen vår for å utføre web service operasjonene vi tilbyr. Dette kan eksempelvis være «GetCompanies» eller «CreateActivity» dersom vi skal ha en ekstern løsning som skal hente eller oppdatere data i vår Genus CRM løsning. En Web Service krever at vi har definert opp formatet på input og output fra web servicen (xml), så vi må ha satt opp schemaet for dette i schemaeditoren først (eventuelt importert et eksisterende schema hit først).
+Web Services are easily set up in Genus Apps. A Web Service made in Genus Apps is available on the application server so that other applications can call on it to perform the service operations it provides. Examples can be "GetCompanies" or "CreateActivity", if we want to have an external solution that retrieves or updates data in our Genus CRM solution. A Web Service requires that we have defined the format of both input and output (XML). Accordingly, we first have to set up a schema for this using the schema editor (or we could have imported an existing one).
 
-**VALGFRI OPPGAVE:** Opprett en web service «GetCompaniesForUser» som tar som input en xml med et felt: brukernavn, og returnerer som output en xml med en liste av companies med felter: ID, CompanyName, OrgNo, Employees, AnnualRevenue og PostalAddressCity.
+**OPTIONAL EXERCISE:** Create a Web Service called "GetCompaniesForUser" which takes an XML with a field "UserName" as input and returns an XML with a list of companies with fields "ID", "CompanyName", "OrgNo", "Employees", "AnnualRevenue" and "PostalAddressCity".
 
-For å teste denne kan du benytte «Test run» i klienten hvor du på forhånd lager en xml-fil med UserName som input.
+To verify that it works, you can use "Test run" in the client. You will have to create an XML-file (with field UserName) in advance which can be utilized as input.
 
-Veileding: Først må du laget et Schema i Schemaeditoren (navngi denne feks «CompanyServiceSchema»). Denne bør ha 2 elementer:
+Guidance: Create a Schema in the Schema editor (name it "CompanyServiceSchema"). It should have 2 elements:
 * GetCompaniesForUserInput
 * GetCompaniesForUserOutput 
 
-Førstnevnte har 1 element under seg (UserName) mens sistnevnte må ha en liste av Companies. Da trenger du en complext type «Company» (med feltene under seg), deretter en complex type «Companies» (av typen Company, med minoccurs=0 og maxoccurs=unbounded – dette gir en «repetert liste»). Deretter gir du complex type «GetCompaniesForUserOutput» et element «Companies» av type «Companies».
+While the former contains only 1 element (UserName), the latter must have a list of Companies. You will need a complex type "Company" (containing all the fields), and then a complex type "Companies" (of type Company, minOccurs=0 and maxOccurs=unbounded - giving a "repeated list"). Next, you will have to give the complex type "GetCompaniesForUserOutput" an element "Companies" of type Companies.
 
-Se gjerne i fasiten her.
+Take a look at the solution for help.
 
-Deretter lager du en ny web service i studio. Navngi denne «CompanyService». Legg til et endpoint (sier noe om autentiseringen og kommunikasjonen, bruk default her), og lag deretter en Operation («GetCompaniesForUser»).
+Create a new Web Service in Studio. Name it "CompanyService". Add an end point (says something about authentication and communication, use default) and create an Operation ("GetCompaniesForUser").
 
-På Operation «GetCompaniesForUser» velger du schema-elementene fra CompanyServiceSchema for request og response (hhv input og output elementene).
+On Operation "GetCompaniesForUser", select schema-elements from CompanyServiceSchema for request and response (input and output, respectively).
 
-Nå som dette er satt opp kan du benytte Data Sources til å filtrere opp Companies (hvis Company.Responsible.UserName = input.UserName) og under Actions kan trenger du kun en enkel Create Objects effekt som oppretter output xml’en (hvor du mapper inn data felter fra Companies).
+Now that this is set up, you can use Data Sources to filter Companies (if Company.Responsible.UserName = input.UserName) and under Actions you will only need one single Create Objects effect which generates the output XML (map data fields from Companies).
 
-For å teste denne i klienten trenger du en xml-fil som input når du velger Test run -> Web Service -> CompanyService. Bruk Notepad og legg inn denne teksten og lagre fila som input.xml (bytt ut usr1a med ditt brukernanv, og sett deg selv som ansvarlig for et par selskaper først): <GetCompaniesForUser><UserName>usr1a<//UserName><//GetCompaniesForUser»
+To verify that it works, you will need an XML-file as input when you select Test run -> Web Service -> CompanyService. Open Notepad and add the following text to a file before you save it as "input.xml": <GetCompaniesForUser><UserName>usr1a<//UserName><//GetCompaniesForUser>. Note: Substitute "usr1a" with your username, and make sure you are the responsible of a couple of companies before you start testing.
 

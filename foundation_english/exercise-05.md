@@ -1,5 +1,5 @@
 ## Exercise 5 - Ribbon
-**SESSION BY INSTRUCTOR:** *The instructor will start of by giving you a brief introduction of the topic.*
+**SESSION BY INSTRUCTOR:** *The instructor will start off by giving you a brief introduction of the topic.*
 
  ![oppg5fig1.JPG](media/oppg5fig1.JPG)
 ### Ribbon

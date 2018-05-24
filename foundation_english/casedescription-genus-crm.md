@@ -1,7 +1,6 @@
-## Case description: Genus CRM
+# Case description: Genus CRM
 
-###Fasitløsningen Genus CRM inneholder følgende forretningsobjekter
-###Provided solution Genus CRM contains the following business objects:
+###The provided solution Genus CRM contains the following business objects:
 - 	Company & Log (logging of important company events)
 -	Contacts & Log
 -	Activities

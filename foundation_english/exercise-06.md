@@ -1,5 +1,5 @@
 ## Exercise 6 - Logic og tasks
-**SESSION BY INSTRUCTOR:** *The instructor will start of by giving you a brief introduction of the topic.*
+**SESSION BY INSTRUCTOR:** *The instructor will start off by giving you a brief introduction of the topic.*
 
 ###Modeling logic - Principal overview
 

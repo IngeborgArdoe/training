@@ -1,5 +1,5 @@
 # User Interface in Genus Apps: Forms, Tables and Ribbon
-**SESSION BY INSTRUCTOR:** *The instructor will give you a brief introduction to the creation of Forms and Tables in Genus. Notify the instructor if you have reached this point before the session.
+**SESSION BY INSTRUCTOR:** *The instructor will give you a brief introduction to the creation of Forms and Tables in Genus. Notify the instructor if you have reached this point before the session.*
 
 You have made the object Contact, but still it is not possible for the end user to see or register them. For that to happen, you must add Contacts to the user interface. Read the following information about user interface in Genus before you do the next exercise:
 

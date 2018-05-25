@@ -79,3 +79,9 @@ You are now ready to add Request to the interface, i.e. make a Request-form and 
 	2. The local object's Data Filter can't be read from the database, but you can set Data Filter = "Run a Local Task". Create a Local Task (under «Tasks») which has a Create Objects («Label Values») effect. Use this task to filter the «Label Values» data source.
 	3. Bind the Label properties of tabs «Documents» and «Mail» to fields «Label Values.Documents Label» and «Label Values.Mail Label», respectively. 
 Deploy and verify! Check the naming of the tabs.
+
+
+</br>
+<table>
+   <tr><td><a href="exercise-08.md"><- Previous exercise</a></td><td align="right"><a href="exercise-10.md">Next exercise -></a></td></tr>
+</table>

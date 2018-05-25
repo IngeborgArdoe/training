@@ -117,3 +117,9 @@ Note that you can go back and modify the properties of an Object Class/Object Cl
  
 
 8. The Draft-object that you made in Exercise 2.2 is no longer needed. Navigate to Object Class Diagram -> Right-click on Draft-object «Contact» -> «Replace Draft». In the dialog box, select object class «Contact». This will remove the Draft-object from the view and replaced it with modeled object class «Contact».
+
+
+</br>
+<table>
+   <tr><td><a href="exercise-01.md"><- Previous exercise</a></td><td align="right"><a href="exercise-03.md">Next exercise -></a></td></tr>
+</table>

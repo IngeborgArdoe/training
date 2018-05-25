@@ -1,5 +1,4 @@
 ## Exercise 11 - Genus Apps
-
 **SESSION BY INSTRUCTOR:** *The instructor will start off by giving you a brief introduction to Genus App-form modeling.*
 
 ### Simple web interface
@@ -141,5 +140,5 @@ In this exercise, we will fetch open data from multiple public API’s, store it
       
 </br>
 <table>
-   <tr><td><a href="oppgave-10.md"><- Previous exercise</a></td><td align="right"><a href="oppgave-12.md">Next exercise -></a></td></tr>
+   <tr><td><a href="exercise-10.md"><- Previous exercise</a></td><td align="right"><a href="exercise-12.md">Next exercise -></a></td></tr>
 </table>

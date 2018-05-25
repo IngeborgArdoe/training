@@ -1,4 +1,4 @@
-# Exercise 4 - Tables
+## Exercise 4 - Tables
 You will now make a Table that lists all contact persons associated with the logged in user. The Table will have to be made available as a shortcut in the navigation pane. 
 1. Create a new Table and name it «Contacts»
    *Guidance: From Studio -> User Interface -> Tables -> New (Basic Table).*
@@ -24,3 +24,9 @@ You will now make a Table that lists all contact persons associated with the log
 3. Deploy to yourself and verify that you can see all your contacts (Note: you may have to put yourself as responsible for some of them first). Check also that you can open and create Contacts.
 4. As a last addition, we wish to highlight inactive contact persons by coloring the rows gray. Navigate to Layout and mark the Row («Contact»). In the menu on the left, open Automatic Formatting and add a new rule named "Inactive". Finally, select some kind of gray as Foreground and use "Contact.State = Inactive" as Condition.
 5. Deploy again og verify your latest modification by setting a contact person to "inactive" in the client.
+
+
+</br>
+<table>
+   <tr><td><a href="exercise-03.md"><- Previous exercise</a></td><td align="right"><a href="exercise-04.md">Next exercise -></a></td></tr>
+</table>

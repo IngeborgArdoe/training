@@ -14,3 +14,9 @@ You will now make a Rule that does the following: If a user checks the «Is Cust
 
 	  *Note: Remember to put it within a Commit Scope. Otherwise, the change will not be persisted.*
    4. Deploy to yourself and verify that when you set a Company (which is inactive) to "Is Customer", and save, the State is automatically changed to "Active". 
+
+   
+   </br>
+<table>
+   <tr><td><a href="exercise-06.md"><- Previous exercise</a></td><td align="right"><a href="exercise-08.md">Next exercise -></a></td></tr>
+</table>

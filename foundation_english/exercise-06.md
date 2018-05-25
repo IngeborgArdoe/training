@@ -81,3 +81,9 @@ You will now make it possible to create Mail on contact persons. For this purpos
 4. While you're at it, place a command on the Mail-tab that calls the existing task "Copy Mail to Clipboard as Mail Message". Make it available through an event on the grid and in the Ribbon.
 
 *Guidance: Set the event's Menu Item = Copy. The command's Data Filter must be set to «Mail Message (input)» = selected objects in data source Mail. Ribbon: Search for "copy" to find a suitable symbol.*
+
+
+</br>
+<table>
+   <tr><td><a href="exercise-05.md"><- Previous exercise</a></td><td align="right"><a href="exercise-07.md">Next exercise -></a></td></tr>
+</table>

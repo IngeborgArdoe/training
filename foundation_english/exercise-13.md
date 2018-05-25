@@ -18,3 +18,9 @@ For each iteration, all activities that the user is responsible for have to be r
 After reading activities, add a "Create a Mail Message" effect. Compose an e-mail text and a sender (e.g. noreply@genus.nox), and list Activities with activity number and subject. Tip: In the e-mail Body, right-click -> Insert Repeating Section. Bind it to Activities (temp for user). This will generate a list. 
 
 Last but not least, add a Modify Objects effect (remember to put it in a Commit Scope) which updates Last Reminder Sent to Now.
+
+
+</br>
+<table>
+   <tr><td><a href="exercise-12.md"><- Previous exercise</a></td><td align="right"><a href="exercise-14.md">Next exercise -></a></td></tr>
+</table>

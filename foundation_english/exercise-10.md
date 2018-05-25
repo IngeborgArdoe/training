@@ -59,3 +59,9 @@ Note also that when you are working in Genus Discovery, you are working in the c
 5. **OPTIONAL EXERCISE: Add shortcuts to the reports in Navigation Pane.**
 
    *Comment: All reports (given that you have the rights to see them) are available from the Discovery menu in the client. In some cases, however, it can be useful to create shortcuts to reports in the Navigation Pane (e.g. reports are of high importance or are frequently used). Take a look at the provided solution if you want to see how reports have been published there.*
+
+   
+   </br>
+<table>
+   <tr><td><a href="exercise-09.md"><- Previous exercise</a></td><td align="right"><a href="exercise-11.md">Next exercise -></a></td></tr>
+</table>

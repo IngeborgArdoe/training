@@ -63,3 +63,8 @@ The next thing for you to make is the functionality for sending e-mail to contac
    *The effects needed are Create a Mail Message (that creates a Mail Message file with the e-mail addresses of the contacts and saves the message to the data source «Mail Message»), Open a Form (that opens a Mail Message window from the file data field of «Mail Message») and Create Objects (that saves Mail objects).*
    
    *Take a look at the provided solution for further guidance. Remember to set the security of the task!*
+
+   </br>
+<table>
+   <tr><td><a href="exercise-07.md"><- Previous exercise</a></td><td align="right"><a href="exercise-09.md">Next exercise -></a></td></tr>
+</table>

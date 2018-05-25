@@ -25,3 +25,8 @@ Now that this is set up, you can use Data Sources to filter Companies (if Compan
 
 To verify that it works, you will need an XML-file as input when you select Test run -> Web Service -> CompanyService. Open Notepad and add the following text to a file before you save it as "input.xml": <GetCompaniesForUser><UserName>usr1a<//UserName><//GetCompaniesForUser>. Note: Substitute "usr1a" with your username, and make sure you are the responsible of a couple of companies before you start testing.
 
+
+</br>
+<table>
+   <tr><td><a href="exercise-14.md"><- Previous exercise</a></td></tr>
+</table>

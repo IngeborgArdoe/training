@@ -1,7 +1,7 @@
 ## Exercise 12 - Mail Merge
 **SESSION BY INSTRUCTOR:** *The instructor will start off by giving you a brief introduction of the topic. He/she will explain the concept of Mail Merge and show the schema editor in Genus Apps.*
 
-The exercises are optional and should be done only if time allows. That being said - we recommend you to at least read through the exercises.
+These exercises are optional and should be done only if time allows. That being said - we recommend you to at least read through the exercises.
 
 **OPTIONAL EXERCISE:** Make a new task "Order Confirmation", which takes a Request as input and from it generates an order confirmation (Word document). Information that will be merged into the document is Order No, Subject, Description, Expected Delivery Date, Order Value NOK, Company Name, Org No, Contact Name (name of person ordering) and ResponsibleName (name of user).
 
@@ -29,3 +29,9 @@ The exercises are optional and should be done only if time allows. That being sa
    * "Create a Mail Message": Define "To", "Subject", "Attachments" (Document.File Data) and suggest a default e-mail text. Make sure the effect is set to "Write message to a data source" (Mail Message (temp)) so that the e-mail is not sent immediately. Note: The reason for keeping the Mail Message file in a data source is to avoid losing changes made by the user in Outlook before he/she press "Send". You could have used the "Open a Form" effect directly, but it's more visual to create an e-mail in the "Create a Mail Message" effect.
    * "Open a Form": Choose Mail Message Window and Modify. Check "Wait until the form is closed". The effect will now open the suggested e-mail and pause the execution until the user has pressed "Send" in outlook. 
    * "Create Objects": Data source = Mail. Map fields from Mail Message (temp). Put the effect in a Commit Scope to save the Mail object.
+
+   
+   </br>
+<table>
+   <tr><td><a href="exercise-11.md"><- Previous exercise</a></td><td align="right"><a href="exercise-13.md">Next exercise -></a></td></tr>
+</table>

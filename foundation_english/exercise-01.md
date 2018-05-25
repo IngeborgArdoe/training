@@ -15,4 +15,8 @@ Familiarize yourself with your own EDU-solution. Use the shortcut that you defin
    4. Click on Discovery in the Navigation Pane on the left. Open a predefined report under Reports.
 6. Navigate to Administration. Take a look at Users and General Codes.
 
- 
+
+</br>
+<table>
+   <tr><td align="right"><a href="exercise-02.md">Next exercise -></a></td></tr>
+</table>

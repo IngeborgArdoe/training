@@ -21,5 +21,5 @@ This optional exercise contains various extensions to improve you CRM solution. 
 
 
 <table>
-   <tr><td><a href="exercise-13.md"><- Previous exercise</a></td><td align="right"><a href="exercise-15.md">Next exercise -></a></td></tr>
+   <tr><td><a href="exercise-13.md"><- Previous</a></td><td align="right"><a href="exercise-15.md">Next -></a></td></tr>
 </table>

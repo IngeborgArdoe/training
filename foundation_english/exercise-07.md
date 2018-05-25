@@ -17,5 +17,5 @@ You will now make a Rule that does the following: If a user checks the «Is Cust
 
    
 <table>
-   <tr><td><a href="exercise-06.md"><- Previous exercise</a></td><td align="right"><a href="exercise-08.md">Next exercise -></a></td></tr>
+   <tr><td><a href="exercise-06.md"><- Previous</a></td><td align="right"><a href="exercise-08.md">Next -></a></td></tr>
 </table>

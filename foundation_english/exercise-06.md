@@ -84,5 +84,5 @@ You will now make it possible to create Mail on contact persons. For this purpos
 
 
 <table>
-   <tr><td><a href="exercise-05.md"><- Previous exercise</a></td><td align="right"><a href="exercise-07.md">Next exercise -></a></td></tr>
+   <tr><td><a href="exercise-05.md"><- Previous</a></td><td align="right"><a href="exercise-07.md">Next -></a></td></tr>
 </table>

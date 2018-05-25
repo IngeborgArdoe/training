@@ -82,5 +82,5 @@ Deploy and verify! Check the naming of the tabs.
 
 
 <table>
-   <tr><td><a href="exercise-08.md"><- Previous exercise</a></td><td align="right"><a href="exercise-10.md">Next exercise -></a></td></tr>
+   <tr><td><a href="exercise-08.md"><- Previous</a></td><td align="right"><a href="exercise-10.md">Next -></a></td></tr>
 </table>

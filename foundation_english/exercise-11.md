@@ -139,5 +139,5 @@ In this exercise, we will fetch open data from multiple public API’s, store it
       
       
 <table>
-   <tr><td><a href="exercise-10.md"><- Previous exercise</a></td><td align="right"><a href="exercise-12.md">Next exercise -></a></td></tr>
+   <tr><td><a href="exercise-10.md"><- Previous</a></td><td align="right"><a href="exercise-12.md">Next -></a></td></tr>
 </table>

@@ -27,5 +27,5 @@ You will now make a Table that lists all contact persons associated with the log
 
 
 <table>
-   <tr><td><a href="exercise-03.md"><- Previous exercise</a></td><td align="right"><a href="exercise-04.md">Next exercise -></a></td></tr>
+   <tr><td><a href="exercise-03.md"><- Previous</a></td><td align="right"><a href="exercise-04.md">Next -></a></td></tr>
 </table>

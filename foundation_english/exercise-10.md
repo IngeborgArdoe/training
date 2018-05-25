@@ -62,5 +62,5 @@ Note also that when you are working in Genus Discovery, you are working in the c
 
    
 <table>
-   <tr><td><a href="exercise-09.md"><- Previous exercise</a></td><td align="right"><a href="exercise-11.md">Next exercise -></a></td></tr>
+   <tr><td><a href="exercise-09.md"><- Previous</a></td><td align="right"><a href="exercise-11.md">Next -></a></td></tr>
 </table>

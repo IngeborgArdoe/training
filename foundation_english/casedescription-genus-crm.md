@@ -34,3 +34,7 @@ Your daily work consists of getting new customers and to follow up existing ones
 -	Generate order confirmations and send these to customers.
 
 The solution you have been given - and will now work on - already contains some of the main objects of the system, but other than that little functionality. In this course you will be asked to create objects Contacts, Requests and Documents, and eventually most of the functionality needed for the different parts of the system.
+
+<table>
+   <tr><td><a href="installation-of-sql-server-mgmt-studio.md"><- Previous</a></td><td align="right"><a href="exercise-01.md">Next -></a></td></tr>
+</table>

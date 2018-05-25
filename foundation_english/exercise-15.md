@@ -27,5 +27,5 @@ To verify that it works, you will need an XML-file as input when you select Test
 
 
 <table>
-   <tr><td><a href="exercise-14.md"><- Previous exercise</a></td></tr>
+   <tr><td><a href="exercise-14.md"><- Previous</a></td></tr>
 </table>

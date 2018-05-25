@@ -40,5 +40,5 @@ Finally, it is worth mentioning that the end user can hide the Ribbon if he/she 
 
 
 <table>
-   <tr><td><a href="exercise-04.md"><- Previous exercise</a></td><td align="right"><a href="exercise-06.md">Next exercise -></a></td></tr>
+   <tr><td><a href="exercise-04.md"><- Previous</a></td><td align="right"><a href="exercise-06.md">Next -></a></td></tr>
 </table>

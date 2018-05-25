@@ -13,3 +13,8 @@ https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-
 Utilize username "eduXY" (where XY is your assigned environment number) and password "L3arn1ng!". All querys will be run against database «GenusCRM_EDUXY_Data». After login, you will have to click on "New Query" and select the correct database in the box located in upper left corner:  
  
  ![installklient2.JPG](media/installklient2.JPG) 
+
+
+<table>
+   <tr><td><a href="installation-of-genus-app-platform.md"><- Previous</a></td><td align="right"><a href="casedescription-genus-crm.md">Next -></a></td></tr>
+</table>

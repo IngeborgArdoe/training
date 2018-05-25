@@ -120,5 +120,5 @@ Note that you can go back and modify the properties of an Object Class/Object Cl
 
 
 <table>
-   <tr><td><a href="exercise-01.md"><- Previous exercise</a></td><td align="right"><a href="exercise-03.md">Next exercise -></a></td></tr>
+   <tr><td><a href="exercise-01.md"><- Previous</a></td><td align="right"><a href="exercises3-4.md">Next -></a></td></tr>
 </table>

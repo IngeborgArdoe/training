@@ -32,5 +32,5 @@ These exercises are optional and should be done only if time allows. That being 
 
 
 <table>
-   <tr><td><a href="exercise-11.md"><- Previous exercise</a></td><td align="right"><a href="exercise-13.md">Next exercise -></a></td></tr>
+   <tr><td><a href="exercise-11.md"><- Previous</a></td><td align="right"><a href="exercise-13.md">Next -></a></td></tr>
 </table>

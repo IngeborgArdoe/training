@@ -144,5 +144,5 @@ When doing the exercises below, it may seem natural to place the Command on the 
    
 
 <table>
-   <tr><td><a href="exercise-02.md"><- Previous exercise</a></td><td align="right"><a href="exercise-04.md">Next exercise -></a></td></tr>
+   <tr><td><a href="exercises3-4.md"><- Previous</a></td><td align="right"><a href="exercise-04.md">Next -></a></td></tr>
 </table>

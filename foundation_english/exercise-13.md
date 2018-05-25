@@ -20,7 +20,6 @@ After reading activities, add a "Create a Mail Message" effect. Compose an e-mai
 Last but not least, add a Modify Objects effect (remember to put it in a Commit Scope) which updates Last Reminder Sent to Now.
 
 
-</br>
 <table>
    <tr><td><a href="exercise-12.md"><- Previous exercise</a></td><td align="right"><a href="exercise-14.md">Next exercise -></a></td></tr>
 </table>

@@ -141,8 +141,8 @@ When doing the exercises below, it may seem natural to place the Command on the 
       ![oppg3fig13.JPG](media/oppg3fig13.JPG)
  
    5. Deploy and test creation, modification and deletion of a Contact's log objects in the client.
+   
 
-   </br>
 <table>
    <tr><td><a href="exercise-02.md"><- Previous exercise</a></td><td align="right"><a href="exercise-04.md">Next exercise -></a></td></tr>
 </table>

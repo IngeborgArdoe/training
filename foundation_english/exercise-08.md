@@ -64,7 +64,6 @@ The next thing for you to make is the functionality for sending e-mail to contac
    
    *Take a look at the provided solution for further guidance. Remember to set the security of the task!*
 
-   </br>
 <table>
    <tr><td><a href="exercise-07.md"><- Previous exercise</a></td><td align="right"><a href="exercise-09.md">Next exercise -></a></td></tr>
 </table>

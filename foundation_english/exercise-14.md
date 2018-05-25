@@ -20,7 +20,6 @@ This optional exercise contains various extensions to improve you CRM solution. 
    *Tip: This makes it possible to explore related data (menu "Explore") when a user for instance selects a list of Companies. You will have to set it up in the "Explore"-tab under "Browse Paths" among the properties of an Object Class. If a user explores Companies, Contacts should for example be listed - but first Genus needs to know which Contacts-list to use. If you open the properties of Company or Contacts in the provided solution (tab "Explore" under "Views"), you will se that a "default view" is selected. This is the view that is used when the user "Explore" (either from the Explore menu, or when the user double-clicks on a number in a report to see the underlying data).* 
 
 
-   </br>
 <table>
    <tr><td><a href="exercise-13.md"><- Previous exercise</a></td><td align="right"><a href="exercise-15.md">Next exercise -></a></td></tr>
 </table>

@@ -26,7 +26,6 @@ You will now make a Table that lists all contact persons associated with the log
 5. Deploy again og verify your latest modification by setting a contact person to "inactive" in the client.
 
 
-</br>
 <table>
    <tr><td><a href="exercise-03.md"><- Previous exercise</a></td><td align="right"><a href="exercise-04.md">Next exercise -></a></td></tr>
 </table>

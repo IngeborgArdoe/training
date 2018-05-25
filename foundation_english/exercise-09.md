@@ -81,7 +81,6 @@ You are now ready to add Request to the interface, i.e. make a Request-form and 
 Deploy and verify! Check the naming of the tabs.
 
 
-</br>
 <table>
    <tr><td><a href="exercise-08.md"><- Previous exercise</a></td><td align="right"><a href="exercise-10.md">Next exercise -></a></td></tr>
 </table>

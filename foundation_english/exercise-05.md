@@ -38,7 +38,7 @@ Finally, it is worth mentioning that the end user can hide the Ribbon if he/she 
    3. Place the event under Main Tabs – Home -> New.
 4. Optional: Expand Ribbon in form Contact with a Context Tab Group for Contact Log.
 
-</br>
+
 <table>
    <tr><td><a href="exercise-04.md"><- Previous exercise</a></td><td align="right"><a href="exercise-06.md">Next exercise -></a></td></tr>
 </table>

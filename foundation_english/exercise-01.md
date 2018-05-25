@@ -16,7 +16,6 @@ Familiarize yourself with your own EDU-solution. Use the shortcut that you defin
 6. Navigate to Administration. Take a look at Users and General Codes.
 
 
-</br>
 <table>
    <tr><td align="right"><a href="exercise-02.md">Next exercise -></a></td></tr>
 </table>

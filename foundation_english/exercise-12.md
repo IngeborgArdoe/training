@@ -30,8 +30,7 @@ These exercises are optional and should be done only if time allows. That being 
    * "Open a Form": Choose Mail Message Window and Modify. Check "Wait until the form is closed". The effect will now open the suggested e-mail and pause the execution until the user has pressed "Send" in outlook. 
    * "Create Objects": Data source = Mail. Map fields from Mail Message (temp). Put the effect in a Commit Scope to save the Mail object.
 
-   
-   </br>
+
 <table>
    <tr><td><a href="exercise-11.md"><- Previous exercise</a></td><td align="right"><a href="exercise-13.md">Next exercise -></a></td></tr>
 </table>

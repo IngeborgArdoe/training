@@ -34,8 +34,6 @@ Add data source, properties, connections - [Data view](https://docs.genus.no/use
 
 ### Data Sources 
 
-There are multiple methods of adding data sources to the data mart. Use the method you prefer and add data sources to the data mart. The methods are summarised below. 
-
 Data sources that should be included in the data mart: 
 
 * Yellow Trip
@@ -54,6 +52,8 @@ Data sources that should be included in the data mart:
 * Week 
 
 Data Sources that are added more than once represent different connections, in this case Borough, Service Zone and Taxi Zone. For example, the two data sources for Taxi Zone represents **pick up zone** and **drop off zone** in Yellow Trip.  
+
+There are multiple methods of adding data sources to the data mart. Use the method you prefer and add data sources to the data mart. The methods are summarised below. 
 
 #### Choose Data Sources from list
 
@@ -80,14 +80,50 @@ If a property is not among the published fields, it will not be available in any
 
 Each data source is default set to read "All objects", but for object classes with millions of rows the data filter should be restricted. Data Filter can be restricted in Data Sources or Data View.  
 
-In this data model, most of the object classes are small and don't need to be limited, except for Taxi Trips which has millions of rows. The data filter should therefore include Yellow Trip if the boolean **Include in data mart** is equal to true. 
+In this data model, most of the object classes are small and don't need to be limited, except for Taxi Trips which has millions of rows. The data filter for Yellow Trip should be included if the boolean **Include in data mart** is equal to true. 
 
-If all objects are read for large data sources, the data mart will take a long time to load and the server can potentially crash due to no available memory. 
+If all objects are read for large data sources, the data mart will take a long time to load or the server can potentially crash due to the server running out of memory.  
 
 ### Connections
 
 In the app model a connection between two object classes means that one object class has a a reference to the other object class, or one object class has a property that can contain values from the other object class. 
 
-If you have chosen to add data sources from the list there are no connections between the object classes.  
+If you have chosen to add data sources through connections, the connections are already in place, but if the data sources where added from the list there are no connections between the object classes.  
 
-To connect data sources click on data view -> right click on data source -> connection. 
+To connect data sources, or change existing connection, click on data view -> right click on data source -> connection. Connections are also available in data view -> click on data source -> properties panel -> connections.  
+
+Add connections by choosing which field in the data source is connected to another data source in the data mart. 
+
+Complete list of connections are displayed below:
+
+![DM_connections_final.png](media/DM_connections_final.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

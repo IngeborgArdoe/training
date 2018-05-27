@@ -1,11 +1,9 @@
 
-**_Øvingsopplegg er under arbeid_**
-
 # Data Mart Part One - Create a Data Mart
 
 ### SESSION BY INSTRUCTOR: 
 
-_The main idea of the data mart is to simplify access to enterprise data, for different purposes and users, by reducing data complexity and volume. More on data mart concepts [here](https://docs.genus.no/users/analyze-report-and-discover/data-marts/data-mart-concepts.html). After the lesson the participants will recreate the data mart made in class._
+_The main idea of the data mart is to simplify access to enterprise data, for different purposes and users, by reducing data complexity and volume. The instructor will start of by giving you an introduction to the topic. After the lesson the participants will recreate the data mart made in class._
 
 #### Agenda:
 
@@ -26,10 +24,10 @@ _The main idea of the data mart is to simplify access to enterprise data, for di
 
 ## Create Yellow Trips Data Mart
 
-To create a data mart open Genus Desktop and open the portal **Discovery**. Create a new data mart by clicking **New** in the toolbar, or by right-clicking in the list of data marts and clicking **New**. Save the data mart. 
+To create a data mart open Genus Desktop and open **Discovery**. Create a new data mart by clicking **New** in the toolbar, or by right-clicking in the list of data marts and clicking **New**. Save the data mart. 
 
 #### Useful links:
-
+Data mart concepts - [here](https://docs.genus.no/users/analyze-report-and-discover/data-marts/data-mart-concepts.html)
 Add data source, properties, connections - [Data view](https://docs.genus.no/users/analyze-report-and-discover/data-marts/data-view.html)
 
 ### Data Sources 
@@ -52,6 +50,8 @@ Data sources that should be included in the data mart:
 * Week 
 
 Data Sources that are added more than once represent different connections, in this case Borough, Service Zone and Taxi Zone. For example, the two data sources for Taxi Zone represents **pick up zone** and **drop off zone** in Yellow Trip.  
+
+Evaluate the data sources' max occurence, if it should be private and if it should **Allow Aggreagate Requests Only**. 
 
 There are multiple methods of adding data sources to the data mart. Use the method you prefer and add data sources to the data mart. The methods are summarised below. 
 
@@ -94,36 +94,19 @@ To connect data sources, or change existing connection, click on data view -> ri
 
 Add connections by choosing which field in the data source is connected to another data source in the data mart. 
 
-Complete list of connections are displayed below:
+Complete list of connections from Yellow Trip is displayed below:
 
 ![DM_connections_final.png](media/DM_connections_final.png)
 
+## Data Mart Load Plan
 
+A data mart needs to be loaded before it is ready to provide data for analyses. Create a data mart load plan that loads the data mart twice per day starting at 11.00 AM and only auto loads between 07.00-20.00. 
 
+- In Genus Desktop click on Discovery -> expand Data Marts shortcut -> click on **Load Plans** -> New
+- General is a summary of **Reload** and **Auto Load** plans. 
+- In reload set up the data mart to load every day at 11.00, then click Advanced... and set up reload every 12 hours for 24 hours. ![DM_loadplan.jpg](media/DM_loadplan.jpg)
+- In auto load set up to not auto load in interval 00.00-07.00 and 20.00-00.00 ![DM_loadplan_autoload.jpg](media/DM_loadplan_autoload.jpg)
 
+## Extra 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- Try to create a circular reference

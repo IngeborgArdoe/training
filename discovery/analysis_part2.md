@@ -1,10 +1,8 @@
 
-**_Øvingsopplegg er under arbeid_**
-
 # Analysis Part Two - Formula editor and data manipulation
 
 ### SESSION BY INSTRUCTOR: 
-_After the lesson the participants will recreate the analysis made in class._
+_The instructor will start of by giving you an introduction to the topic. After the lesson the participants will recreate the analysis made in class._
 
 #### Agenda 
 

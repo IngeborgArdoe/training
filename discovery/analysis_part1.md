@@ -1,10 +1,8 @@
 
-**_Øvingsopplegg er under arbeid_**
-
 # Analysis Part One - Trips and visualization of data
 
 ### SESSION BY INSTRUCTOR: 
-_The instructor will start of by giving you a brief introduction to the topic. The session will include how to create a new analysis, how to add and modify tiles and how to preview the analysis. After the lesson the participants will recreate the analysis made in class._
+_The instructor will start of by giving you an introduction to the topic. After the lesson the participants will recreate the analysis made in class._
 
 #### Agenda 
 
@@ -27,7 +25,7 @@ To preview an analysis either:
 
 ## Analysis from class
 
-Try to recreate the analysis shown in class/analysis in the solution environment. If there are any questions  These are the steps: 
+Try to recreate the analysis shown in class/analysis in the solution environment. These are the steps: 
 
 ### Total number of trips
 
@@ -39,7 +37,7 @@ Try to recreate the analysis shown in class/analysis in the solution environment
 
 4. Choose tile type **Measure**.
 	
-    a. In DATA - Value - choose a data source and aggregation. 
+    a. In DATA - Value - choose a data source and aggregation. Hint - which data source must be aggregated to find total number of trips? 
 	
     b. In FORMAT - Body - change font size and colour.
 

@@ -27,8 +27,8 @@ _The main idea of the data mart is to simplify access to enterprise data, for di
 To create a data mart open Genus Desktop and open **Discovery**. Create a new data mart by clicking **New** in the toolbar, or by right-clicking in the list of data marts and clicking **New**. Save the data mart. 
 
 #### Useful links:
-Data mart concepts - [here](https://docs.genus.no/users/analyze-report-and-discover/data-marts/data-mart-concepts.html)
-Add data source, properties, connections - [Data view](https://docs.genus.no/users/analyze-report-and-discover/data-marts/data-view.html)
+Data mart concepts - [here](https://docs.genus.no/users/analyze-report-and-discover/data-marts/data-mart-concepts.html)  
+Data source, properties, connections in [Data view](https://docs.genus.no/users/analyze-report-and-discover/data-marts/data-view.html)
 
 ### Data Sources 
 

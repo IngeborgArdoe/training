@@ -28,10 +28,10 @@ An **Analysis** is a set of **Tiles** where each tile uses one of many **Visuali
 
 In the analysis, tiles are located in the grey area to the left, while the tile pane is located to the right. The different visualizations are located on top of the tile pane, while configurations to the visualization are made in the bottom part of the tile pane. The tile pane configuration part consists of **Data**, **Format** and **Actions** sections. 
 
-Visualizations: 
+Visualizations:  
 ![tile_visualizations.jpg](media/tile_visualizations.jpg) 
 
-Configuration to visualization: 
+Configuration to visualization:  
 ![tile_pane.jpg](media/tile_pane.jpg) 
 
 The visualization decides what type of configurations can be made to the tile. Read more on visualizations in [Analysis concepts](https://docs.genus.no/users/analyze-report-and-discover/analysis/concepts.html).  

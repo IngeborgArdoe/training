@@ -1,7 +1,7 @@
 
 # Analysis Part Two - Formula editor and data manipulation
 
-### SESSION BY INSTRUCTOR: 
+#### SESSION BY INSTRUCTOR: 
 _The instructor will start of by giving you an introduction to the topic. After the lesson the participants will recreate the analysis made in class._
 
 #### Agenda 
@@ -16,7 +16,7 @@ _The instructor will start of by giving you an introduction to the topic. After 
 Try to recreate the analysis shown in class/analysis in the solution environment. These are the steps: 	
 	
 ### Key Values 
-The goal of this tile is to show the formula editor and how to display the calculated value in combination with a self composed text. More on formula editor [here](https://docs.genus.no/users/analyze-report-and-discover/analysis/designer/formula-designer.html)  
+The goal of this tile is to show the formula editor and how to display the calculated value in combination with a self composed text. More on formula editor [here](https://docs.genus.no/users/analyze-report-and-discover/analysis/designer/formula-designer.html).  
 	
 1. Create a tile. Resize the tile and give it a header. 
 

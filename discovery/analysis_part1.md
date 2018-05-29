@@ -1,7 +1,7 @@
 
 # Analysis Part One - Trips and visualization of data
 
-### SESSION BY INSTRUCTOR: 
+#### SESSION BY INSTRUCTOR: 
 _The instructor will start of by giving you an introduction to the topic. After the lesson the participants will recreate the analysis made in class._
 
 #### Agenda 
@@ -28,15 +28,12 @@ An **Analysis** is a set of **Tiles** where each tile uses one of many **Visuali
 
 In the analysis, tiles are located in the grey area to the left, while the tile pane is located to the right. The different visualizations are located on top of the tile pane, while configurations to the visualization are made in the bottom part of the tile pane. The tile pane configuration part consists of **Data**, **Format** and **Actions** sections. 
 
-Visualizations:  
-![tile_visualizations.jpg](media/tile_visualizations.jpg) 
-
-Configuration to visualization:  
+Visualizations and Data, Format and Actions:   
 ![tile_pane.jpg](media/tile_pane.jpg) 
 
 The visualization decides what type of configurations can be made to the tile. Read more on visualizations in [Analysis concepts](https://docs.genus.no/users/analyze-report-and-discover/analysis/concepts.html).  
 
-Useful links: 
+#### Useful links:
 - [Analysis concepts](https://docs.genus.no/users/analyze-report-and-discover/analysis/concepts.html) 
 - [Analysis visualizations](https://docs.genus.no/users/analyze-report-and-discover/analysis/visualizations.html)
 - [Design an analysis](https://docs.genus.no/users/analyze-report-and-discover/analysis/designer/index.html) 
@@ -51,7 +48,6 @@ Try to recreate the analysis shown in class/analysis in the solution environment
 2. In the analysis edit mode, create a new tile by clicking the red circular plus button on the bottom right. 
 
 3. Scale the tile to match the solution environment and give the tile a header. The header can be 		configured in **Format**. Click on Header -> Title.  
-![tile_header.jpg](media/tile_header.jpg)  
 
 4. Choose visualization **Measure**.
 	

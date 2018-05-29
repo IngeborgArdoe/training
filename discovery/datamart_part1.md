@@ -1,7 +1,7 @@
 
 # Data Mart Part One - Create a Data Mart
 
-### SESSION BY INSTRUCTOR: 
+#### SESSION BY INSTRUCTOR: 
 
 _The main idea of the data mart is to simplify access to enterprise data, for different purposes and users, by reducing data complexity and volume. The instructor will start of by giving you an introduction to the topic. After the lesson the participants will recreate the data mart made in class._
 
@@ -39,8 +39,8 @@ Data sources that should be included in the data mart:
 * Borough Drop off
 * Payment Type
 * Rate Code
-* Service Zone Pick Up
-* Service Zone Drop Off
+* Community District Pick Up
+* Community District Drop Off
 * Store and forward
 * Taxi Zone Pick Up 
 * Taxi Zone Drop Off
@@ -49,9 +49,9 @@ Data sources that should be included in the data mart:
 * Day
 * Week 
 
-Data Sources that are added more than once represent different connections, in this case Borough, Service Zone and Taxi Zone. For example, the two data sources for Taxi Zone represents **pick up zone** and **drop off zone** in Yellow Trip.  
+Data Sources that are added more than once represent different connections, in this case Borough, Community District and Taxi Zone. For example, the two data sources for Taxi Zone represents **pick up zone** and **drop off zone** in Yellow Trip.  
 
-Evaluate the data sources' max occurence, if it should be private and if it should **Allow Aggreagate Requests Only**. 
+For each data source you should evaluate the data sources' max occurence, if it should be private and if it should **Allow Aggreagate Requests Only**. 
 
 There are multiple methods of adding data sources to the data mart. Use the method you prefer and add data sources to the data mart. The methods are summarised below. 
 

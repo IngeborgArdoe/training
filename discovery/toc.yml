@@ -1,5 +1,18 @@
 - name: Overview
   href: index.md
-  items: 
-  - name: Introduction to the model 
-    href: introduction_model.md
+- name: Installation and Setup
+  href: installation_setup.md
+- name: Introduction to the model 
+  href: introduction_model.md
+- name: Analysis Part One - Visualization 
+  href: analysis_part1.md
+- name: Anlysis Part Two - Formula
+  href: analysis_part2.md
+- name: Data Mart Part 1 - Create a data mart
+  href: datamart_part1.md
+- name: Data Mart Part 2 - Subset and calculated fields
+  href: datamart_part2.md
+- name: Analysis Part 3 - Advanced Analysis
+  href: analysis_part3.md
+- name: Finalization
+  href: finalization.md 

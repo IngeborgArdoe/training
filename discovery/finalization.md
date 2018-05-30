@@ -1,10 +1,7 @@
 
-
-**_Øvingsopplegg er under arbeid_**
-
 # Finalization 
 
-### SESSION BY INSTRUCTOR: 
+#### SESSION BY INSTRUCTOR: 
 
 _After the lesson the participants will redo some of the activities done in class._
 
@@ -27,7 +24,7 @@ _After the lesson the participants will redo some of the activities done in clas
     - Powerpoint
     - Export data excel/picture
 
-## Create in class
+## Exercise
 	
 ### Analysis 
 

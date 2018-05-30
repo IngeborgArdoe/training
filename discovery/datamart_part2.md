@@ -3,9 +3,9 @@
 **_Øvingsopplegg er under arbeid_**
 
 # Datamart part two – Manipulate data
-In this session, we will take a closer look at the data mart, and explore ways to create custom calculations that can be used readily in analysis.  
+_In this session, we will take a closer look at the data mart, and explore ways to create custom calculations that can be used readily in analysis._  
 
-### Agenda 
+#### Agenda 
 - Subset 
 - Calculated field
     - Keep
@@ -19,7 +19,7 @@ Subsets are used to access only specific parts of the data source. In this case,
 
 The effect of subsets can be compared to the effect of making selections in an analysis. An important difference is that the filtration is done in advance in the case of subsets, wheareas for an analysis the filtration is executed during runtime. To have the filtration done in advance, can be beneficial when dealing with large data sources.
 
-### Create in class ###
+### Exercise ###
 
 #### Create a subset ####
 ##### Total amount > $200 #####

@@ -14,23 +14,25 @@ In this session, we will take a closer look at the data mart, and explore ways t
 
 
 ### Subset
-Subsets are used to access only specific parts of the data source. In this case, we want to create a subset that only includes Yellow taxi trips with a cost higher than $250, and another subset for trips that were tipped for more than $100. 
+Subsets are used to access only specific parts of the data source. In this case, we want to create a subset that only includes Yellow taxi trips with a cost higher than $200, and another subset for trips that were tipped for more than $50. 
 
 The effect of subsets can be compared to the effect of making selections in an analysis. An important difference is that the filtration is done in advance in the case of subsets, wheareas for an analysis the filtration is executed during runtime. To have the filtration done in advance, can be beneficial when dealing with large data sources.
 
+### Create in class ###
+
 #### Create a subset ####
-##### Total amount > $250 #####
+##### Total amount > $200 #####
  - Enter the *Subsets* shortcut in the navigation pane. Click the "New" icon, either in the action menu or by right clicking the main window
- - Add a name (e.g. *Yellow Trip > $250*), and optionally a description
+ - Add a name (e.g. *Yellow Trip > $200*), and optionally a description
  - Open *Data Filter* to edit the filter properties for this subset
 		 -  add a filter for the *Yellow Trip* data source
-		 - in the condition window, click *"Add"*, choose *Total amount*  as left operand, and enter 250 as a right operand
-		 - the expression should read *"Yellow Trip.Total amount **is greater than** 250"*
+		 - in the condition window, click *"Add"*, choose *Total amount*  as left operand, and enter 200 as a right operand
+		 - the expression should read *"Yellow Trip.Total amount **is greater than** 200"*
 
 Notice that you can add filters for many data sources per subset.
 
-##### Tip amount > $100
-Create a similar subset for taxi trips that were awarded with more than $100 tip.
+##### Tip amount > $50
+Create a similar subset for taxi trips that were awarded with more than $50 tip.
 
 ### Calculated Fields ###
 A calculated field is a data mart specific extension of a data source. As with formulas in an analysis, they are defined as mathematical expressions. Calculated fields are normally used when the mathematical operation needs to be performed at object level, as opposed to a formula in analysis, which operates on an aggregated level. Additionally, the calculations are done during data mart load, as opposed to formulas in analysis, which are calculated at run time.
@@ -58,14 +60,14 @@ Calculated fields can be accessed across data sources. We want to calculate the 
 	- The expression should read: "*yellowTrip.tripSpeed().average()*"
 
 
-##### Average trip speed per PU Community District when Tip amount > $100 using *keep*
-The *keep* keyword can be used in expressions to make use of subsets. Here we want to calculate the Trip speed for Yellow Taxi Trips where the Tip amount exceeded $100.
+##### Average trip speed per PU Community District when Tip amount > $50 using *keep*
+The *keep* keyword can be used in expressions to make use of subsets. Here we want to calculate the Trip speed for Yellow Taxi Trips where the Tip amount exceeded $50.
 
-- Add a new calculated field to the Yellow Trip data source and name it *"Average Trip speed per PU Community, tip > $100"*
-- Start typing *"yellowTrips."*, this time followed by "*keep(Subsets.)*". Notice that the subsets you created appear. Choose *tipsAmount__100*
-	- Now, the calculation will only consider yellow taxi trips where the tip amount exceeds $100
+- Add a new calculated field to the Yellow Trip data source and name it *"Average Trip speed per PU Community, tip > $50"*
+- Start typing *"yellowTrips."*, this time followed by "*keep(Subsets.)*". Notice that the subsets you created appear. Choose *tipsAmount__50*
+	- Now, the calculation will only consider yellow taxi trips where the tip amount exceeds $50
 - add another "*.*" to access the properties of the *Yellow Trip* object class. As in the previous step, choose *"tripSpeed"*, followed by "*.*" and *average*. 
-	- The expression should read: "*yellowTrip.keep(Subsets.tipAmount__100).tripSpeed().average()*"
+	- The expression should read: "*yellowTrip.keep(Subsets.tipAmount__50).tripSpeed().average()*"
 
 ##### Total Average Trip speed using *ignoreContext* #####
 The previous calculated fields have been contextualized: We have calculated the average speed *per* trip, and *per* community district. Sometimes we want to ignore the context, for example in order to calculate the total average trip speed. We can do this by using the *ignoreContext* keyword.

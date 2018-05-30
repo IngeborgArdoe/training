@@ -1,16 +1,17 @@
 
+
 **_Øvingsopplegg er under arbeid_**
 
 # Datamart part two – Manipulate data
-In this session, we will take a closer look at the data mart, and explore ways to create custom calculations that can readily be used in analysis.  
+In this session, we will take a closer look at the data mart, and explore ways to create custom calculations that can be used readily in analysis.  
 
 ### Agenda 
 - Subset 
 - Calculated field
     - Keep
     - IgnoreContext
-    - Ignore all selections
     - Ignore selections
+    - Ignore all selections
 
 
 ### Subset
@@ -38,7 +39,7 @@ Create a similar subset for taxi trips that were awarded with more than $50 tip.
 A calculated field is a data mart specific extension of a data source. As with formulas in an analysis, they are defined as mathematical expressions. Calculated fields are normally used when the mathematical operation needs to be performed at object level, as opposed to a formula in analysis, which operates on an aggregated level. Additionally, the calculations are done during data mart load, as opposed to formulas in analysis, which are calculated at run time.
 
 #### Create Calculated Fields ####
-We are going to create four calculated fields in this exercise: *"Trip speed"*, *"Average price total (fixed)"* on the *"Yellow Trip"* data source, and *"Average speed per pickup borough"* and *"Difference from global average"* on the *Community District PU* data source.
+We are going to create four calculated fields in this exercise: *"Trip speed"* on the *"Yellow Trip"* data source,  and *"Average trip speed per PU Community"*,  *"Average Trip speed per PU Community, tip > $50"* and *"Total average trip speed”* on the *Community District PU* data source.
 ##### "Trip speed" #####
 - Enter the *Calculated Fields* shortcut in the navigation pane.
 - Right click the *Yellow Trip* data source and click "New"
@@ -48,7 +49,7 @@ We are going to create four calculated fields in this exercise: *"Trip speed"*, 
 - Trip speed is defined as distance divided by duration
 	- the expression should read: *yellowTrip.distance / yellowTrip.duration_Hours*
 
-##### Average trip speed per pickup borough
+##### Average trip speed per PU Community District
 Calculated fields can be accessed across data sources. We want to calculate the average trip speed per pickup community, by using the *"Trip speed"* field that we calculated in the previous step.
 
 - Add a new Calculated Field to the *Community District PU* data source. Name it *"Average Trip speed per PU Community"*
@@ -60,21 +61,21 @@ Calculated fields can be accessed across data sources. We want to calculate the 
 	- The expression should read: "*yellowTrip.tripSpeed().average()*"
 
 
-##### Average trip speed per PU Community District when Tip amount > $50 using *keep*
+##### Average trip speed per PU Community District when Tip amount > $50, using *keep*
 The *keep* keyword can be used in expressions to make use of subsets. Here we want to calculate the Trip speed for Yellow Taxi Trips where the Tip amount exceeded $50.
 
-- Add a new calculated field to the Yellow Trip data source and name it *"Average Trip speed per PU Community, tip > $50"*
+- Add a new calculated field to the Community District PU data source and name it *"Average Trip speed per PU Community, tip > $50"*
 - Start typing *"yellowTrips."*, this time followed by "*keep(Subsets.)*". Notice that the subsets you created appear. Choose *tipsAmount__50*
 	- Now, the calculation will only consider yellow taxi trips where the tip amount exceeds $50
 - add another "*.*" to access the properties of the *Yellow Trip* object class. As in the previous step, choose *"tripSpeed"*, followed by "*.*" and *average*. 
 	- The expression should read: "*yellowTrip.keep(Subsets.tipAmount__50).tripSpeed().average()*"
 
 ##### Total Average Trip speed using *ignoreContext* #####
-The previous calculated fields have been contextualized: We have calculated the average speed *per* trip, and *per* community district. Sometimes we want to ignore the context, for example in order to calculate the total average trip speed. We can do this by using the *ignoreContext* keyword.
+The previous calculated fields have been contextualized: We have calculated the average speed *per* trip, and *per* community district. Sometimes we want to ignore the context, for example in order to calculate the total average trip speed (aka. "average average trip speed"). We can do this by using the *ignoreContext* keyword.
 
-- Add a new calculated field to the Yellow Trip data source and name it *"Total average trip speed"**
+- Add a new calculated field to the Community District PU data source and name it *"Total average trip speed"**
 - Start by typing "*yellowTrip.ignoreContext()*". 
-	- The connection between the *Yellow Trip* object class and *Community District PU* is now ignored. Instead, all *Yellow Trip* objects are included in the calcuation 
+	- The connection between the *Community District PU* data source and *Yellow Trip* is now ignored. Instead, all *Yellow Trip* objects are included in the calcuation 
 	- Complete the expression by selecting the *tripSpeed* field, and choosing *average* as accumuluation method
 		- The final expression should read: "*yellowTrip.ignoreContext().tripSpeed().average()*"
 

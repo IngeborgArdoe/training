@@ -1,5 +1,6 @@
 
 
+
 # Datamart part two – Manipulate data
 _In this session, we will take a closer look at the data mart, and explore ways to create custom calculations that can be used readily in analysis._  
 
@@ -32,6 +33,9 @@ Notice that you can add filters for many data sources per subset.
 
 ##### Tip amount > $50
 Create a similar subset for taxi trips that were awarded with more than $50 tip.
+
+#### Weekdays
+Create a subset on the Weekday data source, that only includes Saturday and Sunday
 
 ### Calculated Fields ###
 A calculated field is a data mart specific extension of a data source. As with formulas in an analysis, they are defined as mathematical expressions. Calculated fields are normally used when the mathematical operation needs to be performed at object level, as opposed to a formula in analysis, which operates on an aggregated level. Additionally, the calculations are done during data mart load, as opposed to formulas in analysis, which are calculated at run time.

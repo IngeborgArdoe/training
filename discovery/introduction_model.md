@@ -9,6 +9,7 @@ The data model used for this course represents New York City Yellow Cab`s taxi t
 
 * Yellow Trip
 * Borough
+* Community District
 * Payment Type
 * Rate Code
 * Service Zone
@@ -22,6 +23,6 @@ The data model used for this course represents New York City Yellow Cab`s taxi t
 
 The main object class is Yellow Trip, where each instance/row represents a single trip. Each trip has information on pick-up and drop off location, time and zone, and includes details on different payment amounts, payment type, duration of the trip and number of passengers. 
 
-The pick-up and drop off taxi zones consists of 265 different areas, such as "Jamaica Bay" and "Chinatown". Each taxi zone is connected to a larger Borough, which is split into seven areas. Two examples of boroughs are "Bronx" and "Brooklyn". Lastly, each borough is connected to a Service zone. There are five Service zones and an example is "Airports". 
+The pick-up and drop off taxi zones consists of 265 different areas, such as "Jamaica Bay" and "Chinatown". Each taxi zone is connected to a larger community district, and to an even larger borough, such as "Bronx" or "Brooklyn".
 
 

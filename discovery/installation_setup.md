@@ -3,13 +3,13 @@
 1.	In case you haven't installed Genus Apps on your computer yet: Open the web browser and type http://edudiscovery.genus.net/discover/Download/Setup.exe . This will download Genus Apps.
 2.	An environment will be assigned to you. We have 15 environments: 
     
-    edu1a, edu1b, .., edu1g and edu2a, edu2b, .., edu2h. 
+    user1a, user1b, .., user1g and user2a, user2b, .., user2h. 
     
 	You will be doing all your training exercises in the assigned environment. In addition, you will get access to a solution, which can be used to verify your work or give inspiration when needed (please make sure you are not editing the solution!).
-3.	Create 4 shortcuts on your computer with the targets below. Note that "1a" must be replaced with the environment number assigned to you (i.e. change «edu1a» to «edu2b» if your assigned environment is 2b).
-  * “genusstudiolink:http://edudiscovery.genus.net/edu1a/?LinkType=OpenStudio” 
+3.	Create 4 shortcuts on your computer with the targets below. Note that "1a" must be replaced with the environment number assigned to you (i.e. change «user1a» to «user2b» if your assigned environment is 2b).
+  * “genusstudiolink:http://edudiscovery.genus.net/discover1a/?LinkType=OpenStudio” 
 (Navn: Genus Discovery Edu1a Studio)
- “genuslink:http://edudiscovery.genus.net/edu1a/?RunAsAdmin=1” 
+ “genuslink:http://edudiscovery.genus.net/discover1a/?RunAsAdmin=1” 
 (Navn: Genus Discovery Edu1a)
   * “genusstudiolink:http://edudiscovery.genus.net/discover/?LinkType=OpenStudio” 
 (Navn: Genus Discovery Solution Studio)

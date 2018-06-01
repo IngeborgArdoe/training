@@ -57,7 +57,10 @@ Theory about GeoJSON.
 
 **Adding the map base**
 
-1. Make a new analysis, and add a tile with the control type **Map**. image: mapcontroltype.
+1. Make a new analysis, and add a tile with the control type **Map**. 
+
+![mapicon.png](media/mapicon.png)
+
 
 2. Add a new map layer, and set Type=Map and Server type=OSM. This will be your “base layer”.
 
@@ -97,13 +100,19 @@ For solutions with user 2
 
 **Color distribution based on value - Conditional colors**
 
-1. In DATA, select the borough layer, and add a **Value**. Use the same data source as you used in your data binding. Set BoroCode as your field. image: mapboroughbinding
+1. In DATA, select the borough layer, and add a **Value**. Use the same data source as you used in your data binding. Set BoroCode as your field.
+
+![mapboroughbinding.png](media/mapboroughbinding.png)
+
 
 2. Go to FORMAT, and select your borough layer.
 
 3. Open **GeoJson Fill Color**.
 
-4. We now want to add a color to each region. To do this, click on **conditional colors**. Here, add a color to each BoroCode image: mapconditionalcolors
+4. We now want to add a color to each region. To do this, click on **conditional colors**. Here, add a color to each BoroCode 
+
+![mapconditionalcolors.png](media/mapconditionalcolors.png)
+
 
 5. Save and preview. Each borough in your map should now have a color.
 

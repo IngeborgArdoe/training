@@ -13,7 +13,7 @@
 (Navn: Genus Discovery Edu1a)
   * “genusstudiolink:http://edudiscovery.genus.net/discover/?LinkType=OpenStudio” 
 (Navn: Genus Discovery Solution Studio)
-  * “genuslink:http://edudiscovery.genus.net/discover/” 
+  * “genuslink:http://edudiscovery.genus.net/discover” 
 (Navn: Genus Discovery Solution)
 
 The first shortcut points to the developing tool Genus Studio. The second shortcut points to the end user application (also referred to as the client or Genus Desktop). Shortcuts 3 and 4 are the equivalents for the provided solution.

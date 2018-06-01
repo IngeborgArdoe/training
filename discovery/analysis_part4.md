@@ -1,4 +1,3 @@
-
 # Analysis Part Four - Advanced analysis 
 
 ### SESSION BY INSTRUCTOR: 
@@ -71,9 +70,7 @@ For solutions with user 2
 
 6. **Data binding**: Add "Borough PU" or "DO" as data source, and choose the field that corresponds with your **GeoJSON-field**. This field is called “BoroCode”.
 
-7. Add a **Value**, and use the same data source as you used in your data binding. Set BoroCode as your field. image: mapboroughbinding
-
-8. Save and preview. You should now be able the see the boroughs in your map.
+7. Save and preview. You should now be able the see the boroughs in your map.
 
 **Adding the GeoJSON for community districts**
 
@@ -88,7 +85,43 @@ For solutions with user 2
 
 3. Add community district as your data source. Make sure your choice of pickup versus dropoff corresponds with what you chose for borough.
 
-**Color distribution based on value**
+4. Set **Show layer selector** to enabled
 
-[Link to more information about maps](https://docs.genus.no/users/analyze-report-and-discover/analysis/visualizations.html)
+5. Save and preview. Use the layer selector to switch between the two GeoJSON layers.
 
+**Color distribution based on value - Conditional colors**
+
+1. In DATA, select the borough layer, and add a **Value**. Use the same data source as you used in your data binding. Set BoroCode as your field. image: mapboroughbinding
+
+2. Go to FORMAT, and select your borough layer.
+
+3. Open **GeoJson Fill Color**.
+
+4. We now want to add a color to each region. To do this, click on **conditional colors**. Here, add a color to each BoroCode image: mapconditionalcolors
+
+5. Save and preview. Each borough in your map should now have a color.
+
+**Color distribution based on value - gradient based on number of trips**
+
+1. In DATA, select the community district layer, and add a **Value**. Choose "Yellow Trip" as your data source, and make sure **Aggregation** is set to **Count**.
+
+2. Go to FORMAT, and select your community district layer. Open **GeoJson Fill Color**.
+
+3. We now want to add a color gradient to each region. To do this, click on each end of the color scale, and choose a color.
+
+4. Save and preview. The districts in your map should now have a gradient color distribution based on number of trips.
+
+**Color distribution based on value - gradient based on average speed**
+
+5. Go to **Value** in FORMAT and choose the field "trip speed". Set **Aggregation** to **Average**.
+
+6. Save and preview. The color gradient now shows average trip speed per community.
+
+**Selections**
+
+1. Add two new table tiles to your analysis, and set data source to the two data sources used in your geoJSON layers (borough and community district). Add some useful columns.
+
+2. Save and preview. By selecting a borough or community district in your table, the map should now be responsive, and reflect your selection.
+
+
+You can read more about maps in the [Genus Documentation](https://docs.genus.no/users/analyze-report-and-discover/analysis/visualizations.html)

@@ -12,7 +12,9 @@
   href: datamart_part1.md
 - name: Data Mart Part 2 - Subset and Calculated Fields
   href: datamart_part2.md
-- name: Analysis Part 3 - Advanced Analysis
+- name: Analysis Part 3 - Applying Subsets and Calculated Fields to Analyses
   href: analysis_part3.md
+- name: Analysis Part 4 - Advanced Analysis
+  href: analysis_part4.md
 - name: Finalization
   href: finalization.md 

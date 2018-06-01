@@ -25,7 +25,10 @@ Objective: Create a diagram that shows the flow of taxi trips from one part of N
 
 1. Create a new analysis
 
-2. Add a new tile, and choose the control type **Sankey** image:sankeyicon
+2. Add a new tile, and choose the control type **Sankey** 
+
+![sankeyicon.png](media/sankeyicon.png) 
+
 
 3. In DATA set **Category 1** and **Category 2** to the data sources "Borough PU" and "Borough DO", respectively.
 
@@ -37,7 +40,10 @@ Objective: Create a diagram that shows the flow of taxi trips from one part of N
 
 1. Add two new categories – "Community District PU" and "Community District DO".
 
-2. Rearrange the order of the categories so that the flow starts with "Borough PU" and ends with "Borough DO". image: sankeycategoryorder
+2. Rearrange the order of the categories so that the flow starts with "Borough PU" and ends with "Borough DO".
+
+![sankeycategoryorder.png](media/sankeycategoryorder.png) 
+
 
 3. Add two new values. Since we want to show the same data flowing through all the categories, both of the new values should be assigned to the same data source and aggregation as the first one.
 

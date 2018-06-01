@@ -24,7 +24,10 @@ The objective of this exercise is to use the subsets created in the data mart in
 
 2. Keep the tile showing tip amount per payment type, and remove all other tiles.
 
-3. Duplicate the tile, so that you have two identical tiles. image:subsetduplicate
+3. Duplicate the tile, so that you have two identical tiles. 
+
+![subsetduplicate.png](media/subsetduplicate.png) 
+
 
 4. Pick a tile and in DATA, go to **Value (# Yellow Trip)** and add a subset. Choose the subset "Total amount > $200". 
 
@@ -36,7 +39,10 @@ The objective of this exercise is to use the subsets created in the data mart in
 
 **Applying subsets using the Subset control type:**
 
-1. Add a new tile, and choose the **Subsets** control type. image:subsetselectionicon.
+1. Add a new tile, and choose the **Subsets** control type.
+
+![subsetselectionicon.png](media/subsetselectionicon.png)  
+
 
 2. In DATA, expand **Available** to see the available subsets. Choose the "Weekend" subset.
 

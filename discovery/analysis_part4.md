@@ -27,7 +27,7 @@ Objective: Create a diagram that shows the flow of taxi trips from one part of N
 
 2. Add a new tile, and choose the control type **Sankey** 
 
-![sankeyicon.png](media/sankeyicon.png) 
+	![sankeyicon.png](media/sankeyicon.png) 
 
 
 3. In DATA set **Category 1** and **Category 2** to the data sources "Borough PU" and "Borough DO", respectively.
@@ -42,7 +42,7 @@ Objective: Create a diagram that shows the flow of taxi trips from one part of N
 
 2. Rearrange the order of the categories so that the flow starts with "Borough PU" and ends with "Borough DO".
 
-![sankeycategoryorder.png](media/sankeycategoryorder.png) 
+	![sankeycategoryorder.png](media/sankeycategoryorder.png) 
 
 
 3. Add two new values. Since we want to show the same data flowing through all the categories, both of the new values should be assigned to the same data source and aggregation as the first one.
@@ -59,7 +59,7 @@ Theory about GeoJSON.
 
 1. Make a new analysis, and add a tile with the control type **Map**. 
 
-![mapicon.png](media/mapicon.png)
+	![mapicon.png](media/mapicon.png)
 
 
 2. Add a new map layer, and set Type=Map and Server type=OSM. This will be your “base layer”.
@@ -102,7 +102,7 @@ For solutions with user 2
 
 1. In DATA, select the borough layer, and add a **Value**. Use the same data source as you used in your data binding. Set BoroCode as your field.
 
-![mapboroughbinding.png](media/mapboroughbinding.png)
+	![mapboroughbinding.png](media/mapboroughbinding.png)
 
 
 2. Go to FORMAT, and select your borough layer.
@@ -111,7 +111,7 @@ For solutions with user 2
 
 4. We now want to add a color to each region. To do this, click on **conditional colors**. Here, add a color to each BoroCode 
 
-![mapconditionalcolors.png](media/mapconditionalcolors.png)
+	![mapconditionalcolors.png](media/mapconditionalcolors.png)
 
 
 5. Save and preview. Each borough in your map should now have a color.

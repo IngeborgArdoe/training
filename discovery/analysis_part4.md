@@ -41,12 +41,19 @@ Theory about GeoJSON.
 
 1. Add a new map layer.
 
+For solutions with user 1  
 [http://edudiscovery.genus.net/discover/Resources/GeojsonBorough.json](http://edudiscovery.genus.net/discover/Resources/GeojsonBorough.json)
+For solutions with user 2  
+[http://edudiscovery2.genus.net/discover/Resources/GeojsonBorough.json](http://edudiscovery.genus.net/discover/Resources/GeojsonBorough.json)
 
 **Adding the GeoJSON for community districts**
 
 1. Add a new map layer. 
 
+For solutions with user 1  
 [http://edudiscovery.genus.net/discover/Resources/GeojsonCommunityDistrict.json](http://edudiscovery.genus.net/discover/Resources/GeojsonCommunityDistrict.json)
+For solutions with user 2  
+[http://edudiscovery2.genus.net/discover/Resources/GeojsonCommunityDistrict.json](http://edudiscovery.genus.net/discover/Resources/GeojsonCommunityDistrict.json)
 
 **Color distribution based on value**
+

@@ -71,7 +71,7 @@ Try to recreate the analysis shown in class/analysis in the solution environment
 
     d. In FORMAT - Axes - Primary Value Axis - Change number format to zero decimals.
 
-    e. In FORMAT - Values - change number format to zero decimals and change data series color. Also set data point label to **custom** and write **{value}**. This will make the values of each datapoint visible. 
+    e. In FORMAT - Values - change number format to zero decimals and change data series colour. Also set data point label to **custom** and write **{value}**. This will make the values of each datapoint visible. 
 
 3. Save and preview. 
 
@@ -86,6 +86,12 @@ Try to recreate the analysis shown in class/analysis in the solution environment
     b. Create two additional dropdowns in the same dropdown tile.  
 
 3. Save and preview. While previewing, do a selection in the dropdown. Notice how the numbers in the different tiles change as selections are made. 
+
+### Ignore selections
+
+1. In the first tile with total number of trips, open the value and chose weekday in ignore selection. 
+
+2. Save and preview. Do selections on weekday and check if number of trips changes with the selection. 
 
 ## Extra work 
 

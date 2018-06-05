@@ -54,6 +54,7 @@ The settings pane is located on the right side of an analysis in edit-mode. Here
 1. Open Genus Studio 
 2. In Directory - User Interface - Navigation pane - right click beneath the other view buttons -> Add View Button
 3. Give the view button a name – _including your user name_ – and choose a symbol. To change the symbol right click the view button -> Properties -> Under Symbol click Change... -> Select symbol -> Ok
-4. Add an analysis to the view button. Right click on the view button -> Add shortcut -> Analysis -> Next -> Browse -> Chose an analysis -> Ok -> Next -> Change name and symbol -> Finish ![Navigation_pane_w_analysis](media/Navigation_pane_w_analysis.jpg) 
+4. Add an analysis to the view button. Right click on the view button -> Add shortcut -> Analysis -> Next -> Browse -> Chose an analysis -> Ok -> Next -> Change name and symbol -> Finish  
+   ![Navigation_pane_w_analysis](media/Navigation_pane_w_analysis.jpg) 
 5. To see the changes in Desktop the directory must be deployed. Click on File and **Deploy to the App Model to this computer**. Deploy to all will force a restart to all users who are currently using Genus Desktop. Deploy to this computer will only deploy changes to you. To see the changes, restart Genus Desktop. After the changes are deployed, check the View button and Shortcut.
 

@@ -74,6 +74,8 @@ Try to recreate the analysis shown in class/analysis in the solution environment
     d. In Format - Axes - Primary Value Axis - Change number format to zero decimals.
 
     e. In Format - Values - change number format to zero decimals and change data series colour. Also set data point label to **custom** and write **{value}**. This will make the values of each datapoint visible. 
+	
+    f. In Analytics - Trend - Add a line. Choose your own style, color and line label. Value is Yellow Trip. 
 
 3. Save and preview. 
 

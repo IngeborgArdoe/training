@@ -15,9 +15,9 @@ _The instructor will start of by giving you an introduction to the topic. After 
 
 ## Create, edit and preview analysis
 
-To create an analysis open Genus Desktop and choose the portal **Discovery**. This is where both **Data Marts** and **Analysis** are available. In the Discovery-panel click on **Analysis** and **New**. Remember to save. To reopen an analysis in edit mode, right click the analysis and choose **Edit**.  
+To create an analysis, open Genus Desktop and choose the portal **Discovery**. This is where both **Data Marts** and **Analysis** are available. In the Discovery panel click on **Analysis** and **New**. Remember to save. To reopen an analysis in edit mode, right click the analysis and choose **Edit**.  
 
-To preview an analysis either: 
+To preview an analysis, either: 
 
 - double click on the saved analysis in Discovery Desktop
 - in the analysis editor click on **Action**. In the action dropdown there are two preview choices, one for Genus Desktop preview and one for internet browser preview.   
@@ -39,7 +39,7 @@ The visualization decides what type of configurations can be made to the tile. R
 - [Design an analysis](https://docs.genus.no/users/analyze-report-and-discover/analysis/designer/index.html) 
 
 ## Exercise  
-Try to recreate the analysis shown in class/analysis in the solution environment. The steps for each tile are listed below.  
+Try to recreate the analysis shown in class/analysis in the solution environment. The steps for each tile are listed below.
 
 ### Total number of trips
 
@@ -47,7 +47,7 @@ Try to recreate the analysis shown in class/analysis in the solution environment
 
 2. In the analysis edit mode, create a new tile by clicking the red circular plus button on the bottom right. 
 
-3. Scale the tile to match the solution environment and give the tile a header. The header can be 		configured in **Format**. Click on Header -> Title.  
+3. Scale the tile to match the solution environment and give the tile a header. The header can be configured in **Format**. Click on Header -> Title.  
 
 4. Choose visualization **Measure**.
 	
@@ -89,7 +89,7 @@ Try to recreate the analysis shown in class/analysis in the solution environment
 
 ### Ignore selections
 
-1. In the first tile with total number of trips, open the value and chose weekday in ignore selection. 
+1. In the first tile with total number of trips, open the value and choose weekday in ignore selection. 
 
 2. Save and preview. Do selections on weekday and check if number of trips changes with the selection. 
 

@@ -22,9 +22,9 @@ The goal of this tile is to show the formula editor and how to display the calcu
 
 2. Choose visualization **Text**
 	
-    a. Create a parameter. Calculate the average price of a trip using the formula editor. To use formula the data source field must be empty. In the formula editor create two fields for total amount and total number of trips. To create a field click on **new field**. In the field-editor, choose a data source, field and aggregation and give the field a label. In this case the fields should represent total amount and total number of yellow trips.  
+    a. Create a parameter. Calculate the average price of a trip using the formula editor. To use formula, the data source field must be empty. In the formula editor, create two fields for total amount and total number of trips. To create a field, click on **new field**. In the field-editor, choose a data source, field and aggregation and give the field a label. In this case the fields should represent total amount and total number of yellow trips.  
 	
-	When the fields are ready, make the formula for average price in the formula editor view. To use a field in the formula click on the label for the field in **Formula values**. To edit the field click the three dots to the right of the field label.   
+	When the fields are ready, make the formula for average price in the formula editor view. To use a field in the formula click on the label for the field in **Formula values**. To edit the field click the three dots to the right of the field label.  
 	
 	![tile_formula_avgprice.jpg](media/tile_formula_avgprice.jpg)
 	

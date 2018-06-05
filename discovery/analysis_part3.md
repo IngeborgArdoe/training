@@ -1,6 +1,6 @@
 # Analysis Part Three - Applying subsets and calculated fields to analyses 
 
-#### SESSION BY INSTRUCTOR 
+#### Session by instructor
 _In this section the participants will learn how the subsets and calculated fields made in the previous section can be applied in different analyses._
 
 #### Agenda 
@@ -73,3 +73,18 @@ The objective of this exercise is to apply the calculated fields created in the 
 3. Next, go to the same column, and add the subset for tip > $50. 
 
 4. Save and preview. The altered column should now be identical to the column showing the calculated field for average trip speed per community district with tip > $50.
+
+**Using calculated fields in formulas**
+
+1. Remove any subsets applied to the columns  in your table tile.
+
+2. Add a new column. 
+
+3. Under Data, open the formula editor. Here the existing columns from your table should already be available under Tile values.
+
+4. Create a new formula using the tile values, or by adding new fields, that shows average trip speed divided by total amount paid. 
+
+5. Repeat steps 2-4, but now find average trip speed/amount when tip > $50. 
+
+6. Save and preview. What does the resulting columns tell you?
+

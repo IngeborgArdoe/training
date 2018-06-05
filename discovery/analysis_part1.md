@@ -95,6 +95,6 @@ Try to recreate the analysis shown in class/analysis in the solution environment
 
 ## Extra work 
 
-- Create a tile that shows _% trips per borough type_ 
+- Create a tile that shows _% trips per borough PU_ 
 - Create a tile that shows _total amount per payment type_
 

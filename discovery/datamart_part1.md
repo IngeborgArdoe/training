@@ -38,16 +38,12 @@ Data sources that should be included in the data mart:
 * Borough Pick Up
 * Borough Drop off
 * Payment Type
-* Rate Code
 * Community District Pick Up
 * Community District Drop Off
-* Store and forward
 * Taxi Zone Pick Up 
 * Taxi Zone Drop Off
-* Vendor
 * Weekday
 * Day
-* Week 
 
 Data Sources that are added more than once represent different connections, in this case Borough, Community District and Taxi Zone. For example, the two data sources for Taxi Zone represents **pick up zone** and **drop off zone** in Yellow Trip.  
 

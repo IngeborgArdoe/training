@@ -31,12 +31,12 @@ _After the lesson the participants will redo some of the activities done in clas
 #### Settings 
 The settings pane is located on the right side of an analysis in edit-mode. Here you can adjust and set default appearances of the analysis.
 
-** Initial Selection**
+**Initial Selection**
 - In the first analysis with selections-tile, set an initial selection. Chose a an initial selection where there also is a selection in the dropdown tile, i.e. Weekend.  
 - Save and preview. 
 - Notice that the dropdown selection for weekday is defined as the initial selection when opening the analysis.  
 
-** Themes**
+**Themes**
 - In Genus Desktop, open **Discovery** and click on **Themes** under **Analysis**. 
 - Create a new theme. Either make your own theme, or choose one of the predefined themes **Light**, **Superlight** or **Dark**
 - Open one of the previous analysis in edit-mode. Under **Settings** there is an option for Theme, pick the theme you have made. 

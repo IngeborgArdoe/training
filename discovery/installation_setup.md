@@ -5,24 +5,22 @@
     
     user1a, user1b, .., user1g and user2a, user2b, .., user2h. 
     
-	You will be doing all your training exercises in the assigned environment. In addition, you will get access to a solution, which can be used to verify your work or give inspiration when needed (please make sure you are not editing the solution!).
-3.	Create 4 shortcuts on your computer with the targets below. Note that "1a" must be replaced with the environment number assigned to you (i.e. change «user1a» to «user2b» if your assigned environment is 2b).
-  * “genusstudiolink:http://edudiscovery.genus.net/discover1a/?LinkType=OpenStudio” 
-(Navn: Genus Discovery Edu1a Studio)
- “genuslink:http://edudiscovery.genus.net/discover1a/?RunAsAdmin=1” 
-(Navn: Genus Discovery Edu1a)
-  * “genusstudiolink:http://edudiscovery.genus.net/discover/?LinkType=OpenStudio” 
-(Navn: Genus Discovery Solution Studio)
-  * “genuslink:http://edudiscovery.genus.net/discover” 
-(Navn: Genus Discovery Solution)
+	You will be doing all your training exercises in the assigned environment. In each environment there are also solution analysis and data marts, which can be used to verify your work or give inspiration when needed (please make sure you are not editing the solution!).
+3.	Create 2 shortcuts on your computer with the targets below. Note that the number in your username indicates which environment you will use. I.e. "user1a" will use environment 1 while "user2b" indicates environment 2. 
+  * Environment 1 “genusstudiolink:http://edudiscovery.genus.net/discover/?LinkType=OpenStudio” 
+  * Environment 2 “genusstudiolink:http://edudiscovery2.genus.net/discover/?LinkType=OpenStudio” 
+   (Navn: Genus Discovery Studio)
+ * Environment 1 “genuslink:http://edudiscovery.genus.net/discover1a/?RunAsAdmin=1” 
+ * Environment 2 “genuslink:http://edudiscovery2.genus.net/discover1a/?RunAsAdmin=1” 
+   (Navn: Genus Discovery)
 
-The first shortcut points to the developing tool Genus Studio. The second shortcut points to the end user application (also referred to as the client or Genus Desktop). Shortcuts 3 and 4 are the equivalents for the provided solution.
+
+The first shortcut points to the developing tool Genus Studio. The second shortcut points to the end user application (also referred to as the client or Genus Desktop). 
 
 **Login credentials for your own solution:**
 
 username = userXY 
 password = usrusr
 
-where XY is the number of your assigned environment (i.e. if you got edu1a, your username / password are user1a / usrusr, respectively).
+where XY is the number of your assigned environment (i.e. if you got user1a, your username / password are user1a / usrusr, respectively).
 
-The same username and password can be used to access the provided solution.

@@ -5,20 +5,15 @@ In this course the participants will use **Data Mart** and **Analysis** tools in
 Analysis and data mart go hand in hand. Data mart is the structure and content of data, while analysis is the visual representation of the data. This course starts with basic implementation of analysis, continues to data mart, then touches on more advanced analysis, before finally looking at finishing touches to both analysis and data mart.  
 
 ##Data model 
-The data model used for this course represents New York City Yellow Cab`s taxi trips. The timespan is set to the first four weeks of 2017. The model includes the classes in the following list:
+The data model used for this course represents New York City Yellow Cab taxi trips. The timespan is set to the first four weeks of 2017. The model includes the classes in the following list:
 
 * Yellow Trip
 * Borough
 * Community District
 * Payment Type
-* Rate Code
-* Service Zone
-* Store and forward
 * Taxi Zone
-* Vendor
 * Weekday
 * Day
-* Month
 
 
 The main object class is Yellow Trip, where each instance/row represents a single trip. Each trip has information on pick-up and drop off location, time and zone, and includes details on different payment amounts, payment type, duration of the trip and number of passengers. 

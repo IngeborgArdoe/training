@@ -1,8 +1,9 @@
 
+
 # Analysis Part One - Trips and visualization of data
 
-#### SESSION BY INSTRUCTOR: 
-_The instructor will start of by giving you an introduction to the topic. After the lesson the participants will recreate the analysis made in class._
+#### SESSION BY INSTRUCTOR
+_The instructor will start of by giving you an introduction to creating an analysis. After the lesson, the participants will recreate the analysis made in class._
 
 #### Agenda 
 
@@ -12,6 +13,7 @@ _The instructor will start of by giving you an introduction to the topic. After 
 		- Data
 		- Format 
 - Set up tile with selections (to filter data)
+- Ignore selection
 
 ## Create, edit and preview analysis
 
@@ -51,9 +53,9 @@ Try to recreate the analysis shown in class/analysis in the solution environment
 
 4. Choose visualization **Measure**.
 	
-    a. In DATA - Value - choose a data source and aggregation. A value can be a count of objects in a data source, a field (or function) of an object in a data source, an aggregated numeric property of a set of objects, or the result of a formula. In this case we want to count the number of objects in the data source Yellow Trip.  
+    a. In Data - Value - choose a data source and aggregation. A value can be a count of objects in a data source, a field (or function) of an object in a data source, an aggregated numeric property of a set of objects, or the result of a formula. In this case we want to count the number of objects in the data source Yellow Trip.  
 	
-    b. In FORMAT - Body - change font size and colour.
+    b. In Format - Body - change font size and colour.
 
 5. Save and preview.
 
@@ -63,15 +65,15 @@ Try to recreate the analysis shown in class/analysis in the solution environment
 
 2. Choose visualization **Lines**.
 
-    a. In DATA - Horizontal category - choose a data source. A category is a data source binding, and defines how the data is displayed. A visualization can contain one or more categories. In this case we want to show the weekdays as the horizontal category.  
+    a. In Data - Horizontal category - choose a data source. A category is a data source binding, and defines how the data is displayed. A visualization can contain one or more categories. In this case we want to show the weekdays as the horizontal category.  
 
-    b. In DATA - Values - choose a data source. In this case we want to know how many Yellow Trips are made per category weekday.
+    b. In Data - Values - choose a data source. In this case we want to know how many Yellow Trips are made per category weekday.
 
-    c. In FORMAT - Legend - set a legend position. 
+    c. In Format - Legend - set a legend position. 
 
-    d. In FORMAT - Axes - Primary Value Axis - Change number format to zero decimals.
+    d. In Format - Axes - Primary Value Axis - Change number format to zero decimals.
 
-    e. In FORMAT - Values - change number format to zero decimals and change data series colour. Also set data point label to **custom** and write **{value}**. This will make the values of each datapoint visible. 
+    e. In Format - Values - change number format to zero decimals and change data series colour. Also set data point label to **custom** and write **{value}**. This will make the values of each datapoint visible. 
 
 3. Save and preview. 
 

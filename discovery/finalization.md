@@ -1,7 +1,7 @@
 
 # Finalization 
 
-#### SESSION BY INSTRUCTOR: 
+#### SESSION BY INSTRUCTOR 
 
 _After the lesson the participants will redo some of the activities done in class._
 

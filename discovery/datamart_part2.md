@@ -1,11 +1,6 @@
-
-
-
-
-
 # Data Mart Part Two – Manipulate Data
 
-#### SESSION BY INSTRUCTOR
+#### Session by instructor
 
 _In this session, we will take a closer look at the data mart, and explore ways to create custom calculations that can be used readily in analysis._  
 

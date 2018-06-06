@@ -19,7 +19,6 @@ _After the lesson the participants will redo some of the activities done in clas
         - Publishing analysis 
         - Private Shortcuts
 	    - Recent items
-    - Powerpoint
     - Export data excel/picture
 
 ## Exercise

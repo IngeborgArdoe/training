@@ -16,8 +16,8 @@ Create two shortcuts on your computer with the targets below. Note that the numb
   * Environment 1 “genusstudiolink:http://edudiscovery.genus.net/discover/?LinkType=OpenStudio” 
   * Environment 2 “genusstudiolink:http://edudiscovery2.genus.net/discover/?LinkType=OpenStudio” 
    (Navn: Genus Discovery Studio)
- * Environment 1 “genuslink:http://edudiscovery.genus.net/discover1a/?RunAsAdmin=1” 
- * Environment 2 “genuslink:http://edudiscovery2.genus.net/discover1a/?RunAsAdmin=1”  
+ * Environment 1 “genuslink:http://edudiscovery.genus.net/discover/?RunAsAdmin=1” 
+ * Environment 2 “genuslink:http://edudiscovery2.genus.net/discover/?RunAsAdmin=1”  
    (Navn: Genus Discovery)
 
 

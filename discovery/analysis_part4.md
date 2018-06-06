@@ -88,9 +88,9 @@ For solutions with user 2
 2. As **GeoJSON URL**, choose one of the following URLs:
 
 For solutions with user 1  
-[http://edudiscovery.genus.net/discover/Resources/GeojsonCommunityDistrict.json](http://edudiscovery.genus.net/discover/Resources/GeojsonCommunityDistrict.json)  
+[https://edudiscovery.genus.net/discover/Resources/GeojsonCommunityDistrict.json](http://edudiscovery.genus.net/discover/Resources/GeojsonCommunityDistrict.json)  
 For solutions with user 2  
-[http://edudiscovery2.genus.net/discover/Resources/GeojsonCommunityDistrict.json](http://edudiscovery.genus.net/discover/Resources/GeojsonCommunityDistrict.json)  
+[https://edudiscovery2.genus.net/discover/Resources/GeojsonCommunityDistrict.json](http://edudiscovery.genus.net/discover/Resources/GeojsonCommunityDistrict.json)  
 
 3. Add community district as your data source. Make sure your choice of pickup versus dropoff corresponds with what you chose for borough.
 

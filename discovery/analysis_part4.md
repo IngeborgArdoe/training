@@ -53,7 +53,6 @@ Objective: Create a diagram that shows the flow of taxi trips from one part of N
 
 The objective of this exercise is to visualize the taxi trip data by using maps.
 
-Theory about GeoJSON.
 
 **Adding the map base**
 
@@ -62,7 +61,9 @@ Theory about GeoJSON.
 	![mapicon.png](media/mapicon.png)
 
 
-2. Add a new map layer, and set Type=Map and Server type=OSM. This will be your “base layer”.
+2. Add a new map layer, and set Type=Map and Server type=OSM. This will be your “base layer”. 
+By not choosing a server url for your map, a default map will be chosen for you. If you want to add a specific map, just add a the map url to your map. 
+Example url: [http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png](http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png)
 
 **Adding the GeoJSON for boroughs**
 
@@ -100,12 +101,12 @@ For solutions with user 2
 
 **Color distribution based on value - Conditional colors**
 
-1. In DATA, select the borough layer, and add a **Value**. Use the same data source as you used in your data binding. Set BoroCode as your field.
+1. In Data, select the borough layer, and add a **Value**. Use the same data source as you used in your data binding. Set BoroCode as your field.
 
 	![mapboroughbinding.png](media/mapboroughbinding.png)
 
 
-2. Go to FORMAT, and select your borough layer.
+2. Go to Format, and select your borough layer.
 
 3. Open **GeoJson Fill Color**.
 
@@ -118,9 +119,9 @@ For solutions with user 2
 
 **Color distribution based on value - gradient based on number of trips**
 
-1. In DATA, select the community district layer, and add a **Value**. Choose "Yellow Trip" as your data source, and make sure **Aggregation** is set to **Count**.
+1. In Data, select the community district layer, and add a **Value**. Choose "Yellow Trip" as your data source, and make sure **Aggregation** is set to **Count**.
 
-2. Go to FORMAT, and select your community district layer. Open **GeoJson Fill Color**.
+2. Go to Format, and select your community district layer. Open **GeoJson Fill Color**.
 
 3. We now want to add a color gradient to each region. To do this, click on each end of the color scale, and choose a color.
 
@@ -128,7 +129,7 @@ For solutions with user 2
 
 **Color distribution based on value - gradient based on average speed**
 
-5. Go to **Value** in FORMAT and choose the field "trip speed". Set **Aggregation** to **Average**.
+5. Go to **Value** in Format and choose the field "trip speed". Set **Aggregation** to **Average**.
 
 6. Save and preview. The color gradient now shows average trip speed per community.
 

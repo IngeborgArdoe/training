@@ -12,5 +12,3 @@ The half-finished solution you start with, contains parts of the blueprint solut
 The solution is in a "sandbox environment" and will be reset after the training program - in other words - you can play freely in your solution.
 
 The assigned tasks assume to some extent that you refer to Genus Apps' documentation, or that you ask your supervisor if you are stuck. Genus Apps' documentation can be found at [docs.genus.no] (https://docs.genus.no/). The documentation may not answer all your questions, so please ask your supervisor - or the other course participants!
-
-The assigned tasks are currently only available in Norwegian, but translation to English is ongoing. The other material is in English, i.e. the half-finished and the blueprint solutions, the Genus Studio modeling tool and Genus Apps documentation.

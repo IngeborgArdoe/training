@@ -1,7 +1,3 @@
-- name: Foundation
-  href: foundation/
-  homepage: foundation/index.md
-- name: Foundation (English)
   href: foundation_english/
   homepage: foundation_english/index.md
 - name: Discovery

@@ -86,8 +86,7 @@ If you expand the node «Object Classes» in Studio, you should now see the Cont
    6. State: Tab «Data Calculation»: Set Default = Active. The state of the Contact is set to Active when it is created. The state can be changed later. Note also that the field is of Data Type int. The state is stored in the database as an integer, but is mapped to the Code Domain in Genus called «Object State», which translates 1 to «Active» and 2 to «Inactive». You will be able to see this by right-clicking the object class «Object State» -> Open -> Data Entries.
    7. Mail: We want this field to be blank, but at the same time we want a message - "field should have value" - to be shown when it is.
       1. Tab «Data Validations», click «Add»
-      2. Legg til en Condition «Contact.Mail has no value»
-	  2. Add a Condition «Contact.Mail has no value».
+      2. Add a Condition «Contact.Mail has no value».
       3. Check Impact = "Notify user and ask for confirmation for proceed" and "Notification Message" (type in a suitable response, e.g. "Mail should be set" or something similar).
 
 The object «Contact» is now almost done. The last step is to assign a few properties to the object class «Contact» itself.

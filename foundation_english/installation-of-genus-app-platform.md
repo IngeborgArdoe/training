@@ -1,6 +1,6 @@
 # Installation of Genus Apps and URLs to the environments
 
-1.	In case you haven't installed Genus Apps on your computer yet: Open the web browser and type http://edufasit.genus.net/GenusCRM/Download/Setup.exe . This will download Genus Apps.
+1.	In case you haven't installed Genus Apps on your computer yet: Open the web browser and type http://edu1.genus.net/edu1a/download/Setup.exe . This will download Genus Apps.
 2.	An environment will be assigned to you. We have 16 environments: 
     
     edu1a, edu1b, .., edu1h samt edu2a, edu2b, .., edu2h. 

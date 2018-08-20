@@ -7,7 +7,7 @@
     
 	You will be doing all your training exercises in the assigned environment. In addition, you will get access to a solution, which can be used to verify your work or give inspiration when needed (please make sure you are not editing the solution!).
 3.	Create 4 shortcuts on your computer with the targets below. Note that "1a" must be replaced with the environment number assigned to you (i.e. change «edu1a» to «edu2b» if your assigned environment is 2b).
-* <genusstudiolink:http://edu1.genus.net/edu1a/?LinkType=OpenStudio> (Name: Genus CRM Edu1a Studio)
+* [genusstudiolink:http://edu1.genus.net/edu1a/?LinkType=OpenStudio](genusstudiolink:http://edu1.genus.net/edu1a/?LinkType=OpenStudio) (Name: Genus CRM Edu1a Studio)
 * <genuslink:http://edu1.genus.net/edu1a/?RunAsAdmin=1> (Name: Genus CRM Edu1a)
 * <genusstudiolink:http://edufasit.genus.net/GenusCRM/?LinkType=OpenStudio> (Name: Genus CRM Solution Studio)
 * <genuslink:http://edufasit.genus.net/GenusCRM/> (Name: Genus CRM Solution)

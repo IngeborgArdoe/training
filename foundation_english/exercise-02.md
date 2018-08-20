@@ -56,7 +56,7 @@ When you add a new draft Property, you define its Logical Name (the name of the 
 
 Best Practice when it comes to naming a database column (Physical Name) is to use the "camel cased" version of the Logical Name. E.g. a field with Logical Name «First Name» should be «FirstName» in the database (Physical Name). The exception is references to other objects. The property "Company" should have Physical Name "CompanyID" to indicate that the field is refering to another object's ID.
 
-3. Open the «Actions» menu (at the top), and push «Forward Engineering». Select object «Contact» and click Next twice. This will generate a SQL script that can be used to create the «Contact»-table in the database. Copy the scrupt and run it in SQL Server Management Studio against the database (GenusCRM_EDUXY_Data).
+3. Open the «Actions» menu (at the top), and push «Forward Engineering». Select object «Contact» and click Next twice. This will generate a SQL script that can be used to create the «Contact»-table in the database. Copy the script and run it in SQL Server Management Studio against the database (GenusCRM_EDUXY_Data).
 
 You have now made the table «Contact» in the database, and will soon model the associated Object Class for Contact in Genus.
 

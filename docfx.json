@@ -18,7 +18,9 @@
           "**/*.jpg",
           "**/*.gif",
           "**/*.png",
-          "**/*.ico"
+          "**/*.ico",
+          "**/404redirect.html",
+          "**/*.config"
         ],
         "exclude": [
           "_site/**"

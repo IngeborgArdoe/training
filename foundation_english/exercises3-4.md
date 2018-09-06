@@ -3,7 +3,7 @@
 
 You have made the object Contact, but still it is not possible for the end user to see or register them. For that to happen, you must add Contacts to the user interface. Read the following information about user interface in Genus before you do the next exercise:
 
-In Genus Apps there are two main constrcutions that is used to show information; Tables and Forms. Both Tables and Forms kan use Ribbon. A Ribbon is a command line situated at the top of the window which shows functionality relevant to the content.
+In Genus Apps there are two main constrcutions that is used to show information; Tables and Forms. Both Tables and Forms can use Ribbon. A Ribbon is a command line situated at the top of the window which shows functionality relevant to the content.
 
 ##Table 
 Tables are used to display simple lists or aggregated lists of data. One can do searches in them or apply various filters. Tables are typically placed in the Navigation Pane on the left-hand side of the client, e.g. "Customers" in Genus CRM.

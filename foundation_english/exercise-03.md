@@ -11,7 +11,6 @@
   Add a new tab: Move one level out (hint: press the Esc-button), and double-click on "Group" in the Desktop Control menu. Name the new tab «Activities» (content will come later). 
   Add also a tab named «Mail» to the Tab Sheet (content will come later).
    5. In tab «General», you will add the fields for Contact.
-  *Veiledning: I en oppgave senere skal man også liste ut «Contact log» nederst i dette skjermbildet, så vi anbefaler følgende oppdeling av «General»:*
   *Guidance: You will be asked to list «Contact log» at the bottom of this display in an upcoming task. Hence, we recommend the following layout for the «General»-tab:*
   ![oppg3fig2.JPG](media/oppg3fig2.JPG)
 

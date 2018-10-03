@@ -9,7 +9,7 @@ The object model is exposed to the end user through tables or "forms", combined 
 In Genus Studio, we refer to an object (e.g. Company) as an «Object Class». The properties of the object (e.g. "Name" or "Org No") are called «Object Class Property» or just «Property».
 The proposed Genus CRM solution has a simple object model outlined in the Case-description. What is missing in your EDU-solution is Contact, Contact Log, Document and Request. Initially, you will have to expand the object model with Contact and Contact Log.
 
- 
+![oppg1fig1.JPG](media/oppg1fig1.JPG)
 Fig.1.1.: The initial version of the Genus CRM object model. Click on «Object Class Diagram» in the menu on the left to open the diagram. Here we see 5 Object Classes, each with several Object Class Properties. 
 NOTE: A diagram is just a drawing board where it is possible to visualize a selection of objects in the solution (all existing objects are listet under «Object Classes»). Here you will automatically see the object relations. If you delete an object from the diagram, it will only disappear from this particular view. The object itself is not deleted from the solution.
 

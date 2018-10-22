@@ -14,7 +14,7 @@
   *Guidance: You will be asked to list «Contact log» at the bottom of this display in an upcoming task. Hence, we recommend the following layout for the «General»-tab:*
   ![oppg3fig2.JPG](media/oppg3fig2.JPG)
 
-	  Select GroupBox1 and change «Container Type» to «Group» in the menu on the left. This will remove the frame of the box. Do the same for Groupbox3 and Groupbox4 (or whatever they are called by default in your solution). Fields can be dragged from the right menu and dropped into the form after changing the following:
+	  Select OUTER GROUPBOX (or what you have called it in your solution) and change «Container Type» to «Group» in the menu on the left. This will remove the frame of the box. Do the same for LEFT GROUPBOX and RIGHT GROUPBOX. Fields can be dragged from the right menu and dropped into the form after changing the following:
   ![oppg3fig3.JPG](media/oppg3fig3.JPG)
   
 	  After having made the change above, you can drag Properties from the Contact data source into the Groups located in the «General»-tab. A proposed layout control is selected by default (e.g. TextEdit is proposed for «First Name»). If you drag Company into the form, a ComboboxEdit - which is a dropdown - is suggested. This may be unfortunate when there are a lot of objects to choose from. Instead you can press Shift while dragging the Company into the form, and you will get a SearchBoxEdit rather than a ComboBoxEdit - increasing the user friendliness.
@@ -47,9 +47,9 @@ You can trigger a Command with an Event by for example adding the Event «On Cli
 When doing the exercises below, it may seem natural to place the Command on the same control as the Event that points to it. This will work brilliantly, but we often choose to place the Commands on a different level due to reasons we will have a closer look at in Exercise 5: Ribbon. The Ribbon is also the reason why we typically pick a symbol for each Command and change their names, e.g. from Name: Open Contact to "New Contact". 
   
 3. Add actions to the Company-form:
-   1. Select the Grid of Contacts. Under Properties, click on Commands. Add a new Command of type "Open a Form": 
-	  1. Name: Open
-      2. Tip: Contact (this tip is only visble for the ones modeling)
+   1. Select the Grid of Contacts. Under Properties, click on Commands. Add a new Command of type "Open a Form" which will enable the user to open a contact: 
+      1. Name: Open
+      2. Tip: Contact (this tip is only visble for modelers)
       3. Type: Open a Form
       4. Effect: Contact (the form to open)
       5. View: Default (if a form has several views, you can select one here)
@@ -66,8 +66,8 @@ When doing the exercises below, it may seem natural to place the Command on the 
       3. Effect: Contact
       4. View: Default
       5. Data Binding: Default
-	  6. Create Data: Click … and push Add. Under Default Values you will have to set Contact.Company = Company (in other words, the new Contact's Company will be set to the Company that you have open when the "New"-button is clicked).
-	  7. Assign a symbol: This will turn out to be useful later. You will find a suitable symbol if you search for "1081". Notice that you can choose both a main symbol and an "overlay". Try putting on an overlay. Before you push OK, right-click on the overlay and hit "Clear".
+      6. Create Data: Click … and push Add. Under Default Values you will have to set Contact.Company = Company (in other words, the new Contact's Company will be set to the Company that you have open when the "New"-button is clicked).
+      7. Assign a symbol: This will turn out to be useful later. You will find a suitable symbol if you search for "1081". Notice that you can choose both a main symbol and an "overlay". Try putting on an overlay. Before you push OK, right-click on the overlay and hit "Clear".
    4. Add an Event to the grid for creating a new contact.
       1. Type: On Context Menu Item Click
       2. Menu Item: New
@@ -99,7 +99,7 @@ When doing the exercises below, it may seem natural to place the Command on the 
       1. Command: Open a Form
       2. Name: Open, Tip: Activity
       3. Remember filtering!
-	  4. Add an Event = Context Menu Item Click: Open in New Window to the grid which executes the above Command.
+      4. Add an Event = Context Menu Item Click: Open in New Window to the grid which executes the above Command.
    3. Additionally, create a Command + Event for «New» and «Delete». Place them on the Activities-grid. Remember to set Default values on «New» so that Activity is connected to both Contact and Company. Symbols #1198 and #1195 should suit «New» and «Delete», respectively. If you need inspiration, go back to exercise 3.3.
    4. Deploy the solution to yourself and check that you are able to create Activities on a contact person.
 8. You will also have to list Mails associated with a Contact. The way of adding instances to the Mail-list in the Company-form is to paste new Mail from the Clipboard (i.e. drag-and-drop). You will make this functionality in a later task, so for now, you only need to focus on the list itself and how to open an e-mail from it.
@@ -117,29 +117,23 @@ When doing the exercises below, it may seem natural to place the Command on the 
       ![oppg3fig9.JPG](media/oppg3fig9.JPG)
    2. Assign Default values to Created By and Created Date, and set Subject to "required".
    3. Make a form «Contact Log».
-	  1. This should only have one single Data Source: Contact Log (remember to uncheck Private and set Max Occurence = Allow one object).
-	  2. View (properties): Change Style to "Dialog Box" and Buttons to "OK and Cancel". Set Alignment = "Fixed", Width = 800 and Height = 600.
-	 *Comment: The reason for chosing "Dialog Box" is that we don't need a save-button in this form. It will be opened modally from the list of Log objects on Contact, and by clicking OK, the form will be closed and changes saved in the Contact-form instead.*
-	  3. View: This should only display the «Subject»-field. Drag it into the view, and change the following properties of the field:
-		 1. Check Multiline and Word Wrap
-         2.	Set Vertical Alignment to «Stretch»
+      1. This should only have one single Data Source: Contact Log (remember to uncheck Private and set Max Occurence = Allow one object).
+      2. View (properties): Change Style to "Dialog Box" and Buttons to "OK and Cancel". Set Alignment = "Fixed", Width = 800 and Height = 600. *Comment: The reason for chosing "Dialog Box" is that we don't need a save-button in this form. It will be opened modally from the list of Log objects on Contact, and by clicking OK, the form will be closed and changes saved in the Contact-form instead.*
+      3. View: This should only display the «Subject»-field. Drag it into the view, and change the following properties of the field:
+         1. Check Multiline and Word Wrap
+         2. Set Vertical Alignment to «Stretch»
          3. Set Label Position to «Top».
    4. Open form «Contact». 
-	  1. Add a new GroupBox at the bottom. Give it label "Log:", and check Is Collapsible and Transparent Title Area. Set Border Thickness to 0.
-	  2. Add a grid inside the GroupBox. Bind the grid to Data Source «Contact» and Field «Contact Log». Select Columns to show and define the Sorting (Created Date, descending). **NB: You may need to re-start Genus Studio to do this!**.
-	 *Comment: Since Contact Log is part of composition and we don't need to filter out anything, Contact Log don't have to be a Data Source on its own. The grid is now bound to the group of log objects that is "attached" to the Contact in the Data Source.* 
-	  3. Add a Command to the GeneralTab-tab for opening a Contact Log (in form «Contact Log»). This should be enabled if Contact.Log.Single Selected has value. Also add an event to the grid which executes the command.
-	  *Guidance: As the «Contact Log»-form is a dialog box, it can't save changes on its own. Accordingly, choose Two-Way binding (as shown below) when setting up the Event.
+      1. Add a new GroupBox at the bottom. Give it label "Log:", and check Is Collapsible and Transparent Title Area. Set Border Thickness to 0.
+      2. Add a grid inside the GroupBox. Bind the grid to Data Source «Contact» and Field «Contact Log». Select Columns to show and define the Sorting (Created Date, descending). **NB: You may need to re-start Genus Studio to do this!**. *Comment: Since Contact Log is part of composition and we don't need to filter out anything, Contact Log don't have to be a Data Source on its own. The grid is now bound to the group of log objects that is "attached" to the Contact in the Data Source.* 
+      3. Add a Command to the GeneralTab-tab for opening a Contact Log (in form «Contact Log»). This should be enabled if Contact.Log.Single Selected has value. Also add an event to the grid which executes the command.*Guidance: As the «Contact Log»-form is a dialog box, it can't save changes on its own. Accordingly, choose Two-Way binding (as shown below) when setting up the Event.
       ![oppg3fig10.JPG](media/oppg3fig10.JPG)
       Data Binding: 
       ![oppg3fig11.JPG](media/oppg3fig11.JPG)
-	  4. Add also a Command and an Event for New and Delete. Place the commands on GeneralTab and the events on the grid itself.
-		 1. New: *Guidance: The opening of Contact Log in "Create"-mode is also two-way bound. Consequently, a new object is created in the Contact Log-form, but is not saved before the object is brought back to the Contact-form and the Save-button is pressed. See screenshot below:*
-      ![oppg3fig12.JPG](media/oppg3fig12.JPG)
-         2. Delete: *Guidance: Se screenshot below: (Command og Event, respectively)*
-      ![oppg3fig13.JPG](media/oppg3fig13.JPG)
- 
-   5. Deploy and test creation, modification and deletion of a Contact's log objects in the client.
+      4. Add also a Command and an Event for New and Delete. Place the commands on GeneralTab and the events on the grid itself.
+         1. New: *Guidance: The opening of Contact Log in "Create"-mode is also two-way bound. Consequently, a new object is created in the Contact Log-form, but is not saved before the object is brought back to the Contact-form and the Save-button is pressed. See screenshot below:*![oppg3fig12.JPG](media/oppg3fig12.JPG)
+         2. Delete: *Guidance: Se screenshot below: (Command og Event, respectively)*![oppg3fig13.JPG](media/oppg3fig13.JPG)
+      5. Deploy and test creation, modification and deletion of a Contact's log objects in the client.
    
 
 <table>

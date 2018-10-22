@@ -56,7 +56,7 @@ When you add a new draft Property, you define its Logical Name (the name of the 
 
 Best Practice when it comes to naming a database column (Physical Name) is to use the "camel cased" version of the Logical Name. E.g. a field with Logical Name «First Name» should be «FirstName» in the database (Physical Name). The exception is references to other objects. The property "Company" should have Physical Name "CompanyID" to indicate that the field is refering to another object's ID.
 
-3. Open the «Actions» menu (at the top), and push «Forward Engineering». Select object «Contact» and click Next twice. This will generate a SQL script that can be used to create the «Contact»-table in the database. Copy the script and run it in SQL Server Management Studio against the database (GenusCRM_EDUXY_Data).
+3. Open the «Actions» menu (at the top), and push «Forward Engineering». Select object «Contact» and click Next twice. This will generate a SQL script that can be used to create the «Contact»-table in the database. Copy the script and run it in SQL Server Management Studio against your assigned database.
 
 You have now made the table «Contact» in the database, and will soon model the associated Object Class for Contact in Genus.
 
@@ -100,7 +100,7 @@ The object «Contact» is now almost done. The last step is to assign a few prop
     ![oppg2fig5.JPG](media/oppg2fig5.JPG)
  
       This is where you meet Genus' "Condition editor" for the first time. It is used everytime you want to conditionalize something. In this case it will generate a SQL query that checks (prior to saving) whether a Contact in the database has the same e-mail address as the one you want to store, or not. If the query returns true, the user will get a warning. Notice that we have allowed the user to store the Contact nevertheless, as the "Notify user and ask for confimation to proceed"-box has been checked. By selecting the option above, however, you will deny users to store Contacts with identical e-mail addresses. 
-   5. Tab «Search»: In the Search Properties section, click Modify and add the properties that you want to be searchable (at least Company, First Name and Last Name). This is where you define which properties should be visible in the search panel at the top of the client when you want to find certain Contacts.
+   **5. Tab «Search»: In the Search Properties section, click Modify and add the properties that you want to be searchable (at least Company, First Name and Last Name). This is where you define which properties should be visible in the search panel at the top of the client when you want to find certain Contacts.**
    
   **Click OK.** The object «Contact» is now complete and ready to be included in the interface (and optionally get additional functionality).
 

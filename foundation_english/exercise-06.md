@@ -41,9 +41,10 @@ You will now make a simple Task, "Change Responsible for Contact" that can take 
       ![oppg6fig1.JPG](media/oppg6fig1.JPG)
  
    Next is the effect which changes Contact.Responsible for all objects in the data source "Contact input" and saves it to the database.
-   3. Set the chosen User as Add a Block "Scope".
-	  *Note: By default, the Commit-option is checked. This means that all changes (Create or Modify) done by effects within the Scope will be saved.*
-   4. Place Effect "Modify Objects" within in the Scope and parameterize it to change the "Responsible" field of Data Source "Contact input".
+   3. Set the chosen User as Responsible
+      1. Add a Block "Scope".
+      *Note: By default, the Commit-option is checked. This means that all changes (Create or Modify) done by effects within the Scope will be saved.*
+      2. Add a "Modify objects" effect which sets the Contact.Responsible field to the chosen User.
   *Guidance: Set it up as illustrated below. This will generate a SQL query that changes the Responsible of all Contacts in "Contacts input".*
      ![oppg6fig2.JPG](media/oppg6fig2.JPG)
   

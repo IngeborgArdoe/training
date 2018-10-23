@@ -21,20 +21,27 @@ In Genus Studio, you will see Tasks in the «Logic»-section of the left menu. H
 
 
 ###Change Responsible for Contact
-You will now make a simple Task that can take one or more Contacts as input, and change their Resposible.
-1. Data Sources: Add Object Class «Contact».
-   *Guidance: Right-click in the upper-left pane -> Add -> Object. Select «Contact». In the bottom pane (General) uncheck Private. Change also the Name to "Contacts input" to highlight for the "rest of the solution" what the input is, and which cardinality it has. Although this is not required, it is good practice, as it makes it easier when you for example want to connect a table to the task.*
-2. Actions: The first thing that we want to do is to make it possible for the user to provide an input. The user should be able to select one person (User) - from a dropdown - which is to become the new resposible of all input contacts (Data Source "Contacts input").
-   1. First, you will need a "variable" in which you can store the Responsible person (User) that is chosen by the user.
-	  1. Go back to Data Sources and add a Local Object (Add -> Local Object). Name it "User Input".
-	  2. In the pane on the right-hand side, add a Field. Set Display Name = "New Resposible" and Data Type = "User". Uncheck "Allow blank values" (the field is required).
-   2. Navigate to Actions:
-	  1. Add the Effect "Open a Form".
-	  2. Double-click on the effect and set Type = "Local Object Window" and Data Source = "User Input". Check "Create" (we are creating a local object in memory). Click on button "Modify..." and write the text that will be showed to the end user when the window is opened. See below: 
+You will now make a simple Task, "Change Responsible for Contact" that can take one or more Contacts as input, and change their Resposible.
+1. Data Sources
+   1. Contact - an unbounded datasource for which we will choose new responsible for.
+      1. Let the cardinality be Unbounded, and set the privacy to not Private (Private unchecked).
+      *Guidance: Right-click in the upper-left pane -> Add -> Object. Select «Contact». In the bottom pane (General) uncheck Private.
+   2. Data Source:  User - a "One"-data source which will represent the new Responsible.
+      1. Add the Data Source User with cardinality One and Private checked.
+2. Actions
+   1. Choose new responsible
+   The first thing that we want to do is to make it possible for the user to choose a User which shall be the new Responsible for the contact. Here we use a useful input method which shows a table of Users to the user that the user can choose between.
+      1. Add a "Read Object(s)"-effect
+      2. Double-click the effect and choose "User" as the Data Source and "User.state=Active" as Data Filter.
+      3. Switch to the tab item "User Interaction"
+         1. Check "Prompt the user to select objects".
+         2. Type in a meaningful Dialog Title like "Choose responsible" and Dialog Prompt "Please ..."
+         3. Choose fields that will be shown to the end user when he or she will choose the new Responsible
+         4. Use a meaningful sorting (E. g. First name, Last name)
       ![oppg6fig1.JPG](media/oppg6fig1.JPG)
  
    Next is the effect which changes Contact.Responsible for all objects in the data source "Contact input" and saves it to the database.
-   3. Add a Block "Scope".
+   3. Set the chosen User as Add a Block "Scope".
 	  *Note: By default, the Commit-option is checked. This means that all changes (Create or Modify) done by effects within the Scope will be saved.*
    4. Place Effect "Modify Objects" within in the Scope and parameterize it to change the "Responsible" field of Data Source "Contact input".
   *Guidance: Set it up as illustrated below. This will generate a SQL query that changes the Responsible of all Contacts in "Contacts input".*

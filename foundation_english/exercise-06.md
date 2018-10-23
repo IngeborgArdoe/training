@@ -23,11 +23,11 @@ In Genus Studio, you will see Tasks in the «Logic»-section of the left menu. H
 ###Change Responsible for Contact
 You will now make a simple Task, "Change Responsible for Contact" that can take one or more Contacts as input, and change their Resposible.
 1. Data Sources
-   a) Contact - an unbounded datasource for which we will choose new responsible for.
-      i) Let the cardinality be Unbounded, and set the privacy to not Private (Private unchecked).
+   a. Contact - an unbounded datasource for which we will choose new responsible for.
+      i. Let the cardinality be Unbounded, and set the privacy to not Private (Private unchecked).
       *Guidance: Right-click in the upper-left pane -> Add -> Object. Select «Contact». In the bottom pane (General) uncheck Private.
-   b) Data Source:  User - a "One"-data source which will represent the new Responsible.
-      i) Add the Data Source User with cardinality One and Private checked.
+   b. Data Source:  User - a "One"-data source which will represent the new Responsible.
+      i. Add the Data Source User with cardinality One and Private checked.
 2. Actions
    1. Choose new responsible
    The first thing that we want to do is to make it possible for the user to choose a User which shall be the new Responsible for the contact. Here we use a useful input method which shows a table of Users to the user that the user can choose between.

@@ -20,7 +20,7 @@ In Genus Studio, you will see Tasks in the «Logic»-section of the left menu. H
 -	Web Services can be set up and triggered by a web-service call from for example an external system. The setup of Web Services are logic-wise equal to that of tasks, but Web Services have additionally defined Schemas which describes the structure of input and output XML (more about this later).
 
 
-###Change Responsible for Contact
+###1. Change Responsible for Contact
 You will now make a simple Task, "Change Responsible for Contact" that can take one or more Contacts as input, and change their Resposible.
 ####Data Sources
 a. Contact - an unbounded datasource for which we will choose new responsible for.
@@ -72,21 +72,26 @@ Navigate to Form «Company», and add a command that runs your task. Place the c
 *Note: Define the Data Filter of the command, i.e. what to filter into the task's data source «Contacts input». It should be a Two-Way binding to Selected Objects in the Data Source «Contact».* 
 *"Two-Way", in this context, means that if changes are not persisted (committed/saved) in the task, they are brought back to the Comapany-form and the "Save"-botton is made available.*
  
-### Paste new Mail from File - store e-mail under contact
-You will now make it possible to create Mail on contact persons. For this purpose, a task "Paste new Mail from file" - taking «Mail Message (input)» and «Company» as input - has already been created. You will have to expand this with logic to store Mail not only on Companies, but Contacts as well. For this, you must make it possible to input «Contact».
+###2. Paste new Mail from File - store e-mail under contact
+You will now make it possible to create Mail on contacts. This task will be similar to the task "Paste new Mail from File (Company)" and we will therefore use this task as a template.
 
-1. Open the task «Paste new Mail from file». Add «Contact» as a Data Source and name it "Contact (input)".
-   *Note: Given that Mail will be pasted on one single Contact at a time, the Occurences parameter of this Data Source should be set to "Allow one object".*
-2. Expand the logic under Actions
-   1. Expand the Condition of the first Decision-block to make it valid also when «Contact (input)» has value (and «Company (input)» has not).
-   *Guidance: You can make Conditions with AND and OR. The condition «Mail Message (input)» has value AND (Company input has value OR Contact input has value) is expressed as illustrated below (Tip: Add Group-button):*
-   ![oppg6fig3.JPG](media/oppg6fig3.JPG)
-   2. Modify the Create Objects effect so that the field Company is set to «Company (input)» if this has value or «Contact (input)».Company if «Contact (input)» has value. Also set field Contact equal to «Contact (input)».
-   ![oppg6fig4.JPG](media/oppg6fig4.JPG)
-3. Add a command to the Mail-tab in the Contact.form which runs the task «Paste new Mail from File». The command should be triggered by Menu item «Paste». Create the event and place it on the grid. Add the command to the Ribbon (New Tab Section under Mail Management: Clipboard. Remember to provide a suitable Name, Symbol and Tip).
+####Copying a task and adding Contact Data Source
+1. Copy the task "Paste new Mail from File (Company)" using right clicking the task or using "ctrl+c, ctrl+v" and name the copy "Paste new Mail from File (Contact).
+2. Add security to the task: "Users" should be able to Find and List and Read and Execute.
+3. Add a new data source Contact and name it "Contact (input)" with appropriate cardinality and privacy. You can also check for "Cannot be blank" as the e-mails need a Contact to be added to.
+
+####Actions
+1. In the Create Object(s)-effect:
+   1. Remove "Company" by right-clicking the value and choosing "Clear value".
+   2. Add Contact (input).Company as new Value for the Company-field on Mail.
+   3. Add Contact (input) as Value for the Contact-field on Mail.
+
+####Add to Ribbon
+1. Add a command to the Mail-tab in the Contact-form which runs the task «Paste new Mail from File». The command should be triggered by Menu item «Paste». Create the event and place it on the grid. Add the command to the Ribbon (New Tab Section under Mail Management: Clipboard. Remember to provide a suitable Name, Symbol and Tip).
 
 *Guidance: The command is set up with Effect Type = Run a Task (global scope), and the Event with Menu = Past Special. The data filter of the command must be set to «Mail Message (input)» = "Get objects from the clipboard" and «Contact (input)» = Contact.*
-4. While you're at it, place a command on the Mail-tab that calls the existing task "Copy Mail to Clipboard as Mail Message". Make it available through an event on the grid and in the Ribbon.
+
+2. While you're at it, place a command on the Mail-tab that calls the existing task "Copy Mail to Clipboard as Mail Message". Make it available through an event on the grid and in the Ribbon.
 
 *Guidance: Set the event's Menu Item = Copy. The command's Data Filter must be set to «Mail Message (input)» = selected objects in data source Mail. Ribbon: Search for "copy" to find a suitable symbol.*
 

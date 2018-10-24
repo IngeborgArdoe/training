@@ -42,7 +42,11 @@
     "template": [
       "default"
     ],
-    "postProcessors": [],
+    "postProcessors": ["ExtractSearchIndex"],
     "noLangKeyword": false
+    "sitemap": {
+      "baseUrl": "https://training.genus.no/",
+      "changefreq": "daily"
+    }
   }
 }

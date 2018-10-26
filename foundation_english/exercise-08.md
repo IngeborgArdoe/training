@@ -29,19 +29,21 @@ For this, you will have to model an object «Document» (like «Mail») that all
 
   ModifiedByUserID uniqueidentifier, 
 
-  CompanyID uniqueidentifier
+  CompanyID uniqueidentifier,
+  
+  ContactID uniqueidentifier
 
   )
 
 2. Add Document.File Data as a search field on Company.
 
-   *Guidance: This allows the user to search for text found in documents associated with the Company. Open Object Class «Company», and add Document.File Data as property under «Search».*
+   *Guidance: This allows the user to search for text found in documents associated with the Company. Open Object Class «Company», and add Document.File Data as Search Property under «Search».*
 
    NB: In order to get "full text" search operators, you need to open Object Class Property «Document.File Data» and check «Full Text and Like operators» under «Data Filtering».
 
 3. RUN A "DEPLOY TO ALL". The reason is that you will soon set up a "file preview" which utilizes calls against the server. Naturally, the server needs to know about the new object class for this to work.
 4. Make a new Task "Paste new Document from File". This should take Company and File(s) as input, and create Document(s).
-   *Guidance: You will need 3 data sources; Company (name="Company (input)", cardinality="one"), General File (name="General files (input), cardinality="unbound") and Document (name="Documents (to be created)", cardinality=unbound). The task is logically very simple. All you need is a Scope and aCreate Objects effect. If you need inspiration, you can look at the equivalent task «Paste new Mail from file». Remember to define the security of the task after creation.*
+   *Guidance: You will need 3 data sources; Company (name="Company (input)", cardinality="one", private=no), General File (name="General files (input), cardinality="unbound", private=no) and Document (name="Documents (to be created)", cardinality=unbound, private=yes). The task is logically very simple. All you need is a Scope and a Create Objects effect. If you need inspiration, you can look at the equivalent task «Paste new Mail from file». Remember to define the security of the task after creation.*
 
    *Tip: The file-input comes with cardinality "unbounded". For each file, a document has to be made. Here you can either make use of an Enumerator which loops through the General File data source OR (even simpler) you can define a Create Object on data source Document which is bound to the General File data source at the top level. The latter option will create a document per instance in the "General Files (input)" data source!*
   ![oppg8fig1.JPG](media/oppg8fig1.JPG)
@@ -51,8 +53,8 @@ For this, you will have to model an object «Document» (like «Mail») that all
   ![oppg8fig2.JPG](media/oppg8fig2.JPG)
 6. OPTIONAL EXERCISE: Create a new task "Copy Document to Clipboard as File" equivalent to "Copy Mail to Clipboard as Mail Message". Publish it.
    *Guidance: The task should take Documents as input and should create General Files. Make it available through an Event with Menu item = Copy.*
-7. OPTIONAL EXERCISE: Add Delete and Paste to the Ribbon.
-   Guidance: Create two new Tab Sections under Context Tab Group "Document" and Tab "Document Management": Tab Section "Manage" for Delete and Tab Section "Clipboard" for Paste. Recall symbols and enabling conditions.*
+7. OPTIONAL EXERCISE: Add Delete and Paste/Copy to the Ribbon.
+   Guidance: Create two new Tab Sections under Context Tab Group "Document" and Tab "Document Management": Tab Section "Manage" for Delete and Tab Section "Clipboard" for Paste/Copy to Clipboard. Recall symbols and enabling conditions.*
 
 The next thing for you to make is the functionality for sending e-mail to contact persons and store them as «Mail». This exercise is again optional, but we recommend you to at least browse through it and look at the solution.
 

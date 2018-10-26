@@ -86,14 +86,10 @@ You will now make it possible to create Mail on contacts. This task will be simi
    2. Add Contact (input).Company as new Value for the Company-field on Mail.
    3. Add Contact (input) as Value for the Contact-field on Mail.
 
-####Add to Ribbon
-1. Add a command to the Mail-tab in the Contact-form which runs the task «Paste new Mail from File». The command should be triggered by Menu item «Paste». Create the event and place it on the grid. Add the command to the Ribbon (New Tab Section under Mail Management: Clipboard. Remember to provide a suitable Name, Symbol and Tip).
+####Copying an e-mail (optional)
+1. Place a command on the Mail-tab that calls the existing task "Copy Mail to Clipboard as Mail Message". Make it available through an event on the grid and in the Ribbon.
 
-*Guidance: The command is set up with Effect Type = Run a Task (global scope), and the Event with Menu = Past Special. The data filter of the command must be set to «Mail Message (input)» = "Get objects from the clipboard" and «Contact (input)» = Contact.*
-
-2. While you're at it, place a command on the Mail-tab that calls the existing task "Copy Mail to Clipboard as Mail Message". Make it available through an event on the grid and in the Ribbon.
-
-*Guidance: Set the event's Menu Item = Copy. The command's Data Filter must be set to «Mail Message (input)» = selected objects in data source Mail. Ribbon: Search for "copy" to find a suitable symbol.*
+*Guidance: Set the event's Menu Item = Copy. The command's Data Filter must be set to «Mail Message (input)» = selected objects in data source Mail.
 
 
 <table>

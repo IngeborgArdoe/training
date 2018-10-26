@@ -26,7 +26,7 @@ It would also be nice to have a sequential "order number" that is generated on t
 
    INSERT INTO OrderNoCounter
    
-   values (10000)
+   VALUES (10000)
    
    In the wizard for creating a new Identifier Domain, choose "Sequential Counter" in step 2:
 ![oppg9fig1.JPG](media/oppg9fig1.JPG)

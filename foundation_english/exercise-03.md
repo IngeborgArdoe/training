@@ -14,13 +14,13 @@ You will now make a Form for registering and opening customer Contact informatio
   Add a new tab: Move one level out (hint: press the Esc-button), and double-click on "Group" in the Desktop Control menu. Name the new tab «Activities» (content will come later). 
   Add also a tab named «Mail» to the Tab Sheet (content will come later).
 5. In tab «General», you will add the fields for Contact.
-*Guidance: You will be asked to model a «Contact log» at the right hand side of this display in an upcoming task. Hence, we recommend the following layout for the «General»-tab:*
+   *Guidance: You will be asked to model a «Contact log» at the right hand side of this display in an upcoming task. Hence, we recommend the following layout for the «General»-tab:*
 ![oppg3fig2.JPG](media/oppg3fig2.JPG)
 
-Select OUTER GROUPBOX (or whatever you called it in your solution) and change «Container Type» to «Group» in the menu on the left. This will remove the frame of the box. Do the same for LEFT GROUPBOX and RIGHT GROUPBOX. Fields can be dragged from the right menu and dropped into the form after changing the following:
+   Select OUTER GROUPBOX (or whatever you called it in your solution) and change «Container Type» to «Group» in the menu on the left. This will remove the frame of the box. Do the same for LEFT GROUPBOX and RIGHT GROUPBOX. Fields can be dragged from the right menu and dropped into the form after changing the following:
 ![oppg3fig3.JPG](media/oppg3fig3.JPG)
   
-After having made the change above, you can drag Data Properties from the Contact data source into the Groups located in the «General»-tab. A proposed layout control is selected by default (e.g. TextEdit is proposed for «First Name»). If you drag Company into the form, a ComboboxEdit - which is a dropdown - is suggested. This may be unfortunate when there are a lot of objects to choose from. Instead you can press Shift while dragging the Company into the form, and you will get a SearchBoxEdit rather than a ComboBoxEdit - increasing the user friendliness.
+   After having made the change above, you can drag Data Properties from the Contact data source into the Groups located in the «General»-tab. A proposed layout control is selected by default (e.g. TextEdit is proposed for «First Name»). If you drag Company into the form, a ComboboxEdit - which is a dropdown - is suggested. This may be unfortunate when there are a lot of objects to choose from. Instead you can press Shift while dragging the Company into the form, and you will get a SearchBoxEdit rather than a ComboBoxEdit - increasing the user friendliness.
 6. The initial version of the Contact-form is now complete. You can optionally navigate to the outermost layer of the View and set Width and Height to 800 and 500, respectively. To see what this looks like, change the Alignment to "Fixed". The latter alteration prevents the end user to change the size of the window, so Alignment back to "Stretch" before you save. 
 
 ####2. Create a list of Contacts within form «Company».
@@ -77,36 +77,35 @@ You will now add functionality to open, create and delete Contacts from the Comp
    2. Menu Item: New
    3. Command: New (The Command you just made).
 5. Add a Command to the Contacts-tab that deletes selected Contacts.
-*Guidance: Look at the «Delete»-command which is placed on the ActivitiesTab-tab. In our case, the Delete-command should have Data Binding against Data Source «Contact». Tip: Use symbol #1195, and choose Enabling = Conditional with condition "Contact.Selected Objects has value" (illustration below).*
-  ![oppg3fig7.JPG](media/oppg3fig7.JPG)
+   *Guidance: Look at the «Delete»-command which is placed on the ActivitiesTab-tab. In our case, the Delete-command should have Data Binding against Data Source «Contact». Tip: Use symbol #1195, and choose Enabling = Conditional with condition "Contact.Selected Objects has value" (illustration below).*
+![oppg3fig7.JPG](media/oppg3fig7.JPG)
  
 6. Add an Event to the Contacts-grid for deleting contacts. 
    1. Type: On Context Menu Item Click
    2. Menu Item: Delete
    3. Command: Delete (The Command that you just made). 
 7. To test what you have done so far: In Genus Studio, select File (at the top) -> Deploy to this computer. All changes are now deployed to your own computer for testing. Open the client (or restart it if you already have it open) and try to add, edit and/or delete a Contact from a Company. Since we haven't define a Ribbon yet, you will have to click the close button ('X') and "Yes" to save. Check also that the default values on creation are as expected. 
-*Comment: If this had been a test or production environment, you could have chosen "Deploy to all" with a defined time. Changes would then become available for all users of the soultion.*
+   *Comment: If this had been a test or production environment, you could have chosen "Deploy to all" with a defined time. Changes would then become available for all users of the soultion.*
   
-	  You have now made Contact and verified that it works. Next, you will have to list Activities and Mail on Contacts. For this to work, both object classes need a reference to Contact.
 ####4. Create lists of Activities and Mail on Contacts (with functionality)
 1. Add a new field to Object Class «Activity» named "Contact".
    *Guidance: Add the field to the database by running SQL statement:
    
    ALTER TABLE Activity 
    Add ContactID uniqueidentifier 
-
-This adds a column ContactID to the Activity-table in the database, with data type identical to the primary key of Contact).*  
-Then, right-click on Activity in Studio and choose «Add Object Class Properties». Remember to set the Data Interpretation under «Property Definition» to «Contact»
+   
+   This adds a column ContactID to the Activity-table in the database, with data type identical to the primary key of Contact).*
+   Then, right-click on Activity in Studio and choose «Add Object Class Properties». Remember to set the Data Interpretation under «Property Definition» to «Contact»
 2. Add a new field called "Contact" to Object Class «Mail».
-*Guidance: Same as exercise 3.4 above (substitute "Activity" with "Mail" in the SQL query)*  
+   *Guidance: Same as exercise 3.4 above (substitute "Activity" with "Mail" in the SQL query)*  
 3. Make Activity.Contact available in the user interface.
    1. Open form Activity, and include property "Contact" - from the Activity data source - to it as a field (ComboBox) below Company.
    2. The drop-down should be limited to show only Active Contacts belonging to the Company of the selected Activity. Hence, you will have to define the field's Data Restriction.
-   *Guidance: See screenshot below:*
+      *Guidance: See screenshot below:*
    ![oppg3fig8.JPG](media/oppg3fig8.JPG)
 4. Add activity-functionality to the Contact-form. First, you will have to make a list of all Activities associated with a contact person. Secondly, you will have to make it possible to register Activities on a contact.
    1. Create a list (grid) of activities in the «Activities»-tab (Contact-form).
-   *Guidance: You will have to add object Activities to the form's list of data sources. Define its data filter (read Activities where Activity.Contact = Contact and Activity.State <> Canceled), and add a Grid to the Activities-tab. The grid needs to bound to Data Source «Activity». Remember also to select Columns and determine Sorting (e.g. descending Due Date). Try Grouping (on State) as well if you want to.
+      *Guidance: You will have to add object Activities to the form's list of data sources. Define its data filter (read Activities where Activity.Contact = Contact and Activity.State <> Canceled), and add a Grid to the Activities-tab. The grid needs to bound to Data Source «Activity». Remember also to select Columns and determine Sorting (e.g. descending Due Date). Try Grouping (on State) as well if you want to.
    2. Add a Command to the Activity-tab for opening Activities:
       1. Command: Open a Form
       2. Name: Open, Tip: Activity
@@ -117,7 +116,7 @@ Then, right-click on Activity in Studio and choose «Add Object Class Properties
 5. You will also have to list Mails associated with a Contact. The way of adding instances to the Mail-list in the Company-form is to paste new Mail from the Clipboard (i.e. drag-and-drop). You will make this functionality in a later task, so for now, you only need to focus on the list itself and how to open an e-mail from it.
    1. Create a list (grid) in the «Mail»-tab of form «Contact» that shows Mail where Mail.Contact = Contact.
    2. Add an Event of type "On Activate" to the grid. Set the Effect Type to be "Invoke a File".
-	 *Comment: This allows the Mail to open in Outlook when a row has been double-clicked. This is a built in function of the platform. If the object class contains File Data, File Size, File Type and File Name, the "Invoke a File"-effect will open it in its "default" program. You can look at how this is done in the Mail-grid of the Company-form.*
+      *Comment: This allows the Mail to open in Outlook when a row has been double-clicked. This is a built in function of the platform. If the object class contains File Data, File Size, File Type and File Name, the "Invoke a File"-effect will open it in its "default" program. You can look at how this is done in the Mail-grid of the Company-form.*
 
 ####5. OPTIONAL: Add a "Contact log" to contact persons
 This exercise is not strictly necessary for the remaining set of tasks. However, it contains an interesting new consept - «Part of composition» - so we recommend you to at least read through it.
@@ -133,7 +132,7 @@ We want the user to be able to write and add lines to a Contact log (similar to 
    CreatedByUserID uniqueidentifier, 
    ContactID uniqueidentifier) *
    
-By setting Contact Log to be part of Contact's composition, Contact Log data will always be read together with Contact, and inherit both security and audit trail from it. Set it up like the screenshot below:
+   By setting Contact Log to be part of Contact's composition, Contact Log data will always be read together with Contact, and inherit both security and audit trail from it. Set it up like the screenshot below:
 ![oppg3fig9.JPG](media/oppg3fig9.JPG)
 2. Assign Default values to Created By and Created Date, and set Subject to "required".
 3. Make a form «Contact Log».

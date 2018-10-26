@@ -16,7 +16,7 @@ You will now make a Form for registering and opening customer Contact informatio
 5. In tab «General», you will add the fields for Contact.
    *Guidance: You will be asked to model a «Contact log» at the right hand side of this display in an upcoming task. Hence, we recommend the following layout for the «General»-tab:*
 ![oppg3fig2.JPG](media/oppg3fig2.JPG)
-
+   
    Select OUTER GROUPBOX (or whatever you called it in your solution) and change «Container Type» to «Group» in the menu on the left. This will remove the frame of the box. Do the same for LEFT GROUPBOX and RIGHT GROUPBOX. Fields can be dragged from the right menu and dropped into the form after changing the following:
 ![oppg3fig3.JPG](media/oppg3fig3.JPG)
   
@@ -27,19 +27,19 @@ You will now make a Form for registering and opening customer Contact informatio
 You will now add a list to the Company-form that shows all associated Contacts (using a grid). You will also make actions to create new Contacts and open existing ones.
 1. In Studio, navigate to User Interface -> Forms. Open «Company».
 2. Add a new tab to the Tab Sheet at the bottom of the form.
-*Guidance: See screenshot below*
+   *Guidance: See screenshot below*
 ![oppg3fig4.JPG](media/oppg3fig4.JPG)
- 
-*Note: In the Company-form, you will see that the names of the tabs and headers are «Company Label», «Log Label», etc. Don't worry about this yet - it simply means that the label of the control is bound to the field of an object and hence shows a dynamic name (both name and the number of objects in the list is shown).*
+   
+   *Note: In the Company-form, you will see that the names of the tabs and headers are «Company Label», «Log Label», etc. Don't worry about this yet - it simply means that the label of the control is bound to the field of an object and hence shows a dynamic name (both name and the number of objects in the list is shown).*
 3. Name the new tab «Contacts» (both Name and Label). Right-click the tab and select "Sort tabsheets". Move it one step up.
 4. Under «Data Sources», add Contacts ("Private" and "Unbounded", as by default). In the properties menu, navigate to Data Filter. Add filter Contact.Company = Company (i.e. read only Contacts belonging to the Company in the form).
-*Guidance: See screenshot below:*
+   *Guidance: See screenshot below:*
 ![oppg3fig5.JPG](media/oppg3fig5.JPG)
-The Contacts are filtered and read when the Company-form opens.
+   The Contacts are filtered and read when the Company-form opens.
 5. Navigate back to the tab "Contacts" and add a Grid from the menu on the right. Set the Data Binding to Data Source «Contact». Select which columns to include under Columns. Define the sorting (First Name, Last Name) under Sorting, and set Selection Mode to "Multiple" (allows the user to mark several contacts in the list).
-*Guidance: See screenshot below*
+   *Guidance: See screenshot below*
 ![oppg3fig6.JPG](media/oppg3fig6.JPG)
-You have now successfully added a list of Contacts to Company. Next you will have to add an event that opens the Contact-form that you made earlier (by double-clicking a row in the grid) and a button that allows the user to create a new Contact.
+   You have now successfully added a list of Contacts to Company. Next you will have to add an event that opens the Contact-form that you made earlier (by double-clicking a row in the grid) and a button that allows the user to create a new Contact.
 
 ###Actions in Genus Apps: Commands and Events:
 
@@ -79,14 +79,14 @@ You will now add functionality to open, create and delete Contacts from the Comp
 5. Add a Command to the Contacts-tab that deletes selected Contacts.
    *Guidance: Look at the «Delete»-command which is placed on the ActivitiesTab-tab. In our case, the Delete-command should have Data Binding against Data Source «Contact». Tip: Use symbol #1195, and choose Enabling = Conditional with condition "Contact.Selected Objects has value" (illustration below).*
 ![oppg3fig7.JPG](media/oppg3fig7.JPG)
- 
+   
 6. Add an Event to the Contacts-grid for deleting contacts. 
    1. Type: On Context Menu Item Click
    2. Menu Item: Delete
    3. Command: Delete (The Command that you just made). 
 7. To test what you have done so far: In Genus Studio, select File (at the top) -> Deploy to this computer. All changes are now deployed to your own computer for testing. Open the client (or restart it if you already have it open) and try to add, edit and/or delete a Contact from a Company. Since we haven't define a Ribbon yet, you will have to click the close button ('X') and "Yes" to save. Check also that the default values on creation are as expected. 
    *Comment: If this had been a test or production environment, you could have chosen "Deploy to all" with a defined time. Changes would then become available for all users of the soultion.*
-  
+   
 ####4. Create lists of Activities and Mail on Contacts (with functionality)
 1. Add a new field to Object Class «Activity» named "Contact".
    *Guidance: Add the field to the database by running SQL statement:
@@ -117,10 +117,10 @@ You will now add functionality to open, create and delete Contacts from the Comp
    1. Create a list (grid) in the «Mail»-tab of form «Contact» that shows Mail where Mail.Contact = Contact.
    2. Add an Event of type "On Activate" to the grid. Set the Effect Type to be "Invoke a File".
       *Comment: This allows the Mail to open in Outlook when a row has been double-clicked. This is a built in function of the platform. If the object class contains File Data, File Size, File Type and File Name, the "Invoke a File"-effect will open it in its "default" program. You can look at how this is done in the Mail-grid of the Company-form.*
-
+   
 ####5. OPTIONAL: Add a "Contact log" to contact persons
 This exercise is not strictly necessary for the remaining set of tasks. However, it contains an interesting new consept - «Part of composition» - so we recommend you to at least read through it.
- 
+
 We want the user to be able to write and add lines to a Contact log (similar to «Company Log» which exist under Company).
 1. Create a new Object Class called "Contact Log". When you run through the wizard to add the new Object Class, remember to define the Data Interpretation of Created By (User) and Contact (Contact). In the last step of the wizard, choose Part of Composition "Contact".
    *Guidance: You can use the following SQL query to create the database table:
@@ -145,9 +145,10 @@ We want the user to be able to write and add lines to a Contact log (similar to 
 4. Add Contact Log to the Contact-form. 
    1. Add a new GroupBox inside the RIGHT GROUP BOX that you made earlier (which perhaps is a Group now?). Give it label "Log:", and check property Transparent Title Area. Set Border Thickness to 0.
    2. Add a grid inside the GroupBox. Bind the grid to Data Source «Contact» and Field «Contact Log». Select Columns to show and define the Sorting (Created Date, descending). **NB: You may need to re-start Genus Studio to do this!**. *Comment: Since Contact Log is part of composition and we don't need to filter out anything, Contact Log don't have to be a Data Source on its own. The grid is now bound to the group of log objects that is "attached" to the Contact in the Data Source.* 
-   3. Add a Command to the ContactLog-grid for opening a Contact Log (through form «Contact Log»). This should be enabled if Contact.Log.Single Selected has value. Also add an event to the grid which executes the command.*Guidance: As the «Contact Log»-form is a dialog box, it can't save changes on its own. Accordingly, choose Two-Way binding (as shown below) when setting up the Event.
+   3. Add a Command to the ContactLog-grid for opening a Contact Log (through form «Contact Log»). This should be enabled if Contact.Log.Single Selected has value. Also add an event to the grid which executes the command.
+      *Guidance: As the «Contact Log»-form is a dialog box, it can't save changes on its own. Accordingly, choose Two-Way binding (as shown below) when setting up the Event.
    ![oppg3fig10.JPG](media/oppg3fig10.JPG)
-   Data Binding: 
+      Data Binding: 
    ![oppg3fig11.JPG](media/oppg3fig11.JPG)
    4. Add also a Command and an Event for New and Delete, respectively. Place both the commands and the events on the Contact Log grid itself.
       1. New: *Guidance: The opening of Contact Log in "Create"-mode is also two-way bound. Consequently, a new object is created in the Contact Log-form, but is not saved before the object is brought back to the Contact-form and the Save-button is pressed. See screenshot below:*

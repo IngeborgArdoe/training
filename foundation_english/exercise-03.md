@@ -118,7 +118,7 @@ You will now add functionality to open, create and delete Contacts from the Comp
    2. Add an Event of type "On Activate" to the grid. Set the Effect Type to be "Invoke a File".
       *Comment: This allows the Mail to open in Outlook when a row has been double-clicked. This is a built in function of the platform. If the object class contains File Data, File Size, File Type and File Name, the "Invoke a File"-effect will open it in its "default" program. You can look at how this is done in the Mail-grid of the Company-form.*
    
-####5. OPTIONAL: Add a "Contact log" to contact persons
+####5. OPTIONAL: Add a Contact Log to Contact
 This exercise is not strictly necessary for the remaining set of tasks. However, it contains an interesting new consept - «Part of composition» - so we recommend you to at least read through it.
 
 We want the user to be able to write and add lines to a Contact log (similar to «Company Log» which exist under Company).

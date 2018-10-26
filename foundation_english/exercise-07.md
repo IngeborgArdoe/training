@@ -9,6 +9,7 @@ Name the rule "Set Company Active when set to Customer". Select "On After Modify
 *Comment: By selecting "On After Modify", the Rule will execute after changes have been stored in the data base.*
 #### Data Sources: 
 Choose «Company» as object class. Then, select «Is Customer» as property.
+
 *Comment: The Rule will now solely run when a change is made to the «Is Customer» field (and saved). If a property isn't provided, a change to any of the object's (e.g. Company) fields would trigger the Rule. It is also possible to add other Data Sources, which are read during execution, if you want to (even if it's not relevant in this Rule) create logic against these.*
 
 #### Actions: 

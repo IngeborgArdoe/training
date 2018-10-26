@@ -77,14 +77,15 @@ You will now add functionality to open, create and delete Contacts from the Comp
    2. Menu Item: New
    3. Command: New (The Command you just made).
 5. Add a Command to the Contacts-tab that deletes selected Contacts.
-   *Guidance: Look at the «Delete»-command which is placed on the ActivitiesTab-tab. In our case, the Delete-command should have Data Binding against Data Source «Contact». Tip: Use symbol #1195, and choose Enabling = Conditional with condition "Contact.Selected Objects has value" (illustration below).*
+  *Guidance: Look at the «Delete»-command which is placed on the ActivitiesTab-tab. In our case, the Delete-command should have Data Binding against Data Source «Contact». Tip: Use symbol #1195, and choose Enabling = Conditional with condition "Contact.Selected Objects has value" (illustration below).*
 ![oppg3fig7.JPG](media/oppg3fig7.JPG)
    
 6. Add an Event to the Contacts-grid for deleting contacts. 
    1. Type: On Context Menu Item Click
    2. Menu Item: Delete
    3. Command: Delete (The Command that you just made). 
-7. To test what you have done so far: In Genus Studio, select File (at the top) -> Deploy to this computer. All changes are now deployed to your own computer for testing. Open the client (or restart it if you already have it open) and try to add, edit and/or delete a Contact from a Company. Since we haven't define a Ribbon yet, you will have to click the close button ('X') and "Yes" to save. Check also that the default values on creation are as expected. 
+7. To test what you have done so far: In Genus Studio, select File (at the top) -> Deploy to this computer. All changes are now deployed to your own computer for testing. Open the client (or restart it if you already have it open) and try to add, edit and/or delete a Contact from a Company. Since we haven't define a Ribbon yet, you will have to click the close button ('X') and "Yes" to save. Check also that the default values on creation are as expected.
+   
    *Comment: If this had been a test or production environment, you could have chosen "Deploy to all" with a defined time. Changes would then become available for all users of the soultion.*
    
 ####4. Create lists of Activities and Mail on Contacts (with functionality)

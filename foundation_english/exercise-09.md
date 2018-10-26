@@ -13,34 +13,40 @@ Before modeling «Request», you will be asked to create a couple of Code Domain
 It would also be nice to have a sequential "order number" that is generated on the creation of a Request. For this, you can create an «Identifier Domain» (from Studio -> right-click on Object Classes -> New -> select Identifier Domain). Such an object class demands a table in the database containing the latest order number. The table has a name (e.g. "Order No Counter") and an integer field (e.g. "Order No"). When an Identifier Domain is used in the calculation of a field, Genus retrieves the latest number in the sequence and updates it incrementally with 1.
 
 3. Create a new Identifier Domain named "Order No Counter" with integer field "Order No".
-  
+   
    *Guidance: Create the table in the database and insert the first "order number" instance. Do it with the following SQL query:   
 
-   create table OrderNoCounter (OrderNo int)
-
+   CREATE TABLE OrderNoCounter (
+   
+   OrderNo int
+   
+   )
+   
    go
 
-   insert into OrderNoCounter values (10000)
-  
-  In the wizard for creating a new Identifier Domain, choose "Sequential Counter" in step 2:
-  ![oppg9fig1.JPG](media/oppg9fig1.JPG)
+   INSERT INTO OrderNoCounter
+   
+   values (10000)
+   
+   In the wizard for creating a new Identifier Domain, choose "Sequential Counter" in step 2:
+![oppg9fig1.JPG](media/oppg9fig1.JPG)
  
-  In step 3, select the column that will hold the counter:
-  ![oppg9fig2.JPG](media/oppg9fig2.JPG)
-  Click Finish.
+   In step 3, select the column that will hold the counter:
+![oppg9fig2.JPG](media/oppg9fig2.JPG)
+   Click Finish.
   
 4. Create Object Class «Request». In the New Object Domain wizard, remember to set correct Data Interpretations.
 
-   *Comment: The SQL script for creating table «Request» has already been run against your database. This is because we wanted to genereate some data in advance for making reports/analysis in later exercises.*
+*Comment: The SQL script for creating table «Request» has already been run against your database. This is because we wanted to genereate some data in advance for making reports/analysis in later exercises.*
    1. Set also default value for field «Order No». Select «Custom Id Generator» and «Order No Counter» from the list. Make Subject, State and Type mandatory. Default values for State and Type should also be defined. In addition, set the default value of Received Date to "Now", but let it be possible to change. Agreed Delivery Date and Expected Delivery Date should have Data Interpretation "Date" (not "Date and Time"), as we don't want the user to care about the time of the delivery.
    
-   After creating the object class, sett Default Values for the «Created» fields and Data Calculations for the «Modified» fields.
-   *Comment: The former locks the values after creation (i.e. they remain unchanged after creation), while the latter allows the values to be automatically set whenever the Request object is modified.*
+      After creating the object class, sett Default Values for the «Created» fields and Data Calculations for the «Modified» fields.
+      *Comment: The former locks the values after creation (i.e. they remain unchanged after creation), while the latter allows the values to be automatically set whenever the Request object is modified.*
    
    2. Open Object Class «Request» (right-click -> Open) and define the following properties:
       - Search (set search properties, under «Search Properties» in tab «Search»).
-	  - Events -> Auditing (want to log all changes made on Request objects, check «Enable Auditing» in tab «Events»).
-	  -	Display -> Naming (field «Subject» should at least be a part of the naming, in tab «Display»).
+	- Events -> Auditing (want to log all changes made on Request objects, check «Enable Auditing» in tab «Events»).
+	- Display -> Naming (field «Subject» should at least be a part of the naming, in tab «Display»).
       -	Data Sorting (default sorting on «Company» ascending and «Received Date» descending, in tab «Data Sorting»).
   
 You have now created the object itself. Next, you will make it possible to drag documents and e-mail into a Request.
@@ -58,13 +64,13 @@ You are now ready to add Request to the interface, i.e. make a Request-form and 
    *Tip: Add a Tab Sheets container with tabs "General", "Documents" and "Mail" in that respective order. To get a meaningful Ribbon (optional), you should place the commands on the tabs. Remember to give the commands good names and symbols.*
    
 8. Make a new "Requests" tab in the Company-form and add a **list of Requests**. Remember to create commands+events for creating new and opening existing requests through the Request-form. It should not be possible to delete Requests. However, the grid should filter out Requests with State="Canceled".
-  *Comment: Feel free to add the "New" command to the Ribbon. Find a meaningful symbol for Request.*
+   *Comment: Feel free to add the "New" command to the Ribbon. Find a meaningful symbol for Request.*
   
 9. Create a new Table for Requests with view that displays all Requests with State="Open". Name the view "Open Requests".
    *Guidance: If needed, take a look at the earlier Table exercise. Make sure you include columns, define the Data Filter and enable Search. Under Events, add one "Open a Form" event with menu item = "New" (remember Create Data) and one with menu item 0 "Open in New Window (remember Data Filter).*
    
 10. Make a new View Button in the Navigation Pane (name "Requests"), and add a shortcut to the "Open Requests"-table. Remember to define the security of the View Button first, so that the security is inherited by all its elements. Choose a suitable symbol (e.g. 1972).
-  ![oppg9fig3.JPG](media/oppg9fig2.JPG)
+![oppg9fig3.JPG](media/oppg9fig2.JPG)
   
 11. OPTIONAL EXERCISE: Male a rule "Set Closed Date and Canceled Date when State changed". This should change Closed Date if State is set to "Closed" (and NULL otherwise) and Canceled Date if State is set to "Canceled" (and NULL otherwise).
 
@@ -74,10 +80,11 @@ You are now ready to add Request to the interface, i.e. make a Request-form and 
     *Tip: You can determine when a Control is "Read Only" and not by defining conditions in the menu on the left-hand side of the editor. Luckily, you don't have to define one condition per field, you can also do it per Group. Everything placed within the Group will be "Read Only" if the condition is true.*
 	
 14. OPTIONAL EXERCISE: Give tabs «Mail» and «Documents» in the Request-form a **dynamic label which counts the number of objects** listed (e.g. "Mail (3)" and "Documents (1)").
-	*Guidance: It may be necessary to use the provided solution for aid.*
-	1. You will need a data source of type Local Object (name: "Label Values") in the Request-form. Create two fields "Mail Label" and "Document Label" of Type = Function. For Data Calculation, use Formula (e.g. "Mail  (" + Misc.ifNull(mail.size(),0).toString() + ")"  )
-	2. The local object's Data Filter can't be read from the database, but you can set Data Filter = "Run a Local Task". Create a Local Task (under «Tasks») which has a Create Objects («Label Values») effect. Use this task to filter the «Label Values» data source.
-	3. Bind the Label properties of tabs «Documents» and «Mail» to fields «Label Values.Documents Label» and «Label Values.Mail Label», respectively. 
+    *Guidance: It may be necessary to use the provided solution for aid.*
+    1. You will need a data source of type Local Object (name: "Label Values") in the Request-form. Create two fields "Mail Label" and "Document Label" of Type = Function. For Data Calculation, use Formula (e.g. "Mail  (" + Misc.ifNull(mail.size(),0).toString() + ")"  )
+    2. The local object's Data Filter can't be read from the database, but you can set Data Filter = "Run a Local Task". Create a Local Task (under «Tasks») which has a Create Objects («Label Values») effect. Use this task to filter the «Label Values» data source.
+    3. Bind the Label properties of tabs «Documents» and «Mail» to fields «Label Values.Documents Label» and «Label Values.Mail Label», respectively. 
+
 Deploy and verify! Check the naming of the tabs.
 
 

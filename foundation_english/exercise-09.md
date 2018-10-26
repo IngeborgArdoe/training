@@ -2,7 +2,7 @@
 
 In this exercise, you will make a new business object «Request» that allows the user to register inquiries from customers. «Request» will be used in later exercises to generate order confirmations and reports, so the most important thing is to model the object. As you have seen before, some exercises are mandatory and some are optional. Do the optional ones if you have time.
 
-Before modeling «Request», you will be asked to create a couple of Code Domains and an Identifier Domain. In this way, you can set all Data Interpretations correctly right away when you model the object class. 
+Before modeling «Request», you will be asked to create a couple of Code Domains and an Identifier Domain. This way, you will be able to set all Data Interpretations correctly when you model the object class. 
 1. Create a new Code Domain named "Request State". Add values "Open" (value=10), "Closed" (value=20) and "Canceled" (value=30).
 
    *Guidance: In Genus Studio, right-click on Object Classes -> New -> Select Code Domain.*
@@ -10,7 +10,7 @@ Before modeling «Request», you will be asked to create a couple of Code Domain
 
    *Comment: The requests can hence be classified as either orders ("Order") or inquiries for help / other ("Service").*
 
-It would also be nice to have a sequential "order number" that is generated on the creation of a Request. For this, you can create an «Identifier Domain» (from Studio -> right-click on Object Classes -> New -> select Identifier Domain). Such an object class demands a table in the database containing the latest order number. The table has a name (e.g. "Order No Counter") and an integer field (e.g. "Order No"). When an Identifier Domain is used in the calculation of a field, Genus retrieves the latest number in the sequence and updates it incrementally with 1.
+   It would also be nice to have a sequential "order number" that is generated on the creation of a Request. For this, you can create an «Identifier Domain» (from Studio -> right-click on Object Classes -> New -> select Identifier Domain). Such an object class demands a table in the database containing the latest order number. The table has a name (e.g. "Order No Counter") and an integer field (e.g. "Order No"). When an Identifier Domain is used in the calculation of a field, Genus retrieves the latest number in the sequence and updates it incrementally with 1.
 
 3. Create a new Identifier Domain named "Order No Counter" with integer field "Order No".
    
@@ -38,25 +38,33 @@ It would also be nice to have a sequential "order number" that is generated on t
 4. Create Object Class «Request». In the New Object Domain wizard, remember to set correct Data Interpretations.
 
 *Comment: The SQL script for creating table «Request» has already been run against your database. This is because we wanted to genereate some data in advance for making reports/analysis in later exercises.*
-   1. Set also default value for field «Order No». Select «Custom Id Generator» and «Order No Counter» from the list. Make Subject, State and Type mandatory. Default values for State and Type should also be defined. In addition, set the default value of Received Date to "Now", but let it be possible to change. Agreed Delivery Date and Expected Delivery Date should have Data Interpretation "Date" (not "Date and Time"), as we don't want the user to care about the time of the delivery.
-   
-      After creating the object class, sett Default Values for the «Created» fields and Data Calculations for the «Modified» fields.
+   1. Set default value for field «Order No». Select «Custom Id Generator» and «Order No Counter» from the list. Make Subject, State and Type mandatory. Also, agreed Delivery Date and Expected Delivery Date should have Data Interpretation "Date" (not "Date and Time"), as we don't want the user to care about the time of the delivery.
+      
+      After creating the object class, sett Default Values for the «Created» fields and Data Calculations for the «Modified» fields. Default values for State and Type should also be defined. In addition, set the default value of Received Date to "Now", but let it be possible to change.
+      
       *Comment: The former locks the values after creation (i.e. they remain unchanged after creation), while the latter allows the values to be automatically set whenever the Request object is modified.*
    
    2. Open Object Class «Request» (right-click -> Open) and define the following properties:
       - Search (set search properties, under «Search Properties» in tab «Search»).
-	- Events -> Auditing (want to log all changes made on Request objects, check «Enable Auditing» in tab «Events»).
-	- Display -> Naming (field «Subject» should at least be a part of the naming, in tab «Display»).
+      - Events -> Auditing (want to log all changes made on Request objects, check «Enable Auditing» in tab «Events»).
+      - Display -> Naming (field «Subject» should at least be a part of the naming, in tab «Display»).
       -	Data Sorting (default sorting on «Company» ascending and «Received Date» descending, in tab «Data Sorting»).
   
 You have now created the object itself. Next, you will make it possible to drag documents and e-mail into a Request.
 
 5. Expand object classes Mail and Document with a new field "Request".
 
-   *Guidance: Use the following SQL query to create a new column in the Document table: "alter table Document add RequestID uniqueidentifier". Run the equivalent query against the Mail Table. Add the two fields to their corresponding Object Classes in Studio.*
-6. Modify tasks «Paste new Mail from file» and «Paste new Document from file» to allow Request as input. Also, make sure that the reference to Request is correctly set on creation.
+   *Guidance: Use the following SQL query to create a new column in the Document table:*
+   
+   ALTER TABLE Document
+   
+   ADD RequestID uniqueidentifier 
+   
+   *Run the equivalent query against the Mail Table. Add the two fields to their corresponding Object Classes in Studio.*
 
-   *Guidance: Same modification as in the second part of exercise 6. Add Request to the list of data sources (name it "Request (input)") and use it - if it has value - to set Mail.Company, Mail.Contact and Mail.Request.*
+6. Create tasks «Paste new Mail from file (Request)» and «Paste new Document from file (Request)» - both taking Request as input.
+
+   *Guidance: Copy the corresponding Paste-tasks for Company, and substitute the data source Company with Request. Make sure that the reference to Request is correctly set on Mail/Document creation (Mail.Request = Request (input) and Document.Request = Request (input)).*
 
 You are now ready to add Request to the interface, i.e. make a Request-form and list Requests under Company. In addition, you will be asked to make a list (table) of Requests that is accessible from the Navigation Pane.
 
@@ -66,23 +74,23 @@ You are now ready to add Request to the interface, i.e. make a Request-form and 
 8. Make a new "Requests" tab in the Company-form and add a **list of Requests**. Remember to create commands+events for creating new and opening existing requests through the Request-form. It should not be possible to delete Requests. However, the grid should filter out Requests with State="Canceled".
    *Comment: Feel free to add the "New" command to the Ribbon. Find a meaningful symbol for Request.*
   
-9. Create a new Table for Requests with view that displays all Requests with State="Open". Name the view "Open Requests".
-   *Guidance: If needed, take a look at the earlier Table exercise. Make sure you include columns, define the Data Filter and enable Search. Under Events, add one "Open a Form" event with menu item = "New" (remember Create Data) and one with menu item 0 "Open in New Window (remember Data Filter).*
+9. Create a new Table for Requests with a view that displays all Requests with State="Open". Name the view "Open Requests".
+   *Guidance: If needed, take a look at the earlier Table exercise. Make sure you include columns, define the Data Filter and enable Search. Under Events, add one "Open a Form" event with menu item = "New" (remember Create Data) and one with menu item = "Open in New Window (remember Data Filter).*
    
 10. Make a new View Button in the Navigation Pane (name "Requests"), and add a shortcut to the "Open Requests"-table. Remember to define the security of the View Button first, so that the security is inherited by all its elements. Choose a suitable symbol (e.g. 1972).
 ![oppg9fig3.JPG](media/oppg9fig2.JPG)
   
 11. OPTIONAL EXERCISE: Male a rule "Set Closed Date and Canceled Date when State changed". This should change Closed Date if State is set to "Closed" (and NULL otherwise) and Canceled Date if State is set to "Canceled" (and NULL otherwise).
 
-12. OPTIONAL EXERCISE: Force field Request.State to be "Read Only" and make tasks - "Close Request", "Reopen Request" and "Cancel Request" - for setting the State of a Request. Publish the tasks through buttons in the Request-form (e.g. next to State) and in the Company-form (below the grid). Furthermore, add enabling conditions to the buttons, so that "Close Request" is enabled when State="Open", "Re-open Request" is enabled when State="Canceled"/"Closed", and "Cancel Request" is enabled when State="Open"/"Closed".
+12. OPTIONAL EXERCISE: Force field Request.State to be "Read Only" by changing the Read Only property in the Request form/grid/table, and make tasks "Close Request", "Reopen Request" and "Cancel Request" to set the State of a Request. Publish the tasks through buttons in the Request-form (e.g. next to State) and in the Company-form (below the grid). Furthermore, add enabling conditions to the buttons, so that "Close Request" is enabled when State="Open", "Re-open Request" is enabled when State="Canceled"/"Closed", and "Cancel Request" is enabled when State="Open".
 
 13. OPTIONAL EXERCISE: Force all fields in the Request-form to be "Read Only" if State is not equal to "Open".
     *Tip: You can determine when a Control is "Read Only" and not by defining conditions in the menu on the left-hand side of the editor. Luckily, you don't have to define one condition per field, you can also do it per Group. Everything placed within the Group will be "Read Only" if the condition is true.*
 	
 14. OPTIONAL EXERCISE: Give tabs «Mail» and «Documents» in the Request-form a **dynamic label which counts the number of objects** listed (e.g. "Mail (3)" and "Documents (1)").
     *Guidance: It may be necessary to use the provided solution for aid.*
-    1. You will need a data source of type Local Object (name: "Label Values") in the Request-form. Create two fields "Mail Label" and "Document Label" of Type = Function. For Data Calculation, use Formula (e.g. "Mail  (" + Misc.ifNull(mail.size(),0).toString() + ")"  )
-    2. The local object's Data Filter can't be read from the database, but you can set Data Filter = "Run a Local Task". Create a Local Task (under «Tasks») which has a Create Objects («Label Values») effect. Use this task to filter the «Label Values» data source.
+    1. You will need a data source of type Local Object (name: "Labels") in the Request-form. Create two fields "Mail Label" and "Document Label" of Type = Function. For Data Calculation, use Formula (e.g. "Mail  (" + Misc.ifNull(mail.size(),0).toString() + ")"  )
+    2. The local object's Data Filter can't be read from the database, but you can set Data Filter = "Create Single Object". This will create a Labels object when the form is opened.
     3. Bind the Label properties of tabs «Documents» and «Mail» to fields «Label Values.Documents Label» and «Label Values.Mail Label», respectively. 
 
 Deploy and verify! Check the naming of the tabs.

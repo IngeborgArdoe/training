@@ -154,7 +154,7 @@ We want the user to be able to write and add lines to a Contact log (similar to 
    4. Add also a Command and an Event for New and Delete, respectively. Place both the commands and the events on the Contact Log grid itself.
       1. New: *Guidance: The opening of Contact Log in "Create"-mode is also two-way bound. Consequently, a new object is created in the Contact Log-form, but is not saved before the object is brought back to the Contact-form and the Save-button is pressed. See screenshot below:*
       ![oppg3fig12.JPG](media/oppg3fig12.JPG)
-      2. Delete: *Guidance: Se screenshot below: (Command og Event, respectively)*
+      2. Delete: *Guidance: Se screenshot below: (Command)*
       ![oppg3fig13.JPG](media/oppg3fig13.JPG)
 5. Deploy and test creation, modification and deletion of a Contact's log objects in the client.
    

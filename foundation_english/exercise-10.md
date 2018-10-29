@@ -10,7 +10,7 @@ You will now go through a couple of exercises concerning the creation of reports
 A new report is created from Genus Studio -> Discovery -> Reports -> New. The tool's structure is logically set up as shown below:
 ![oppg10fig1.JPG](media/oppg10fig1.JPG)
  
-To make an Object Class available as a dimension in a report, you must specifically assign this feature to the Object Class (right-click on the Object Class -> Open -> Data Aggregation). Likewise, you will have to check the "Enable as Measure" option (right-click on the Object Class Property -> Open -> Data Aggregation) if you want to use an Object Class Property as a Measure (ref Activity's No Of Activities property).
+To make an Object Class available as a dimension in a report, you must specifically assign this feature to the Object Class (right-click on the Object Class -> Open -> Data Aggregation). Likewise, you will have to check the "Enable as Measure" option (right-click on the Object Class Property -> Open -> Data Aggregation) if you want to use an Object Class Property as a Measure for calculating sums, counts, etc (ref Activity's No Of Activities property).
 
 In addition, you will have to specify how to group No of Activities per month, as this can be based either on «Created date» or «Completed date». You will have to determine which links to use ("Connections") in the report.
 

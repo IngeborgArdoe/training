@@ -57,7 +57,7 @@ Add also a Measure (formula) "Sales Increase" that shows the increase or decreas
 
 *Make sure that the Sales measure only includes Requests in state "Closed" and of type "Order". You can do this "per measure" (right-click -> Local Filters) OR you can add Request State and Request Type to the "Filters" section of the report and define filters here. Measures that are connected to any (or all) of the latter filter objects will be filtered accordingly. If you don't want to define Connections every time you are using the sales measure, you can - in the Data Aggregation tab of Object Class Request - set up default connections. These are connections that will be set automatically in reports.*
 
-####5. OPTIONAL: Add report shortcuts to the Navigation Pane.**
+####5. OPTIONAL: Add report shortcuts to the Navigation Pane.
 
 All reports (given that you have the rights to see them) are available from the Discovery menu in the client. In some cases, however, it can be useful to create shortcuts to reports in the Navigation Pane (e.g. reports are of high importance or are frequently used). Take a look at the provided solution if you want to see how reports have been published there.
 

@@ -43,14 +43,17 @@ The first thing that we want to do is to make it possible for the user to choose
 Next is the effect which changes Contact.Responsible for all objects in the data source "Contact input" and saves it to the database.
 ####Set the chosen User as Responsible
 1. Add a Block "Scope".
+
 *Note: By default, the Commit-option is checked. This means that all changes (Create or Modify) done by effects within the Scope will be saved.*
 2. Add a "Modify objects" effect which sets the Contact.Responsible field to the chosen User.
+
 *Guidance: Set it up as illustrated below. This will generate a SQL query that changes the Responsible of all Contacts in "Contacts input".*
 ![oppg6fig2.JPG](media/oppg6fig2.JPG)
 
 #### Security
 One important thing that we haven't considered yet is security. Access is given to security groups per task. All users of Genus CRM are members of security group "Users" og should have access to this task.
 1. Go to File -> Properties (upper-left corner of the task). Under Security, add security group "Users". Check "Find and List" and "Read and Execute". Note: The task has to be saved before you are allowed to open the Security-tab.
+
 *The task is finished, but not made available for the end user yet. To do so, you will have to publish it through an Event.*
 2. Navigate to table «Contacts». Add an Event that executes your task.
    1. Effect Type = «Run a Task (Global Scope)».

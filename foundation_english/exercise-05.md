@@ -28,14 +28,16 @@ Finally, it is worth mentioning that the end user can hide the Ribbon if he/she 
    5. If you have followed the exercises carefully, you will find a command named "New Contact" on the left-hand side. Mark the Tab Section "Contact" and double-click on the command.
    6. Equally, you should find a command named "Delete Contact". Double-click on this as well.
    7. Deploy and check that everything looks as expected. If you have done it correctly, you should see the following when you open a Company and click the Contacts-tab:
+![oppg5fig3.JPG](media/oppg5fig3.JPG)
 
-     ![oppg5fig3.JPG](media/oppg5fig3.JPG)
 ####2. Add "Change Resposible for Company" to the Quick Access Toolbar
 1. Select Quick Access Toolbar in the dropdown menu on the right-hand side and add the command.
+
 ####3. Add Ribbon-command for creating new Contact (Contacts-table)
 1. Open the Contacts-table.
 2. Verify that the Event for making a new contact is named "New Contact". Set Tip = "Contact", and find a suitable symbol (# 1081). 
 3. Place the event under Main Tabs – Home -> New.
+
 ####4. OPTIONAL: Expand Ribbon in form Contact with a Context Tab Group for Contact Log.
 
 

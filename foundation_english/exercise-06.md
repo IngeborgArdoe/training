@@ -41,12 +41,11 @@ The first thing that we want to do is to make it possible for the user to choose
    ![oppg6fig1.JPG](media/oppg6fig1.JPG)
 
 Next is the effect which changes Contact.Responsible for all objects in the data source "Contact input" and saves it to the database.
-####Set the chosen User as Responsible
-1. Add a Block "Scope".
 
+#### Set the chosen User as Responsible
+1. Add a Block "Scope".
 *Note: By default, the Commit-option is checked. This means that all changes (Create or Modify) done by effects within the Scope will be saved.*
 2. Add a "Modify objects" effect which sets the Contact.Responsible field to the chosen User.
-
 *Guidance: Set it up as illustrated below. This will generate a SQL query that changes the Responsible of all Contacts in "Contacts input".*
 ![oppg6fig2.JPG](media/oppg6fig2.JPG)
 
@@ -61,6 +60,7 @@ One important thing that we haven't considered yet is security. Access is given 
    3. Enabling: Select "On selected objects" (the task should be enabled when one or more rows are marked).
    4. Filter Data: Set "Two way binding to objects in the data source: Contact" with Objects: Selected.
    *Note: Defining a data filter like this is a quick way of saying "I want my task's data source «Contacts input» to be populated with all contact persons marked in the table by the user". When clicking the Action «Change Responsible for Contact» in the Action pane, the chosen contact persons are copied into the task «Change Responsible for Contact» and the task's effects are executed.* 
+   
 ### Ribbon
 Add «Change Responsible for Contact» to the Ribbon.
 1. Name the event "Change Responsible".

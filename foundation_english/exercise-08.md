@@ -45,9 +45,9 @@ For this, you will have to model an object «Document» (like «Mail») that all
    *Guidance: The task should take Documents as input and should create General Files. Make it available through an Event with Menu item = Copy.*
 7. OPTIONAL EXERCISE: Add Delete and Paste/Copy to the Ribbon.
    Guidance: Create two new Tab Sections under Context Tab Group "Document" and Tab "Document Management": Tab Section "Manage" for Delete and Tab Section "Clipboard" for Paste/Copy to Clipboard. Recall symbols and enabling conditions.*
-
+   
 The next thing for you to make is the functionality for sending e-mail to contact persons and store them as «Mail». This exercise is again optional, but we recommend you to at least browse through it and look at the solution.
-
+   
 8. OPTIONAL EXERCISE: Create a new task "Send Mail to Contact". The task should be made available through buttons both in the Contact-form and the Company-form (where you have a grid of contact persons).
    1. Create a new task which opens a mail-window and stores the e-mail as a Mail-object in the database after "Send" has been clicked.
   

@@ -61,7 +61,7 @@ One important thing that we haven't considered yet is security. Access is given 
    4. Filter Data: Set "Two way binding to objects in the data source: Contact" with Objects: Selected.
    *Note: Defining a data filter like this is a quick way of saying "I want my task's data source «Contacts input» to be populated with all contact persons marked in the table by the user". When clicking the Action «Change Responsible for Contact» in the Action pane, the chosen contact persons are copied into the task «Change Responsible for Contact» and the task's effects are executed.* 
    
-### Ribbon
+### 2. Ribbon
 Add «Change Responsible for Contact» to the Ribbon.
 1. Name the event "Change Responsible".
 2. Choose symbol #692 with overlay #13
@@ -75,7 +75,7 @@ Navigate to Form «Company», and add a command that runs your task. Place the c
 *Note: Define the Data Filter of the command, i.e. what to filter into the task's data source «Contacts input». It should be a Two-Way binding to Selected Objects in the Data Source «Contact».* 
 *"Two-Way", in this context, means that if changes are not persisted (committed/saved) in the task, they are brought back to the Comapany-form and the "Save"-botton is made available.*
  
-### Paste new Mail from File - store e-mail under contact
+### 3. Paste new Mail from File - store e-mail under contact
 You will now make it possible to create Mail on contacts. This task will be similar to the task "Paste new Mail from File (Company)" and we will therefore use this task as a template.
 
 #### Copying a task and adding Contact Data Source

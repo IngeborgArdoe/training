@@ -93,9 +93,10 @@ You will now add functionality to open, create and delete Contacts from the Comp
 1. Add a new field to Object Class «Activity» named "Contact".
    *Guidance: Add the field to the database by running SQL statement:
    
+   ```
    ALTER TABLE Activity
-   
    Add ContactID uniqueidentifier 
+   ```
    
    This adds a column ContactID to the Activity-table in the database, with data type identical to the primary key of Contact).*
    Then, right-click on Activity in Studio and choose «Add Object Class Properties». Remember to set the Data Interpretation under «Property Definition» to «Contact»
@@ -128,17 +129,15 @@ We want the user to be able to write and add lines to a Contact log (similar to 
 1. Create a new Object Class called "Contact Log". When you run through the wizard to add the new Object Class, remember to define the Data Interpretation of Created By (User) and Contact (Contact). In the last step of the wizard, choose Part of Composition "Contact".
    *Guidance: You can use the following SQL query to create the database table:*
    
+   ```
    CREATE TABLE ContactLog (
-   
-   ContactLogID uniqueidentifier PRIMARY KEY,
-   
-   "Subject" varchar(1000),
-   
-   CreatedDate datetime,
-   
-   CreatedByUserID uniqueidentifier,
-   
-   ContactID uniqueidentifier)
+    ContactLogID uniqueidentifier PRIMARY KEY,
+    "Subject" varchar(1000),
+    CreatedDate datetime,
+    CreatedByUserID uniqueidentifier,
+    ContactID uniqueidentifier
+    )
+   ```
    
    By setting Contact Log to be part of Contact's composition, Contact Log data will always be read together with Contact, and inherit both security and audit trail from it. Set it up like the screenshot below:
 ![oppg3fig9.JPG](media/oppg3fig9.JPG)

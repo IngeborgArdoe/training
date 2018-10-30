@@ -9,7 +9,7 @@ Create an agent that sends out an e-mail to the responsible of an activity if it
 *Guidance: The agent should send 1 e-mail per responsible (i.e. it's a bad idea to iterate over Activities and send one e-mail per activity).*
 
 The agent should have the following data sources:
-  * Activities (all to be reminded) with data filter "all non-completed or canceled activities that have Reminder Time < Now and where Last Reminder Sent has no value or is less than Reminder Time".
+  * Activities (all to be reminded) with data filter "all Open activities that have Reminder Time < Now and where Last Reminder Sent has no value or is less than Reminder Time".
   * Users (read from Activities.Responsible)
   * Activities (temp for user), to keep track of the activities that the user your are iterating over should be reminded about.
   

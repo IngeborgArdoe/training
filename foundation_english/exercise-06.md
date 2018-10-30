@@ -25,6 +25,7 @@ You will now make a simple Task, "Change Responsible for Contact" that can take 
 #### Data Sources
 a. Contact - an unbounded datasource for which we will choose new responsible for.
    i. Let the cardinality be Unbounded, and set the privacy to not Private (Private unchecked).
+   
    *Guidance: Right-click in the upper-left pane -> Add -> Object. Select «Contact». In the bottom pane (General) uncheck Private.
 b. Data Source:  User - a "One"-data source which will represent the new Responsible.
       i. Add the Data Source User with cardinality One and Private checked.
@@ -44,9 +45,11 @@ Next is the effect which changes Contact.Responsible for all objects in the data
 
 #### Set the chosen User as Responsible
 1. Add a Block "Scope".
-*Note: By default, the Commit-option is checked. This means that all changes (Create or Modify) done by effects within the Scope will be saved.*
+
+   *Note: By default, the Commit-option is checked. This means that all changes (Create or Modify) done by effects within the Scope will be saved.*
 2. Add a "Modify objects" effect which sets the Contact.Responsible field to the chosen User.
-*Guidance: Set it up as illustrated below. This will generate a SQL query that changes the Responsible of all Contacts in "Contacts input".*
+
+   *Guidance: Set it up as illustrated below. This will generate a SQL query that changes the Responsible of all Contacts in "Contacts input".*
 ![oppg6fig2.JPG](media/oppg6fig2.JPG)
 
 #### Security
@@ -72,8 +75,7 @@ Add «Change Responsible for Contact» to the Ribbon.
 Add Change Responsible Contact to Ribbon
 Navigate to Form «Company», and add a command that runs your task. Place the command on the «Contacts»-grid and make sure the enabling is correct. Remember also to create an Event that triggers the command from the grid. The command should also be made available from the Ribbon (Context Tab Group Contact, in a new Tab Section called "Responsible Contact").
 
-*Note: Define the Data Filter of the command, i.e. what to filter into the task's data source «Contacts input». It should be a Two-Way binding to Selected Objects in the Data Source «Contact».* 
-*"Two-Way", in this context, means that if changes are not persisted (committed/saved) in the task, they are brought back to the Comapany-form and the "Save"-botton is made available.*
+*Note: Define the Data Filter of the command, i.e. what to filter into the task's data source «Contacts input». It should be a *Two-Way binding to Selected Objects in the Data Source «Contact»."Two-Way", in this context, means that if changes are not persisted (committed/saved) in the task, they are brought back to the Comapany-form and the "Save"-botton is made available.*
  
 ### 3. Paste new Mail from File - store e-mail under contact
 You will now make it possible to create Mail on contacts. This task will be similar to the task "Paste new Mail from File (Company)" and we will therefore use this task as a template.

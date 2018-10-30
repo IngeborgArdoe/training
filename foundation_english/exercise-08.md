@@ -9,7 +9,7 @@ For this, you will have to model an object «Document» (like «Mail») that all
 
    SQL: 
   
-'''CREATE TABLE Document
+```CREATE TABLE Document
   (DocumentID uniqueidentifier PRIMARY KEY,
   FileName varchar(240), 
   FileData varbinary(max), 
@@ -22,7 +22,7 @@ For this, you will have to model an object «Document» (like «Mail») that all
   CompanyID uniqueidentifier,
   ContactID uniqueidentifier
 )
-'''
+```
 
 2. Add Document.File Data as a search field on Company.
 

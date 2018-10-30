@@ -7,33 +7,22 @@ For this, you will have to model an object «Document» (like «Mail») that all
 
    *Guidance: To save some time, use the SQL query below to create a Document-table in the database. Make sure that the Data Interpretations of File Name, File Data, File Extension and File Size are set correctly when you model the object class. Use the built-in data types with identical names.*
 
-  SQL: 
-
-  CREATE TABLE Document
-
-  (DocumentID uniqueidentifier PRIMARY KEY,
-
-  FileName varchar(240), 
-
-  FileData varbinary(max), 
-
-  FileSize int, 
-
-  FileExtension varchar(30), 
-
-  CreatedDate datetime, 
-
-  CreatedByUserID uniqueidentifier, 
-
-  ModifiedDate datetime, 
-
-  ModifiedByUserID uniqueidentifier, 
-
-  CompanyID uniqueidentifier,
+   SQL: 
   
+'''CREATE TABLE Document
+  (DocumentID uniqueidentifier PRIMARY KEY,
+  FileName varchar(240), 
+  FileData varbinary(max), 
+  FileSize int, 
+  FileExtension varchar(30), 
+  CreatedDate datetime, 
+  CreatedByUserID uniqueidentifier, 
+  ModifiedDate datetime, 
+  ModifiedByUserID uniqueidentifier, 
+  CompanyID uniqueidentifier,
   ContactID uniqueidentifier
-
-  )
+)
+'''
 
 2. Add Document.File Data as a search field on Company.
 

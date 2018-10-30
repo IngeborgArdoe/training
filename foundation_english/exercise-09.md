@@ -14,7 +14,7 @@ Before modeling «Request», you will be asked to create a couple of Code Domain
 
 3. Create a new Identifier Domain named "Order No Counter" with integer field "Order No".
    
-   *Guidance: Create the table in the database and insert the first "order number" instance. Do it with the following SQL query:   
+   *Guidance: Create the table in the database and insert the first "order number" instance. Do it with the following SQL query:*
 
    CREATE TABLE OrderNoCounter (
    

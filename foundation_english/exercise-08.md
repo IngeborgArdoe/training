@@ -6,7 +6,7 @@ For this, you will have to model an object «Document» (like «Mail») that all
 1. Model Object Class «Document».
 
    *Guidance: To save some time, use the SQL query below to create a Document-table in the database. Make sure that the Data Interpretations of File Name, File Data, File Extension and File Size are set correctly when you model the object class. Use the built-in data types with identical names.*
-
+   
    SQL: 
   
    ```
@@ -24,7 +24,7 @@ For this, you will have to model an object «Document» (like «Mail») that all
     ContactID uniqueidentifier
    )
    ```
-
+   
 2. Add Document.File Data as a search field on Company.
 
    *Guidance: This allows the user to search for text found in documents associated with the Company. Open Object Class «Company», and add Document.File Data as Search Property under «Search».*

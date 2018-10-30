@@ -36,7 +36,7 @@ Finally, it is worth mentioning that the end user can hide the Ribbon if he/she 
 1. Open the Contacts-table.
 2. Verify that the Event for making a new contact is named "New Contact". Set Tip = "Contact", and find a suitable symbol (# 1081). 
 3. Place the event under Main Tabs – Home -> New.
-###4. OPTIONAL: Expand Ribbon in form Contact with a Context Tab Group for Contact Log.
+####4. OPTIONAL: Expand Ribbon in form Contact with a Context Tab Group for Contact Log.
 
 
 <table>

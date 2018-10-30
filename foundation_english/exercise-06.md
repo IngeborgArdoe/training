@@ -27,7 +27,7 @@ a. Contact - an unbounded datasource for which we will choose new responsible fo
    i. Let the cardinality be Unbounded, and set the privacy to not Private (Private unchecked).
    
    *Guidance: Right-click in the upper-left pane -> Add -> Object. Select «Contact». In the bottom pane (General) uncheck Private.
-b. Data Source:  User - a "One"-data source which will represent the new Responsible.
+b. Data Source:  User - a "One"-data source which will represent the new Responsible.*
       i. Add the Data Source User with cardinality One and Private checked.
 #### Actions
 1. Choose new responsible

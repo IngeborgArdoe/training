@@ -106,7 +106,7 @@ Model a Request-table with a view that displays all Requests with State="Open". 
 Add a shortcut (name "Requests") to the Navigation Pane that points to the "Open Requests"-table. Remember to define the security of the View Button first, so that the security is inherited by all its elements. Choose a suitable symbol (e.g. 1972).
 ![oppg9fig3.JPG](media/oppg9fig2.JPG)
   
-####11. OPTIONAL: Male a rule "Set Closed Date and Canceled Date when State changed"
+####11. OPTIONAL: Make a rule "Set Closed Date and Canceled Date when State changed"
 
 This rule should change Closed Date if State is set to "Closed" (and NULL otherwise) and Canceled Date if State is set to "Canceled" (and NULL otherwise).
 
@@ -114,7 +114,7 @@ This rule should change Closed Date if State is set to "Closed" (and NULL otherw
 
 Force field Request.State to be "Read Only" by changing the Read Only property in the Request form/grid/table, and make tasks "Close Request", "Reopen Request" and "Cancel Request" to set the State of a Request. Publish the tasks through buttons in the Request-form (e.g. next to State) and in the Company-form (below the grid). Furthermore, add enabling conditions to the buttons, so that "Close Request" is enabled when State="Open", "Re-open Request" is enabled when State="Canceled"/"Closed", and "Cancel Request" is enabled when State="Open".
 
-####13. OPTIONAL: Make Request "Read-Only" if State <> "Open"
+####13. OPTIONAL: Make Request "read-only" if State <> "Open"
 
 Force all fields in the Request-form to be "Read Only" if State is not equal to "Open".
 

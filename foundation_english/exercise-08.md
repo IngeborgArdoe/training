@@ -4,6 +4,7 @@ Your next task will be to add the possibility of dragging documents into a tab i
 For this, you will have to model an object «Document» (like «Mail») that allows the user to save the file in the database. You will also have to build the functionality for handling "drag-and-drop" to and from Genus CRM.
 
 ####1. Model Object Class «Document».
+
 *Guidance: To save some time, use the SQL query below to create a Document-table in the database. Make sure that the Data Interpretations of File Name, File Data, File Extension and File Size are set correctly when you model the object class. Use the built-in data types with identical names.*
    
 SQL: 

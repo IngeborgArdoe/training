@@ -70,7 +70,9 @@ In the repeating section, add a button for changing the state of the activity to
 * Under General: set “Enable Run on Application Server”=true
 * Under Actions: Add a Scope with a Modify Object that changes State to Completed.
 * Save and add security:
+
 ![oppg11fig4.JPG](media/oppg11fig4.JPG)
+
 * Drag a Button from App Controls into the repeating section (Activities).
   * Set background color = white, foreground color = navy and border color = navy, show border=true.
   * Label: "Complete"
@@ -79,7 +81,7 @@ In the repeating section, add a button for changing the state of the activity to
 * Move things around and adjust until you are happy with the display.
 ![oppg11fig5.JPG](media/oppg11fig5.JPG)
   
-## Open Data, Local Objects and Map
+### Open Data, Local Objects and Map
 In this exercise, we will fetch open data from multiple public API’s, store it in local objects and visualize the aggregate data in a map. Note that we do not store any of the data in the database, everything is stored in memory as the client uses the app.
 
 ####1. Create a new web-form

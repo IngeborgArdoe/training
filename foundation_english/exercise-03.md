@@ -1,6 +1,7 @@
 ## Exercise 3 - Forms
 
 ####1. Create a Form: «Contact»
+
 You will now make a Form for registering and opening customer Contact information.
 1. In Studio, navigate to User Interface -> Forms. Right-click -> New -> Desktop Form. Save it right away with name «Contact».
 2. Data Sources (upper-left corner): This is where you add the object(s) that you want to show or utilize in the Form. Add «Contact» as a Data Source (see screenshot below). Note that:
@@ -25,6 +26,7 @@ You will now make a Form for registering and opening customer Contact informatio
 6. The initial version of the Contact-form is now complete. You can optionally navigate to the outermost layer of the View and set Width and Height to 800 and 500, respectively. To see what this looks like, change the Alignment to "Fixed". The latter alteration prevents the end user to change the size of the window, so set Alignment back to "Stretch" before you save. 
 
 ####2. Create a list of Contacts within form «Company».
+
 You will now add a list to the Company-form that shows all associated Contacts (using a grid). You will also make actions to create new Contacts and open existing ones.
 1. In Studio, navigate to User Interface -> Forms. Open «Company».
 2. Add a new tab to the Tab Sheet at the bottom of the form.
@@ -50,6 +52,7 @@ You can trigger a Command with an Event by for example adding the Event «On Cli
 When doing the exercises below, it may seem natural to place the Command on the same control as the Event that points to it. This will work brilliantly, but we often choose to place the Commands on a different level due to reasons we will have a closer look at in Exercise 5: Ribbon. The Ribbon is also the reason why we typically pick a symbol for each Command and change their names, e.g. from Name: Open Contact to "New Contact". 
   
 ####3. Add Contact actions to the Company-form:
+
 You will now add functionality to open, create and delete Contacts from the Company form.
 1. Add a command to open an existing Contact. Place the Command on the Contacts-tab by selecting the tab (you can mark the Contact grid and press Esc), and - under Properties - clicking Commands.
    1. Name: Open
@@ -90,6 +93,7 @@ You will now add functionality to open, create and delete Contacts from the Comp
    *Comment: If this had been a test or production environment, you could have chosen "Deploy to all" with a defined time. Changes would then become available for all users of the soultion.*
    
 ####4. Create lists of Activities and Mail on Contacts (with functionality)
+
 1. Add a new field to Object Class «Activity» named "Contact".
    *Guidance: Add the field to the database by running SQL statement:
    
@@ -123,6 +127,7 @@ You will now add functionality to open, create and delete Contacts from the Comp
       *Comment: This allows the Mail to open in Outlook when a row has been double-clicked. This is a built in function of the platform. If the object class contains File Data, File Size, File Type and File Name, the "Invoke a File"-effect will open it in its "default" program. You can look at how this is done in the Mail-grid of the Company-form.*
    
 ####5. OPTIONAL: Add a Contact Log to Contact
+
 This exercise is not strictly necessary for the remaining set of tasks. However, it contains an interesting new consept - «Part of composition» - so we recommend you to at least read through it.
 
 We want the user to be able to write and add lines to a Contact log (similar to «Company Log» which exist under Company).

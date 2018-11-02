@@ -1,4 +1,4 @@
-## Exercise 15 - Web Services
+## Exercise 14 - Web Services
 **SESSION BY INSTRUCTOR:** *The instructor will give you a brief introduction to the concept of Web Services, how it is set up and how to use the schema editor in Genus Apps.*
 
 This is a fully optional exercise. As a minimum, we recommend you to read through it.

@@ -1,6 +1,7 @@
 # Installation of Genus Apps
 
 1. In case you haven't installed Genus Apps on your computer yet: Open the web browser and type http://genus-stud1.westeurope.cloudapp.azure.com/edu/download/Setup.exe . This will download Genus Apps.
+
 2. An environment will be assigned to you:
   
    ```
@@ -9,7 +10,8 @@
   
    where {X} is a number 1, 2, 3, ....
     
-   You will be doing all your training exercises in the assigned environment. In addition, you will get access to a solution, which can be used to verify your work or give inspiration when needed (please make sure you are not editing the solution!).
+   You will be doing all your training exercises in the assigned environment. In addition, you will get access to a blueprint of a complete Genus CRM-model which can be used when you want to verify your work get some inspiration. 
+   
 3. Create 4 shortcuts on your computer with the targets below:
 
    * **Genus CRM Studio:** genusstudiolink:{Your assigned environment}?LinkType=OpenStudio

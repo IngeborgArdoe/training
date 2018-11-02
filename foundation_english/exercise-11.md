@@ -201,12 +201,12 @@ Define Popup Contents for both the Bus Stops and the Bik Stations layers which s
     
 1. Get departure data for the bus
    
-   Get departure data for the bus and display it in the form. 
+   Get departure data for the bus and display it in the form
    (http://reisapi.ruter.no/StopVisit/GetDepartures/3010146).
 
-2. Get weather forcasts 
+2. Get weather forecasts 
    
-   Get weather forcasts from YR and dispay bus stops if rain and bike stations otherwise.
+   Get weather forecasts from YR and dispay bus stops if rain and bike stations otherwise
    (https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Fwww.yr.no%2Fsted%2Fnorge%2FOslo%2Foslo%2Foslo%2Fvarsel.rss).
       
       

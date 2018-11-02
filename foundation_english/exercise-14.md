@@ -23,9 +23,9 @@ Add the possibility to Explore other related objects from Company, Request and U
 
 * Company -> Activities, Contacts, Mail og Documents
 * Request -> Companies, Contacts, Documents og Mail
-* User -> Activities, Companies, Contacts, Documents, Mail, Requests
+* User -> Activities (responsible), Companies (responsible), Contacts (responsible), Documents (created/modified by), Mail (created by), Requests (responsible)
 
-*Tip: This makes it possible to explore related data (menu "Explore") when a user for instance selects a list of Companies. You will have to set it up in the "Explore"-tab under "Browse Paths" among the properties of an Object Class. If a user explores Companies, Contacts should for example be listed - but first Genus needs to know which Contacts-list to use. If you open the properties of Company or Contacts in the provided solution (tab "Explore" under "Views"), you will see that a "default view" is selected. This is the view that is used when the user "Explore" (either from the Explore menu, or when the user double-clicks on a number in a report to see the underlying data).* 
+*Tip: This makes it possible to explore related data (menu "Explore") when a user for instance selects a list of Companies. You will have to set it up in the "Explore"-tab under "Browse Paths" among the properties of an Object Class. If a user explores Companies, Contacts should for example be listed - but first Genus needs to know which Contacts-list to use. If you open the properties of Company or Contacts in the provided solution (tab "Explore" under "Views"), you will see that a "default view" is selected. This is the view that is used when the user "Explore" (either from the Explore menu, or when the user double-clicks on a number in a report to see the underlying data). Take a look at the provided solution if needed.* 
 
 
 <table>

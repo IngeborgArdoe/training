@@ -107,7 +107,7 @@ Right-click on Object Class «Contact» -> Open.
    
    ![oppg2fig5.JPG](media/oppg2fig5.JPG)
  
-   This is where you meet Genus' "Condition editor" for the first time. It is used everytime you want to conditionalize something. In this case it will generate a SQL query that checks (prior to saving) whether a Contact in the database has the same e-mail address as the one you want to store, or not. If the query returns true, the user will get a warning. Notice that we have allowed the user to store the Contact nevertheless, as the "Notify user and ask for confimation to proceed"-box has been checked. By selecting the option above, however, you will deny users to store Contacts with identical e-mail addresses. 
+   This is where you meet Genus' "Condition editor" for the first time. It is used everytime you want to conditionalize something. In this case it will generate an SQL query that checks (prior to saving) whether a Contact in the database has the same e-mail address as the one you want to store, or not. If the query returns true, the user will get a warning. Notice that we have allowed the user to store the Contact nevertheless, as the "Notify user and ask for confimation to proceed"-box has been checked. By selecting the option above, however, you will deny users to store Contacts with identical e-mail addresses. 
 
    
 5. **Click OK.** The object «Contact» is now complete and ready to be included in the interface (and optionally get additional functionality).

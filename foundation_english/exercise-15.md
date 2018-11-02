@@ -29,5 +29,5 @@ Add the possibility to Explore other related objects from Company, Request and U
 
 
 <table>
-   <tr><td><a href="exercise-14.md"><- Previous</a></td><td align="right"><a href="exercise-15.md">Next -></a></td></tr>
+   <tr><td><a href="exercise-14.md"><- Previous</a></td></tr>
 </table>

@@ -2,6 +2,7 @@
 You will now make a Table that lists all contact persons associated with the logged in user. The Table will have to be made available as a shortcut in the navigation pane.
 
 ####1. Create a Table called «Contacts»
+
 *Guidance: From Studio -> User Interface -> Tables -> New (Basic Table).*
 1. Data Sources: Add "Contact". Uncheck "Private".
 2. Layout: Here you define which rows and columns you want to make available. Drag the Data Source (from the right menu) into Rows. Then, drag fields First Name, Last Name, Company, Mobile, Mail, Responsible, State, Position, Created and Modify into Columns.
@@ -24,11 +25,13 @@ You will now make a Table that lists all contact persons associated with the log
    3. Save and close the table.
    
 ####2. Create a Short Cut to Contacts in the Navigation Pane
+
 1. Navigate to Studio -> Navigation Pane. 
 2. Right-click on "Companies", and add a Shortcut pointing to the Table that you made (Table: Contacts, View: My Contacts). Click Next. 3. Change the name to "My Contacts", so that the name of the shortcut shown in the navigation pane matches the view. If you like, you can also add an icon to the shortcut. Click Finish.
 4. Deploy to yourself and verify that you can see all your contacts (Note: you may have to put yourself as responsible for some of them first). Check also that you can open and create Contacts.
 
 ####3. Define Row Format for Inactive Contacts. 
+
 1. Highlight inactive contact persons by coloring the rows gray. Navigate to Layout and mark the Row («Contact»). In the menu on the left, open Automatic Formatting and add a new rule named "Inactive". Finally, select some kind of gray as Foreground and use "Contact.State = Inactive" as Condition.
 2. Deploy again og verify your latest modification by setting a contact person to "inactive" in the client.
 

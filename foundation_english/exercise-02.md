@@ -103,7 +103,7 @@ Right-click on Object Class «Contact» -> Open.
 3. Tab «Data Filtering»: Under "Auto Complete", click Add.. and select First Name, Last Name and Mail. This allows the user to type in a part of a Contact's first name, last name or e-mail in any field of type Contact, and hit Tab to lookup contact persons that match the written text.
 4. Tab «Data Integrity»: Click on Change under "Uniqueness Constraint", and then Add. In the window that opens you can set uniqueness requirements for the creation of contacts. Here you can for example say that "if e-mail has a value", check if another contact person with the same e-mail exists, and if so, qive a warning to the user.
 
-   *Guidance: See screenshot below:
+   *Guidance: See screenshot below:*
    
    ![oppg2fig5.JPG](media/oppg2fig5.JPG)
  
@@ -121,7 +121,7 @@ Note that you can go back and modify the properties of an Object Class/Object Cl
 
 2. Set Default value of Responsible to «User (User Account)» (Active User Account).
 
-*Guidance: Note that this is not the same as «Active User Account Stamp». «Active User Account Stamp», like «Time Stamp», means that the default value is set server-side, and can hence not be changed from the client. Choose instead F3 (see screenshot below) and pick «User (User Account)» which corresponds to the logged in user on the client.
+*Guidance: Note that this is not the same as «Active User Account Stamp». «Active User Account Stamp», like «Time Stamp», means that the default value is set server-side, and can hence not be changed from the client. Choose instead F3 (see screenshot below) and pick «User (User Account)» which corresponds to the logged in user on the client.*
 
 ![oppg2fig6.JPG](media/oppg2fig6.JPG)
  

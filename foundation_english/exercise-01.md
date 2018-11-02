@@ -2,7 +2,7 @@
 **SESSION BY INSTRUCTOR:** *The instructor will start off by giving you a brief introduction to the topic. The session will include a review of the client's functionality (i.e. objects, navigation, search, etc) and - to help you get started with modeling - a general look at Genus Studio.*
 
 ## Exercise 1 - The Client
-Familiarize yourself with your own EDU-solution. Use the shortcut that you defined earlier to open it (point 3 under Installation of Genus Apps and URLs to the environments).
+Familiarize yourself with your own solution. Use the shortcut that you defined earlier to open it (point 3 under Installation of Genus Apps and URLs to the environments).
 
 1. Open a Company. Change some of the fields. Save. Register a new Activity.
 2. Drag an e-mail onto a Company. Double-click to open it. Take a look at the preview pane.

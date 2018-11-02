@@ -12,8 +12,8 @@
    You will be doing all your training exercises in the assigned environment. In addition, you will get access to a solution, which can be used to verify your work or give inspiration when needed (please make sure you are not editing the solution!).
 3. Create 4 shortcuts on your computer with the targets below:
 
-   * **Genus CRM Studio:** ```genusstudiolink:_{Your assigned environment}_?LinkType=OpenStudio```
-   * **Genus CRM Desktop:** ```genuslink:_{Your assigned environment}_```
+   * **Genus CRM Studio:** ```genusstudiolink:{Your assigned environment}?LinkType=OpenStudio```
+   * **Genus CRM Desktop:** ```genuslink:{Your assigned environment}```
    * **Genus CRM Solution Studio:** ```genusstudiolink:http://genus-edu-fasit.westeurope.cloudapp.azure.com/edu/?LinkType=OpenStudio```
    * **Genus CRM Solution Desktop:** ```genuslink:http://genus-edu-fasit.westeurope.cloudapp.azure.com/edu/```
 
@@ -21,7 +21,7 @@
 
    **Login credentials for your own solution:**
 
-   username / password = usrX / usrusr.
+   ```username / password = usrX / usrusr```
 
    where X is the number of your assigned environment.
 

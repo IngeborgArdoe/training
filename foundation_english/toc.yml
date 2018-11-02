@@ -1,7 +1,7 @@
 - name: Installation and setup
   href: installation-of-genus-app-platform.md
   items:
-  - name: Installation of Genus App Platform og URLs
+  - name: Installation of Genus Apps
     href: installation-of-genus-app-platform.md
   - name: Installation of SQL Server Management Studio
     href: installation-of-sql-server-mgmt-studio.md

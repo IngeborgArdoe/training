@@ -21,7 +21,10 @@
 
    **Login credentials for your own solution:**
 
-   ```username / password = usrX / usrusr```
+   ```
+   Username = usrX
+   Password = usrusr
+   ```
 
    where X is the number of your assigned environment.
 

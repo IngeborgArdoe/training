@@ -117,11 +117,11 @@ Note that you can go back and modify the properties of an Object Class/Object Cl
 ####7. Add field Responsible (user) to Contact.
 1. Create a new field called Responsible on Contact.
 
-*Guidance: A column must be added to the database first. Do this by running the SQL statement «alter table Contact add ResponsibleUserID uniqueidentifier». Navigate to object class «Contact» -> Right-click -> «Add Object Class Properties..». Click Next in the first dialog window. In the second, Genus reads all columns from the table that has not modelled yet. Click Next. Under «Property Definitions», double-click on the row and change the Data Interpretation to «User» (make sure you change the Display Name to «Responsible» afterwards). Click OK and Finish.*
+   *Guidance: A column must be added to the database first. Do this by running the SQL statement «alter table Contact add ResponsibleUserID uniqueidentifier». Navigate to object class «Contact» -> Right-click -> «Add Object Class Properties..». Click Next in the first dialog window. In the second, Genus reads all columns from the table that has not modelled yet. Click Next. Under «Property Definitions», double-click on the row and change the Data Interpretation to «User» (make sure you change the Display Name to «Responsible» afterwards). Click OK and Finish.*
 
 2. Set Default value of Responsible to «User (User Account)» (Active User Account).
 
-*Guidance: Note that this is not the same as «Active User Account Stamp». «Active User Account Stamp», like «Time Stamp», means that the default value is set server-side, and can hence not be changed from the client. Choose instead F3 (see screenshot below) and pick «User (User Account)» which corresponds to the logged in user on the client.*
+   *Guidance: Note that this is not the same as «Active User Account Stamp». «Active User Account Stamp», like «Time Stamp», means that the default value is set server-side, and can hence not be changed from the client. Choose instead F3 (see screenshot below) and pick «User (User Account)» which corresponds to the logged in user on the client.*
 
 ![oppg2fig6.JPG](media/oppg2fig6.JPG)
  

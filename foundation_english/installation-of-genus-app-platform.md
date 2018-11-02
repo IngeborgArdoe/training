@@ -12,10 +12,10 @@
    You will be doing all your training exercises in the assigned environment. In addition, you will get access to a solution, which can be used to verify your work or give inspiration when needed (please make sure you are not editing the solution!).
 3. Create 4 shortcuts on your computer with the targets below:
 
-   * **Genus CRM Studio:** ```genusstudiolink:{Your assigned environment}?LinkType=OpenStudio```
-   * **Genus CRM Desktop:** ```genuslink:{Your assigned environment}```
-   * **Genus CRM Solution Studio:** ```genusstudiolink:http://genus-edu-fasit.westeurope.cloudapp.azure.com/edu/?LinkType=OpenStudio```
-   * **Genus CRM Solution Desktop:** ```genuslink:http://genus-edu-fasit.westeurope.cloudapp.azure.com/edu/```
+   * **Genus CRM Studio:** genusstudiolink:{Your assigned environment}?LinkType=OpenStudio
+   * **Genus CRM Desktop:** genuslink:{Your assigned environment}
+   * **Genus CRM Solution Studio:** genusstudiolink:http://genus-edu-fasit.westeurope.cloudapp.azure.com/edu/?LinkType=OpenStudio
+   * **Genus CRM Solution Desktop:** genuslink:http://genus-edu-fasit.westeurope.cloudapp.azure.com/edu/
 
    The first shortcut points to the [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) of our developing tool Genus    Studio. The second shortcut points to the end user application (also referred to as the client or Genus Desktop. Shortcuts 3 and 4 are the equivalents for the provided solution.
 

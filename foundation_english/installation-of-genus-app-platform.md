@@ -4,10 +4,10 @@
 2. An environment will be assigned to you:
   
    ```
-   http://genus-studX.westeurope.cloudapp.azure.com/edu/
+   http://genus-stud{X}.westeurope.cloudapp.azure.com/edu/
    ```
   
-   where X is a number 1, 2, 3, ....
+   where {X} is a number 1, 2, 3, ....
     
    You will be doing all your training exercises in the assigned environment. In addition, you will get access to a solution, which can be used to verify your work or give inspiration when needed (please make sure you are not editing the solution!).
 3. Create 4 shortcuts on your computer with the targets below:
@@ -22,11 +22,11 @@
    **Login credentials for your own solution:**
 
    ```
-   Username = usrX
+   Username = usr{X}
    Password = usrusr
    ```
 
-   where X is the number of your assigned environment.
+   where {X} is the number of your assigned environment.
 
    The same username and password can be used to access the provided solution.
 

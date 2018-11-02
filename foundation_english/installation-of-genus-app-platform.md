@@ -8,13 +8,13 @@
    where X is a number 1, 2, 3, ....
     
    You will be doing all your training exercises in the assigned environment. In addition, you will get access to a solution, which can be used to verify your work or give inspiration when needed (please make sure you are not editing the solution!).
-3. Create 4 shortcuts on your computer with the targets below. Note that "X" must be replaced with your assigned NU.
+3. Create 4 shortcuts on your computer with the targets below:
 
-   * genusstudiolink:_Your assigned environment_?LinkType=OpenStudio
+   * genusstudiolink:_[Your assigned environment]_?LinkType=OpenStudio
      (Name: Genus CRM Studio)
    * genuslink:_Your assigned environment_
      (Name: Genus CRM)
-   *<genusstudiolink:http://genus-edu-fasit.westeurope.cloudapp.azure.com/edu/?LinkType=OpenStudio
+   * <genusstudiolink:http://genus-edu-fasit.westeurope.cloudapp.azure.com/edu/?LinkType=OpenStudio
      (Name: Genus CRM Solution Studio)
    * genuslink:http://genus-edu-fasit.westeurope.cloudapp.azure.com/edu/
      (Name: Genus CRM Solution)

@@ -37,12 +37,11 @@ Make a task called "Send Order Confirmation" which allows the user to select amo
 
 *Add data sources Request (input), Mail (to be created), Document (confirmation document to attach)and Mail Message (temporary file which opens in Outlook, and is used to generate the Mail object after send).*
 
-*The task should have the following effects:*
-
-** "Read Object": Data source = Document, with user interaction (let the user choose among documents associated with the request).*
-** "Create a Mail Message": Define "To", "Subject", "Attachments" (Document.File Data) and suggest a default e-mail text. Make sure the effect is set to "Write message to a data source" (Mail Message (temp)) so that the e-mail is not sent immediately. Note: The reason for keeping the Mail Message file in a data source is to avoid losing changes made by the user in Outlook before he/she press "Send". You could have used the "Open a Form" effect directly, but it's more visual to create an e-mail in the "Create a Mail Message" effect.*
-** "Open a Form": Choose Mail Message Window and Modify. Check "Wait until the form is closed". The effect will now open the suggested e-mail and pause the execution until the user has pressed "Send" in outlook.* 
-** "Create Objects": Data source = Mail. Map fields from Mail Message (temp). Put the effect in a Commit Scope to save the Mail object.*
+*The task should have the following effects:
+* "Read Object": Data source = Document, with user interaction (let the user choose among documents associated with the request).
+* "Create a Mail Message": Define "To", "Subject", "Attachments" (Document.File Data) and suggest a default e-mail text. Make sure the effect is set to "Write message to a data source" (Mail Message (temp)) so that the e-mail is not sent immediately. Note: The reason for keeping the Mail Message file in a data source is to avoid losing changes made by the user in Outlook before he/she press "Send". You could have used the "Open a Form" effect directly, but it's more visual to create an e-mail in the "Create a Mail Message" effect.
+* "Open a Form": Choose Mail Message Window and Modify. Check "Wait until the form is closed". The effect will now open the suggested e-mail and pause the execution until the user has pressed "Send" in outlook.
+* "Create Objects": Data source = Mail. Map fields from Mail Message (temp). Put the effect in a Commit Scope to save the Mail object.*
 
 
 <table>

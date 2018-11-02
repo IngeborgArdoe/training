@@ -43,6 +43,7 @@ Add Super Users as a member to a new security group that you call "Key Account M
 *Tip: In order to set security per Object Class Property on group level, check "Allow granting of permissions for property" in the Object Class Property's Security tab. Afterwards, set permissions under Security (left menu in Studio) -> Permissions.*
 
 ####6. OPTIONAL: Add Explore functionality 
+
 Add the possibility to Explore other related objects from Company, Request and User (Object Class -> Explore -> Browse Paths).
 
 * Company -> Activities, Contacts, Mail og Documents

@@ -19,6 +19,7 @@ To create a well-functioning Ribbon, it is important to utilize all the customiz
 Finally, it is worth mentioning that the end user can hide the Ribbon if he/she wants more space for content. In that case, it is convenient to have a Quick Access Toolbar where the most important commands are included.
 
 ####1. Explore the tool for modeling Ribbons
+
 1. Open "Customize Ribbon" in the top menu of the Company-form. Familiarize yourself with the content of the dropdown menu on the left-hand side (General Commands vs Form/View Commands). Also, check out what's available in the dropdown menu on the right. For the Company-form, the relevant items in the latter menu are «Form Tabs», «Context Tab Groups» and «Quick Access Toolbar». Commands that are added to the Form Tabs will always be available in the form, provided that there are no enabling/visibility rules set.
 2. Add Ribbon-commands for deleting and creating Contacts.
    1. In the left dropdown menu: Select All Form Commands. In the right drowdown menu: Select Context Tab Group.
@@ -31,14 +32,18 @@ Finally, it is worth mentioning that the end user can hide the Ribbon if he/she 
 ![oppg5fig3.JPG](media/oppg5fig3.JPG)
 
 ####2. Add "Change Resposible for Company" to the Quick Access Toolbar
+
 1. Select Quick Access Toolbar in the dropdown menu on the right-hand side and add the command.
 
 ####3. Add Ribbon-command for creating new Contact (Contacts-table)
+
 1. Open the Contacts-table.
 2. Verify that the Event for making a new contact is named "New Contact". Set Tip = "Contact", and find a suitable symbol (# 1081). 
 3. Place the event under Main Tabs – Home -> New.
 
-####4. OPTIONAL: Expand Ribbon in form Contact with a Context Tab Group for Contact Log.
+####4. OPTIONAL: Contact Log in Ribbon
+
+Add a Context Tab Group for Contact Log in the Contact-form Ribbon.
 
 
 <table>

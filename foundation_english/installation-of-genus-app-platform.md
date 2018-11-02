@@ -10,9 +10,9 @@
    You will be doing all your training exercises in the assigned environment. In addition, you will get access to a solution, which can be used to verify your work or give inspiration when needed (please make sure you are not editing the solution!).
 3. Create 4 shortcuts on your computer with the targets below. Note that "X" must be replaced with your assigned NU.
 
-   * genusstudiolink:{Your assigned environment}?LinkType=OpenStudio
+   * genusstudiolink:_Your assigned environment_?LinkType=OpenStudio
      (Name: Genus CRM Studio)
-   * genuslink:{Your assigned environment}
+   * genuslink:_Your assigned environment_
      (Name: Genus CRM)
    *<genusstudiolink:http://genus-edu-fasit.westeurope.cloudapp.azure.com/edu/?LinkType=OpenStudio
      (Name: Genus CRM Solution Studio)

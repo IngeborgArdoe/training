@@ -1,15 +1,18 @@
 # Installation of Genus Apps and URLs to the environments
 
-1. In case you haven't installed Genus Apps on your computer yet: Open the web browser and type http://genusedu.westeurope.cloudapp.azure.com/edu/download/Setup.exe . This will download Genus Apps.
-2. An environment will be assigned to you. We have 16 environments: 
+1. In case you haven't installed Genus Apps on your computer yet: Open the web browser and type http://genus-stud1.westeurope.cloudapp.azure.com/edu/download/Setup.exe . This will download Genus Apps.
+2. An environment will be assigned to you:
     
-   edu1a, edu1b, .., edu1h samt edu2a, edu2b, .., edu2h. 
+  http://genus-studX.westeurope.cloudapp.azure.com/edu/
+  
+  where X is a number 1, 2, 3, ....
     
    You will be doing all your training exercises in the assigned environment. In addition, you will get access to a solution, which can be used to verify your work or give inspiration when needed (please make sure you are not editing the solution!).
-3. Create 4 shortcuts on your computer with the targets below. Note that "edu" must be replaced with your assigned environment.
-   * <genusstudiolink:http://genusedu.westeurope.cloudapp.azure.com/edu/?LinkType=OpenStudio> 
+3. Create 4 shortcuts on your computer with the targets below. Note that "X" must be replaced with your assigned NU.
+
+   * <genusstudiolink:{Your assigned environment}?LinkType=OpenStudio> 
      (Name: Genus CRM Studio)
-   * <genuslink:http://genusedu.westeurope.cloudapp.azure.com/edu/> 
+   * <genuslink:{Your assigned environment}> 
      (Name: Genus CRM)
    * <genusstudiolink:http://genus-edu-fasit.westeurope.cloudapp.azure.com/edu/?LinkType=OpenStudio> 
      (Name: Genus CRM Solution Studio)
@@ -20,9 +23,9 @@
 
 **Login credentials for your own solution:**
 
-username / password = usrXY / usrusr.
+username / password = usrX / usrusr.
 
-where XY is the number of your assigned environment.
+where X is the number of your assigned environment.
 
 The same username and password can be used to access the provided solution.
 

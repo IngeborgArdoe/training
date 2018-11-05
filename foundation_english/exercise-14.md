@@ -1,5 +1,5 @@
 ## Exercise 14 - REST Services
-**SESSION BY INSTRUCTOR:** *The instructor will give you a brief introduction to the concept of REST Services,and how they are set up in Genus*
+**SESSION BY INSTRUCTOR:** *The instructor will give you a brief introduction to the concept of REST Services and how they are set up in Genus*
 
 This is a fully optional exercise. As a minimum, we recommend you to read through it.
 

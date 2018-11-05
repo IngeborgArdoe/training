@@ -79,7 +79,8 @@ Once again, we emphasize that you don't have to build Draft object classes, but 
 
 If you expand the node «Object Classes» in Studio, you should now see the Contact-object. If you expand Contact further and click on Properties, you will find the list of Object Class Properties belonging to Contact.
 
-####5. Modify settings on Contact's Data Properties
+####5. 
+on Contact's Data Properties
 
 Modify the following settings on the Data Properties of Contact (double-click on a Property):
 1. Company, First Name and Last Name: Tab «Data Validation», uncheck «Allow blank value». In other words, the fields become mandatory.
@@ -98,7 +99,7 @@ The object «Contact» is now almost done. The last step is to assign a few prop
 ####6. Modify settings on Object Class Contact
 
 Right-click on Object Class «Contact» -> Open.
-1. Tab «Events»: Check "Enable auditing" and then "Mandatory" on "Modify". Press Apply. This allows the user to right-click on a Contact in the client to look at its change history (which user has done what). 
+1. Tab «Auditing»: Check "Enable auditing" and then "Mandatory" on "Modify". Press Apply. This allows the user to right-click on a Contact in the client to look at its change history (which user has done what). 
 2. Tab «Data Sorting»: Click Add.. and select First Name and Last Name. This will by default sort Contacts automatically by their first name and last name wherever Contacts are listed (e.g. tables, grids) without any sorting specified.
 3. Tab «Data Filtering»: Under "Auto Complete", click Add.. and select First Name, Last Name and Mail. This allows the user to type in a part of a Contact's first name, last name or e-mail in any field of type Contact, and hit Tab to lookup contact persons that match the written text.
 4. Tab «Data Integrity»: Click on Change under "Uniqueness Constraint", and then Add. In the window that opens you can set uniqueness requirements for the creation of contacts. Here you can for example say that "if e-mail has a value", check if another contact person with the same e-mail exists, and if so, qive a warning to the user.

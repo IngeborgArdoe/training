@@ -7,7 +7,7 @@ REST Services are easily set up in Genus. A REST Service made in Genus is availa
 
 ####1. OPTIONAL: Create a REST Service "ActivityForCompany"
 
-Make a REST-service ActivityForCompany that retrieves all Activities associated with a given Company that are in state “Not started” or “In progress”. The input of the service should be the name of the company, and the response should contain important fields on Activity.
+Make a REST-service ActivityForCompany that retrieves all Activities associated with a given Company that are in state “Not started” or “In progress”. The input of the service should be the name of the company, and the response should contain the most important fields on Activity.
 
 1.	Add a new REST service
 

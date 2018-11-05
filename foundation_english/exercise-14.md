@@ -31,23 +31,24 @@ Make a REST-service ActivityForCompany that retrieves all Activities associated 
       
    *Note: Go back to the API-tab and choose Save To: Request (under Request).*
    
-3.	In the Actions-tab, you will have to define the logic of the REST Service. First, you will have to find the Company that corresponds to the name provided as input (request). If a matching company does not exist, a suitable response should be generated (e.g. “Company not found”). If a Company is found, all Activities in state “Not started” or “In progress” associated with it should be read. If there are no Activities, a suitable response text should be generated (e.g. “No activities found for company”). However, if there are Activities, they should all be exported as a response. Customize the response to not include all fields (e.g. remove CompletedDate etc) and to contain names rather than IDs. At the end of the Actions sequence, catch all exceptions and let the error message be the response of the service.
+   3.	In the Actions-tab, you will have to define the logic of the REST Service. First, you will have to find the Company that corresponds to the name provided as input (request). If a matching company does not exist, a suitable response should be generated (e.g. “Company not found”). If a Company is found, all Activities in state “Not started” or “In progress” associated with it should be read. If there are no Activities, a suitable response text should be generated (e.g. “No activities found for company”). However, if there are Activities, they should all be exported as a response. Customize the response to not include all fields (e.g. remove CompletedDate etc) and to contain names rather than IDs. At the end of the Actions sequence, catch all exceptions and let the error message be the response of the service.
 
-   *Guidance: Use the Create Object(s) effect to create response texts (Response.responseText), and the Export Data effect to map objects to Json format and output them as Response Message Body. You can edit the response by clicking Customize within the Data-tab of the Export Data effect. You will need to assign names (e.g. the response text which they represent) to the Export Data effects to be able to recognize them. Take a look at the provided solution if needed.*
+      *Guidance: Use the Create Object(s) effect to create response texts (Response.responseText), and the Export Data effect to map objects to Json format and output them as Response Message Body. You can edit the response by clicking Customize within the Data-tab of the Export Data effect. You will need to assign names (e.g. the response text which they represent) to the Export Data effects to be able to recognize them. Take a look at the provided solution if needed.*
    
-   ![oppg14fig2.JPG](media/oppg14fig2.JPG)
+      ![oppg14fig2.JPG](media/oppg14fig2.JPG)
    
-4.	Go back to the API-tab and specify which responses to include. You should add 4 different responses in total: “Company not found” (Status Code=”204 No Content”), “No activities found for company” (Status Code=”204 No Content”), “Activities found” (Status Code=”200 OK”) and “Something went wrong (Status Code=”500 Internal Server Error”). 
+   4.	Go back to the API-tab and specify which responses to include. You should add 4 different responses in total: “Company not found” (Status Code=”204 No Content”), “No activities found for company” (Status Code=”204 No Content”), “Activities found” (Status Code=”200 OK”) and “Something went wrong (Status Code=”500 Internal Server Error”). 
    
-   *Comment: The Description property is just metadata, used for describing the request/response.*
+      *Comment: The Description property is just metadata, used for describing the request/response.*
    
-   ![oppg14fig3.JPG](media/oppg14fig3.JPG)
+      ![oppg14fig3.JPG](media/oppg14fig3.JPG)
    
-5.	Deploy and verify that the REST-service works as expected. 
+4.	Deploy and verify that the REST-service works as expected. 
    
    *Guidance: After deploying, open the client and click File - > App -> Call a REST Service. Select the service that you made and type in the Resource Path and a Query Parameter (e.g. “ActivityForCompany?CompanyName=Active Cycling”). Check the response in the lower window.*
 
    ![oppg14fig4.JPG](media/oppg14fig4.JPG)
+
 
 <table>
    <tr><td><a href="exercise-13.md"><- Previous</a></td><td align="right"><a href="exercise-15.md">Next -></a></td></tr>

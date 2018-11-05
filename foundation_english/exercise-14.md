@@ -3,7 +3,7 @@
 
 This is a fully optional exercise. As a minimum, we recommend you to read through it.
 
-REST Services are easily set up in Genus. A REST Service made in Genus is available on the application server so that other applications can call on it to perform the service operations it provides. Perhaps we want an external solution to be able to write/read something to/from the Genus CRM application. In this case we want it to retrieve information about activities on a given company.
+REST Services are easily set up in Genus. A REST Service made in Genus is available on the application server so that other applications can call on it to perform the service operations it provides. Perhaps we want an external solution to be able to write something to the Genus CRM application. In this case we want it to retrieve information.
 
 ####1. OPTIONAL: Create a REST Service "ActivityForCompany"
 

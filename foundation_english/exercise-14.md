@@ -1,29 +1,47 @@
-## Exercise 14 - Web Services
-**SESSION BY INSTRUCTOR:** *The instructor will give you a brief introduction to the concept of Web Services, how it is set up and how to use the schema editor in Genus Apps.*
+## Exercise 14 - REST Services
+**SESSION BY INSTRUCTOR:** *The instructor will give you a brief introduction to the concept of REST Services,and how they are set up in Genus*
 
 This is a fully optional exercise. As a minimum, we recommend you to read through it.
 
-Web Services are easily set up in Genus Apps. A Web Service made in Genus Apps is available on the application server so that other applications can call on it to perform the service operations it provides. Examples can be "GetCompanies" or "CreateActivity", if we want to have an external solution that retrieves or updates data in our Genus CRM solution. A Web Service requires that we have defined the format of both input and output (XML). Accordingly, we first have to set up a schema for this using the schema editor (or we could have imported an existing one).
+REST Services are easily set up in Genus. A REST Service made in Genus is available on the application server so that other applications can call on it to perform the service operations it provides. Perhaps we want an external solution to be able to write something to the Genus CRM application, or in this case retrieve all activities on a given Company.
 
-**OPTIONAL EXERCISE:** Create a Web Service called "GetCompaniesForUser" which takes an XML with a field "UserName" as input and returns an XML with a list of companies with fields "ID", "CompanyName", "OrgNo", "Employees", "AnnualRevenue" and "PostalAddressCity".
+####1. OPTIONAL: Create a REST Service "ActivityForCompany"
 
-To verify that it works, you can use "Test run" in the client. You will have to create an XML-file (with field UserName) in advance which can be utilized as input.
+Make a REST-service ActivityForCompany that retrieves all Activities associated with a given Company that are in state “Not started” or “In progress”. The input of the service should be the name of the company, and the response should contain important fields on Activity.
 
-Guidance: Create a Schema in the Schema editor (name it "CompanyServiceSchema"). It should have 2 elements:
-* GetCompaniesForUserInput
-* GetCompaniesForUserOutput 
+1.	Add a new REST service
 
-While the former contains only 1 element (UserName), the latter must have a list of Companies. You will need a complex type "Company" (containing all the fields), and then a complex type "Companies" (of type Company, minOccurs=0 and maxOccurs=unbounded - giving a "repeated list"). Next, you will have to give the complex type "GetCompaniesForUserOutput" an element "Companies" of type Companies.
+   Find REST Services in the Navigation Pane, right-click and select New. Specify Name and Path Segment (e.g. type “GenusBikeParts” in both). Save.
+   
+2.	Add a Resource
 
-Take a look at the solution for help.
+   Right-click on the REST Service node in the tree structure view and select Add Resource. Under Request, specify a Path Segment (Name = “ActivityForCompany”, Type=Literal) either by modifying the Segment that is already there by default, or by adding a new (and removing the default)
+   
+   *Note: At least one Path Segment is required to identify the resource.*
+   
+3.	Add a Method GET
+   
+   1.	Right-click on the Resource node in the tree structure view and select Add GET. Since we want to input a company name, add a Query Parameter (Name=”companyName”, Type=String, Required=TRUE) under Request. Later, we will also specify various responses under Response.
+   2.	Navigate to Data Sources, and add the following objects:
+   
+      * Company: Company object to which the input name is referencing (Max Occurences=One).
+      * Activities: All Activity objects associated with the provided Company (Max Occurences=Unbounded).
+      * Response: Local object used to keep the response/output text of the service (Max Occurences=One). Add a field “requestText” (Type=String).
+      * Request: Local object used to maintain the request/input of the service (Max Occurences=One).  Add a field “companyName” (Type=String).
+      
+   *Note: Go back to the API-tab and choose Save To: Request (under Request).*
+   
+3.	In the Actions-tab, you will have to define the logic of the REST Service. First, you will have to find the Company that corresponds to the name provided as input (request). If a matching company does not exist, a suitable response should be generated (e.g. “Company not found”). If a Company is found, all Activities in state “Not started” or “In progress” associated with it should be read. If there are no Activities, a suitable response text should be generated (e.g. “No activities found for company”). However, if there are Activities, they should all be exported as a response. Customize the response to not include all fields (e.g. remove CompletedDate etc) and to contain names rather than IDs. At the end of the Actions sequence, catch all exceptions and let the error message be the response of the service.
 
-Create a new Web Service in Studio. Name it "CompanyService". Add an end point (says something about authentication and communication, use default) and create an Operation ("GetCompaniesForUser").
-
-On Operation "GetCompaniesForUser", select schema-elements from CompanyServiceSchema for request and response (input and output, respectively).
-
-Now that this is set up, you can use Data Sources to filter Companies (if Company.Responsible.UserName = input.UserName) and under Actions you will only need one single Create Objects effect which generates the output XML (map data fields from Companies).
-
-To verify that it works, you will need an XML-file as input when you select Test run -> Web Service -> CompanyService. Open Notepad and add the following text to a file before you save it as "input.xml": <GetCompaniesForUser><UserName>usr1a<//UserName><//GetCompaniesForUser>. Note: Substitute "usr1a" with your username, and make sure you are the responsible of a couple of companies before you start testing.
+   *Guidance: Use the Create Object(s) effect to create response texts (Response.responseText), and the Export Data effect to map objects to Json format and output them as Response Message Body. You can edit the response by clicking Customize within the Data-tab of the Export Data effect. You will need to assign names (e.g. the response text which they represent) to the Export Data effects to be able to recognize them. Take a look at the provided solution if needed.*
+   
+4.	Go back to the API-tab and specify which responses to include. You should add 4 different responses in total: “Company not found” (Status Code=”204 No Content”), “No activities found for company” (Status Code=”204 No Content”), “Activities found” (Status Code=”200 OK”) and “Something went wrong (Status Code=”500 Internal Server Error”). 
+   
+   *Comment: The Description property is just metadata, used for describing the requests/responses.*
+   
+5.	Deploy and verify that the REST-service works as expected. 
+   
+   *Guidance: After deploying, open the client and click File - > App -> Call a REST Service. Select the service that you made and type in the Resource Path and a Query Parameter (e.g. “ActivityForCompany?CompanyName=Active Cycling”). Check the response in the lower window.*
 
 
 <table>

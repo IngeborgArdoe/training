@@ -8,6 +8,7 @@ The tool can also be made available from the client, so that dedicated groups of
 You will now go through a couple of exercises concerning the creation of reports. **A brief summary of the report functionality of Genus Discovery is described here:**
 
 A new report is created from Genus Studio -> Discovery -> Reports -> New. The tool's structure is logically set up as shown below:
+
 ![oppg10fig1.JPG](media/oppg10fig1.JPG)
  
 To make an Object Class available as a dimension in a report, you must specifically assign this feature to the Object Class (right-click on the Object Class -> Open -> Data Aggregation). Likewise, you will have to check the "Enable as Measure" option (right-click on the Object Class Property -> Open -> Data Aggregation) if you want to use an Object Class Property as a Measure for calculating sums, counts, etc (ref Activity's No Of Activities property).

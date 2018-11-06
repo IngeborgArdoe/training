@@ -29,7 +29,7 @@ Make a REST-service ActivityForCompany that retrieves all Activities associated 
       * Response: Local object used to keep the response/output text of the service (Max Occurences=One). Add a field “requestText” (Type=String).
       * Request: Local object used to maintain the request/input of the service (Max Occurences=One).  Add a field “companyName” (Type=String).
       
-   *Note: Go back to the API-tab and choose Save To: Request (under Request).*
+      *Note: Go back to the API-tab and choose Save To: Request (under Request).*
    
    3.	In the Actions-tab, you will have to define the logic of the REST Service. First, you will have to find the Company that corresponds to the name provided as input (request). If a matching company does not exist, a suitable response should be generated (e.g. “Company not found”). If a Company is found, all Activities in state “Not started” or “In progress” associated with it should be read. If there are no Activities, a suitable response text should be generated (e.g. “No activities found for company”). However, if there are Activities, they should all be exported as a response. Customize the response to not include all fields (e.g. remove CompletedDate etc) and to contain names rather than IDs. At the end of the Actions sequence, catch all exceptions and let the error message be the response of the service.
 

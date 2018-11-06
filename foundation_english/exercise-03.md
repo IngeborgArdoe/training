@@ -123,8 +123,9 @@ You will now add functionality to open, create and delete Contacts from the Comp
    4. Deploy the solution to yourself and check that you are able to create Activities on a contact person.
 5. You will also have to list Mails associated with a Contact. The way of adding instances to the Mail-list in the Company-form is to paste new Mail from the Clipboard (i.e. drag-and-drop). You will make this functionality in a later task, so for now, you only need to focus on the list itself and how to open an e-mail from it.
    1. Create a list (grid) in the «Mail»-tab of form «Contact» that shows Mail where Mail.Contact = Contact.
-   2. Add an Event of type "On Activate" to the grid. Set the Effect Type to be "Invoke a File".
-      *Comment: This allows the Mail to open in Outlook when a row has been double-clicked. This is a built in function of the platform. If the object class contains File Data, File Size, File Type and File Name, the "Invoke a File"-effect will open it in its "default" program. You can look at how this is done in the Mail-grid of the Company-form.*
+   2. Add a Command of type "Invoke a File" to the Mail tab control. Next, add an Event to the grid that executes it (Type="On Contect Menu Item Click", Menu Item="Open in New Window").
+      
+      *Comment: This allows the Mail to open in Outlook when a row has been double-clicked. If the object class contains File Data, File Size, File Type and File Name, the "Invoke a File"-effect will open it in its "default" program. You can look at how this is done in the Mail-grid of the Company-form.*
    
 ####5. OPTIONAL: Add a Contact Log to Contact
 

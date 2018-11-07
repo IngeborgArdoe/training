@@ -5,7 +5,7 @@ For this, you will have to model an object «Document» (like «Mail») that all
 
 ####1. Model Object Class «Document».
 
-*Guidance: To save some time, use the SQL query below to create a Document-table in the database. Make sure that the Data Interpretations of File Name, File Data, File Extension and File Size are set correctly when you model the object class. Use the built-in data types with identical names.*
+To save some time, use the SQL query below to create a Document-table in the database.
    
 SQL: 
 
@@ -24,6 +24,8 @@ CREATE TABLE Document (
  ContactID uniqueidentifier
  )
 ```
+
+Right-click within the Object Class Diagram (or in the Object Class section of the Navigation Pane), and select New -> Object Domain. Choose database table Document, make DocumentID the primary key (generate identifier automatically), and define each property's correct Data Interpretation. Make sure that the Data Interpretations of File Name, File Data, File Extension and File Size are set to the built-in data types with identical names. Also remember that the Modified By and Created By properties should be interpreted as Users.
    
 ####2. Run a "deploy to all".
 

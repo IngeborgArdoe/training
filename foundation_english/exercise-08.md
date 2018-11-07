@@ -62,17 +62,6 @@ This task will be the equivalent to "Copy Mail to Clipboard as Mail Message". Pu
    
 The next thing for you to make is the functionality for sending e-mail to contact persons and store them as «Mail». This exercise is again optional, but we recommend you to at least browse through it and look at the solution.
    
-####7. OPTIONAL: Create a task "Send Mail to Contact". 
-
-The task should be made available through buttons both in the Contact-form and the Company-form (where you have a grid of contact persons).
-   1. Create a new task which opens a mail-window and stores the e-mail as a Mail-object in the database after "Send" has been clicked.
-   
-   *Guidance: The task needs «Contact» as data source (cardinality=unbound). In addition, you will need a File data source (cardinality=one) of type "Mail Message". This is the Outlook-file which will be created in memory and sent out. After being sent, the e-mail has to be stored as a Mail-object - one instance per contact. Accordingly, you will have to include the data source Mail (cardinality=unbound) as well.*
-   
-   *The effects needed are Create a Mail Message (that creates a Mail Message file with the e-mail addresses of the contacts and saves the message to the data source «Mail Message»), Open a Form (that opens a Mail Message window from the file data field of «Mail Message») and Create Objects (that saves Mail objects).*
-   
-   *Take a look at the provided solution for further guidance. Remember to set security for the task!*
-
 <table>
    <tr><td><a href="exercise-07.md"><- Previous</a></td><td align="right"><a href="exercise-09.md">Next -></a></td></tr>
 </table>

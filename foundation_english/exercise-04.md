@@ -16,11 +16,11 @@ You will now make a Table that lists all contact persons associated with the log
    4. Filter Pane: Check Show Filter Pane and add Contact to Date Sources.
       *Comment: This allows the user to see the Default filter at the bottom of the client when the «My Contacts»-list is opened.*
 4. Events:
-   1. Add an event for opening the Contact-form by double-clicking a row ("Open in a New Window").
+   1. Add an event for opening the Contact-form by double-clicking a row ("Open in New Window").
       *Guidance: Command and Event are put together in Tables. Set Effect Type = "Open a Form", Effect = "Contact" and Menu = "Open in New Window". Additionally, the Data Filter must be set in accordance with the screenshot below:*
    ![oppg4fig1.JPG](media/oppg4fig1.JPG)
    2. Add an event for creating a new Contact.
-      *Guidance: Menu = «New», Name = "New Contact", Symbol = #1081, Cardinality = "Always", "Enabled = "Yes", Visbility = "Yes". Set Create Data in accordance with the screenshot below:*
+      *Guidance: Effect Type = "Open a Form", Effect = "Contact", Menu = «New», Name = "New Contact", Symbol = #1081, Cardinality = "Always", "Enabled = "Yes", Visbility = "Yes". Set Create Data in accordance with the screenshot below:*
    ![oppg4fig2.JPG](media/oppg4fig2.JPG)
    3. Save and close the table.
    

@@ -25,7 +25,7 @@ CREATE TABLE Document (
  )
 ```
 
-Right-click within the Object Class Diagram (or in the Object Class section of the Navigation Pane), and select New -> Object Domain. Choose database table Document, make DocumentID the primary key (generate identifier automatically), and define each property's correct Data Interpretation. Make sure that the Data Interpretations of File Name, File Data, File Extension and File Size are set to the built-in data types with identical names. Also remember that the Modified By and Created By properties should be interpreted as Users.
+Right-click within the Object Class Diagram (or in the Object Class section of the Navigation Pane), and select New -> Object Domain. Choose database table Document, make DocumentID the primary key (generate identifier automatically), and define each property's correct Data Interpretation. Make sure that the Data Interpretations of File Name, File Data, File Extension and File Size are set to the built-in data types with identical names. Also remember that Modified By and Created By should both be interpreted as Users.
    
 ####2. Run a "deploy to all".
 

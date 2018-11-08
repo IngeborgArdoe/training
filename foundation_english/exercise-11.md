@@ -1,4 +1,4 @@
-## Exercise 11 - Genus Apps
+## Exercise 11 - Genus Web Apps
 **SESSION BY INSTRUCTOR:** *The instructor will start off by giving you a brief introduction to Genus App-form modeling.*
 
 ### Simple web interface

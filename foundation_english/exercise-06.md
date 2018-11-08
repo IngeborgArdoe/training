@@ -65,7 +65,7 @@ One important thing that we haven't considered yet is security. Access is given 
    *Note: Defining a data filter like this is a quick way of saying "I want my task's data source «Contacts input» to be populated with all contact persons marked in the table by the user". When clicking the Action «Change Responsible for Contact» in the Action pane, the chosen contact persons are copied into the task «Change Responsible for Contact» and the task's effects are executed.* 
    
 ### 2. Ribbon
-Add «Change Responsible for Contact» to the Ribbon.
+Add «Change Responsible for Contact» to the Ribbon in the Contact table.
 1. Name the event "Change Responsible".
 2. Choose symbol #692 with overlay #13
 3. Open Customize Ribbon. Under Main Tabs, add a new Tab Section. Call it "Responsible"

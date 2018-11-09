@@ -1,215 +1,68 @@
-## Exercise 11 - Genus Web Apps
-**SESSION BY INSTRUCTOR:** *The instructor will start off by giving you a brief introduction to Genus App-form modeling.*
+## Exercise 11 - Business Intelligence
+**SESSION BY INSTRUCTOR:** *The instructor will start off by giving you a brief introduction to the topic. The session will concern Genus App's report functionality.* 
 
-### Simple web interface
-In this exercise, you will make a simple web interface that shows current activities associated with companies for which the logged in user is responsible. It should also be possible to change the status to Completed.
+In Genus Apps, we have a product called "Genus Discovery". This is a report and analysis tool. The report part is mainly used for setting up predefined reports that benefits the end user.
 
-####1. Preparation for Genus Apps:
+The tool can also be made available from the client, so that dedicated groups of end users can set up or modify reports/analysis themselves.
 
-1. Deploy to all (you need to deploy to all for things to show in the web browser. It takes about 10 seconds from deployment until changes are reflected on the web).
-2. Verify that you reach the following web site: *<URL to your assigned solution>/web* 
-   As of now, you should only see a header and an option to log out and close.
-	
-####2. Create a new Web Form:
-	
-1. Add a new Form: "My Activities" (Web/Mobile -> right-click Forms -> New)
-   * Navigate to View
-   * Name: "My Activities - Main".
-   * Check Platform options: Tablet, Web on Phone, Web on Tablet, Web on Desktop.
-   * Padding: 24
-   
-####3. Add a headline
+You will now go through a couple of exercises concerning the creation of reports. **A brief summary of the report functionality of Genus Discovery is described here:**
 
-1. Drag in a Text-control from App Controls:
-	
-![oppg11fig1.JPG](media/oppg11fig1.JPG)
-   
-   * Label: ""
-   * Content: "My Activities"
-   * Foreground Color: Navy
-   * Font Size 24
-   
-####4. Add a repeating section
+A new report is created from Genus Studio -> Discovery -> Reports -> New. The tool's structure is logically set up as shown below:
 
-The repeating section should iterate over Activities ("Not Started" or "In Progress") belonging to Companies which the logged in user is responsible for. Display company name, activity subject and activity status. 
-
-1. Add data source Activity
-
-![oppg11fig2.JPG](media/oppg11fig2.JPG)
-
-2. Create a Repeating Section that iterates over Activity
-   * Drag a GroupBox into the View. 
-   * Set Vertical Alignment: Top
-   * Bind the GroupBox to the Activity data source.
-   * Check "Repeat Content".
-   * Sort the GroupBox on Due Time (Descending).
-3. Add text fields for company name, activity subject, deadline and activity state:
-   * Drag or double-click 4 Text-controls into the GroupBox.
-   * Bind the first to Datasource:Activity - Field:Company.Name, and do the equivalent for Activity.Subject, Due(Fx) and Activity.State.Display Name.
-        
-     *Note: Although Activity is an unbounded data source and the field is only supposed to show one single text string, you don't have to specify Active Object in DataSource. This is because you are already in the context of an active Activity-object when you are within a repeating Activity section.*
-     
-####5. Build an App bound to form My Activities.
-
-* Navigate to Apps under User Interface in Genus Studio.
-* Create a new one which you call "My Activities". Form "My Activities".
-* Check default view for Web and Tablet.
-* Set AppBar Foreground to Navy
-* After saving, define the security of the App. (Properties -> Super Users should be able to "Find and List" and "Read and Execute").
-   
-####6. Deploy to all
-
-Verify that you get expected results in the browser. You should see something like this:
-![oppg11fig3.JPG](media/oppg11fig3.JPG)
+![oppg10fig1.JPG](media/oppg10fig1.JPG)
  
-####7. Add button to change state to Completed
+To make an Object Class available as a dimension in a report, you must specifically assign this feature to the Object Class (right-click on the Object Class -> Open -> Data Aggregation). Likewise, you will have to check the "Enable as Measure" option (right-click on the Object Class Property -> Open -> Data Aggregation) if you want to use an Object Class Property as a Measure for calculating sums, counts, etc (ref Activity's No Of Activities property).
 
-In the repeating section, add a button for changing the state of the activity to Complete.
+In addition, you will have to specify how to group No of Activities per month, as this can be based either on «Created date» or «Completed date». You will have to determine which links to use ("Connections") in the report.
 
-* Add a new task with input Activity (Name: T.Activity, Max Occurences: One, Private=false).
-* Under General: set “Enable Run on Application Server”=true
-* Under Actions: Add a Scope with a Modify Object that changes State to Completed.
-* Save and add security:
+Connections that will become available in the report, and hence possible to choose from, are defined under Object Classes in Studio:
+![oppg10fig2.JPG](media/oppg10fig2.JPG)
+ 
+*Note: You don't have to specify the link between Activity and Company, as Activity has a Company-field (the tool understands). However, if No of Activities is to be grouped by for example Country, you will have to add a Connection from Activity to Country through Company in the list shown above. Note also that when you are working in Genus Discovery, you are working in the client. Accordingly, if you for example add a new connection to an Object Class, you will have to deploy in order to make the Connection available for reports.*
 
-![oppg11fig4.JPG](media/oppg11fig4.JPG)
+In the report, you can set up connections from No of Activities to the "Month" and "Company" dimensions by right-clicking No of Activities -> Connections:
+ ![oppg10fig3.JPG](media/oppg10fig3.JPG)
 
-* Drag a Button from App Controls into the repeating section (Activities).
-  * Set background color = white, foreground color = navy and border color = navy, show border=true.
-  * Label: "Complete"
-* To run the task, create a command+event and place them both on the button. Remember to define the Data Filter (Two-Way Binding to Activity.Single Selected).
-* Deploy and verify that the button works as expected.
-* Move things around and adjust until you are happy with the display.
-![oppg11fig5.JPG](media/oppg11fig5.JPG)
-  
-### Open Data, Local Objects and Map
-In this exercise, we will fetch open data from multiple public API’s, store it in local objects and visualize the aggregate data in a map. Note that we do not store any of the data in the database, everything is stored in memory as the client uses the app.
+You can also define "Local Filters" on objects in the Report, if you somehow want to restrict the data (e.g. you want a report with numbers based on Activities having State="Completed" only).
 
-####1. Create a new web-form
+####1. Create a report "Activities per Company Speciality YTD".
+The report should count the number of completed Activities per Month per Company Speciality so far this year. It should also sum the number of activities both horizontally and vertically, and be presented to the end user either as a table or as a line chart.
 
-* Mark the view and name it “Main - map”
-* Check all Platforms for the views
-* Padding: 24
-* Save the form and name it “OSLO”, close the form.
+*Tip: You will have to set up a new Connection from Activity to Company Speciality (through Company). You also need to make object class Company Speciality available as a dimension in reports (i.e. check the "Enable as dimension in reports" option found in the object's Data Aggregation properties tab).*
 
-####2. Create an App
+*In order to sum data, right-click on "No of Activities" in the report -> Series Calculation and choose to sum over both Month and Company Speciality. Check "Calculate intersections" in both sum functions to get the "sum of sums" (i.e. sum of activities for all Company Specialities for all months YTD) in the bottom right corner:*
+![oppg10fig4.JPG](media/oppg10fig4.JPG)
 
-Select Apps in the “User Interface” section of the navigation pane.
+*You can control which buttons to show in the report by checking/unchecking them in the "Buttons" menu (upper right). Allow the user to shift period back and forth. In addition, check Explore, Table, Line (line chart) and Filter Pane. By adding both Table and Line, the user can choose to see the trend as a line per Company Speciality or as a table per month per Company Speciality.*
 
-* Right click and new App
-* Name it “OSLO”
-* Select form OSLO
-* Check all default views and set Main - map as default, the app will be available from all devices.
-* Give the app appropriate security
+We haven't said anything about the setup of "No of Activities" as an Object Class Property yet. If you open Object Class Property "No of Activities" from Studio, you will see that the field is of type "function". In other words, the field is not refering to a specific column in the database (Provider Name), but is instead calculated. The value is set according to the RDBMS expression ("\*") defined in the Data Calculation tab and the aggregation method ("count") selected under Data Aggregation. When "No of Activities" is used as a measure in a report, a SQL statement "select count(\*) from.." grouped on the report's dimensions is executed.
 
-####3. Deploy to all
+####2. Create a report "Sales per Company last 3 months".
+The report should have measure "Order Value NOK" and dimensions "Month" (select last month and two months back) and "Company". Only Requests of Type="Order" and State="Closed" should be shown, and the connection against Month should based on Received Date.
 
-Check the website to verify that the app is published and available.
+*Tip: You need to make sure that object class Request is available as a dimension (Data Aggregation), and that Request.Order Value NOK is available as a measure with Method="Sum". In addition, you will have to make a Connection from Request to Month. There is a shortcut for doing the latter in Genus: Right-click on Received Date -> Create Calendar Connection.* 
 
-####4. Create local objects Bike Stations and Bus Stops
+####3. Create a report "Company Benchmark"
+The report should contain measures "Annual Sales" and "Employees" from Company, and utilize Company as vertical dimension to show a Plot diagram.
 
-*Note: Occurrences=Unbounded and Datatypes as defined in the pictures below:*
+*Comment: Take a look at the provided solution if needed. This report can be used to distinguish between companies with potential and companies to keep away from. As the diagram shows all Annual Sales plotted against Number of Employees for all companies, a point "above the curve" is a company doing well (i.e. generates a lot of revenue per employee).*
 
-![oppg11fig6.JPG](media/oppg11fig6.JPG)
+####4. OPTIONAL: Create a report "Monthly Sales and Activities per Employee"
+The report should show No of Activities, Sales (from Request.Order Value NOK) and Avg Sales per Request (formula based on Order Value NOK / NO of Requests) for the current month.
 
-![oppg11fig7.JPG](media/oppg11fig7.JPG)
+Add also a Measure (formula) "Sales Increase" that shows the increase or decrease of sales relative to last month.
 
-####5. Visualization in Map-control
+*Tip: You need to make a new Object Class Property on Request: No of Requests (equivalent to No of Activities). To be able to calculate Avg Sales per Request, you must use a Formula in the report tool. In a Formula, you can set up an expression based on the published Measures of the report (under "Values"). Accordingly, you will have to add No of Request to the report as measure and make it Hidden.* 
 
-Add a Map control (found under Reporting and Visualization)
+*To make a formula for Sales Increase, you will need a Measure that shows Sales last month: Copy "Sales" (right-click -> copy), rename it to "Sales (last month)", navigate to the "Period Shift" setting and add "-1" (minus one). Then, make a Formula "Sales - Sales (last month)".*
 
-1. Add Layer for Basemap (found under General properties)
-   * Type = Map
-   * Server Type = OSM
-2. Add Layer for Bike Stations
-   * Type = Point
-   * DS = Bike Stations
-   * Location fields
-     - Northing = latitude
-     - Easting = longitude
-     - Coordinate system = WGS84
-   * Select an appropriate symbol, set the size to 32px, and choose a color of your choice.
- 3. Add Layer for Bus Stops
-    * Type = Point
-    * DS = Bus Stops
-    * Location fields
-      - Northing = longitude (!)
-      - Easting = latitude   (!)
-      - Coordinate system = UTM32N
-     * Select an appropriate symbol, set the size to 32px, and choose a color of your choice.
+*Make sure that the Sales measure only includes Requests in state "Closed" and of type "Order". You can do this "per measure" (right-click -> Local Filters) OR you can add Request State and Request Type to the "Filters" section of the report and define filters here. Measures that are connected to any (or all) of the latter filter objects will be filtered accordingly. If you don't want to define Connections every time you are using the sales measure, you can - in the Data Aggregation tab of Object Class Request - set up default connections. These are connections that will be set automatically in reports.*
 
-####6. Create local tasks "Get stops" and "Get bikes". 
+####5. OPTIONAL: Add report shortcuts to the Navigation Pane.
 
-1. Create a local task named "Get stops"
-   The first source of data is Ruter (which plans, coordinates, orders and markets public transport in Oslo and Akershus). Link to API documentation: https://ruter.no/labs/.
-   * Open the Get stops-task
-   * In the Actions-pane add Consume a REST Service-effect
-   * URL: http://reisapi.ruter.no/Line/GetStopsByLineId/30
-   * Click the Test-button and click Send. The response of the API call is shown in Response Body. Click Handle Current Response. Open the entry in Response Handlers by double-clicking or pressing Modify. Genus has created a mapping from the test-run (this is VERY time consuming for the developer of the app, appreciate Genus :smile:).
-   * Configure the response handler as the screenshot illustrates:
-   
-   ![oppg11fig8.JPG](media/oppg11fig8.JPG)  
-   
-   * When the task “Get stops” is executed, the API is called and the return data is mapped to the specified data source, creating X number of Bus stops with its associated data.
-   * To see the result of the call, create a command executing the Get stops task and add it as a On Load Form event. Data will be populated when the form is accessed. Deploy to all and see that the map contains Bus stops.
-   
-   *Note: Give the task appropriate security (Properties > security).*
-   
-   ![oppg11fig9.JPG](media/oppg11fig9.JPG)
-   
-2. Create a local task named "Get bikes".
-   The second source of data is Oslo Bysykkel. Link to API documentation: https://developer.oslobysykkel.no/api
-   * Open the Get bikes-task.
-   * In the Actions-pane add Consume a REST Service-effect
-   * URL: https://oslobysykkel.no/api/v1/stations/
-   * Header: "Client-Identifier:9d0c945ef25d6f01ccc382df111437cc" (Click Headers and copy-paste identifier)
-   ![oppg11fig10.JPG](media/oppg11fig10.JPG)
-   * Click the Test-button and click Send. The response of the API call is shown in Response Body. Click Handle Current Response. Open the Response Handlers entry, and configure it.
-   * Verify that consuming data from the API works in the website.
-
-####7. Add Popup Content to the point layers
-
-Define Popup Contents for both the Bus Stops and the Bik Stations layers which show information (for instance id and name) on click. Customize it (try to be creative, maybe we don’t need label?)
-
-![oppg11fig11.JPG](media/oppg11fig11.JPG)
+All reports (given that you have the rights to see them) are available from the Discovery menu in the client. In some cases, however, it can be useful to create shortcuts to reports in the Navigation Pane (e.g. reports are of high importance or are frequently used). Take a look at the provided solution if you want to see how reports have been published there.
 
    
-####8. Display available and locked bikes
-
-1. Create local task "Get bike availability"
-   Information about available and locked bikes will have to be added to the Bike Stations objects after their initial creation, with a separate API-call. Accordingly, you will have to create a new Local Object to store availability data temporarily. Do this by creating a local object named “availability” (unbounded, and String-fields "id", "bikes" and "locks") inside a local task "Get bike availability". See screenshots.
-
-![oppg11fig12.JPG](media/oppg11fig12.JPG)
-![oppg11fig13.JPG](media/oppg11fig13.JPG)
- 
-2. Add a REST service
-   Add a Rest service to call https://oslobysykkel.no/api/v1/stations/availability with the header credentials provided above. Map it to the availability DS. Then the data must be copied from availability DS to the bikes DS via a modify object-effect. See screenshot. 
-   
-   *Note: The filter is important to ensure correct modifications!*
-
-![oppg11fig14.JPG](media/oppg11fig14.JPG)
-![oppg11fig15.JPG](media/oppg11fig15.JPG)
-
-3. Publish task and edit Popup Content
-   * Create a command
-   * Add another On Load Form. 
-   * Add bikes and locks to popup content. 
-   * Deploy to all and verify that you can see name and availability of bikes on the map.
-   
-   ![oppg11fig16.JPG](media/oppg11fig16.JPG)
-   
-####9. OPTIONAL challenges:
-    
-1. Get departure data for the bus
-   
-   Get departure data for the bus and display it in the form
-   (http://reisapi.ruter.no/StopVisit/GetDepartures/3010146).
-
-2. Get weather forecasts 
-   
-   Get weather forecasts from YR and dispay bus stops if rain and bike stations otherwise
-   (https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Fwww.yr.no%2Fsted%2Fnorge%2FOslo%2Foslo%2Foslo%2Fvarsel.rss).
-      
-      
 <table>
    <tr><td><a href="exercise-10.md"><- Previous</a></td><td align="right"><a href="exercise-12.md">Next -></a></td></tr>
 </table>

@@ -1,68 +1,138 @@
-## Exercise 10 - Business Intelligence
-**SESSION BY INSTRUCTOR:** *The instructor will start off by giving you a brief introduction to the topic. The session will concern Genus App's report functionality.* 
+## Exercise 10 - Request
 
-In Genus Apps, we have a product called "Genus Discovery". This is a report and analysis tool. The report part is mainly used for setting up predefined reports that benefits the end user.
+In this exercise, you will make a new business object «Request» that allows the user to register inquiries from customers. «Request» will be used in later exercises to generate order confirmations and reports, so the most important thing is to model the object. As you have seen before, some exercises are mandatory and some are optional. Do the optional ones if you have time.
 
-The tool can also be made available from the client, so that dedicated groups of end users can set up or modify reports/analysis themselves.
+Before modeling «Request», you will be asked to create a couple of Code Domains and an Identifier Domain. This way, you will be able to set all Data Interpretations correctly when you model the object class. 
 
-You will now go through a couple of exercises concerning the creation of reports. **A brief summary of the report functionality of Genus Discovery is described here:**
+####1. Create a Code Domain named "Request State"
 
-A new report is created from Genus Studio -> Discovery -> Reports -> New. The tool's structure is logically set up as shown below:
+Add values "Open" (value=10), "Closed" (value=20) and "Canceled" (value=30).
 
-![oppg10fig1.JPG](media/oppg10fig1.JPG)
- 
-To make an Object Class available as a dimension in a report, you must specifically assign this feature to the Object Class (right-click on the Object Class -> Open -> Data Aggregation). Likewise, you will have to check the "Enable as Measure" option (right-click on the Object Class Property -> Open -> Data Aggregation) if you want to use an Object Class Property as a Measure for calculating sums, counts, etc (ref Activity's No Of Activities property).
+*Guidance: In Genus Studio, right-click on Object Classes -> New -> Select Code Domain.*
 
-In addition, you will have to specify how to group No of Activities per month, as this can be based either on «Created date» or «Completed date». You will have to determine which links to use ("Connections") in the report.
+####2. Create a Code Domain named "Request Type"
 
-Connections that will become available in the report, and hence possible to choose from, are defined under Object Classes in Studio:
-![oppg10fig2.JPG](media/oppg10fig2.JPG)
- 
-*Note: You don't have to specify the link between Activity and Company, as Activity has a Company-field (the tool understands). However, if No of Activities is to be grouped by for example Country, you will have to add a Connection from Activity to Country through Company in the list shown above. Note also that when you are working in Genus Discovery, you are working in the client. Accordingly, if you for example add a new connection to an Object Class, you will have to deploy in order to make the Connection available for reports.*
+Add values "Order" (value=10) and "Service" (value=20).
 
-In the report, you can set up connections from No of Activities to the "Month" and "Company" dimensions by right-clicking No of Activities -> Connections:
- ![oppg10fig3.JPG](media/oppg10fig3.JPG)
+*Comment: The requests can hence be classified as either orders ("Order") or inquiries for help / other ("Service").*
 
-You can also define "Local Filters" on objects in the Report, if you somehow want to restrict the data (e.g. you want a report with numbers based on Activities having State="Completed" only).
 
-####1. Create a report "Activities per Company Speciality YTD".
-The report should count the number of completed Activities per Month per Company Speciality so far this year. It should also sum the number of activities both horizontally and vertically, and be presented to the end user either as a table or as a line chart.
+It would also be nice to have a sequential "order number" that is generated on the creation of a Request. For this, you can create an «Identifier Domain» (from Studio -> right-click on Object Classes -> New -> select Identifier Domain). Such an object class demands a table in the database containing the latest order number. The table has a name (e.g. "Order No Counter") and an integer field (e.g. "Order No"). When an Identifier Domain is used in the calculation of a field, Genus retrieves the latest number in the sequence and updates it incrementally with 1.
 
-*Tip: You will have to set up a new Connection from Activity to Company Speciality (through Company). You also need to make object class Company Speciality available as a dimension in reports (i.e. check the "Enable as dimension in reports" option found in the object's Data Aggregation properties tab).*
+####3. Create an Identifier Domain named "Order No Counter"
 
-*In order to sum data, right-click on "No of Activities" in the report -> Series Calculation and choose to sum over both Month and Company Speciality. Check "Calculate intersections" in both sum functions to get the "sum of sums" (i.e. sum of activities for all Company Specialities for all months YTD) in the bottom right corner:*
-![oppg10fig4.JPG](media/oppg10fig4.JPG)
-
-*You can control which buttons to show in the report by checking/unchecking them in the "Buttons" menu (upper right). Allow the user to shift period back and forth. In addition, check Explore, Table, Line (line chart) and Filter Pane. By adding both Table and Line, the user can choose to see the trend as a line per Company Speciality or as a table per month per Company Speciality.*
-
-We haven't said anything about the setup of "No of Activities" as an Object Class Property yet. If you open Object Class Property "No of Activities" from Studio, you will see that the field is of type "function". In other words, the field is not refering to a specific column in the database (Provider Name), but is instead calculated. The value is set according to the RDBMS expression ("\*") defined in the Data Calculation tab and the aggregation method ("count") selected under Data Aggregation. When "No of Activities" is used as a measure in a report, a SQL statement "select count(\*) from.." grouped on the report's dimensions is executed.
-
-####2. Create a report "Sales per Company last 3 months".
-The report should have measure "Order Value NOK" and dimensions "Month" (select last month and two months back) and "Company". Only Requests of Type="Order" and State="Closed" should be shown, and the connection against Month should based on Received Date.
-
-*Tip: You need to make sure that object class Request is available as a dimension (Data Aggregation), and that Request.Order Value NOK is available as a measure with Method="Sum". In addition, you will have to make a Connection from Request to Month. There is a shortcut for doing the latter in Genus: Right-click on Received Date -> Create Calendar Connection.* 
-
-####3. Create a report "Company Benchmark"
-The report should contain measures "Annual Sales" and "Employees" from Company, and utilize Company as vertical dimension to show a Plot diagram.
-
-*Comment: Take a look at the provided solution if needed. This report can be used to distinguish between companies with potential and companies to keep away from. As the diagram shows all Annual Sales plotted against Number of Employees for all companies, a point "above the curve" is a company doing well (i.e. generates a lot of revenue per employee).*
-
-####4. OPTIONAL: Create a report "Monthly Sales and Activities per Employee"
-The report should show No of Activities, Sales (from Request.Order Value NOK) and Avg Sales per Request (formula based on Order Value NOK / NO of Requests) for the current month.
-
-Add also a Measure (formula) "Sales Increase" that shows the increase or decrease of sales relative to last month.
-
-*Tip: You need to make a new Object Class Property on Request: No of Requests (equivalent to No of Activities). To be able to calculate Avg Sales per Request, you must use a Formula in the report tool. In a Formula, you can set up an expression based on the published Measures of the report (under "Values"). Accordingly, you will have to add No of Request to the report as measure and make it Hidden.* 
-
-*To make a formula for Sales Increase, you will need a Measure that shows Sales last month: Copy "Sales" (right-click -> copy), rename it to "Sales (last month)", navigate to the "Period Shift" setting and add "-1" (minus one). Then, make a Formula "Sales - Sales (last month)".*
-
-*Make sure that the Sales measure only includes Requests in state "Closed" and of type "Order". You can do this "per measure" (right-click -> Local Filters) OR you can add Request State and Request Type to the "Filters" section of the report and define filters here. Measures that are connected to any (or all) of the latter filter objects will be filtered accordingly. If you don't want to define Connections every time you are using the sales measure, you can - in the Data Aggregation tab of Object Class Request - set up default connections. These are connections that will be set automatically in reports.*
-
-####5. OPTIONAL: Add report shortcuts to the Navigation Pane.
-
-All reports (given that you have the rights to see them) are available from the Discovery menu in the client. In some cases, however, it can be useful to create shortcuts to reports in the Navigation Pane (e.g. reports are of high importance or are frequently used). Take a look at the provided solution if you want to see how reports have been published there.
-
+The Identifier Domain should have an integer field "Order No".
    
+*Guidance: Create the table in the database and insert the first "order number" instance. Do it with the following SQL query:*
+
+```
+CREATE TABLE OrderNoCounter (
+ OrderNo int
+)  
+go
+
+INSERT INTO OrderNoCounter
+VALUES (10000)
+
+```
+
+In the wizard for creating a new Identifier Domain, choose "Sequential Counter" in step 2:
+![oppg9fig1.JPG](media/oppg9fig1.JPG)
+ 
+In step 3, select the column that will hold the counter:
+![oppg9fig2.JPG](media/oppg9fig2.JPG)
+
+Click Finish.
+  
+####4. Create Object Class «Request» 
+
+In the New Object Domain wizard, remember to set correct Data Interpretations.
+
+*Comment: The SQL script for creating table «Request» has already been run against your database. This is because we wanted to genereate some data in advance for making reports/analysis in later exercises.*
+   
+   1. Set default value for field «Order No». Select «Custom Id Generator» and «Order No Counter» from the list. Make Subject, State and Type mandatory. Also, agreed Delivery Date and Expected Delivery Date should have Data Interpretation "Date" (not "Date and Time"), as we don't want the user to care about the time of the delivery.
+      
+      After creating the object class, sett Default values for the «Created» fields and Formula values for the «Modified» fields. Default values for State and Type should also be defined. In addition, set the default value of Received Date to "Now", but let it be possible to change.
+      
+      *Comment: Default locks the values after creation (i.e. they remain unchanged after creation), while Formula allows the values to be automatically set whenever the Request object is modified.*
+   
+   2. Open Object Class «Request» (right-click -> Open) and define the following properties:
+      - Search (set search properties, under «Search Properties» in tab «Search»).
+      - Events -> Auditing (want to log all changes made on Request objects, check «Enable Auditing» in tab «Events»).
+      - Display -> Naming (field «Subject» should at least be a part of the naming, in tab «Display»).
+      -	Data Sorting (default sorting on «Company» ascending and «Received Date» descending, in tab «Data Sorting»).
+  
+You have now created the object itself. Next, you will make it possible to drag documents and e-mail into a Request.
+
+####5. Add property "Request" on object classes Mail and Document
+
+*Guidance: Use the following SQL query to create a new column in the Document table:*
+
+```
+ALTER TABLE Document
+ ADD RequestID uniqueidentifier 
+```
+
+*Run the equivalent query against the Mail Table. Add the two fields to their corresponding Object Classes in Studio.*
+
+####6. Create tasks «Paste new Mail from file (Request)» and «Paste new Document from file (Request)»
+
+Both tasks should take Request as input.
+
+*Guidance: Copy the corresponding Paste-tasks for Company, and substitute the data source Company with Request. Make sure that the reference to Request is correctly set on Mail/Document creation (Mail.Request = Request (input) and Document.Request = Request (input)).*
+
+You are now ready to add Request to the interface, i.e. make a Request-form and list Requests under Company. In addition, you will be asked to make a list (table) of Requests that is accessible from the Navigation Pane.
+
+####7. Create a Form for Request
+
+Add commands+events for creating Mail and Documents (by Paste) in the corresponding Grids. Do the same for deletion and opening of e-mail/documents.
+
+*Tip: Add a Tab Sheets container with tabs "General", "Documents" and "Mail" in that respective order. To get a meaningful Ribbon (optional), you should place the commands on the tabs. Remember to give the commands good names and symbols.*
+   
+####8. Make a "Requests"-tab in the Company-form
+
+Add a list of Requests to the Company-form in a separate Request-tab. Remember to create commands+events for creating new and opening existing requests through the Request-form. It should not be possible to delete Requests. However, the grid should filter out Requests with State="Canceled".
+
+*Comment: Feel free to add the "New" command to the Ribbon. Find a meaningful symbol for Request.*
+  
+####9. Create a Table for Requests
+
+Model a Request-table with a view that displays all Requests with State="Open". Name the view "Open Requests".
+
+*Guidance: If needed, take a look at the earlier Table exercise. Make sure you include columns, define the Data Filter and enable Search. Under Events, add one "Open a Form" event with menu item = "New" (remember Create Data) and one with menu item = "Open in New Window (remember Data Filter).*
+   
+####10. Make a View Button in the Navigation Pane
+
+Add a shortcut (name "Requests") to the Navigation Pane that points to the "Open Requests"-table. Remember to define the security of the View Button first, so that the security is inherited by all its elements. Choose a suitable symbol (e.g. 1972).
+![oppg9fig3.JPG](media/oppg9fig2.JPG)
+  
+####11. OPTIONAL: Make a rule "Set Closed Date and Canceled Date when State changed"
+
+This rule should change Closed Date if State is set to "Closed" (and NULL otherwise) and Canceled Date if State is set to "Canceled" (and NULL otherwise).
+
+####12. OPTIONAL: Make tasks "Close Request", "Reopen Request" and "Cancel Request"
+
+Force field Request.State to be "Read Only" by changing the Read Only property in the Request form/grid/table, and make tasks "Close Request", "Reopen Request" and "Cancel Request" to set the State of a Request. Publish the tasks through buttons in the Request-form (e.g. next to State) and in the Company-form (below the grid). Furthermore, add enabling conditions to the buttons, so that "Close Request" is enabled when State="Open", "Re-open Request" is enabled when State="Canceled"/"Closed", and "Cancel Request" is enabled when State="Open".
+
+####13. OPTIONAL: Make Request "read-only" if State <> "Open"
+
+Force all fields in the Request-form to be "Read Only" if State is not equal to "Open".
+
+*Tip: You can determine when a Control is "Read Only" and not by defining conditions in the menu on the left-hand side of the editor. Luckily, you don't have to define one condition per field, you can also do it per Group. Everything placed within the Group will be "Read Only" if the condition is true.*
+	
+####14. OPTIONAL: Define dynamic labels for tabs "Mail" and "Documents"
+
+Give tabs «Mail» and «Documents» in the Request-form dynamic labels which counts the number of objects listed (e.g. "Mail (3)" and "Documents (1)").
+
+*Guidance: It may be necessary to use the provided solution for aid.*
+    
+   1. You will need a data source of type Local Object (name: "Labels") in the Request-form. Create two fields "Mail Label" and "Document Label" of Type = Function. For Data Calculation, use Formula (e.g. "Mail  (" + Misc.ifNull(mail.size(),0).toString() + ")"  )
+   2. The local object's Data Filter can't be read from the database, but you can set Data Filter = "Create Single Object". This will create a Labels object when the form is opened.
+   3. Bind the Label properties of tabs «Documents» and «Mail» to fields «Label Values.Documents Label» and «Label Values.Mail Label», respectively. 
+
+Deploy and verify! Check the naming of the tabs.
+
+
 <table>
    <tr><td><a href="exercise-09.md"><- Previous</a></td><td align="right"><a href="exercise-11.md">Next -></a></td></tr>
 </table>

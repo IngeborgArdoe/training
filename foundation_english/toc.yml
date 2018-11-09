@@ -12,38 +12,46 @@
     href: exercise-01.md
   - name: 2 - Object Classes og Properties
     href: exercise-02.md  
-- name: Exercises Part II - Forms, Tables and actions (3-4)
-  href: exercises3-4.md
+- name: Exercises Part II - Forms, Tables and actions (3-5)
+  href: exercises3-5.md
   items:
   - name: 3 - Forms
     href: exercise-03.md
   - name: 4 - Tables
     href: exercise-04.md
-- name: Exercises Part III - Ribbon, logic and rules (5-7)
-  href: exercise-05.md
+  - name: 5 - Actions
+    href: exercise-05.md  
+- name: Exercises Part III - Ribbon, logic and rules (6-8)
+  href: exercise-06.md
   items:
-  - name: 5 - Ribbon
-    href: exercise-05.md
-  - name: 6 - Logic and tasks
+  - name: 6 - Ribbon
     href: exercise-06.md
-  - name: 7 - Rules
+  - name: 7 - Logic and tasks
     href: exercise-07.md
-- name: Exercises Part IV - Advanced modeling (8-15)
-  href: exercise-08.md
-  items:
-  - name: 8 - Documents, Mail
+  - name: 8 - Rules
     href: exercise-08.md
-  - name: 9 - Request
+- name: Exercises Part IV - Documents and repetition (9-11)
+  href: exercise-09.md
+  items:
+  - name: 9 - Documents, Mail
     href: exercise-09.md
-  - name: 10 - Analysis and reports
+  - name: 10 - Request
     href: exercise-10.md
-  - name: 11 - Genus Apps
+  - name: 11 - Analysis and reports
     href: exercise-11.md
-  - name: 12 - Mail Merge
+- name: Exercises Part V - REST and Genus Apps (12-13)
+  href: exercise-12.md
+  items:
+  - name: 12 - REST Services
     href: exercise-12.md
-  - name: 13 - Agents
+  - name: 13 - Genus Apps
     href: exercise-13.md
-  - name: 14 - REST Services
+- name: Exercises Part VI - Mail Merge, Agents, Misc (14-15)
+  href: exercise-14.md
+  items:
+  - name: 14 - Mail Merge
     href: exercise-14.md
-  - name: 15 - Miscellaneous
+  - name: 15 - Agents
     href: exercise-15.md
+  - name: 16 - Miscellaneous
+    href: exercise-16.md

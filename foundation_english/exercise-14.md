@@ -1,53 +1,47 @@
-## Exercise 14 - REST Services
-**SESSION BY INSTRUCTOR:** *The instructor will give you a brief introduction to the concept of REST Services and how they are set up in Genus*
+## Exercise 14 - Mail Merge
+**SESSION BY INSTRUCTOR:** *The instructor will start off by giving you a brief introduction to the topic. He/she will explain the concept of Mail Merge and show the schema editor in Genus Apps.*
 
-This is a fully optional exercise. As a minimum, we recommend you to read through it.
+These exercises are optional and should be done only if time allows. That being said - we recommend you to at least read through the exercises.
 
-REST Services are easily set up in Genus. A REST Service made in Genus is available on the application server so that other applications can call on it to perform the service operations it provides. Perhaps we want an external solution to be able to write something to the Genus CRM application. In this case we want it to retrieve information.
+####1. OPTIONAL: Order Confirmation
 
-####1. OPTIONAL: Create a REST Service "ActivityForCompany"
+Make a new task "Order Confirmation", which takes a Request as input and from it generates an order confirmation (Word document). Information that will be merged into the document is Order No, Subject, Description, Expected Delivery Date, Order Value NOK, Company Name, Org No, Contact Name (name of person ordering) and Responsible Name (name of user).
 
-Make a REST-service ActivityForCompany that retrieves all Activities associated with a given Company that are in state “Not started” or “In progress”. The input of the service should be the name of the company, and the response should contain the most important fields on Activity.
+1. Create a Schema "Order Confirmation" with "OrderConfirmation" as root node (Complex Type) and all the fields above as Elements (all can be of data type String).
 
-1.	Add a new REST service
+   *Guidance:* 
+   
+   *This exercise requires that you have been through a Schema setup review. A Schema is basically a description of the XML layout. You will later generate XML with your schema through the "Create Objects" effect (data source = schema). This XML can then be used as input to the "Merge Data to a Document" effect along with a Word file. The Word file will contain "tags" (merge fields) with names identical to those of the XML elements, allowing data to be merged into the document. Take a look at the provided solution for inspiration.*
+   
+2. Create a Word document for Order Confirmation with merge fields equivalent to the element names of the schema just made.
+   
+   *Guidance:*
+   
+   *Insert a "merge field" in Word by marking the spot where you want the data to be placed and navigate to menu Insert -> Quick Parts -> Field. Next, choose "Merge Field" from the list on the left-hand side and type in the "Field Name" (same as the element name in the schema!).*
 
-   Find REST Services in the Navigation Pane, right-click and select New. Specify Name and Path Segment (e.g. type “GenusBikeParts” in both). Save.
-   
-2.	Add a Resource
+   *You are required to start the document with a merge field "TableStart:OrderConfirmation", where "OrderConfirmation" is the root node (Complex Type) of the schema (or the node that holds the fields that you want to merge). Equivalently, you will have to end the document with a field "TableEnd:OrderConfirmation". In between the latter two merge fields, you can add merge fields such as "OrderNo", "Subject" and so on. Note; to speed up the process you can copy merge fields, right-click and "Edit Field...".*
 
-   Right-click on the REST Service node in the tree structure view and select Add Resource. Under Request, specify a Path Segment (Name = “ActivityForCompany”, Type=Literal) either by modifying the Segment that is already there by default, or by adding a new (and removing the default)
+   Ask the instructor to send you the Word document if you don't want to spend time on the order confirmation template.
    
-   *Note: At least one Path Segment is required to identify the resource.*
-   
-3.	Add a Method GET
-   
-   1.	Right-click on the Resource node in the tree structure view and select Add GET. Since we want to input a company name, add a Query Parameter (Name=”companyName”, Type=String, Required=TRUE) under Request. Later, we will also specify various responses under Response.
-   2.	Navigate to Data Sources, and add the following objects:
-   
-      * Company: Company object to which the input name is referencing (Max Occurences=One).
-      * Activities: All Activity objects associated with the provided Company (Max Occurences=Unbounded).
-      * Response: Local object used to keep the response/output text of the service (Max Occurences=One). Add a field “requestText” (Type=String).
-      * Request: Local object used to maintain the request/input of the service (Max Occurences=One).  Add a field “companyName” (Type=String).
-      
-      *Note: Go back to the API-tab and choose Save To: Request (under Request).*
-   
-   3.	In the Actions-tab, you will have to define the logic of the REST Service. First, you will have to find the Company that corresponds to the name provided as input (request). If a matching company does not exist, a suitable response should be generated (e.g. “Company not found”). If a Company is found, all Activities in state “Not started” or “In progress” associated with it should be read. If there are no Activities, a suitable response text should be generated (e.g. “No activities found for company”). However, if there are Activities, they should all be exported as a response. Customize the response to not include all fields (e.g. remove CompletedDate etc) and to contain names rather than IDs. At the end of the Actions sequence, catch all exceptions and let the error message be the response of the service.
+3. Create a task called "Order Confirmation". Publish it through a button in the Request-form.
 
-      *Guidance: Use the Create Object(s) effect to create response texts (Response.responseText), and the Export Data effect to map objects to Json format and output them as Response Message Body. You can edit the response by clicking Customize within the Data-tab of the Export Data effect. You will need to assign names (e.g. the response text which they represent) to the Export Data effects to be able to recognize them. Take a look at the provided solution if needed.*
+   *Guidance:* 
    
-      ![oppg14fig2.JPG](media/oppg14fig2.JPG)
-   
-   4.	Go back to the API-tab and specify which responses to include. You should add 4 different responses in total: “Company not found” (Status Code=”204 No Content”), “No activities found for company” (Status Code=”204 No Content”), “Activities found” (Status Code=”200 OK”) and “Something went wrong (Status Code=”500 Internal Server Error”). 
-   
-      *Comment: The Description property is just metadata, used for describing the request/response.*
-   
-      ![oppg14fig3.JPG](media/oppg14fig3.JPG)
-   
-4.	Deploy and verify that the REST-service works as expected. 
-   
-   *Guidance: After deploying, open the client and click File - > App -> Call a REST Service. Select the service that you made and type in the Resource Path and a Query Parameter (e.g. “ActivityForCompany?CompanyName=Active Cycling”). Check the response in the lower window.*
+   *The task needs data sources "OrderConfirmation" (type XML Document), "Request (input)", "Document (to be created)" and "General File (temp)" (will be used as temporary output in the merge effect before Document is created). Necessary effects to include are a "Create Objects" (creating OrderConfirmation / mapping values), a "Merge Data to a Document" (where the Word document is the "Embedded file", the OrderConfirmation schema is the "XML Document" and the General File is the "Output Document"), another "Create Objects" (creating the Document object with data from the General File object), and fianlly an "Invoke a File" (opens Document.File Data in default application).*
 
-   ![oppg14fig4.JPG](media/oppg14fig4.JPG)
+####2. OPTIONAL: Send Order Confirmation
+
+Make a task called "Send Order Confirmation" which allows the user to select among existing Order Confirmations (Documents on the Request) and afterwards opens Outlook with the document attached. The task should also store the Mail object. Make the task available in the Ribbon of the Request-form.
+  
+*Guidance:*
+
+*Add data sources Request (input), Mail (to be created), Document (confirmation document to attach)and Mail Message (temporary file which opens in Outlook, and is used to generate the Mail object after send).*
+
+*The task should have the following effects:*
+* _Read Object: Data source = Document, with user interaction (let the user choose among documents associated with the request)._
+* _Create a Mail Message: Define "To", "Subject", "Attachments" (Document.File Data) and suggest a default e-mail text. Make sure the effect is set to "Write message to a data source" (Mail Message (temp)) so that the e-mail is not sent immediately. Note: The reason for keeping the Mail Message file in a data source is to avoid losing changes made by the user in Outlook before he/she press "Send". You could have used the "Open a Form" effect directly, but it's more visual to create an e-mail in the "Create a Mail Message" effect._
+* _Open a Form: Choose Mail Message Window and Modify. Check "Wait until the form is closed". The effect will now open the suggested e-mail and pause the execution until the user has pressed "Send" in outlook._
+* _Create Objects: Data source = Mail. Map fields from Mail Message (temp). Put the effect in a Commit Scope to save the Mail object._
 
 
 <table>

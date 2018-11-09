@@ -43,7 +43,7 @@ Make a REST-service ActivityForCompany that retrieves all Activities associated 
    
       ![oppg14fig3.JPG](media/oppg14fig3.JPG)
    
-4.	Deploy and verify that the REST-service works as expected. 
+4.	Right click the REST-service and add security. Deploy and verify that the REST-service works as expected.
    
    *Guidance: After deploying, open the client and click File - > App -> Call a REST Service. Select the service that you made and type in the Resource Path and a Query Parameter (e.g. “ActivityForCompany?CompanyName=Active Cycling”). Check the response in the lower window.*
 

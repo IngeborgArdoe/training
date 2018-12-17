@@ -1,4 +1,4 @@
-## Exercise 5 - Tables
+## Exercise 4 - Tables
 You will now make a Table that lists all contact persons associated with the logged in user. The Table will have to be made available as a shortcut in the navigation pane.
 
 ####1. Create a Table called «Contacts»

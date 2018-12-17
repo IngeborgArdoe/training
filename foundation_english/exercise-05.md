@@ -1,4 +1,4 @@
-## Exercise 4: Actions in Genus Apps
+## Exercise 5: Actions in Genus Apps
 
 ### Commands and Events
 

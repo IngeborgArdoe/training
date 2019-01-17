@@ -4,9 +4,9 @@
   href: installation_setup.md
 - name: Introduction to the Model 
   href: introduction_model.md
-- name: Analysis Part One - Visualization 
+- name: Analysis Part 1 - Visualization 
   href: analysis_part1.md
-- name: Anlysis Part Two - Formula and Actions
+- name: Anlysis Part 2 - Formula and Actions
   href: analysis_part2.md
 - name: Data Mart Part 1 - Create a Data Mart
   href: datamart_part1.md

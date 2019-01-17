@@ -79,23 +79,35 @@ Try to recreate the analysis shown in class/analysis in the solution environment
 
 3. Save and preview. 
 
-### Selections with dropdown
+### Selections with selector
 
 1. Create a new tile. Scale tile and give it a header. 
 
-2. Choose a visualization **Dropdown**
+2. Choose a visualization **Selector**
 	
-    a. Create a dropdown and choose a data source. The data source will appear in the analysis and be available for selections.  
+    a. Choose a data source. The data source will appear in the analysis and be available for selection.  
 
-    b. Create two additional dropdowns in the same dropdown tile.  
+    b. Add two additional data sources in the selector.  
 
-3. Save and preview. While previewing, do a selection in the dropdown. Notice how the numbers in the different tiles change as selections are made. 
+3. Save and preview. While previewing, do a selection. Notice how the numbers in the different tiles change as selections are made. 
 
 ### Ignore selections
 
 1. In the first tile with total number of trips, open the value and choose weekday in ignore selection. 
 
 2. Save and preview. Do selections on weekday and check if number of trips changes with the selection. 
+
+### Time Slider
+
+1. Create a new tile. Scale tile and give it a header. 
+
+2. Choose a visualization **Time Slider** 
+
+	a. Choose a datasource in category that is a calender time. For example day, month or year. 
+
+	b. In value, choose which field to preview in the time slider. The value should be the same data source as the category.  
+
+3. Save and preview. Do selections in the time slider and see how the data changes. If the data source "Day" is also available in the selector, changes in the time slide will also change selected days in the selector.  
 
 ## Extra work 
 

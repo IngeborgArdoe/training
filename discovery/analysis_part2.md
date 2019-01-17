@@ -1,5 +1,5 @@
 
-# Analysis Part Two - Formula editor and data manipulation
+# Analysis Part Two - Formula editor and data manipulation 
 
 #### SESSION BY INSTRUCTOR
 _The instructor will start of by giving you an introduction to the Formula Editor and Actions. After the lesson, the participants will recreate the analysis made in class._
@@ -73,11 +73,13 @@ Actions allows you to define events in the analysis. An action can be connected 
 
 1. Create a new parameter in "Key Values". Calculate the average price per mile and make it visible in the tile. 
 
-2. Change the column chart from number of trips to total amount. 
+2. Change the column chart from number of trips to total amount for all trips. 
 
 3. In tile one, "Key Values", make the header link to "Analysis 1". Delete the tile that is only a link to "Analysis 1". 
 
-4. In "Analysis 1", create a new tile that goes back to "Analysis 2".
+4. In "Analysis 1", create a new tile that goes back to "Analysis 2". 
 
-5. Create a tile with visualization **Variable Radius Pie** that shows _% tip amount per pick up community district_.
+5. Create a tile with visualization **Word Cloud** that show the names of _community districts in relation to average price_ per community district. The larger names have a higher average price than the smaller names. 
+
+6. Create a tile with visualization **Variable Radius Pie** that shows _% tip amount and toll amount per pick up community district_. 
 

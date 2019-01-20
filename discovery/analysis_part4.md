@@ -131,3 +131,18 @@ Example url: [http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png](http:/
 
 
 You can read more about maps in the [Genus Documentation](https://docs.genus.no/users/analyze-report-and-discover/analysis/visualizations.html)
+
+**Extra work**
+
+***Comparing average passenger count and average tip amount by using Calender Heatmap:*** 
+
+1. In a new analysis, or in one of your existing ones, add a new tile and choose the Calender Heatmap visualization.
+
+2. In Data, select the data source Day under **Categories**.
+
+3. Add Tip amount (data source: taxi trip) as **Value**, and select average as **Aggregation**.
+
+4. Duplicate the tile, but change the value til average passenger count. Compare the two tiles. Is there any correlation? 
+
+
+

@@ -144,5 +144,13 @@ You can read more about maps in the [Genus Documentation](https://docs.genus.no/
 
 4. Duplicate the tile, but change the value til average passenger count. Compare the two tiles. Is there any correlation? 
 
+***Show relation between borough pick up and borough drop off in Two Dimensional Grid***
+
+1. In a new analysis, or in one of your existing ones, add a new tile and choose the Two Dimensional Grid visualization.
+
+2. In Data, select Borough DO as **Row Category** and Borough PU as **Column Category**. Under **Row Category Columns**, select Borough DO as **Data Source**, and Borough as **Field**.
+
+3. Under **Matrix Columns** select Taxi Trip as **Data Source**. Keep Count as **Aggregation**. Save and Preview. The grid should now show the relation between pick up and drop off borough (same as the sankey analysis). 
+
 
 

@@ -1,4 +1,4 @@
-# Finalization 
+﻿# Finalization 
 
 #### Session by instructor
 
@@ -7,10 +7,8 @@ _After the lesson the participants will redo some of the activities done in clas
 #### Agenda:
 
 - Analysis
-    - Initial selection
     - Self-filter
     - Theme editor
-    - Toolbar
     - Bookmarks
 - Studio and Desktop
     - Security 
@@ -28,11 +26,6 @@ _After the lesson the participants will redo some of the activities done in clas
 #### Settings 
 The settings pane is located on the right side of an analysis in edit-mode. Here you can adjust and set default appearances of the analysis.
 
-**Initial Selection**
-1. In the first analysis with selections-tile, set an initial selection. Chose a an initial selection where there also is a selection in the dropdown tile, i.e. Weekend.  
-2. Save and preview. 
-3. Notice that the dropdown selection for weekday is defined as the initial selection when opening the analysis.  
-
 **Themes**
 1. In Genus Desktop, open **Discovery** and click on **Themes** under **Analysis**. 
 2. Create a new theme. Either make your own theme, or choose one of the predefined themes **Light**, **Superlight** or **Dark**
@@ -41,7 +34,7 @@ The settings pane is located on the right side of an analysis in edit-mode. Here
 
 #### Bookmarks 
 
-1. Open the first analysis where there is a dropdown-tile Selections. 
+1. Open the first analysis where there is a Selections-tile. 
 2. Make some selections.
 3. In the Ribbon under Bookmarks click Add. Give the bookmark a name and save. 
 4. Reset the selection or make additional selections.

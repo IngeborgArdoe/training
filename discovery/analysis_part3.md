@@ -88,3 +88,7 @@ The objective of this exercise is to apply the calculated fields created in the 
 
 6. Save and preview. What does the resulting columns tell you?
 
+**Extra work**
+
+1. Add an intial selection to your analysis. Inital selections can be set under the Settings pane in your analysis editor.
+

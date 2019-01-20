@@ -1,4 +1,4 @@
-# Analysis Part Four - Advanced analysis 
+﻿# Analysis Part Four - Advanced analysis 
 
 #### Session by instructor
 _In this section the participants will learn how to use more advanced analysis techniques by visualizing data using the **Sankey** and **Map** tools._
@@ -69,7 +69,7 @@ Example url: [http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png](http:/
 
 3. Add a new map layer. **Type=GeoJSON**, **Coordinate system=WGS84**
 
-4. As **GeoJSON URL**, use this URL: [https://edudiscovery.genus.net/discover/Resources/GeojsonBorough.json](https://edudiscovery.genus.net/discover/Resources/GeojsonBorough.json)  
+4. As **GeoJSON URL**, use this URL: [http://genus-discovery.westeurope.cloudapp.azure.com/discover/Resources/GeojsonBorough.json](http://genus-discovery.westeurope.cloudapp.azure.com/discover/Resources/GeojsonBorough.json)  
 
 5. As **GeoJSON id-field** you should add the name of the field in your GeoJSON that uniquely identifies each region. This field also have to be mapped to a value in the data source you want to add the geoJSON to. In this case the field is “BoroCode”.
 
@@ -81,7 +81,7 @@ Example url: [http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png](http:/
 
 1. Add another GeoJSON map layer. 
 
-2. As **GeoJSON URL**, use this URL: [https://edudiscovery.genus.net/discover/Resources/GeojsonCommunityDistrict.json](https://edudiscovery.genus.net/discover/Resources/GeojsonCommunityDistrict.json)  
+2. As **GeoJSON URL**, use this URL: [http://genus-discovery.westeurope.cloudapp.azure.com/discover/Resources/GeojsonCommunityDistrict.json](http://genus-discovery.westeurope.cloudapp.azure.com/discover/Resources/GeojsonCommunityDistrict.json)  
 
 3. Add community district as your data source. Make sure your choice of pickup versus dropoff corresponds with what you chose for borough.
 

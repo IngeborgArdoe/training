@@ -8,6 +8,7 @@ _In this section the participants will learn how the subsets and calculated fiel
 - Subsets
 - Calculated fields
 - Combining subsets and calculated fields
+- Initial selections
 
 ## Exercise
 

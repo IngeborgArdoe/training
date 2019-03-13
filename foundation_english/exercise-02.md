@@ -79,8 +79,7 @@ Once again, we emphasize that you don't have to build Draft object classes, but 
 
 If you expand the node «Object Classes» in Studio, you should now see the Contact-object. If you expand Contact further and click on Properties, you will find the list of Object Class Properties belonging to Contact.
 
-####5. 
-on Contact's Data Properties
+####5. Contact's Data Properties
 
 Modify the following settings on the Data Properties of Contact (double-click on a Property):
 1. Company, First Name and Last Name: Tab «Data Validation», uncheck «Allow blank value». In other words, the fields become mandatory.

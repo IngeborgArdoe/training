@@ -7,7 +7,7 @@ In Genus Apps, Commands are used to specify effects that will happen in a form. 
 You can trigger a Command with an Event by for example adding the Event «On Click» to a button and point it to the Command. When the button is clicked, the actions defined by the Command is executed.
 When doing the exercises below, it may seem natural to place the Command on the same control as the Event that points to it. This will work brilliantly, but we often choose to place the Commands on a different level due to reasons we will have a closer look at in Exercise 5: Ribbon. The Ribbon is also the reason why we typically pick a symbol for each Command and change their names, e.g. from Name: Open Contact to "New Contact". 
   
-####3. Add Contact actions to the Company-form:
+####1. Add Contact actions to the Company-form:
 
 You will now add functionality to open, create and delete Contacts from the Company form.
 1. Add a command to open an existing Contact. Place the Command on the Contacts-tab by selecting the tab (you can mark the Contact grid and press Esc), and - under Properties - clicking Commands. In the dialog box, click Add.. Open a Form
@@ -46,7 +46,7 @@ You will now add functionality to open, create and delete Contacts from the Comp
    
    *Comment: If this had been a test or production environment, you could have chosen "Deploy to all" with a defined time. Changes would then become available for all users of the soultion.*
    
-####4. Create lists of Activities and Mail on Contacts (with functionality)
+####2. Create lists of Activities and Mail on Contacts (with functionality)
 
 1. Add a new field to Object Class «Activity» named "Contact".
    *Guidance: Add the field to the database by running SQL statement:
@@ -81,7 +81,7 @@ You will now add functionality to open, create and delete Contacts from the Comp
       
       *Comment: This allows the Mail to open in Outlook when a row has been double-clicked. If the object class contains File Data, File Size, File Type and File Name, the "Invoke a File"-effect will open it in its "default" program. You can look at how this is done in the Mail-grid of the Company-form.*
    
-####5. OPTIONAL: Add a Contact Log to Contact
+####3. OPTIONAL: Add a Contact Log to Contact
 
 This exercise is not strictly necessary for the remaining set of tasks. However, it contains an interesting new consept - «Part of composition» - so we recommend you to at least read through it.
 

@@ -1,7 +1,7 @@
 ## Exercise 4 - Tables
 You will now make a Table that lists all contact persons associated with the logged in user. The Table will have to be made available as a shortcut in the navigation pane.
 
-####1. Create a Table called «Contacts»
+####1. Create Table «Contacts»
 
 *Guidance: From Studio -> User Interface -> Tables -> New (Basic Table).*
 1. Data Sources: Add "Contact". Uncheck "Private".
@@ -24,7 +24,7 @@ You will now make a Table that lists all contact persons associated with the log
    ![oppg4fig2.JPG](media/oppg4fig2.JPG)
    3. Save and close the table.
    
-####2. Create a Short Cut to Contacts in the Navigation Pane
+####2. Create a Shortcut to Contacts in the Navigation Pane
 
 1. Navigate to Studio -> Navigation Pane. 
 2. Right-click on "Companies", and add a Shortcut pointing to the Table that you made (Table: Contacts, View: My Contacts). Click Next. 3. Change the name to "My Contacts", so that the name of the shortcut shown in the navigation pane matches the view. If you like, you can also add an icon to the shortcut. Click Finish.

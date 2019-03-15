@@ -83,7 +83,7 @@ You will now add functionality to open, create and delete Contacts from the Comp
    
 ####3. OPTIONAL: Add a Contact Log to Contact
 
-This exercise is not strictly necessary for the remaining set of tasks. However, it contains an interesting new consept - «Part of composition» - so we recommend you to at least read through it.
+This exercise is not strictly necessary for the remaining set of tasks. However, it contains an interesting new consept - «Part of composition» - ~~so we recommend you to at least read through it~~.
 
 We want the user to be able to write and add lines to a Contact log (similar to «Company Log» which exist under Company).
 1. Create a new Object Class called "Contact Log". When you run through the wizard to add the new Object Class, remember to define the Data Interpretation of Created By (User) and Contact (Contact). In the last step of the wizard, choose Part of Composition "Contact".

@@ -7,7 +7,7 @@ If you for some reason don't want to (or are not allowed to) install SSMS on you
 ## Download the latest release of SQL Server Management Studio (SSMS)
 https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms.
 
-After installation, launch SSMS and create a new connection to "genus-edu.database.windows.net,1458" with a user name and password provided by your instructor. 
+After installation, launch SSMS and create a new connection to "genus-edu.database.windows.net,1433" with a user name and password provided by your instructor. 
 
 *Note: You need to specify your users database in the second tab of the Connect to Server window (hit "Options <<"). Your database is the edu-db-data{X} database where {X} is your user number.
 

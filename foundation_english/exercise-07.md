@@ -9,7 +9,7 @@ A Task corresponds in many ways to a method or a function in the programming wor
 
 Tasks in Genus Apps are modeled with the same mindset that you would use if you were programming a method:
 -	A Task has a set of Data Sources. Instances of these can be given to the Task as input (as long as the Data Sources are not private) or they can by read from the data base. The Data Sources are used to modify, delete or create data. 
-- 	A Task contains a sequence of Effects (e.g. «Read Objects», «Create Object» eller «Modify Objects»), which can be places within Decision Blocks (if-statements) or Enumerator Blocks (for-loops).
+- 	A Task contains a sequence of Effects (e.g. «Read Objects», «Create Object» or «Modify Objects»), which can be places within Decision Blocks (if-statements) or Enumerator Blocks (for-loops).
 - 	A Task may also call another Task, and data/objects can be transferred back and forth.
 -	A Task can operate in memory only. You will have to place everything within Scope Blocks that have the Commit-option checked (default), if you want to make changes to the database. If you, on the hand, uncheck the Commit-option or exclude the Scope Blocks completely, nothing gets persisted to the database.
 -	A Task can have user dialogs, e.g. show the user dialog boxes with options that be used to control the execution path through the sequence of effects.

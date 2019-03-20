@@ -78,8 +78,7 @@ In this exercise, we will fetch open data from multiple public API’s, store it
    * Give the app appropriate security
 3. Deploy to all and check the website to verify that the app is published and available.
 4.	Create the following local data sources (note: occurrences=unbounded and datatypes):
-   ![oppg11fig6.JPG](media/oppg11fig6.JPG)
-   ![oppg11fig7.JPG](media/oppg11fig7.JPG)
+   ![oppg11fig17.JPG](media/oppg11fig17.JPG)
 5.	Visualization in Map-control
    * Add Map as Control
      * Edit layers on the Map-control
@@ -108,14 +107,14 @@ In this exercise, we will fetch open data from multiple public API’s, store it
    
     Now we see all bike stations. The next step is to show number of bikes available.
    
-11. We need a new Local Object to store the data temporarily as it is collected in 2 rounds, first stations and then availability. Create the local object inside the local task: name: “availability”, unbounded and fields id, bikes and locks all String. See screenshots.
+10. We need a new Local Object to store the data temporarily as it is collected in 2 rounds, first stations and then availability. Create the local object inside the local task: name: “availability”, unbounded and fields id, bikes and locks all String. See screenshots.
     ![oppg11fig12.JPG](media/oppg11fig12.JPG)
     ![oppg11fig13.JPG](media/oppg11fig13.JPG)
  
-12. Add a REST service to call https://oslobysykkel.no/api/v1/stations/availability with credentials provided above. Map it to the availability DS. Then the data must be copied from availability DS to the bikes DS via a modify object-effect. See screenshot. Note: The filter is important here to ensure correct modifications!
+11. Add a REST service to call https://oslobysykkel.no/api/v1/stations/availability with credentials provided above. Map it to the availability DS. Then the data must be copied from availability DS to the bikes DS via a modify object-effect. See screenshot. Note: The filter is important here to ensure correct modifications!
    ![oppg11fig14.JPG](media/oppg11fig14.JPG)
    ![oppg11fig15.JPG](media/oppg11fig15.JPG)
-13. Add the local task as On Load Form event as the others. Add bikes and locks to popup content. Deploy to all and verify that you can see name and availability of bikes on the map.
+12. Add the local task as On Load Form event as the others. Add bikes and locks to popup content. Deploy to all and verify that you can see name and availability of bikes on the map.
     ![oppg11fig16.JPG](media/oppg11fig16.JPG)
 
 

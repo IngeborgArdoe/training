@@ -99,7 +99,7 @@ In this exercise, we will fetch open data from multiple public API’s, store it
    * In the Actions-pane add Consume a REST Service-effect
    * URL: https://gbfs.urbansharing.com/oslobysykkel.no/station_information.json
    * Header (both in test and request): Client-Identifier:9d0c945ef25d6f01ccc382df111437cc
-     ![oppg11fig10Updated.JPG](media/oppg11fig10.JPG)
+     ![oppg11fig10Updated.JPG](media/oppg11fig10Updated.JPG)
    * Click the Test-button and click Send. The response of the API call is shown in Response Body. Click Handle Current Response. Open the entry in Response Handlers.
    * To see the result of the call, create a command executing the Get bikes task and add it as a On Load Form event. Data will be populated when the form is accessed. Deploy to all and see that the map contains Bike Stations., but for the Get bike task, to verify that consuming data from the API works in the website.
 9. Add popup context to the point layers to show the information (for instance id and name) on click. Customize it (try to be creative, maybe we don’t need label?)

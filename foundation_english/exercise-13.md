@@ -161,7 +161,7 @@ Add a Map control (found under Reporting and Visualization)
    * Open the Get bikes-task.
    * In the Actions-pane add Consume a REST Service-effect
    * URL: https://gbfs.urbansharing.com/oslobysykkel.no/station_information.json
-   ![oppg11fig10.JPG](media/oppg11fig10.JPG)
+   ![oppg11fig10Updated.JPG](media/oppg11fig10Updated.JPG)
    * Click the Test-button and click Send. The response of the API call is shown in Response Body. Click Handle Current Response. Open the Response Handlers entry, and configure it.
    * Verify that consuming data from the API works in the website.
 

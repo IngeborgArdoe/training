@@ -157,11 +157,10 @@ Add a Map control (found under Reporting and Visualization)
    ![oppg11fig9.JPG](media/oppg11fig9.JPG)
    
 2. Create a local task named "Get bikes".
-   The second source of data is Oslo Bysykkel. Link to API documentation: https://developer.oslobysykkel.no/api
+   The second source of data is Oslo Bysykkel. Link to API documentation: https://oslobysykkel.no/apne-data/sanntid
    * Open the Get bikes-task.
    * In the Actions-pane add Consume a REST Service-effect
-   * URL: https://oslobysykkel.no/api/v1/stations/
-   * Header: "Client-Identifier:9d0c945ef25d6f01ccc382df111437cc" (Click Headers and copy-paste identifier)
+   * URL: https://gbfs.urbansharing.com/oslobysykkel.no/station_information.json
    ![oppg11fig10.JPG](media/oppg11fig10.JPG)
    * Click the Test-button and click Send. The response of the API call is shown in Response Body. Click Handle Current Response. Open the Response Handlers entry, and configure it.
    * Verify that consuming data from the API works in the website.
@@ -182,7 +181,7 @@ Define Popup Contents for both the Bus Stops and the Bik Stations layers which s
 ![oppg11fig13.JPG](media/oppg11fig13.JPG)
  
 2. Add a REST service
-   Add a Rest service to call https://oslobysykkel.no/api/v1/stations/availability with the header credentials provided above. Map it to the availability DS. Then the data must be copied from availability DS to the bikes DS via a modify object-effect. See screenshot. 
+   Add a Rest service to call https://gbfs.urbansharing.com/oslobysykkel.no/station_status.json. Map it to the availability DS. Then the data must be copied from availability DS to the bikes DS via a modify object-effect. See screenshot. 
    
    *Note: The filter is important to ensure correct modifications!*
 

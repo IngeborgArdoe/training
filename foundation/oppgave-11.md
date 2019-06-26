@@ -94,12 +94,12 @@ In this exercise, we will fetch open data from multiple public API’s, store it
            - Coordinate system = WGS84
          - Select an appropriate symbol and set the size to 32px and a color of your choice.
 6. Create the following local task: Get bikes. Give the tasks appropriate security (Properties > security).
-7. The source of data is Oslo Bysykkel. Link to API documentation: https://developer.oslobysykkel.no/api
+7. The source of data is Oslo Bysykkel. Link to API documentation: https://oslobysykkel.no/apne-data/sanntid
 8. Open the Get bikes-task.
    * In the Actions-pane add Consume a REST Service-effect
-   * URL: https://oslobysykkel.no/api/v1/stations/
+   * URL: https://gbfs.urbansharing.com/oslobysykkel.no/station_information.json
    * Header (both in test and request): Client-Identifier:9d0c945ef25d6f01ccc382df111437cc
-     ![oppg11fig10.JPG](media/oppg11fig10.JPG)
+     ![oppg11fig10Updated.JPG](media/oppg11fig10.JPG)
    * Click the Test-button and click Send. The response of the API call is shown in Response Body. Click Handle Current Response. Open the entry in Response Handlers.
    * To see the result of the call, create a command executing the Get bikes task and add it as a On Load Form event. Data will be populated when the form is accessed. Deploy to all and see that the map contains Bike Stations., but for the Get bike task, to verify that consuming data from the API works in the website.
 9. Add popup context to the point layers to show the information (for instance id and name) on click. Customize it (try to be creative, maybe we don’t need label?)
@@ -111,7 +111,7 @@ In this exercise, we will fetch open data from multiple public API’s, store it
     ![oppg11fig12.JPG](media/oppg11fig12.JPG)
     ![oppg11fig13.JPG](media/oppg11fig13.JPG)
  
-11. Add a REST service to call https://oslobysykkel.no/api/v1/stations/availability with credentials provided above. Map it to the availability DS. Then the data must be copied from availability DS to the bikes DS via a modify object-effect. See screenshot. Note: The filter is important here to ensure correct modifications!
+11. Add a REST service to call https://gbfs.urbansharing.com/oslobysykkel.no/station_status.json. Map it to the availability DS. Then the data must be copied from availability DS to the bikes DS via a modify object-effect. See screenshot. Note: The filter is important here to ensure correct modifications!
    ![oppg11fig14.JPG](media/oppg11fig14.JPG)
    ![oppg11fig15.JPG](media/oppg11fig15.JPG)
 12. Add the local task as On Load Form event as the others. Add bikes and locks to popup content. Deploy to all and verify that you can see name and availability of bikes on the map.

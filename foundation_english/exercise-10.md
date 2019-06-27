@@ -126,7 +126,7 @@ Give tabs «Mail» and «Documents» in the Request-form dynamic labels which co
 
 *Guidance: It may be necessary to use the provided solution for aid.*
     
-   1. You will need a data source of type Local Object (name: "Labels") in the Request-form. Create two fields "Mail Label" and "Document Label" of Type = Function. For Data Calculation, use Formula (e.g. "Mail  (" + Misc.ifNull(mail.size(),0).toString() + ")"  )
+   1. You will need a data source of type Local Object (name: "Labels") in the Request-form. Create two fields "Mail Label" and "Document Label" of Type = Function. For Data Calculation, use Formula (e.g. "Mail  (" + Misc.ifNull(mail.count(),0).toString() + ")"  )
    2. The local object's Data Filter can't be read from the database, but you can set Data Filter = "Create Single Object". This will create a Labels object when the form is opened.
    3. Bind the Label properties of tabs «Documents» and «Mail» to fields «Label Values.Documents Label» and «Label Values.Mail Label», respectively. 
 

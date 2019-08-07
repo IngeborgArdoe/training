@@ -6,4 +6,4 @@
  
 * Advanced Course in Genus Studio – Genus Apps User Interface (12 hours). This course covers the modeling of mobile apps and web apps in Genus Studio by setting up Forms for Genus Apps, addressing the use of app UI controllers and the logic behind. Participants should have completed the course "Foundations of Genus App Platform" in advance. This course targets experienced modelers.
 
-_These courses are not available yet._
+_These courses are currently not available online._

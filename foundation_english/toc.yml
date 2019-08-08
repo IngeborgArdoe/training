@@ -21,12 +21,12 @@
     href: exercise-04.md
   - name: 5 - Actions
     href: exercise-05.md  
-- name: Exercises Part III - Ribbon, logic and rules (6-8)
+- name: Exercises Part III - Logic, tasks and Ribbon (6-8)
   href: exercise-06.md
   items:
-  - name: 6 - Ribbon
+  - name: 6 - Logic and tasks
     href: exercise-06.md
-  - name: 7 - Logic and tasks
+  - name: 7 - Ribbon
     href: exercise-07.md
   - name: 8 - Rules
     href: exercise-08.md

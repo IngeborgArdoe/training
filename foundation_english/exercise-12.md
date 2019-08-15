@@ -11,7 +11,7 @@ Make a REST-service ActivityForCompany that retrieves all Activities associated 
 
 1.	Add a new REST service
 
-   Find REST Services in the Navigation Pane, right-click and select New. Specify Name and Path Segment (e.g. type “GenusBikeParts” in both). Save.
+   Find REST Services in the Navigation Pane, right-click and select New. Specify Name and Path Segment (e.g. type “Company” in both). Save.
    
 2.	Add a Resource
 

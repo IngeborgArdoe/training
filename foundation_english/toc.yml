@@ -10,21 +10,27 @@
   items:
   - name: 1 - The client
     href: exercise-01.md
-  - name: 2 - Object Classes og Properties
-    href: exercise-02.md  
+  - name: 2.1 - Object Classes & Properties
+    href: exercise-02-1.md  
+  - name: 2.2 - Object Classes & Properties
+    href: exercise-02-2.md  
 - name: Exercises Part II - Forms, Tables and actions (3-5)
   href: exercises3-5.md
   items:
-  - name: 3 - Forms
-    href: exercise-03.md
+  - name: 3.1 - Forms
+    href: exercise-03-1.md
+  - name: 3.2 - Forms
+    href: exercise-03-2.md
   - name: 4 - Tables
     href: exercise-04.md
-  - name: 5 - Actions
-    href: exercise-05.md  
+  - name: 5.1 - Actions
+    href: exercise-05-1.md  
+  - name: 5.2 - Actions
+    href: exercise-05-2.md  
 - name: Exercises Part III - Logic, tasks and Ribbon (6-8)
   href: exercise-06.md
   items:
-  - name: 6 - Logic and tasks
+  - name: 6 - Logic & tasks
     href: exercise-06.md
   - name: 7 - Ribbon
     href: exercise-07.md

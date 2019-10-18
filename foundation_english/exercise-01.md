@@ -17,5 +17,5 @@ Familiarize yourself with your own solution. Use the shortcut (to Genus Desktop)
 
 
 <table>
-   <tr><td><a href="casedescription-genus-crm.md"><- Previous</a></td><td align="right"><a href="exercise-02.md">Next -></a></td></tr>
+   <tr><td><a href="casedescription-genus-crm.md"><- Previous</a></td><td align="right"><a href="exercise-02-1.md">Next -></a></td></tr>
 </table>

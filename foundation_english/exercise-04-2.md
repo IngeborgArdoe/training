@@ -30,12 +30,12 @@ You will now make a Table that lists all contact persons associated with the log
 2. Right-click on "Companies", and add a Shortcut pointing to the Table that you made (Table: Contacts, View: My Contacts). Click Next. 3. Change the name to "My Contacts", so that the name of the shortcut shown in the navigation pane matches the view. If you like, you can also add an icon to the shortcut. Click Finish.
 4. Deploy to yourself and verify that you can see all your contacts (Note: you may have to put yourself as responsible for some of them first). Check also that you can open and create Contacts.
 
-####3. OPTIONAL: Define Row Format for Inactive Contacts. 
+####3. Define Row Format for Inactive Contacts. 
 
 1. Highlight inactive contact persons by coloring the rows gray. Navigate to Layout and mark the Row («Contact»). In the menu on the left, open Automatic Formatting and add a new rule named "Inactive". Finally, select some kind of gray as Foreground and use "Contact.State = Inactive" as Condition.
 2. Deploy again og verify your latest modification by setting a contact person to "inactive" in the client.
 
 
 <table>
-   <tr><td><a href="exercise-04.md"><- Previous</a></td><td align="right"><a href="exercise-06.md">Next -></a></td></tr>
+   <tr><td><a href="exercise-04.md"><- Previous</a></td><td align="right"><a href="exercise-05-1.md">Next -></a></td></tr>
 </table>

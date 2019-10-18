@@ -1,6 +1,9 @@
 ## Exercise 7 - Ribbon
 **SESSION BY INSTRUCTOR:** *The instructor will start off by giving you a brief introduction to the topic.*
 
+### Ribbon
+Both Forms and Tables can get a user friendly menu structure through Ribbon. A Ribbon is a menu structure that most users are familiar with and see every day in Microsoft Office-products and in their operating system (Windows 10). Commands can be run from the Ribbon, and one can use Context to show different menu elements for different parts of the interface (when navigating).
+
  ![oppg5fig1.JPG](media/oppg5fig1.JPG)
 
 In this exercise, you will expand the Company-form with Ribbon-functionality. A Ribbon enhances the user's learning and understanding of a new display (i.e. Form or Table), as relevant actions/commands are made clearly visible.

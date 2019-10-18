@@ -14,12 +14,9 @@ Forms can, in their simplest form, be a display of one single object (e.g. displ
 Tables are used to display simple lists or aggregated lists of data. One can do searches in them or apply various filters. Tables are typically placed in the Navigation Pane on the left-hand side of the client, e.g. "Customers" in Genus CRM.
 Tables can also be "plugged" into Forms (e.g. list Contacts associated with a Company), but for such ad hoc purposes, Forms also have their own control (Grid) which is quicker to set up. However, if an object is going to be listed several places, a Table may be the preferred solution.
 
-##Ribbon
-Both Forms and Tables can get a user friendly menu structure through Ribbon. A Ribbon is a menu structure that most users are familiar with and see every day in Microsoft Office-products and in their operating system (Windows 10). Commands can be run from the Ribbon, and one can use Context to show different menu elements for different parts of the interface (when navigating).
- 
 The exercises concerning user interface are not as detailed as those concerning the rest of the modeling. Hence, you are free to define much of the solution's appearance yourself. 
 
 
 <table>
-   <tr><td><a href="exercise-02.md"><- Previous</a></td><td align="right"><a href="exercise-03.md">Next -></a></td></tr>
+   <tr><td><a href="exercise-02-2.md"><- Previous</a></td><td align="right"><a href="exercise-03-1.md">Next -></a></td></tr>
 </table>

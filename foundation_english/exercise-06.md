@@ -79,7 +79,7 @@ Navigate to Form «Company», and add a command that runs your task. Place the c
 
 *Note: Define the Data Filter of the command, i.e. what to filter into the task's data source «Contacts input». It should be a *Two-Way binding to Selected Objects in the Data Source «Contact»."Two-Way", in this context, means that if changes are not persisted (committed/saved) in the task, they are brought back to the Comapany-form and the "Save"-botton is made available.* -->
  
-### 3. Paste new Mail from File - store e-mail under contact
+### 3. OPTIONAL: Paste new Mail from File - store e-mail under contact
 You will now make it possible to create Mail on contacts. This task will be similar to the task "Paste new Mail from File (Company)" and we will therefore use this task as a template.
 
 #### Copying a task and adding Contact Data Source
@@ -97,5 +97,5 @@ You will now make it possible to create Mail on contacts. This task will be simi
 Add the action to the mail grid in the Contact Form. The command will need to run the global task with Contact as input for contact and "Get objects from the clipboard" for the Mail Message. The event should be set up on the grid for the Context Menu Item "Paste special".
 
 <table>
-   <tr><td><a href="exercise-05.md"><- Previous</a></td><td align="right"><a href="exercise-07.md">Next -></a></td></tr>
+   <tr><td><a href="exercise-05-2.md"><- Previous</a></td><td align="right"><a href="exercise-07.md">Next -></a></td></tr>
 </table>

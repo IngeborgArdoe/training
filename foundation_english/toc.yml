@@ -11,9 +11,9 @@
   - name: 1 - The client
     href: exercise-01.md
   - name: 2.1 - Object Classes & Properties
-    href: exercise-02-1.md  
+    href: exercise-02-1.md
   - name: 2.2 - Object Classes & Properties
-    href: exercise-02-2.md  
+    href: exercise-02-2.md
 - name: Exercises Part II - Forms, Tables and actions (3-5)
   href: exercises3-5.md
   items:

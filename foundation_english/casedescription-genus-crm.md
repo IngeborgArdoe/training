@@ -10,7 +10,7 @@
 -	Users (users that have access to the solution)
 -	Codes (various code domains)
 
-Companies have a flag that indicates whether they are customers or not. This is to keep track of active customers, in addition to earlier customers and/or prospects.
+Companies have a flag which indicates whether they are customers or not. This is to keep track of active customers, in addition to earlier customers and/or prospects.
 Each company has one or more Contacts, which are the persons to contact, conduct sales meeting with, receive requests from and so on.
 Activities are used to plan meetings. When executed, their status is set to "completed". It is possible to drag-and-drop activities between Outlook and Genus CRM. Activities also have a responsible user and can be linked to a contact.
 

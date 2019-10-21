@@ -13,7 +13,7 @@
    This adds a column ContactID to the Activity-table in the database, with data type identical to the primary key of Contact).*
    Then, right-click on Activity in Studio and choose «Add Object Class Properties». Remember to set the Data Interpretation under «Property Definition» to «Contact»
 2. Add a new field called "Contact" to Object Class «Mail».
-   *Guidance: Same as exercise 3.4 above (substitute "Activity" with "Mail" in the SQL query)*  
+   *Guidance: Similar to above - but for Mail, not Activitiy : )  
 3. Make Activity.Contact available in the user interface.
    1. Open form Activity, and include property "Contact" - from the Activity data source - to it as a field (ComboBox) below Company.
    2. The drop-down should be limited to show only Active Contacts belonging to the Company of the selected Activity. Hence, you will have to define the field's Data Restriction.

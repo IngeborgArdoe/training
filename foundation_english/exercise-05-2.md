@@ -41,6 +41,7 @@ This exercise is not strictly necessary for the remaining set of tasks. However,
 
 We want the user to be able to write and add lines to a Contact log (similar to «Company Log» which exist under Company).
 1. Create a new Object Class called "Contact Log". When you run through the wizard to add the new Object Class, remember to define the Data Interpretation of Created By (User) and Contact (Contact). In the last step of the wizard, choose Part of Composition "Contact".
+   
    *Guidance: You can use the following SQL query to create the database table:*
    
    ```

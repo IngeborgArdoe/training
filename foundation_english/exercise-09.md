@@ -31,7 +31,7 @@ Right-click within the Object Class Diagram (or in the Object Class section of t
 
 The reason is that you will soon set up a "file preview" which utilizes calls against the server. Naturally, the server needs to know about the new object class for this to work.
 
-####3. Make a task "Paste new Document from File". 
+####3. Create a task "Paste new Document from File". 
 
 This should take Company and File(s) as input, and create Document(s).
 

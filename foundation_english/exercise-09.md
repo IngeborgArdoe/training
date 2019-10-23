@@ -35,9 +35,9 @@ The reason is that you will soon set up a "file preview" which utilizes calls ag
 
 This should take Company and File(s) as input, and create Document(s).
 
-*Guidance: You will need 3 data sources; Company (name="Company (input)", cardinality="one", private=no), General File (name="General files (input), cardinality="unbound", private=no) and Document (name="Documents (to be created)", cardinality=unbound, private=yes). The task is logically very simple. All you need is a Scope and a Create Objects effect. If you need inspiration, you can look at the equivalent task «Paste new Mail from file». Remember to define the security of the task after creation.*
+*Guidance: You will need 3 data sources; Company (name="Company (input)", Max Occurrences="one", private=no), General File (name="General files (input), Max Occurrences="unbound", private=no) and Document (name="Documents (to be created)", Max Occurrences=unbound, private=yes). The task is logically very simple. All you need is a Scope and a Create Objects effect. If you need inspiration, you can look at the equivalent task «Paste new Mail from file». Remember to define the security of the task after creation.*
 
-*Tip: The file-input comes with cardinality "unbounded". For each file, a document has to be made. Here you can either make use of an Enumerator which loops through the General File data source OR (even simpler) you can define a Create Object on data source Document which is bound to the General File data source at the top level. The latter option will create a document per instance in the "General Files (input)" data source!*
+*Tip: The file-input comes with Max Occurrances "unbounded". For each file, a document has to be made. Here you can either make use of an Enumerator which loops through the General File data source OR (even simpler) you can define a Create Object on data source Document which is bound to the General File data source at the top level. The latter option will create a document per instance in the "General Files (input)" data source!*
 
 ![oppg8fig1.JPG](media/oppg8fig1.JPG)
 

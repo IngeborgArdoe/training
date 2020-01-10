@@ -1,3 +1,3 @@
 # training
-Docs for Genus training 
+Docs for Genus training
 

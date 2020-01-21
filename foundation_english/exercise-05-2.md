@@ -35,9 +35,9 @@
       
       *Comment: This allows the Mail to open in Outlook when a row has been double-clicked. If the object class contains File Data, File Size, File Type and File Name, the "Invoke a File"-effect will open it in its "default" program. You can look at how this is done in the Mail-grid of the Company-form.*
    
-####3. OPTIONAL: Add a Contact Log to Contact
+####3. Add a Contact Log to Contact
 
-This exercise is not strictly necessary for the remaining set of tasks. However, it contains an interesting new consept - «Part of composition» - ~~so we recommend you to at least read through it~~.
+This exercise is not strictly necessary for the remaining set of tasks. However, it contains an interesting new concept - «Part of composition».
 
 We want the user to be able to write and add lines to a Contact log (similar to «Company Log» which exist under Company).
 1. Create a new Object Class called "Contact Log". When you run through the wizard to add the new Object Class, remember to define the Data Interpretation of Created By (User) and Contact (Contact). In the last step of the wizard, choose Part of Composition "Contact".
@@ -54,7 +54,7 @@ We want the user to be able to write and add lines to a Contact log (similar to 
     )
    ```
    
-   By setting Contact Log to be part of Contact's composition, Contact Log data will always be read together with Contact, and inherit both security and audit trail from it. Set it up like the screenshot below:
+   By setting Contact Log to be part of Contact's composition, Contact Log will inherit security and audit trail settings from the Contact Object Class. Set it up like the screenshot below:
 ![oppg3fig9.JPG](media/oppg3fig9.JPG)
 2. Assign Default values to Created By and Created Date, and set Subject to "required".
 3. Make a form «Contact Log».

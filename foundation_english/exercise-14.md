@@ -3,15 +3,15 @@
 
 These exercises are optional and should be done only if time allows. That being said - we recommend you to at least read through the exercises.
 
-####1. OPTIONAL: Order Confirmation
+####1. Order Confirmation
 
-Make a new task "Order Confirmation", which takes a Request as input and from it generates an order confirmation (Word document). Information that will be merged into the document is Order No, Subject, Description, Expected Delivery Date, Order Value NOK, Company Name, Org No, Contact Name (name of person ordering) and Responsible Name (name of user).
+Create a new task "Order Confirmation", which takes a Request as input and from it generates an order confirmation (Word document). Information that will be merged into the document is Order No, Subject, Description, Expected Delivery Date, Order Value NOK, Company Name, Org No, Contact Name (name of person ordering) and Responsible Name (name of user).
 
 1. Create a Schema "Order Confirmation" with "OrderConfirmation" as root node (Complex Type) and all the fields above as Elements (all can be of data type String).
 
    *Guidance:* 
    
-   *This exercise requires that you have been through a Schema setup review. A Schema is basically a description of the XML layout. You will later generate XML with your schema through the "Create Objects" effect (data source = schema). This XML can then be used as input to the "Merge Data to a Document" effect along with a Word file. The Word file will contain "tags" (merge fields) with names identical to those of the XML elements, allowing data to be merged into the document. Take a look at the provided solution for inspiration.*
+   *This exercise requires that you have been through a Schema setup review. A Schema (or XML Schema Description - xsd) is basically a description of the XML layout. The editor in Genus helps you set this schema up correctly. You will later generate XML with your schema through the "Create Objects" effect (data source = schema). This XML can then be used as input to the "Merge Data to a Document" effect along with a Word file. The Word file will contain "tags" (merge fields) with names identical to those of the XML elements, allowing data to be merged into the document. Take a look at the provided solution for inspiration.*
    
 2. Create a Word document for Order Confirmation with merge fields equivalent to the element names of the schema just made.
    
@@ -31,7 +31,7 @@ Make a new task "Order Confirmation", which takes a Request as input and from it
 
 ####2. OPTIONAL: Send Order Confirmation
 
-Make a task called "Send Order Confirmation" which allows the user to select among existing Order Confirmations (Documents on the Request) and afterwards opens Outlook with the document attached. The task should also store the Mail object. Make the task available in the Ribbon of the Request-form.
+Create a task called "Send Order Confirmation" which allows the user to select among existing Order Confirmations (Documents on the Request) and afterwards opens Outlook with the document attached. The task should also store the Mail object. Make the task available in the Ribbon of the Request-form.
   
 *Guidance:*
 

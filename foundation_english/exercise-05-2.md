@@ -81,5 +81,5 @@ We want the user to be able to write and add lines to a Contact log (similar to 
    
 
 <table>
-   <tr><td><a href="exercise-05-1.md"><- Previous</a></td><td align="right"><a href="exercise-06.md">Next -></a></td></tr>
+   <tr><td><a href="exercise-05-1.md"><- Previous</a></td><td align="right"><a href="exercise-06-1.md">Next -></a></td></tr>
 </table>

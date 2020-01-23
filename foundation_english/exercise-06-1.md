@@ -65,37 +65,7 @@ One important thing that we haven't considered yet is security. Access is given 
    3. Enabling: Select "On selected objects" (the task should be enabled when one or more rows are marked).
    4. Filter Data: Set "Two way binding to objects in the data source: Contact" with Objects: Selected.
    *Note: Defining a data filter like this is a quick way of saying "I want my task's data source «Contacts input» to be populated with all contact persons marked in the table by the user". When clicking the Action «Change Responsible for Contact» in the Action pane, the chosen contact persons are copied into the task «Change Responsible for Contact» and the task's effects are executed.* 
-   
-<!-- ### 2. Ribbon
-Add «Change Responsible for Contact» to the Ribbon in the Contact table.
-1. Name the event "Change Responsible".
-2. Choose symbol #692 with overlay #13
-3. Open Customize Ribbon. Under Main Tabs, add a new Tab Section. Call it "Responsible"
-4. Mark tab section "Responsible" and double-click on the "Change Responsible"-event (located under Table Commands). -->
-
-<!-- #### OPTIONAL (but recommended!)
-Add Change Responsible Contact to Ribbon
-Navigate to Form «Company», and add a command that runs your task. Place the command on the «Contacts»-grid and make sure the enabling is correct. Remember also to create an Event that triggers the command from the grid. The command should also be made available from the Ribbon (Context Tab Group Contact, in a new Tab Section called "Responsible Contact").
-
-*Note: Define the Data Filter of the command, i.e. what to filter into the task's data source «Contacts input». It should be a *Two-Way binding to Selected Objects in the Data Source «Contact»."Two-Way", in this context, means that if changes are not persisted (committed/saved) in the task, they are brought back to the Comapany-form and the "Save"-botton is made available.* -->
- 
-### 3. OPTIONAL: Paste new Mail from File - store e-mail under contact
-You will now make it possible to create Mail on contacts. This task will be similar to the task "Paste new Mail from File (Company)" and we will therefore use this task as a template.
-
-#### Copying a task and adding Contact Data Source
-1. Copy the task "Paste new Mail from File (Company)" using right clicking the task or using "ctrl+c, ctrl+v" and name the copy "Paste new Mail from File (Contact).
-2. Add security to the task: "Users" should be able to Find and List and Read and Execute.
-3. Add a new data source Contact and name it "Contact (input)" with appropriate cardinality and privacy. You can also check for "Cannot be blank" as the e-mails need a Contact to be added to.
-
-#### Actions
-1. In the Create Object(s)-effect:
-   1. Remove "Company" by right-clicking the value and choosing "Clear value".
-   2. Add Contact (input).Company as new Value for the Company-field on Mail.
-   3. Add Contact (input) as Value for the Contact-field on Mail.
-   
-#### Adding a command and an event
-Add the action to the mail grid in the Contact Form. The command will need to run the global task with Contact as input for contact and "Get objects from the clipboard" for the Mail Message. The event should be set up on the grid for the Context Menu Item "Paste special".
 
 <table>
-   <tr><td><a href="exercise-05-2.md"><- Previous</a></td><td align="right"><a href="exercise-07.md">Next -></a></td></tr>
+   <tr><td><a href="exercise-05-2.md"><- Previous</a></td><td align="right"><a href="exercise-06-2.md">Next -></a></td></tr>
 </table>

@@ -64,5 +64,5 @@ All reports (given that you have the rights to see them) are available from the 
 
    
 <table>
-   <tr><td><a href="exercise-10.md"><- Previous</a></td><td align="right"><a href="exercise-12.md">Next -></a></td></tr>
+   <tr><td><a href="exercise-10-2.md"><- Previous</a></td><td align="right"><a href="exercise-11-2.md">Next -></a></td></tr>
 </table>

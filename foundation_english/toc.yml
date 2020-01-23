@@ -47,16 +47,21 @@
     href: exercise-10-1.md
   - name: 10.2 - Request
     href: exercise-10-2.md
-  - name: 11 - Analysis and reports
-    href: exercise-11.md
-- name: Exercises Part V - REST and Genus Apps (12-13)
+- name: Exercises Part V - Reports and analysis (12-13)
+  href: exercise-11-1.md
+  items:
+  - name: 11.1 - Reports
+    href: exercise-11-1.md
+  - name: 11.2 - Analysis
+    href: exercise-11-2.md
+- name: Exercises Part VI - REST and Genus Apps (12-13)
   href: exercise-12.md
   items:
   - name: 12 - REST Services
     href: exercise-12.md
   - name: 13 - Genus Apps
     href: exercise-13.md
-- name: Exercises Part VI - Mail Merge, Agents, Misc (14-15)
+- name: Exercises Part VII - Mail Merge, Agents, Misc (14-15)
   href: exercise-14.md
   items:
   - name: 14 - Mail Merge

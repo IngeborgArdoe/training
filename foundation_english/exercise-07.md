@@ -44,9 +44,9 @@ Finally, it is worth mentioning that the end user can hide the Ribbon if he/she 
 2. Verify that the Event for making a new contact is named "New Contact". Set Tip = "Contact", and find a suitable symbol (# 1081). 
 3. Place the event under Main Tabs – Home -> New.
 
-####4. OPTIONAL: Contact Log in Ribbon
+####4. Context Tab Group: Contact Log in Ribbon
 
-Add a Context Tab Group for Contact Log in the Contact-form Ribbon.
+Add a Context Tab Group for Contact Log in the Contact-form Ribbon. 
 
 
 <table>

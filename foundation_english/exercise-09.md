@@ -63,5 +63,5 @@ This task will be the equivalent to "Copy Mail to Clipboard as Mail Message". Pu
 The next thing for you to make is the functionality for sending e-mail to contact persons and store them as «Mail». This exercise is again optional, but we recommend you to at least browse through it and look at the solution.
    
 <table>
-   <tr><td><a href="exercise-08.md"><- Previous</a></td><td align="right"><a href="exercise-10.md">Next -></a></td></tr>
+   <tr><td><a href="exercise-08.md"><- Previous</a></td><td align="right"><a href="exercise-10-1.md">Next -></a></td></tr>
 </table>

@@ -33,5 +33,5 @@
    The same username and password can be used to access the provided solution.
 
 <table>
-   <tr><td align="right"><a href="installation-of-genus-app-platform.md">Next -></a></td></tr>
+   <tr><td align="right"><a href="installation-of-sql-server-mgmt-studio.md">Next -></a></td></tr>
 </table>

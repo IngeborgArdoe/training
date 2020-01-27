@@ -34,11 +34,11 @@ The drafted object «Contact» is now made. Notice that the new object is gray-c
    
 ####2. Add Properties to Contact:
 
-* FirstName (varchar(60))
-* LastName (varchar(60))
+* FirstName (varchar(100))
+* LastName (varchar(100))
 * Company (Outbound reference to object “Company”)
-* Mail (varchar(120))
-* Mobile (varchar(20))
+* Mail (varchar(100))
+* Mobile (varchar(100))
 * Position (varchar(100))
 * State (Outbound reference to object / code domain “Object State”. This is an internal code domain consisting of «Active» and «Inactive»)
 * Created Date (datetime)

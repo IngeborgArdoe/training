@@ -1,4 +1,4 @@
-## Exercise 9 - Documents, Mail
+## Exercise 9 - Documents
 Your next task will be to add the possibility of dragging documents into a tab in the Company-form.
 
 For this, you will have to model an object «Document» (like «Mail») that allows the user to save the file in the database. You will also have to build the functionality for handling "drag-and-drop" to and from Genus CRM.

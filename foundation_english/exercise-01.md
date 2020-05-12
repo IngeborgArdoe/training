@@ -15,7 +15,6 @@ Familiarize yourself with your own solution. Use the shortcut (to Genus Desktop)
    4. Click on Discovery in the Navigation Pane on the left. Open a predefined report under Reports.
 6. Navigate to Administration. Take a look at Users and General Codes.
 
-
 <table>
    <tr><td><a href="casedescription-genus-crm.md"><- Previous</a></td><td align="right"><a href="exercise-02-1.md">Next -></a></td></tr>
 </table>

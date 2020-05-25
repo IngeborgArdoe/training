@@ -60,7 +60,7 @@ Model a Request-table with a view that displays all Requests with State="Open". 
 ####10. Make a View Button in the Navigation Pane
 
 Add a shortcut (name "Requests") to the Navigation Pane that points to the "Open Requests"-table. Remember to define the security of the View Button first, so that the security is inherited by all its elements. Choose a suitable symbol (e.g. 1972).
-![oppg9fig3.JPG](media/oppg9fig2.JPG)
+![oppg9fig3.JPG](media/oppg9fig3.JPG)
   
 ####11. OPTIONAL: Make a rule "Set Closed Date and Canceled Date when State changed"
 

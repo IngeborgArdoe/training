@@ -1,6 +1,6 @@
 # Installation of Genus Apps
 
-1. In case you haven't installed Genus Apps on your computer yet: Open the web browser and type http://genus-stud1.westeurope.cloudapp.azure.com/edu/download/Setup.exe . This will download Genus Apps.
+1. In case you haven't installed Genus Apps on your computer yet: Open the web browser and type http://genus-stud1.westeurope.cloudapp.azure.com/edu/download/Setup.exe . This will download Genus.
 
 2. An environment will be assigned to you:
   

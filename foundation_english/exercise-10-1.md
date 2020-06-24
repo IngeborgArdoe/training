@@ -58,7 +58,7 @@ In the New Object Domain wizard, remember to set correct Data Interpretations.
    
    2. Open Object Class «Request» (right-click -> Open) and define the following properties:
       - Search (set search properties, under «Search Properties» in tab «Search»).
-      - Events -> Auditing (want to log all changes made on Request objects, check «Enable Auditing» in tab «Events»).
+      - Auditing (We want to log all changes made on Request objects, check «Enable Auditing» in tab «Events»).
       - Display -> Naming (field «Subject» should at least be a part of the naming, in tab «Display»).
       -	Data Sorting (default sorting on «Company» ascending and «Received Date» descending, in tab «Data Sorting»).
   

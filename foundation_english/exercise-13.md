@@ -201,7 +201,7 @@ Define Popup Contents for both the Bus Stops and the Bik Stations layers which s
 1. Get departure data for the bus
    
    Get departure data for the bus and display it in the form
-   (http://reisapi.ruter.no/StopVisit/GetDepartures/3010146).
+   (https://reisapi.ruter.no/Help/Api/GET-StopVisit-GetDepartures-id_datetime_transporttypes_linenames).
 
 2. Get weather forecasts 
    

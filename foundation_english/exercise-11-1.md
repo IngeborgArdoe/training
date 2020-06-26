@@ -11,14 +11,14 @@ A new report is created from Genus Studio -> Discovery -> Reports -> New. The to
 
 ![oppg10fig1.JPG](media/oppg10fig1.JPG)
  
-To make an Object Class available as a dimension in a report, you must specifically assign this feature to the Object Class (right-click on the Object Class -> Open -> Data Aggregation). Likewise, you will have to check the "Enable as Measure" option (right-click on the Object Class Property -> Open -> Data Aggregation) if you want to use an Object Class Property as a Measure for calculating sums, counts, etc (ref Activity's No Of Activities property).
+To make an Object Class available as a dimension in a report, you must specifically assign this feature to the Object Class (right-click on the Object Class -> Open -> Data Aggregation). Likewise, you will have to check the "Enable as Measure" option (right-click on the Object Class Property -> Open -> Data Aggregation) if you want to use an Object Class Property as a Measure for calculating sums, counts, etc (ref Activity's No Of Activities property). **Note that this is done already.**
 
 In addition, you will have to specify how to group No of Activities per month, as this can be based either on «Created date» or «Completed date». You will have to determine which links to use ("Connections") in the report.
 
 Connections that will become available in the report, and hence possible to choose from, are defined under Object Classes in Studio:
 ![oppg10fig2.JPG](media/oppg10fig2.JPG)
  
-*Note: You don't have to specify the link between Activity and Company, as Activity has a Company-field (the tool understands). However, if No of Activities is to be grouped by for example Country, you will have to add a Connection from Activity to Country through Company in the list shown above. Note also that when you are working in Genus Discovery, you are working in the client. Accordingly, if you for example add a new connection to an Object Class, you will have to deploy in order to make the Connection available for reports.*
+*Note: You don't have to specify the link between Activity and Company, as Activity has a Company-field directly. However, if No of Activities is to be grouped by for example Country, you will have to add a Connection from Activity to Country through Company in the list shown above. Note also that when you are working in Genus Discovery (reports), you are working in the client. Accordingly, if you for example add a new connection to an Object Class, you will have to deploy in order to make the Connection available for reports.*
 
 In the report, you can set up connections from No of Activities to the "Month" and "Company" dimensions by right-clicking No of Activities -> Connections:
  ![oppg10fig3.JPG](media/oppg10fig3.JPG)

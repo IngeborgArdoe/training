@@ -109,7 +109,7 @@ Check the website to verify that the app is published and available.
 
 *Note: Occurrences=Unbounded and Datatypes as defined in the pictures below:*
 
-![oppg11fig6.JPG](media/oppg11fig6.JPG)
+![oppg11fig6updated.JPG](media/oppg11fig6updated.JPG)
 
 ####5. Visualization in Map-control
 
@@ -140,20 +140,20 @@ Add a Map control (found under Reporting and Visualization)
    
    * Configure the response handler as the screenshot illustrates:
    
-   ![oppg11fig8.JPG](media/oppg11fig8.JPG)  
+   ![oppg11fig8updated.JPG](media/oppg11fig8updated.JPG)  
    
    * When the task “Get bikes” is executed, the API is called and the return data is mapped to the specified data source, creating X number of Bike stations with its associated data.
    * To see the result of the call, create a command executing the Get bikes task and add it as a On Load Form event. Data will be populated when the form is accessed. Deploy to all and see that the map contains Bike stations.
    
    *Note: Give the task appropriate security (Properties > security).*
    
-   ![oppg11fig9.JPG](media/oppg11fig9.JPG)
+   ![oppg11fig9updated.JPG](media/oppg11fig9updated.JPG)
 
 ####7. Add Popup Content to the point layer
 
 Define Popup Contents for the Bik Stations layers which show information (for instance id and name) on click. Customize it (try to be creative, maybe we don’t need label?)
 
-![oppg11fig11.JPG](media/oppg11fig11.JPG)
+![oppg11fig11updated.JPG](media/oppg11fig11updated.JPG)
 
    
 ####8. Display available and locked bikes

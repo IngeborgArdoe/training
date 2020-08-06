@@ -82,7 +82,7 @@ In the repeating section, add a button for changing the state of the activity to
 ![oppg11fig5.JPG](media/oppg11fig5.JPG)
   
 ### Open Data, Local Objects and Map
-In this exercise, we will fetch open data from multiple public API’s, store it in local objects and visualize the aggregate data in a map. Note that we do not store any of the data in the database, everything is stored in memory as the client uses the app.
+In this exercise, we will fetch open data from public API’s, store it in local objects and visualize the aggregate data in a map. Note that we do not store any of the data in the database, everything is stored in memory as the client uses the app.
 
 ####1. Create a new web-form
 
@@ -105,13 +105,11 @@ Select Apps in the “User Interface” section of the navigation pane.
 
 Check the website to verify that the app is published and available.
 
-####4. Create local objects Bike Stations and Bus Stops
+####4. Create local object Bike Stations
 
 *Note: Occurrences=Unbounded and Datatypes as defined in the pictures below:*
 
 ![oppg11fig6.JPG](media/oppg11fig6.JPG)
-
-![oppg11fig7.JPG](media/oppg11fig7.JPG)
 
 ####5. Visualization in Map-control
 
@@ -128,46 +126,32 @@ Add a Map control (found under Reporting and Visualization)
      - Easting = longitude
      - Coordinate system = WGS84
    * Select an appropriate symbol, set the size to 32px, and choose a color of your choice.
- 3. Add Layer for Bus Stops
-    * Type = Point
-    * DS = Bus Stops
-    * Location fields
-      - Northing = longitude (!)
-      - Easting = latitude   (!)
-      - Coordinate system = UTM32N
-     * Select an appropriate symbol, set the size to 32px, and choose a color of your choice.
 
-####6. Create local tasks "Get stops" and "Get bikes". 
-
-1. Create a local task named "Get stops"
-   The first source of data is Ruter (which plans, coordinates, orders and markets public transport in Oslo and Akershus). Link to API documentation: https://ruter.no/labs/.
-   * Open the Get stops-task
-   * In the Actions-pane add Consume a REST Service-effect
-   * URL: http://reisapi.ruter.no/Line/GetStopsByLineId/30
-   * Click the Test-button and click Send. The response of the API call is shown in Response Body. Click Handle Current Response. Open the entry in Response Handlers by double-clicking or pressing Modify. Genus has created a mapping from the test-run (this is VERY time consuming for the developer of the app, appreciate Genus :smile:).
-   * Configure the response handler as the screenshot illustrates:
+####6. Create local task "Get bikes". 
    
-   ![oppg11fig8.JPG](media/oppg11fig8.JPG)  
-   
-   * When the task “Get stops” is executed, the API is called and the return data is mapped to the specified data source, creating X number of Bus stops with its associated data.
-   * To see the result of the call, create a command executing the Get stops task and add it as a On Load Form event. Data will be populated when the form is accessed. Deploy to all and see that the map contains Bus stops.
-   
-   *Note: Give the task appropriate security (Properties > security).*
-   
-   ![oppg11fig9.JPG](media/oppg11fig9.JPG)
-   
-2. Create a local task named "Get bikes".
+1. Create a local task named "Get bikes".
    The second source of data is Oslo Bysykkel. Link to API documentation: https://oslobysykkel.no/apne-data/sanntid
    * Open the Get bikes-task.
    * In the Actions-pane add Consume a REST Service-effect
    * URL: https://gbfs.urbansharing.com/oslobysykkel.no/station_information.json
+   * Click the Test-button and click Send. The response of the API call is shown in Response Body. Click Handle Current Response. Open the entry in Response Handlers by double-clicking or pressing Modify. Genus has created a mapping from the test-run (this is VERY time consuming for the developer of the app, appreciate Genus :smile:).
+   
    ![oppg11fig10Updated.JPG](media/oppg11fig10Updated.JPG)
-   * Click the Test-button and click Send. The response of the API call is shown in Response Body. Click Handle Current Response. Open the Response Handlers entry, and configure it.
-   * Verify that consuming data from the API works in the website.
+   
+   * Configure the response handler as the screenshot illustrates:
+   
+   ![oppg11fig8.JPG](media/oppg11fig8.JPG)  
+   
+   * When the task “Get bikes” is executed, the API is called and the return data is mapped to the specified data source, creating X number of Bike stations with its associated data.
+   * To see the result of the call, create a command executing the Get bikes task and add it as a On Load Form event. Data will be populated when the form is accessed. Deploy to all and see that the map contains Bike stations.
+   
+   *Note: Give the task appropriate security (Properties > security).*
+   
+   ![oppg11fig9.JPG](media/oppg11fig9.JPG)
 
-####7. Add Popup Content to the point layers
+####7. Add Popup Content to the point layer
 
-Define Popup Contents for both the Bus Stops and the Bik Stations layers which show information (for instance id and name) on click. Customize it (try to be creative, maybe we don’t need label?)
+Define Popup Contents for the Bik Stations layers which show information (for instance id and name) on click. Customize it (try to be creative, maybe we don’t need label?)
 
 ![oppg11fig11.JPG](media/oppg11fig11.JPG)
 
@@ -197,15 +181,10 @@ Define Popup Contents for both the Bus Stops and the Bik Stations layers which s
    ![oppg11fig16.JPG](media/oppg11fig16.JPG)
    
 ####9. OPTIONAL challenges:
-    
-1. Get departure data for the bus
-   
-   Get departure data for the bus and display it in the form
-   (https://reisapi.ruter.no/Help/Api/GET-StopVisit-GetDepartures-id_datetime_transporttypes_linenames).
 
-2. Get weather forecasts 
+1. Get weather forecasts 
    
-   Get weather forecasts from YR and dispay bus stops if rain and bike stations otherwise
+   Get weather forecasts from YR and dispay bike stations only if it's not raining.
    (https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Fwww.yr.no%2Fsted%2Fnorge%2FOslo%2Foslo%2Foslo%2Fvarsel.rss).
       
       

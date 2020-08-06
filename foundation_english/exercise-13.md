@@ -158,13 +158,13 @@ Define Popup Contents for the Bik Stations layers which show information (for in
    
 ####8. Display available and locked bikes
 
-1. Create local task "Get bike availability"
+1. Create local task "Get bike availability".
    Information about available and locked bikes will have to be added to the Bike Stations objects after their initial creation, with a separate API-call. Accordingly, you will have to create a new Local Object to store availability data temporarily. Do this by creating a local object named “availability” (unbounded, and String-fields "id", "bikes" and "locks") inside a local task "Get bike availability". See screenshots.
 
    ![oppg11fig12.JPG](media/oppg11fig12.JPG)
    ![oppg11fig13.JPG](media/oppg11fig13.JPG)
  
-2. Add a REST service
+2. Add a REST service.
    Add a Rest service to call https://gbfs.urbansharing.com/oslobysykkel.no/station_status.json. Map it to the availability DS. Then the data must be copied from availability DS to the bikes DS via a modify object-effect. See screenshot. 
    
    *Note: The filter is important to ensure correct modifications!*
@@ -172,7 +172,7 @@ Define Popup Contents for the Bik Stations layers which show information (for in
    ![oppg11fig14.JPG](media/oppg11fig14.JPG)
    ![oppg11fig15.JPG](media/oppg11fig15.JPG)
 
-3. Publish task and edit Popup Content
+3. Publish task and edit Popup Content.
    * Create a command
    * Add another On Load Form. 
    * Add bikes and locks to popup content. 

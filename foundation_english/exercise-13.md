@@ -109,7 +109,7 @@ Check the website to verify that the app is published and available.
 
 *Note: Occurrences=Unbounded and Datatypes as defined in the pictures below:*
 
-![oppg11fig6updated.JPG](media/oppg11fig6updated.JPG)
+![oppg11fig6updated.jpg](media/oppg11fig6updated.jpg)
 
 ####5. Visualization in Map-control
 
@@ -140,7 +140,7 @@ Add a Map control (found under Reporting and Visualization)
    
    * Configure the response handler as the screenshot illustrates:
    
-   ![oppg11fig8updated.jpg](media/oppg11fig8updated.jpg)  
+   ![oppg11fig8updated.JPG](media/oppg11fig8updated.JPG)  
    
    * When the task “Get bikes” is executed, the API is called and the return data is mapped to the specified data source, creating X number of Bike stations with its associated data.
    * To see the result of the call, create a command executing the Get bikes task and add it as a On Load Form event. Data will be populated when the form is accessed. Deploy to all and see that the map contains Bike stations.
@@ -159,13 +159,13 @@ Define Popup Contents for the Bik Stations layers which show information (for in
 ####8. Display available and locked bikes
 
 1. Create local task "Get bike availability"
-   Information about available and locked bikes will have to be added to the Bike Stations objects after their initial creation, with a separate API-call. Accordingly, you will have to create a new Local Object to store availability data temporarily. Do this by creating a local object named “availability” (unbounded, and String-fields "id", "bikes" and "locks") inside a local task "Get bike availability". See screenshots.
+Information about available and locked bikes will have to be added to the Bike Stations objects after their initial creation, with a separate API-call. Accordingly, you will have to create a new Local Object to store availability data temporarily. Do this by creating a local object named “availability” (unbounded, and String-fields "id", "bikes" and "locks") inside a local task "Get bike availability". See screenshots.
 
    ![oppg11fig12.JPG](media/oppg11fig12.JPG)
    ![oppg11fig13.JPG](media/oppg11fig13.JPG)
  
 2. Add a REST service
-   Add a Rest service to call https://gbfs.urbansharing.com/oslobysykkel.no/station_status.json. Map it to the availability DS. Then the data must be copied from availability DS to the bikes DS via a modify object-effect. See screenshot. 
+Add a Rest service to call https://gbfs.urbansharing.com/oslobysykkel.no/station_status.json. Map it to the availability DS. Then the data must be copied from availability DS to the bikes DS via a modify object-effect. See screenshot. 
    
    *Note: The filter is important to ensure correct modifications!*
 

@@ -53,7 +53,7 @@ The repeating section should iterate over Activities ("Not Started" or "In Progr
 
 * Navigate to Apps under User Interface in Genus Studio.
 * Create a new one which you call "My Activities". Form "My Activities".
-* Check default view for Web and Tablet.
+* Check default view for all relevant platforms.
 * Set AppBar Foreground to Navy
 * After saving, define the security of the App. (Properties -> Super Users should be able to "Find and List" and "Read and Execute").
    

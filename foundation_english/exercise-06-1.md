@@ -3,7 +3,7 @@
 
 ### Modeling logic - Principal overview
 
-You are now ready to add «Tasks», which are logical user initialized actions, to the solution. Tasks are executed when the user selects them from the Actions-pane or when he/she clicks on a button pointing to one of them in a Form.
+You are now ready to add «Tasks», which are logical user initialized actions, to the solution. Tasks are executed when they are initiated from somewhere - for example from a right click menu or when clicking a button.
 
 A Task corresponds in many ways to a method or a function in the programming world. It may have an input. It is executed with a call from somewhere. It executes sequentually. It may create variables and lists. And, it can include if-statements and loops (for and while). 
 

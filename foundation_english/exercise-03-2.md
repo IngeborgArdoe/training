@@ -17,7 +17,7 @@ You will now add a list to the Company-form that shows all associated Contacts (
 5. Navigate back to the tab "Contacts" and add a Grid from the menu on the right. Set the Data Binding to Data Source «Contact». Select which columns to include under Columns. Define the sorting (First Name, Last Name) under Sorting, and set Selection Mode to "Multiple" (allows the user to mark several contacts in the list).
    *Guidance: See screenshot below*
 ![oppg3fig6.JPG](media/oppg3fig6.JPG)
-   You have now successfully added a list of Contacts to Company. Next you will have to add an event that opens the Contact-form that you made earlier (by double-clicking a row in the grid) and a button that allows the user to create a new Contact.   
+   You have now successfully added a list of Contacts to Company. Later we will add functionality to open the Contact-form that you made earlier (by double-clicking a row in the grid) and a button that allows the user to create a new Contact.   
 
 <table>
    <tr><td><a href="exercise-03-1.md"><- Previous</a></td><td align="right"><a href="exercise-04.md">Next -></a></td></tr>

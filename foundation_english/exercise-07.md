@@ -44,10 +44,12 @@ Finally, it is worth mentioning that the end user can hide the Ribbon if he/she 
 2. Verify that the Event for making a new contact is named "New Contact". Set Tip = "Contact", and find a suitable symbol (# 1081). 
 3. Place the event under Main Tabs – Home -> New.
 
-####4. Context Tab Group: Contact Log in Ribbon
+####4. Ribbon in the Contact-Form
+Create a Ribbon with Save option and Change responsible in the Contact form.
 
-Add a Context Tab Group for Contact Log in the Contact-form Ribbon. 
+*Tip: You may copy tab sections from the "General Tabs" and paste them into a Tab in the Form Tabs. Typically for a form like Contact one would like to copy the "General" and "Navigate" tab sections.*
 
+Add a Context Tab Group for Activities in the Contact Form, e g for New and Delete. Remember to test as well - no you will see clearly whether or not you have placed the commands in the correct context (at the Activities tab item).
 
 <table>
    <tr><td><a href="exercise-06.md"><- Previous</a></td><td align="right"><a href="exercise-08.md">Next -></a></td></tr>

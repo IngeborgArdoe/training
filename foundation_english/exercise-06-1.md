@@ -1,4 +1,4 @@
-## Exercise 6 - Logic og tasks
+## Exercise 6 - Logic og actions
 **SESSION BY INSTRUCTOR:** *The instructor will start off by giving you a brief introduction to the topic.*
 
 ### Modeling logic - Principal overview

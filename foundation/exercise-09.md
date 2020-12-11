@@ -31,11 +31,11 @@ Right-click within the Object Class Diagram (or in the Object Class section of t
 
 The reason is that you will soon set up a "file preview" which utilizes calls against the server. Naturally, the server needs to know about the new object class for this to work.
 
-####3. Create a task "Paste new Document from File". 
+####3. Create an action "Paste new Document from File". 
 
 This should take Company and File(s) as input, and create Document(s).
 
-*Guidance: You will need 3 data sources; Company (name="Company (input)", Max Occurrences="one", private=no), General File (name="General files (input), Max Occurrences="unbound", private=no) and Document (name="Documents (to be created)", Max Occurrences=unbound, private=yes). The task is logically very simple. All you need is a Scope and a Create Objects effect. If you need inspiration, you can look at the equivalent task «Paste new Mail from file». Remember to define the security of the task after creation.*
+*Guidance: You will need 3 data sources; Company (name="Company (input)", Max Occurrences="one", private=no), General File (name="General files (input), Max Occurrences="unbound", private=no) and Document (name="Documents (to be created)", Max Occurrences=unbound, private=yes). The action is logically very simple. All you need is a Scope and a Create Objects effect. If you need inspiration, you can look at the equivalent action «Paste new Mail from file». Remember to define the security of the action after creation.*
 
 *Tip: The file-input comes with Max Occurrances "unbounded". For each file, a document has to be made. Here you can either make use of an Enumerator which loops through the General File data source OR (even simpler) you can define a Create Object on data source Document which is bound to the General File data source at the top level. The latter option will create a document per instance in the "General Files (input)" data source!*
 
@@ -43,18 +43,18 @@ This should take Company and File(s) as input, and create Document(s).
 
 ####4. Create document-tab in the Company-form
 
-Expand the tab sheet in the Company-form with a new tab for listing documents. Add a Grid, and define which columns to show and what sorting to use. Place a Command pointing to the task that you just made on the Documents-tab, along with an Event to trigger it on the grid itself. Add also commands and events for Delete and Invoke a File (open document by double-clicking).
+Expand the tab sheet in the Company-form with a new tab for listing documents. Add a Grid, and define which columns to show and what sorting to use. Place a Command pointing to the action that you just made on the Documents-tab, along with an Event to trigger it on the grid itself. Add also commands and events for Delete and Invoke a File (open document by double-clicking).
 
 Insert a "file viewer" on the right side of the grid for showing files (take a look at tab "Mail" for inspiration).
 
-*Tip: For the event to trigger when files are pasted into the grid, choose Menu Item = Past Special. Note that you can - under the command's data filter parameter - filter out General File types Mail Message and Calendar Item from the input to the task, as you don't want to store these file types as Documents (but rather as Mail or Activity):*
+*Tip: For the event to trigger when files are pasted into the grid, choose Menu Item = Past Special. Note that you can - under the command's data filter parameter - filter out General File types Mail Message and Calendar Item from the input to the action, as you don't want to store these file types as Documents (but rather as Mail or Activity):*
 ![oppg8fig2.JPG](media/oppg8fig2.JPG)
 
-####5. OPTIONAL: Create a task "Copy Document to Clipboard as File"
+####5. OPTIONAL: Create an action "Copy Document to Clipboard as File"
 
-This task will be the equivalent to "Copy Mail to Clipboard as Mail Message". Publish it.
+This action will be the equivalent to "Copy Mail to Clipboard as Mail Message". Publish it.
 
-*Guidance: The task should take Documents as input and should create General Files. Make it available through an Event with Menu item = Copy.*
+*Guidance: The action should take Documents as input and should create General Files. Make it available through an Event with Menu item = Copy.*
 
 ####6. OPTIONAL: Add Delete and Paste/Copy to the Ribbon.
 

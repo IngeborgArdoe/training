@@ -1,13 +1,13 @@
-## Exercise 5.1: Actions in Genus Apps
+## Exercise 5.1: Evemts in Genus Apps
 
 ### Commands and Events
 
-In Genus Apps, Commands are used to specify effects that will happen in a form. A Command can be started/triggered by an Event or from the Ribbon. It can be of various types, such as «Open a Form», «Apply Changes», «Delete Object» or «Run a Task». Several Commands can also be put (Combined) together, and a Command can call another Command.
+In Genus Apps, Commands are used to specify effects that will happen in a form. A Command can be started/triggered by an Event or from the Ribbon. It can be of various types, such as «Open a Form», «Apply Changes», «Delete Object» or «Run an Action». Several Commands can also be put (Combined) together, and a Command can call another Command.
 
 You can trigger a Command with an Event by for example adding the Event «On Click» to a button and point it to the Command. When the button is clicked, the actions defined by the Command is executed.
 When doing the exercises below, it may seem natural to place the Command on the same control as the Event that points to it. This will work brilliantly, but we often choose to place the Commands on a different level due to reasons we will have a closer look at in Exercise 5: Ribbon. The Ribbon is also the reason why we typically pick a symbol for each Command and change their names, e.g. from Name: Open Contact to "New Contact". 
   
-####1. Add Contact actions to the Company-form:
+####1. Add Contact events to the Company-form:
 
 You will now add functionality to open, create and delete Contacts from the Company form.
 1. Add a command to open an existing Contact. Place the Command on the Contacts-tab by selecting the tab (you can mark the Contact grid and press Esc), and - under Properties - clicking Commands. In the dialog box, click Add.. Open a Form

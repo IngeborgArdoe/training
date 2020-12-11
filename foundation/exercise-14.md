@@ -5,7 +5,7 @@ These exercises are optional and should be done only if time allows. That being 
 
 ####1. Order Confirmation
 
-Create a new task "Order Confirmation", which takes a Request as input and from it generates an order confirmation (Word document). Information that will be merged into the document is Order No, Subject, Description, Expected Delivery Date, Order Value NOK, Company Name, Org No, Contact Name (name of person ordering) and Responsible Name (name of user).
+Create a new action "Order Confirmation", which takes a Request as input and from it generates an order confirmation (Word document). Information that will be merged into the document is Order No, Subject, Description, Expected Delivery Date, Order Value NOK, Company Name, Org No, Contact Name (name of person ordering) and Responsible Name (name of user).
 
 1. Create a Schema "Order Confirmation" with "OrderConfirmation" as root node (Complex Type) and all the fields above as Elements (all can be of data type String).
 
@@ -23,21 +23,21 @@ Create a new task "Order Confirmation", which takes a Request as input and from 
 
    Ask the instructor to send you the Word document if you don't want to spend time on the order confirmation template.
    
-3. Create a task called "Order Confirmation". Publish it through a button in the Request-form.
+3. Create an action called "Order Confirmation". Publish it through a button in the Request-form.
 
    *Guidance:* 
    
-   *The task needs data sources "OrderConfirmation" (type XML Document), "Request (input)", "Document (to be created)" and "General File (temp)" (will be used as temporary output in the merge effect before Document is created). Necessary effects to include are a "Create Objects" (creating OrderConfirmation / mapping values), a "Merge Data to a Document" (where the Word document is the "Embedded file", the OrderConfirmation schema is the "XML Document" and the General File is the "Output Document"), another "Create Objects" (creating the Document object with data from the General File object), and fianlly an "Invoke a File" (opens Document.File Data in default application).*
+   *The action needs data sources "OrderConfirmation" (type XML Document), "Request (input)", "Document (to be created)" and "General File (temp)" (will be used as temporary output in the merge effect before Document is created). Necessary effects to include are a "Create Objects" (creating OrderConfirmation / mapping values), a "Merge Data to a Document" (where the Word document is the "Embedded file", the OrderConfirmation schema is the "XML Document" and the General File is the "Output Document"), another "Create Objects" (creating the Document object with data from the General File object), and fianlly an "Invoke a File" (opens Document.File Data in default application).*
 
 ####2. OPTIONAL: Send Order Confirmation
 
-Create a task called "Send Order Confirmation" which allows the user to select among existing Order Confirmations (Documents on the Request) and afterwards opens Outlook with the document attached. The task should also store the Mail object. Make the task available in the Ribbon of the Request-form.
+Create an action called "Send Order Confirmation" which allows the user to select among existing Order Confirmations (Documents on the Request) and afterwards opens Outlook with the document attached. The action should also store the Mail object. Make the action available in the Ribbon of the Request-form.
   
 *Guidance:*
 
 *Add data sources Request (input), Mail (to be created), Document (confirmation document to attach)and Mail Message (temporary file which opens in Outlook, and is used to generate the Mail object after send).*
 
-*The task should have the following effects:*
+*The action should have the following effects:*
 * _Read Object: Data source = Document, with user interaction (let the user choose among documents associated with the request)._
 * _Create a Mail Message: Define "To", "Subject", "Attachments" (Document.File Data) and suggest a default e-mail text. Make sure the effect is set to "Write message to a data source" (Mail Message (temp)) so that the e-mail is not sent immediately. Note: The reason for keeping the Mail Message file in a data source is to avoid losing changes made by the user in Outlook before he/she press "Send". You could have used the "Open a Form" effect directly, but it's more visual to create an e-mail in the "Create a Mail Message" effect._
 * _Open a Form: Choose Mail Message Window and Modify. Check "Wait until the form is closed". The effect will now open the suggested e-mail and pause the execution until the user has pressed "Send" in outlook._

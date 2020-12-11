@@ -1,4 +1,4 @@
-## Exercise 5.2: Actions in Genus Apps
+## Exercise 5.2: Events in Genus Apps
    
 ####2. Create lists of Activities and Mail on Contacts (with functionality)
 

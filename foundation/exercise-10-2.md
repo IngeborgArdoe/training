@@ -31,11 +31,11 @@ ALTER TABLE Document
 
 *Run the equivalent query against the Mail Table. Add the two fields to their corresponding Object Classes in Studio.*
 
-####6. Create tasks «Paste new Mail from file (Request)» and «Paste new Document from file (Request)»
+####6. Create actions «Paste new Mail from file (Request)» and «Paste new Document from file (Request)»
 
-Both tasks should take Request as input.
+Both actions should take Request as input.
 
-*Guidance: Copy the corresponding Paste-tasks for Company, and substitute the data source Company with Request. Make sure that the reference to Request is correctly set on Mail/Document creation (Mail.Request = Request (input) and Document.Request = Request (input)).*
+*Guidance: Copy the corresponding Paste-actions for Company, and substitute the data source Company with Request. Make sure that the reference to Request is correctly set on Mail/Document creation (Mail.Request = Request (input) and Document.Request = Request (input)).*
 
 You are now ready to add Request to the interface, i.e. make a Request-form and list Requests under Company. In addition, you will be asked to make a list (table) of Requests that is accessible from the Navigation Pane.
 
@@ -66,9 +66,9 @@ Add a shortcut (name "Requests") to the Navigation Pane that points to the "Open
 
 This rule should change Closed Date if State is set to "Closed" (and NULL otherwise) and Canceled Date if State is set to "Canceled" (and NULL otherwise).
 
-####12. OPTIONAL: Make tasks "Close Request", "Reopen Request" and "Cancel Request"
+####12. OPTIONAL: Make actions "Close Request", "Reopen Request" and "Cancel Request"
 
-Force field Request.State to be "Read Only" by changing the Read Only property in the Request form/grid/table, and make tasks "Close Request", "Reopen Request" and "Cancel Request" to set the State of a Request. Publish the tasks through buttons in the Request-form (e.g. next to State) and in the Company-form (below the grid). Furthermore, add enabling conditions to the buttons, so that "Close Request" is enabled when State="Open", "Re-open Request" is enabled when State="Canceled"/"Closed", and "Cancel Request" is enabled when State="Open".
+Force field Request.State to be "Read Only" by changing the Read Only property in the Request form/grid/table, and make actions "Close Request", "Reopen Request" and "Cancel Request" to set the State of a Request. Publish the actions through buttons in the Request-form (e.g. next to State) and in the Company-form (below the grid). Furthermore, add enabling conditions to the buttons, so that "Close Request" is enabled when State="Open", "Re-open Request" is enabled when State="Canceled"/"Closed", and "Cancel Request" is enabled when State="Open".
 
 ####13. OPTIONAL: Make Request "read-only" if State <> "Open"
 

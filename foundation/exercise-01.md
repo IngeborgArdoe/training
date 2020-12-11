@@ -12,7 +12,7 @@ Familiarize yourself with your own solution. Use the shortcut (to Genus Desktop)
    1. In the Home tab: Click on "Open in Default Application" to open the list of Companies in MS Excel.
    2. Select the View tab, and hit "Refine". Here you can add search limitations to objects, either by pressing CTRL + F or by choosing a Refiner in the panel on the right hand side.
    3. Hit the Explore button. Navigate to other objects in the solution that are linked to the selected Companies.
-   4. Click on Discovery in the Navigation Pane on the left. Open a predefined report under Reports.
+   4. Click on Analyses in the Navigation Pane on the left. Open a predefined analyses under Analyses.
 6. Navigate to Administration. Take a look at Users and General Codes.
 
 <table>

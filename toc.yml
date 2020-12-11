@@ -1,6 +1,9 @@
 - name: Foundation
-  href: foundation_english/
-  homepage: foundation_english/index.md
+  href: foundation/
+  homepage: foundation/index.md
+- name: Foundation (2019.2)
+  href: foundation_2019_2/
+  homepage: foundation_2019_2/index.md
 - name: Discovery
   href: discovery/
   homepage: discovery/index.md

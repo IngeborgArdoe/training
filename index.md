@@ -2,7 +2,8 @@
 This site contains the training material for Genus Apps courses .
 
 
-* [Foundation (English)](foundation_english/index.md)
+* [Foundation](foundation/index.md)
+* [Foundation (2019.2)](foundation_2019_2/index.md)
 * [Discovery](discovery/index.md)
 * [Advanced](advanced/index.md)
 

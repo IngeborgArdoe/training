@@ -62,5 +62,5 @@ Let's say that you have created an Genus Mobile tablet-app for creating activiti
 Add support for as many requests you like. Remember error handling.
 
 <table>
-   <tr><td><a href="exercise-11.md"><- Previous</a></td><td align="right"><a href="exercise-13.md">Next -></a></td></tr>
+   <tr><td><a href="exercise-11-2.md"><- Previous</a></td><td align="right"><a href="exercise-13.md">Next -></a></td></tr>
 </table>

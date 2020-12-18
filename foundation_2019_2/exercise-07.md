@@ -52,5 +52,5 @@ Create a Ribbon with Save option and Change responsible in the Contact form.
 Add a Context Tab Group for Activities in the Contact Form, e g for New and Delete. Remember to test as well - no you will see clearly whether or not you have placed the commands in the correct context (at the Activities tab item).
 
 <table>
-   <tr><td><a href="exercise-06.md"><- Previous</a></td><td align="right"><a href="exercise-08.md">Next -></a></td></tr>
+   <tr><td><a href="exercise-06-2.md"><- Previous</a></td><td align="right"><a href="exercise-08.md">Next -></a></td></tr>
 </table>

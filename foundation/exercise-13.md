@@ -83,20 +83,70 @@ When you activate a row in the View, it will now send the Data Set from the cont
 ![oppg13fig11.JPG](media/oppg13fig11.JPG)
   
 ### Components, Viewports, Tabs and Kanban
-In this exercise we will explore some useful web concepts, and use them to make our form more interactive and productive. 
+In this exercise we will explore some more web consepts, and demonstrate how choices during modeling affect our ability to reuse parts of the model
 
 ####1. Create a new Component for Company Summary
+*Components are pages that can be parts of other pages. By strategically creating components, we can reuse part of the user interface in another context. Firstly, we will make a component with a summary of key fields from the company, and include this component in the Company Form*
 
-####2. Add Tab Control to the Company form
+1. Open the CRM Module. Navigate to Components, and create a new component of the type "form". Name it "Company Summary" and select Company as the Master Data Source.
+2. Pick the "Left/right split" Viewpoint Layout. Go to settings and change the title to "Summary".
+3. Go to the form tab and add relavant data fields by dragging fields from the data source into the left or the right Viewport Area (you can also use double-click). By default, the Input Field control will be selected for text fields, and Dropdown for complex fields (such as Responsible), etc. If other controls are preferred, you can hover over the field to see which controls are available for the data type (for instance, Customer No should be a display field, since it is read-only). You can also select controls from the Controls tab of the Insert Content pane. A good way to organize the fields can be to put basic info fields on the left and address fields on the right. Add text controls with style "Heading 2" to make the page more readable. See figure below. Save the component.
+![oppg13fig12.JPG](media/oppg13fig12.JPG)
+4. Open the Company form. Add a Tab Control under the text. Under pages, click on the "(no items)" to open the Pages dialog. Add an item and name it "Summary". Choose Target Tyoe "Component" and Target "Company Summary". Under Data filter, choose Transfer all --> Company. Save and check the results in the browser.
+![oppg13fig13.JPG](media/oppg13fig13.JPG)
+
+####2. Create a Viewport that is mobile friendly
+*Phones are characterized by their narrow screen. A page that looks good on a PC screen, doesn't nessisarily look good on a phones. We use different Viewports to fix this, without having to make a completely new page.*
+
+1. Open the Customer Summary Component. Go to the viewport tab, and add a new Viewport (not a new Viewport Area). Under breakpoint, select "Medium (< 640px)". Keep the suggested name "Phone", and click ok.
+2. In the phone Viewport, click on the "+"-button in the bottom of the screen to add a new row. Then click on the vertical "..." in the right column and delete that column. Select the top row by clicking on the left side near the "1 fr". Change the Hight Unit to "Fit to Content". Finally, drag the "right" Viewport Area to the new bottom row. The viewport port should now look like the figure below.
+![oppg13fig14.JPG](media/oppg13fig14.JPG)
+
+3. Go to the Form tab, to preview how the component will look on narrow screens. You can change the viewport are from the dropdown list on the above the page designer. Save all changes.
+4. Open the browser, and adjust the window width to observe the responsive behaviour when the width is less than 640px. The result should look like this:
+![oppg13fig15.JPG](media/oppg13fig15.JPG)
+
 
 ####3. Add Create an Activity Module
+*The aim of this exercise is to demonstrate how you can use different Modules to separate and organize part of the total data model. Later we will also show how an app can link to pages from multiple Modules, and components from a different Module can be used in a Form page*
+
+1. Create a new Module and save it as "Activities". 
+2. Add "Activity" and "Activity State" from the Data Sources tab (Currently, you can't add code domains from the Data Diagram).
 
 ####4. Display Activities in a Kanban control
+*The Kanban control is a very visual way of displaying processes where objects move through different states. We will use this to display activities. We create this as a component, so that we can later reuse it in a different context.*
+
+1. In the Activities module, create a new component of the type "Canvas", and name it "Activities - Kanban". Select the "None" viewport layout. Go to Settings and change the Title to just "Activities"
+2. Add a public interface data set: Name: "Activities", Data Source: "Activity", Occurrence: "Many"
+3. Add a filtered data set: Name: "Activity States", Data Source: "Activity State", Occurrence: "Many", Data Filter: "Read all"
+4. Navigate to the Canvas Tab, find Controls under Insert Content. Add a Kanban Control (directly inside the "content" Viewport Area).
+5. On the Kanban Control, select the following properties:
+   * List Data Binding: "Activity States"
+   * Card Data Binding: "Activities"
+   * Card to List Data Binding: "Activities.State"
+   * Sort Order: "Sorting"
+6. On the Card Template (click on the "(empty)" on "LIST0"), you can design the layout of a kanban Card. Add a Text Control inside the Card Template. Bind the value to Activities.Subject, and choose the Style "Heading 3". Add one more Text to the template and bind it to Activities.Description. Keep the style "Body 2". Save and close the component.
 
 ####5. Incorporate the Activities Kanban in the Company form
-      
+
+1. Open the Company form in the CRM Module. On the tab control, clik on "Related places". (Here, you can add tabs from other modules, that only load data after you navigate to them).
+2. Add a new item with the following properties:
+   * Name: "Activities"
+   * Target Type: "Component"
+   * Target: "Activities - Kanban"
+   * Data Filter: "Read related"
+3. Save and see the results in the browser. Remember to open a Company that has activities related to it.
+4. Your results should look like the figure below. Try moving cards between lists to change the state of the activity.
+![oppg13fig16.JPG](media/oppg13fig16.JPG)
+
 ### Themes
-      
+
+*You can use themes to customize the visual expression of the application, to, for instance, match that of the application owners organizaion*
+
+1. In the very bottom of the navigation pane in Genus Studio, navigate to Themes. Create a new Theme and name it "Main Theme"
+2. Select your favorite color as primary in both light mode and dark mode (e.g. #bf3711).
+3. Navigate to the CRM app, and change the theme to be "Main Theme". Save and check the results on the web.
+
 <table>
    <tr><td><a href="exercise-12.md"><- Previous</a></td><td align="right"><a href="exercise-14.md">Next -></a></td></tr>
 </table>

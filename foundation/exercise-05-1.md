@@ -42,9 +42,9 @@ You will now add functionality to open, create and delete Contacts from the Comp
    1. Type: On Context Menu Item Click
    2. Menu Item: Delete
    3. Command: Delete (The Command that you just made). 
-7. To test what you have done so far: In Genus Studio, select File (at the top) -> Deploy to this computer. All changes are now deployed to your own computer for testing. Open the client (or restart it if you already have it open) and try to add, edit and/or delete a Contact from a Company. Since we haven't define a Ribbon yet, you will have to click the close button ('X') and "Yes" to save. Check also that the default values on creation are as expected.
+7. Restart Genus Desktop in order to try the new functionality for adding, editing and/or deleting a Contacts from a Company. Since we haven't define a Ribbon yet, you will have to click the close button ('X') and "Yes" to save. Check also that the default values on creation are as expected.
    
-   *Comment: If this had been a test or production environment, you could have chosen "Deploy to all" with a defined time. Changes would then become available for all users of the solution.*
+   *Comment: In order to publish the changes to other users you would have had to deploy the blue or green namespace. This can be done under the "Deployment"-menu item in Genus Studio. Either the blue or the green namespace can be set as the active namepace - the namespace end users are using. When the active namespace is deployed the new appmodel becomes available for the end users.*
 
 <table>
    <tr><td><a href="exercise-04.md"><- Previous</a></td><td align="right"><a href="exercise-05-2.md">Next -></a></td></tr>

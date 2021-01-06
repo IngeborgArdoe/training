@@ -6,12 +6,12 @@ In this exercise, you will make a simple web interface for customer relation man
 
 ####1. Preparations
 
-1. Open the origin namespace in your web browser. Here you can see changes immedietly after they are saved. The origin URL is *<your assigned solution>-origin.genus.net*
-2. As of now, you should only built in apps, such as, Analytics and Insights, Genus Desktop and Genus Studio, as well as a header with options to log out, change language, etc.
+1. Open the origin namespace in your web browser. Here you can see changes immedietly after they are saved. The origin URL is *https://edu-usr{X}-origin.edu.genus.net/*
+2. As of now, you should only see built in apps, such as, Analytics and Insights, Genus Desktop and Genus Studio, as well as a header with options to log out, change language, etc.
 	
 ####2. Create a new CRM Module
 
-1. Navigate to Modules, and create new module
+1. Open Genus Studio. Navigate to Modules, and create new module
 2. Name it "CRM" and save it
 3. Add the Company and Contact data sources to the module by going to "Data Diagram", right-click and choose "Insert" - "Object Classes...". Select the object classes Company and Contact, and choose OK. Right-click on the two boxes and select "Enable as Data Source".
 	   
@@ -81,6 +81,10 @@ In this exercise, you will make a simple web interface for customer relation man
 ![oppg13fig10.JPG](media/oppg13fig10.JPG)
 When you activate a row in the View, it will now send the Data Set from the context to the Client Action. The Client Action will navigate to the Company form, transfering the Data Set further. See the results in the browser.
 ![oppg13fig11.JPG](media/oppg13fig11.JPG)
+
+####Bonus: 
+Create a Contacts View and add it as a page to the Tab Control in the Company Form
+
   
 ### Components, Viewports, Tabs and Kanban
 In this exercise we will explore some more web consepts, and demonstrate how choices during modeling affect our ability to reuse parts of the model

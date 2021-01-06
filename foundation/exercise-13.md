@@ -102,7 +102,7 @@ In this exercise we will explore some more web consepts, and demonstrate how cho
 ####2. Create a Viewport that is mobile friendly
 *Phones are characterized by their narrow screen. A page that looks good on a PC screen, doesn't nessisarily look good on a phones. We use different Viewports to fix this, without having to make a completely new page.*
 
-1. Open the Customer Summary Component. Go to the viewport tab, and add a new Viewport (not a new Viewport Area). Under breakpoint, select "Medium (< 640px)". Keep the suggested name "Phone", and click ok.
+1. Open the Company Summary Component. Go to the viewport tab, and add a new Viewport (not a new Viewport Area). Under breakpoint, select "Medium (< 640px)". Keep the suggested name "Phone", and click ok.
 2. In the phone Viewport, click on the "+"-button in the bottom of the screen to add a new row. Then click on the vertical "..." in the right column and delete that column. Select the top row by clicking on the left side near the "1 fr". Change the Hight Unit to "Fit to Content". Finally, drag the "right" Viewport Area to the new bottom row. The viewport port should now look like the figure below.
 ![oppg13fig14.JPG](media/oppg13fig14.JPG)
 

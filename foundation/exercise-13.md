@@ -36,7 +36,7 @@ In this exercise, you will make a simple web interface for customer relation man
 ![oppg13fig2.JPG](media/oppg13fig2.JPG)
 8. Set security on the app, by right-clicking on the app (the same way as for actions).
      
-####5. Check that your new App is availible in origin
+####5. Check that your new App is available in origin
 
 1. Go to the startpage or your application in the browser and refresh the page. The new app CRM should now be visible
 ![oppg13fig3.JPG](media/oppg13fig3.JPG)

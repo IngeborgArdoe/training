@@ -111,7 +111,7 @@ In this exercise we will explore some more web consepts, and demonstrate how cho
 ![oppg13fig15.JPG](media/oppg13fig15.JPG)
 
 
-####3. Add Create an Activity Module
+####3. Create an Activity Module
 *The aim of this exercise is to demonstrate how you can use different Modules to separate and organize part of the total data model. Later we will also show how an app can link to pages from multiple Modules, and components from a different Module can be used in a Form page*
 
 1. Create a new Module and save it as "Activities". 

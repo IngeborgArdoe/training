@@ -10,3 +10,6 @@
 - name: Advanced
   href: advanced/
   homepage: advanced/index.md
+- name: Free
+  href: free/
+  homepage: free/index.md

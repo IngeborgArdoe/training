@@ -1,0 +1,13 @@
+- name: Overview
+  href: index.md
+- name: Installation and Setup
+  href: installation_setup.md
+- name: Introduction to the Model 
+  href: introduction_model.md
+- name: Exercises
+  href: exercise-01.md
+  items:
+  - name: 1 - Explore the application
+    href: exercise-01.md
+  - name: 2 - Web Modelling
+    href: exercise-02.md

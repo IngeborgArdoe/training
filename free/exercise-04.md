@@ -1,4 +1,4 @@
-## Exercise 4 - Genus Desktop 
+## Exercise 4 - Introduction to Genus Desktop 
 
 This is a step-by-step tutorial on how to use different concepts in the Genus platform in a simple app model for Genus Desktop.
 

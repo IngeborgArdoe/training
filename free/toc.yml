@@ -9,5 +9,9 @@
   items:
   - name: 1 - Explore the application
     href: exercise-01.md
-  - name: 2 - Web Modelling
+  - name: 2 - Human Resources app
     href: exercise-02.md
+  - name: 3 - Productivity app
+    href: exercise-03.md
+  - name: 4 - Introduction to Genus Studio and Desktop 
+    href: exercise-04.md

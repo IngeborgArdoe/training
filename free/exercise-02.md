@@ -59,7 +59,7 @@ In this exercise, you will make a simple web interface for Human Resources Manag
 4. Open the Persons view. Open the Control View, by toggling the button up to the left (green button on the figure below), or "Ctrl+Shift+L". Here you can navigate the different levels of your page. You can use Esc to navigate to the level above, just like in a desktop form. Go to the "Table" level.
 5. In the Table level, Change the On Activate Interaction to "Navigate to Person Form" (you might need to close and open the view if the action is not visible). Under Data Exchange, select Person in the Data Column of the "Task: Person" row.  
 ![oppg02fig7.JPG](media/oppg02fig7.JPG)
-When you activate a row in the View, it will now send the Data Set from the context to the Client Action. The Client Action will navigate to the Company form, transfering the Data Set further. See the results in the browser.
+When you activate a row in the View, it will now send the Data Set from the context to the Client Action. The Client Action will navigate to the Person form, transfering the Data Set further. See the results in the browser.
 ![oppg02fig8.JPG](media/oppg02fig8.JPG)
 
   
@@ -70,13 +70,13 @@ When you activate a row in the View, it will now send the Data Set from the cont
 2. Pick the "Left/right split" Viewpoint Layout. Go to settings and change the title to "Summary".
 3. Go to the form tab and add relavant data fields by dragging fields from the data source into the left or the right Viewport Area (you can also use double-click). By default, the Input Field control will be selected for text fields, and Dropdown for complex fields (such as Responsible), etc. If other controls are preferred, you can hover over the field to see which controls are available for the data type (for instance, "User Name" should be a display field, since it should not be changed). You can also select controls from the Controls tab of the Insert Content pane. A good way to organize the fields can be to put identifying fields on the left and other fields on the right. Add text controls with style "Heading 2" to make the page more readable. See figure below. Save the component.
 ![oppg02fig9.JPG](media/oppg02fig9.JPG)
-4. Open the Company form. Add a Tab Control under the text. Under pages, click on the "(no items)" to open the Pages dialog. Add an item and name it "Summary". Choose Target Tyoe "Component" and Target "Company Summary". Under Data filter, choose Transfer all --> Company. Save and check the results in the browser.
+4. Open the Person form. Add a Tab Control under the text. Under "Pages", click on the "(no items)" to open the Pages dialog. Add an item and name it "Summary". Choose Target Tyoe "Component" and Target "Person Summary". Under Data filter, choose Transfer all --> Person. Save and check the results in the browser.
 ![oppg02fig10.JPG](media/oppg02fig10.JPG)
 
 ####8. Create a Viewport that is mobile friendly
-*Phones are characterized by their narrow screen. A page that looks good on a PC screen, doesn't nessisarily look good on a phones. We use different Viewports to fix this, without having to make a completely new page.*
+*Phones are characterized by their narrow screen. A page that looks good on a PC screen, doesn't nessisarily look good on a phones. We use different Viewports to account for this, without having to make a completely new page.*
 
-1. Open the Company Summary Component. Go to the viewport tab, and add a new Viewport (not a new Viewport Area). Under breakpoint, select "Medium (< 640px)". Keep the suggested name "Phone", and click ok.
+1. Open the Person Summary Component. Go to the viewport tab, and add a new Viewport (not a new Viewport Area). Under breakpoint, select "Medium (< 640px)". Keep the suggested name "Phone", and click ok.
 2. In the phone Viewport, click on the "+"-button in the bottom of the screen to add a new row. Then click on the vertical "..." in the right column and delete that column. Select the top row by clicking on the left side near the "1 fr". Change the Hight Unit to "Fit to Content". Finally, drag the "right" Viewport Area to the new bottom row. The viewport port should now look like the figure below.
 ![oppg02fig11.JPG](media/oppg02fig11.JPG)
 

@@ -35,34 +35,40 @@ In this exercise we will explore some more web consepts, and demonstrate how cho
 5. In the bottom of the window, select Drawer Appearance "Expanded" and Landing Page Link "Productivity/Activities".
 6. Close the app. Now set security on the app, by right-clicking on the app and selecting properties. Go to the security tab, click tha "Add..." button, then "Advanced" and add the group "Standard". Click OK twice. Then select "Find and List" and "Read and Execute" on the list below.
 7. Test the new app. It should look like the figure below.
-![oppg02fig4.JPG](media/oppg02fig4.JPG)
+![oppg03fig1.JPG](media/oppg03fig1.JPG)
 
-####3. Data Filters and pages
+####4. Data Filters and pages
 
-1. We often want to look at a subset of data, without having to perform a search. To do this we need to create a data filter. Open the CRM Module, and navigate to "Data Filters" in the navigation pane on the left.
-2. Create a new data filter, and name it "My Companies". Select the data source "Company".
-3. Add the conditions "Company.Responsible = Active User Account (User)" and "Company.State = Active". Sort By name and press OK. Save changes on the module.
-![oppg02fig5.JPG](media/oppg02fig5.JPG)
+1. We often want to look at a subset of data, without having to perform a search. To do this we need to create a data filter. Open the Activities Module, and navigate to "Data Filters" in the navigation pane on the left.
+2. Create a new data filter, and name it "My Activities". Select the data source "Activity".
+3. Add the conditions "Activity.Responsible = Active User Account (User)". Sort By "Ident" and press OK. Save changes on the module.
+![oppg03fig2.JPG](media/oppg03fig2.JPG)
 
-4. Now we are going to reorganize our CRM App, and utilize the ne filter. Open the CRM App. In the site map, change the label of the Companies link to "Search", by clicking on the vertical "...", selecting Text and entering the label. 
-5. Drag a link of the type "Pages" and drop it on the CRM Area. Change the label to "Companies". Drag the Search link onto the Companies Pages link (see figure further down).
-6. Drop a new Page-link onto the Companies Pages link. Name the new page link "My Companies". Select the Companies View as your target, and also select the "My Companies" data filter. Select default = Yes. 
-7. Select CRM/Companies as your Landing Page Link. Your sitemap should now look like this:
-![oppg02fig6.JPG](media/oppg02fig6.JPG)
-8. Check out the new sitemap in your browser as well, by refreshing. Your can navigate between My Companies and Search from the dropdown next to the title.
-![oppg02fig7.JPG](media/oppg02fig7.JPG)
+4. Now we are going to reorganize our Productivity App, and utilize the new filter. Open the Productivity App. In the site map, change the label of the Activities link to "All", by clicking on the vertical "...", selecting Text and entering the label. 
+5. Add a group, and choose the label "Activities". Move the "All"-link to the new group.
+5. Drop a new Page-link onto the Activities group. Name the new page link "My Activities". Select the "Activities - Kanban" as your target, and also select the "My Activities" data filter.
+6. Select Productivity/My Activities as your Landing Page Link.
+7. Check out the new sitemap in your browser as well, by refreshing. Your can navigate between My Acivities and All from the navigation pane.
+![oppg03fig4.JPG](media/oppg03fig4.JPG)
 
-####4. Incorporate the Activities Kanban in the Company form
+####5. Incorporate the Activities Kanban in the Person form
 
-1. Open the Company form in the CRM Module. On the tab control, clik on "Related places". (Here, you can add tabs from other modules, that only load data after you navigate to them).
+1. Open the Person form in the Organization Module. On the tab control, clik on "Related places". (Here, you can add tabs from other modules, that only load data after you navigate to them).
 2. Add a new item with the following properties:
    * Name: "Activities"
    * Target Type: "Page"
    * Target: "Activities - Kanban"
    * Data Filter: "Read related"
-3. Save and see the results in the browser. Remember to open a Company that has activities related to it.
+3. Click on the Read related text to open a dialog. Fill in the following properties (see figure below):
+   * Filter target data set: "Activities"
+   * On objects in source data set: "Person"
+   * Where the source is related to the target in a: "One to Many Relationship"
+   * By outbound field in target: "Activities.Responsible"
+ ![oppg03fig5.JPG](media/oppg03fig5.JPG)
+
+3. Save and see the results in the Human Resources app in the browser. Remember to open a Person that has activities related to it.
 4. Your results should look like the figure below. Try moving cards between lists to change the state of the activity.
-![oppg02fig16.JPG](media/oppg02fig16.JPG)
+![oppg03fig6.JPG](media/oppg03fig6.JPG)
 
 ### Themes
 
@@ -70,7 +76,7 @@ In this exercise we will explore some more web consepts, and demonstrate how cho
 
 1. In the very bottom of the navigation pane in Genus Studio, navigate to Themes. Create a new Theme and name it "Main Theme"
 2. Select your favorite color as primary in both light mode and dark mode (e.g. #bf3711).
-3. Navigate to the CRM app, and change the theme to be "Main Theme". Save and check the results on the web.
+3. Navigate to the Human Resources app, and change the theme to be "Main Theme". Save and check the results on the web.
 
 <table>
    <tr><td><a href="exercise-02.md"><- Previous</a></td><td align="right"><a href="exercise-04.md">Next -></a></td></tr>

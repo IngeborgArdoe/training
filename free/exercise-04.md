@@ -65,7 +65,7 @@ Navigate to User Interaction | Desktop | Tables in Genus Studio
 
 ####3. Create a form for searching in Brønnøysundregisteret
 
-1. In Genus Studio, navigate to Object Classes, add New -> Object Domain
+1. In Genus Studio, navigate to Data Structures | Object Classes, add New -> Object Domain
   1. Set Data Provider = None, click Next
   2. Select the database table Company, rename to Company (brreg), click Next
   3. Select ID as primary key, and check Generate identifier automatically. Click Next

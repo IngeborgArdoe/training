@@ -96,7 +96,7 @@ Navigate to User Interaction | Desktop | Tables in Genus Studio
 10. Select the bottom Group Box
   1. Deselect Show Title
 11. Save as _Search in Brønnøysundregisteret_
-![Form Editor](Media/oppg04fig16.png)
+ ![Form Editor](Media/oppg04fig16.png)
 12. Open the table Companies
 13. Go to Events, right click and New -> Open a Form
   1. Effect – Select the new Form
@@ -128,10 +128,7 @@ Navigate to User Interaction | Desktop | Tables in Genus Studio
 6. Drag as Read Object(s) onto the decision (or double click on the effect while Clear DS is active)
   1. Double click
   2. Select Companies – Search result as Data Source
-  3. Leave Data Filter as is (No objects – clears the data source)
-
-_This will clear previous search results from the data source_
-
+  3. Leave Data Filter as is (No objects – clears the data source). _This will clear previous search results from the data source_
 7. Add a new effect outside the decision, Consume a REST Service
   1. Paste the url ```https://data.brreg.no/enhetsregisteret/api/enheter?navn=``` into URL
   2. At the end of this URL, right click and select Field. Add the field Search from the local object UI
@@ -154,12 +151,11 @@ _This will clear previous search results from the data source_
     6. forretningsadresse -> land – Country
     7. forretningsadresse -> poststed - City
     8. siftelsesdato – Founded
-    9. konkurs – Bankrupt
  ![Consume a REST Service - JSON Mapping](Media/oppg04fig06.png)
 8. Click OK, three times back to the Action editor
 9. Click Ok to close the Action
 10. Right click on the Action and select properties, go to Security
-  1. Add Everybody
+  1. Add Everyone
   2. Check the two top permissions.
 11. Go to Commands and add New - > Run a Action (local scope)
   1. Control: Form
@@ -168,7 +164,7 @@ _This will clear previous search results from the data source_
   4. Enabled: Select enter a condition
     1. Left operand: select UI.Search, and Apply function LENGTH
     2. is greater than
-    3. Right operand: enter a number, input 3
+    3. Right operand: enter a number, input 2
 12. Navigate to the View editor, click on the search symbol, and click the three dots in Events.
   1. Select Add
   2. Type: On Click
@@ -184,19 +180,15 @@ _This will clear previous search results from the data source_
 
 1. In Genus Studio, navigate to User Interaction | Actions
 2. Create a new Action, Save Companies from search result
-3. Add a data source, right click -> Add -> Object -> Company
+3. Add a data source, right click -> Add -> Object -> Company (brreg)
   1. Rename to Company – search result
   2. Max occurrences = Unbounded
-  3. Select Cannot be blank
-  4. Deselect Private
-  5. Deselect Persistable
+  3. Change Data Flow to Input
 4. Add a data source, right click -> Add -> Object -> Company
   1. Rename to Company – saved
   2. Max occurrences = Unbounded
 5. Go to Actions tab
-  1. Add a Scope, open
-    1. Rename to Save companies
-    2. Check Disable Live Update
+  1. Add a Scope, rename to Save companies
   2. Inside Scope, add a Create Object(s)-effect, open
     1. Set Data Source to Company – saved
     2. On top level, bind Company – search result
@@ -205,12 +197,12 @@ _This will clear previous search results from the data source_
   3. The Action should now look like this
  ![Action Editor](Media/oppg04fig08.png)
   4. Save and close the Action
-  5. Right click on the new Action and add Security (Standard security group, top two permissions)
+  5. Right click on the new Action, select Properties and add Security (Standard security group, top two permissions)
 6. Open the search form
 7. Add a command on the Form, Run a Action (Global Scope), and select the new Action
   1. Open Filter Data
     1. Double Click on Company – Search result (or click modify)
-    2. Select _One-way binding,,,_, click Modify
+    2. Select _One-way binding_, click Modify
     3. Select Companies – Search result (form data source) in first drop down
     4. Select Selected in second drop down
     5. Click OK back to Form editor
@@ -224,22 +216,24 @@ _This will clear previous search results from the data source_
 8. Go to View editor and add a Button somewhere appropriate.
   1. Give the button a label. If necessary, remove the 75px width constraint
   2. Add an Event, On Click, and select the new command
-9. Save and close the form
-10. Navigate to Data -> Object Classes -> Company
-  1. Open (double click Company)
-  2. Go to Data Integrity, click change on Uniqueness Constraint
-  3. Click Add, and setup this constraint
+9. Select the Grid, change Selection Mode to Multiple.
+10. Save and close the form
+11. Add a uniqueness constraint to Company to ensure that only one company with the same organization number can be saved in the database.
+  1. Navigate to Data Structure -> Object Classes -> Company
+  2. Open (double click Company)
+  3. Go to Data Integrity, click change on Uniqueness Constraint
+  4. Click Add, and setup this constraint
  ![Uniqueness Constraint](Media/oppg04fig09.png)
-  4. Click OK back to Genus Studio main window
-11. Start/restart Genus Desktop and test (ctrl+shift+F5 to restart Desktop)
-12. Test that saving the same company twice is not possible.
+  5. Click OK back to Genus Studio main window
+12. Start/restart Genus Desktop and test (ctrl+shift+F5 to restart Desktop)
+13. Test that saving the same company twice is not possible.
 
 ####6. Improve Action to update existing companies
 
 1. Open the Action again
 2. Add a Read object(s)-effect above the existing scope, setup:
  ![Read existing objects](Media/oppg04fig10.png)
-3. Add a Modify Object(s) effect inside the scope
+3. Add a Modify Object(s) effect inside the scope, above the Create Objects effect
   1. Data Source: Company – saved
   2. Doble click on top level
     1. Value Company – search result
@@ -257,8 +251,6 @@ _This will clear previous search results from the data source_
 5. Save the Action
 6. Test by searching for Genus and saving this Company.
 
-_NOTE: Small issue with the updated object appearing in the search result, this is due to reuse of the Company object as the object to receive data from Brønnøysund. Normally a dedicated object for integration and a separate object for app model usage is recommended._
-
 ####7. Setup Search for Company
 
 1. Open the Company object class
@@ -271,24 +263,6 @@ _NOTE: Small issue with the updated object appearing in the search result, this 
   3. Check Enable Search
   4. In Data Sources, add Company
 3. Save, restart and test
-
-####8. Create a Code Domain for Company State
-
-1. Create a Code Domain for Company State. In Genus Studio | Object Classes, select New -> Code Domain. Name the Code Domain _Company State_ and add the values below. Click OK.
- ![Code Domain - General](Media/oppg04fig14.png) ![Code Domain - Data Entries](Media/oppg04fig15.png)
-2. Add a new column to the database table Company
- ```sql
- alter table Company
- add StateId int
- go
- 
- update Company
- set StateId = 1
- go
- ```
-3. On the object class Company, right click and select _Add object class properties_
-4. Select the new column and set interpretation to the new Code Domain.
-
 
 <table>
  <tr>

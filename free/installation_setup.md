@@ -2,7 +2,7 @@
 # Installation of Genus and URLs to the environments
 
 ### Installation
-In case you haven't installed Genus Apps on your computer yet: Open the web browser and type https://free-**\<username\>**-origin.free.genus.net/Download/Setup.exe. This will download Genus.	
+In case you haven't installed Genus Apps on your computer yet: Open the web browser and type https://free-**\<username\>**-origin.free.genus.net/download/Setup.exe. This will download Genus.	
 
 ### Log into your Environment
 You can access your environment through the URL https://free-**\<username\>**-origin.free.genus.net/

@@ -133,16 +133,15 @@ Navigate to User Interaction | Desktop | Tables in Genus Studio
   1. Paste the url ```https://data.brreg.no/enhetsregisteret/api/enheter?navn=``` into URL
   2. At the end of this URL, right click and select Field. Add the field Search from the local object UI
  ![Consume a REST Service - URL](Media/oppg04fig05.png)
-  3. In Response Handlers, click Add
-    1. Expected Format: JSON
-    2. Import Format: JSON
-    3. Data Source: Companies – Search result
-  4. Click Customize, then Template…, then Test REST Request
-  5. Paste the URL ```https://data.brreg.no/enhetsregisteret/api/enheter?navn=genus``` and click Send
-  6. Copy the Response Body, click Close
-  7. Paste the Response Body into Json Data, and click OK, select Yes when prompted
-  8. Drag _Companies – Search result_ onto Create: (no binding) below the element _enheter_
-  9. Drag the appropriate fields onto the corresponding elements
+  3. Click Test...
+    1. Add a serch term after navn= in the Url, e.g. Genus.
+    2. Click Send
+    3. Click Handle Current Response
+  3. Open the Response handler
+  4. Select Company - search result in the Data Source field
+  5. Click Customize...
+  6. Drag _Companies – Search result_ onto Create: (no binding) below the element _enheter_
+  7. Drag the appropriate fields onto the corresponding elements
     1. organisasjonsnummer – Organization number
     2. navn – Name
     3. organisasjonsform -> kode - Organization type

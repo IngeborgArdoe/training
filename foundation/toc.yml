@@ -59,7 +59,9 @@
   items:
   - name: 12 - REST Services
     href: exercise-12.md
-  - name: 13 - Web
+  - name: 13.1 Introduction to Web modeling
+    href: exercise-13intro.md
+  - name: 13.2 Web Exercises
     href: exercise-13.md
 - name: Exercises Part VII - Mail Merge, Agents, Misc (14-15)
   href: exercise-14.md

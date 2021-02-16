@@ -1,4 +1,4 @@
-## Exercise 13 - Web
+## Exercise 13.2 - Web
 **SESSION BY INSTRUCTOR:** *The instructor will start off by giving you a brief introduction to Web modeling.*
 
 ### Simple web application
@@ -139,6 +139,10 @@ In this exercise we will explore some more web consepts, and demonstrate how cho
    * Target Type: "Component"
    * Target: "Activities - Kanban"
    * Data Filter: "Read related"
+      * Filter target data set: "Activities"
+      * On objects in source data set: "Company"
+      * Where the source is related to the target in a: "One to Many Relationship"
+      * By outbound field in target: "Activities.Company"
 3. Save and see the results in the browser. Remember to open a Company that has activities related to it.
 4. Your results should look like the figure below. Try moving cards between lists to change the state of the activity.
 ![oppg13fig16.JPG](media/oppg13fig16.JPG)

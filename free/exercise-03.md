@@ -59,11 +59,11 @@ In this exercise we will explore some more web consepts, and demonstrate how cho
    * Target Type: "Page"
    * Target: "Activities - Kanban"
    * Data Filter: "Read related"
-3. Click on the Read related text to open a dialog. Fill in the following properties (see figure below):
-   * Filter target data set: "Activities"
-   * On objects in source data set: "Person"
-   * Where the source is related to the target in a: "One to Many Relationship"
-   * By outbound field in target: "Activities.Responsible"
+      * Filter target data set: "Activities"
+      * On objects in source data set: "Person"
+      * Where the source is related to the target in a: "One to Many Relationship"
+      * By outbound field in target: "Activities.Responsible"
+3. Save and see the results in the browser. Remember to open a Company that has activities related to it.
  ![oppg03fig5.JPG](media/oppg03fig5.JPG)
 
 3. Save and see the results in the Human Resources app in the browser. Remember to open a Person that has activities related to it.

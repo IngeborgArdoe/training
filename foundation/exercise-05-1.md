@@ -1,4 +1,4 @@
-## Exercise 5.1: Evemts in Genus Apps
+## Exercise 5.1: Events in Genus Apps
 
 ### Commands and Events
 

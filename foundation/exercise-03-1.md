@@ -5,7 +5,7 @@
 You will now make a Form for registering and opening customer Contact information.
 1. In Studio, navigate to User Interface -> Forms. Right-click -> New -> Desktop Form. Save it right away with name «Contact».
 2. Data Sources (upper-left corner): This is where you add the object(s) that you want to show or utilize in the Form. Add «Contact» as a Data Source (see screenshot below). Note that:
-   1. Data Source «Contact» has to be "public". Hence, uncheck the property named Private. The reason is that you want to be able to filter a Contact-object into the form (i.e. input an object to the Form, so that the form knows which contact person to show).
+   1. We want to be able to filter inn Contact-data to the form and get data back. This means that "Data Flow" needs to be "Input and Output" where "None (private)" is the default. 
    2. Data Source «Contact» must be set to «Max Occurences» = "One", which means that only one Contact-object can exist in the Form. This has to be done in order to allow the properties of Contact to be shown in fields. "Unbound" is used for data sources that you want to list (e.g. in a Grid, Table, etc).
    3. This form will be used as the "master" form for showing Contacts, i.e. you can use it as the default form for showing a Contact. Hence, check the «Is Master» property.
 ![oppg3fig1.JPG](media/oppg3fig1.JPG)

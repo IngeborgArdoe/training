@@ -82,9 +82,6 @@ In this exercise, you will make a simple web interface for customer relation man
 When you activate a row in the View, it will now send the Data Set from the context to the Client Action. The Client Action will navigate to the Company form, transfering the Data Set further. See the results in the browser.
 ![oppg13fig11.JPG](media/oppg13fig11.JPG)
 
-####Bonus: 
-Create a Contacts View and add it as a page to the Tab Control in the Company Form
-
   
 ### Components, Viewports, Tabs and Kanban
 In this exercise we will explore some more web consepts, and demonstrate how choices during modeling affect our ability to reuse parts of the model
@@ -146,6 +143,9 @@ In this exercise we will explore some more web consepts, and demonstrate how cho
 3. Save and see the results in the browser. Remember to open a Company that has activities related to it.
 4. Your results should look like the figure below. Try moving cards between lists to change the state of the activity.
 ![oppg13fig16.JPG](media/oppg13fig16.JPG)
+
+#### Bonus: 
+Create a Contacts View and add it as a page to the Tab Control in the Company Form
 
 ### Themes
 

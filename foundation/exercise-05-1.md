@@ -19,7 +19,7 @@ You will now add functionality to open, create and delete Contacts from the Comp
 2. Create an Event for executing the above command. We want the Contact-form to open when a row in the Contact grid is clicked, so place the Event on the grid itself (select the Contact-grid -> click the Events-property):
    1. Type: On Context Meny Item Click
    2. Menu Item: Open in a New Window (the event, which by default triggers «Open in a New Window» in Genus, will happen when a row is double-clicked.
-   3. Command: Open Contact
+   3. Command: Open (The Command you just made)
    4. Click OK
 3. Add a Command to create a new Contact. Place it on the Contacts-tab.
    1. Name: New

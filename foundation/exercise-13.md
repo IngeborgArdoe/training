@@ -72,12 +72,12 @@ In this exercise, you will make a simple web interface for customer relation man
 *In order to navigate to the form from the Companies View, we need to create a Client action that takes in one company and navigates to the Company form with that Company as input*
 
 1. Return to the CRM Module. In the navigation pane, navigate to Client Actions. Client Actions are actions that can be executed directly in the browser, without a server roundtrip, and can only work on data that is already in the memory. Add a new Client Action and name it "Navigate to Company Form".
-2. Go to the Data Sets tab. Add a Public Interface Data Set and name it "Task: Company". Choose the Company Data Source, Occurences "One" and flow "In". The Data Set is the set of data that the Client Action is aware of. We do not select any data filter inside the Client Action, this is done later when we link the Client Action in a page or inside another action.
-3. Navigate to the Action Flow tab. Drag a "Navigate to Page" into the empty Action Flow in the middle of the window. Under Content --> Page, select the Company Form. Under Data filter, select "Task: Company". Your action flow should now look like the figure below. Save and close the Client Action.
+2. Go to the Data Sets tab. Add a Public Interface Data Set and name it "Action: Company". Choose the Company Data Source, Occurences "One" and flow "In". The Data Set is the set of data that the Client Action is aware of. We do not select any data filter inside the Client Action, this is done later when we link the Client Action in a page or inside another action.
+3. Navigate to the Action Flow tab. Drag a "Navigate to Page" into the empty Action Flow in the middle of the window. Under Content --> Page, select the Company Form. Under Data filter, select "Action: Company". Your action flow should now look like the figure below. Save and close the Client Action.
 ![oppg13fig9.JPG](media/oppg13fig9.JPG)
 
 4. Open the Companies view. Open the Control View, by toggling the button up to the left (green button on the figure below), or "Ctrl+Shift+L". Here you can navigate the different levels of your page. You can use Esc to navigate to the level above, just like in a desktop form. Go to the "Table" level.
-5. In the Table level, Change the On Activate Interaction to "Navigate to Company Form" (you might need to close and open the view if the action is not visible). Under Data Exchange, select Company in the Data Column of the "Task: Company" row.  
+5. In the Table level, Change the On Activate Interaction to "Navigate to Company Form" (you might need to close and open the view if the action is not visible). Under Data Exchange, select Company in the Data Column of the "Action: Company" row.  
 ![oppg13fig10.JPG](media/oppg13fig10.JPG)
 When you activate a row in the View, it will now send the Data Set from the context to the Client Action. The Client Action will navigate to the Company form, transfering the Data Set further. See the results in the browser.
 ![oppg13fig11.JPG](media/oppg13fig11.JPG)

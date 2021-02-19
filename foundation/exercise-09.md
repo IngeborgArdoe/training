@@ -26,12 +26,8 @@ CREATE TABLE Document (
 ```
 
 Right-click within the Object Class Diagram (or in the Object Class section of the Navigation Pane), and select New -> Object Domain. Choose database table Document, make DocumentID the primary key (generate identifier automatically), and define each property's correct Data Interpretation. Make sure that the Data Interpretations of File Name, File Data, File Extension and File Size are set to the built-in data types with identical names. Also remember that Modified By and Created By should both be interpreted as Users.
-   
-####2. Run a "deploy to all".
 
-The reason is that you will soon set up a "file preview" which utilizes calls against the server. Naturally, the server needs to know about the new object class for this to work.
-
-####3. Create an action "Paste new Document from File". 
+####2. Create an action "Paste new Document from File". 
 
 This should take Company and File(s) as input, and create Document(s).
 
@@ -41,7 +37,7 @@ This should take Company and File(s) as input, and create Document(s).
 
 ![oppg8fig1.JPG](media/oppg8fig1.JPG)
 
-####4. Create document-tab in the Company-form
+####3. Create document-tab in the Company-form
 
 Expand the tab sheet in the Company-form with a new tab for listing documents. Add a Grid, and define which columns to show and what sorting to use. Place a Command pointing to the action that you just made on the Documents-tab, along with an Event to trigger it on the grid itself. Add also commands and events for Delete and Invoke a File (open document by double-clicking).
 
@@ -50,13 +46,13 @@ Insert a "file viewer" on the right side of the grid for showing files (take a l
 *Tip: For the event to trigger when files are pasted into the grid, choose Menu Item = Past Special. Note that you can - under the command's data filter parameter - filter out General File types Mail Message and Calendar Item from the input to the action, as you don't want to store these file types as Documents (but rather as Mail or Activity):*
 ![oppg8fig2.JPG](media/oppg8fig2.JPG)
 
-####5. OPTIONAL: Create an action "Copy Document to Clipboard as File"
+####4. OPTIONAL: Create an action "Copy Document to Clipboard as File"
 
 This action will be the equivalent to "Copy Mail to Clipboard as Mail Message". Publish it.
 
 *Guidance: The action should take Documents as input and should create General Files. Make it available through an Event with Menu item = Copy.*
 
-####6. OPTIONAL: Add Delete and Paste/Copy to the Ribbon.
+####5. OPTIONAL: Add Delete and Paste/Copy to the Ribbon.
 
 *Guidance: Create two new Tab Sections under Context Tab Group "Document" and Tab "Document Management": Tab Section "Manage" for Delete and Tab Section "Clipboard" for Paste/Copy to Clipboard. Recall symbols and enabling conditions.*
    

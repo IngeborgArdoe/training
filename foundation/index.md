@@ -1,6 +1,6 @@
-# Welcome to our course in the Foundations of Genus Apps!
+# Welcome to our course in the Foundations of Genus!
 
-We have tailored a relevant and educational training program for new modelers, new business engineers and others who want to learn more about model driven development, low-code/nocode and Genus Apps.
+We have tailored a relevant and educational training program for new modelers, new business engineers and others who want to learn more about model driven development, low-code/nocode and Genus.
 
 The training program gives participants a half-finished solution, as well as access to a "blueprint" solution. Through assigned tasks, participants are guided in the process from a half-finished solution in the direction of the blueprint solution. Note that the word "blueprint" is not strict - it is more a _suggested_ solution out of many possible. Participants can log on to the blueprint solution at any time to see how it works and how it is designed - to get some help if stuck.
 

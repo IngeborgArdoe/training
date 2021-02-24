@@ -1,5 +1,5 @@
-# **Genus Apps<sup>&reg;</sup> training**
-This site contains the training material for Genus Apps courses .
+# **Genus Academy**
+This site contains the training material for some of the Genus courses.
 
 
 * [Foundation](foundation/index.md)

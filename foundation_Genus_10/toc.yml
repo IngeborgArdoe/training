@@ -14,14 +14,14 @@
     href: exercise-02-1.md
   - name: 2.2 - Object Classes & Properties
     href: exercise-02-2.md
-- name: Exercises Part II - Forms, Tables and Events (3-5)
+- name: Exercises Part II - Forms, Views and Events (3-5)
   href: exercises3-5.md
   items:
   - name: 3.1 - Forms
     href: exercise-03-1.md
   - name: 3.2 - Forms
     href: exercise-03-2.md
-  - name: 4 - Tables
+  - name: 4 - Views
     href: exercise-04.md
   - name: 5.1 - Events
     href: exercise-05-1.md

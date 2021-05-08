@@ -17,18 +17,18 @@ The object «Contact» is now almost done. The last step is to assign a few prop
 ####6. Modify settings on Object Class Contact
 
 Right-click on Object Class «Contact» -> Open.
-1. Tab «Auditing»: Check "Enable auditing" and then "Mandatory" on "Modify". Press Apply. This allows the user to right-click on a Contact in the client to look at its change history (which user has done what). 
+1. Tab «Auditing»: Check "Enable auditing" and then "Mandatory" on "Modify". Press Apply. This allows the user to right-click on a Contact in the client to look at its change history (which user has done what).
 2. Tab «Data Sorting»: Click Add.. and select First Name and Last Name. This will by default sort Contacts automatically by their first name and last name wherever Contacts are listed (e.g. tables, grids) without any sorting specified.
 3. Tab «Data Filtering»: Under "Auto Complete", click Add.. and select First Name, Last Name and Mail. This allows the user to type in a part of a Contact's first name, last name or e-mail in any field of type Contact, and hit Tab to lookup contact persons that match the written text.
 4. Tab «Data Integrity»: Click on Change under "Uniqueness Constraint", and then Add. In the window that opens you can set uniqueness requirements for the creation of contacts. Here you can for example say that "if e-mail has a value", check if another contact person with the same e-mail exists, and if so, qive a warning to the user.
 
    *Guidance: See screenshot below:*
-   
-   ![oppg2fig5.JPG](media/oppg2fig5.JPG)
- 
-   This is where you meet Genus' "Condition editor" for the first time. It is used everytime you want to conditionalize something. In this case it will generate an SQL query that checks (prior to saving) whether a Contact in the database has the same e-mail address as the one you want to store, or not. If the query returns true, the user will get a warning. Notice that we have allowed the user to store the Contact nevertheless, as the "Notify user and ask for confimation to proceed"-box has been checked. By selecting the option above, however, you will deny users to store Contacts with identical e-mail addresses. 
 
-   
+   ![oppg2fig5.JPG](media/oppg2fig5.JPG)
+
+   This is where you meet Genus' "Condition editor" for the first time. It is used everytime you want to conditionalize something. In this case it will generate an SQL query that checks (prior to saving) whether a Contact in the database has the same e-mail address as the one you want to store, or not. If the query returns true, the user will get a warning. Notice that we have allowed the user to store the Contact nevertheless, as the "Notify user and ask for confimation to proceed"-box has been checked. If selecting the topmost option "Notify user and cancel command", you will deny users to store Contacts with identical e-mail addresses.
+
+
 5. **Click OK.** The object «Contact» is now complete and ready to be included in the interface (and optionally get additional functionality).
 
 Note that you can go back and modify the properties of an Object Class/Object Class Property at any time, with a few exceptions (e.g. Data Interpretation of an Object Class Property; if you want to change this, you will have to delete the property and add it again). You can obviously also add new Object Class Properties to an Object Class after creation (e.g. you want to add Photo to Contact). Then you will have to run the wizard «Add object class properties», which is available in Studio by right-clicking on an Object Class. Remember to expand the table in the database first.
@@ -43,7 +43,7 @@ Note that you can go back and modify the properties of an Object Class/Object Cl
    *Guidance: Note that this is not the same as «Active User Account Stamp». «Active User Account Stamp», like «Time Stamp», means that the default value is set server-side, and can hence not be changed from the client. Choose instead F3 (see screenshot below) and pick «User (User Account)» which corresponds to the logged in user on the client.*
 
 ![oppg2fig6.JPG](media/oppg2fig6.JPG)
- 
+
 ####8. Replace Draft Object with Object Class
 
 The Draft-object that you made in Exercise 2.2 is no longer needed. Navigate to Object Class Diagram -> Right-click on Draft-object «Contact» -> «Replace Draft». In the dialog box, select object class «Contact». This will remove the Draft-object from the view and replaced it with modeled object class «Contact».

@@ -9,15 +9,15 @@ The object model is exposed to the end user through tables or "forms", combined 
 In Genus Studio, we refer to an object (e.g. Company) as an «Object Class». The properties of the object (e.g. "Name" or "Org No") are called «Object Class Property» or just «Property».
 The proposed Genus CRM solution has a simple object model outlined in the Case-description. What is missing in your EDU-solution is Contact, Contact Log, Document and Request. Initially, you will have to expand the object model with Contact and Contact Log.
 
-![oppg1fig1.JPG](media/oppg1fig1.JPG)
-Fig.1.1.: The initial version of the Genus CRM object model. Click on «Object Class Diagram» in the menu on the left to open the diagram. Here we see 5 Object Classes, each with several Object Class Properties. 
+![oppg1fig1.JPG](media/Exc1fig1.jpg)
+Fig.1.1.: The initial version of the Genus CRM object model. Click on «Object Class Diagram» in the menu on the left to open the diagram. Here we see 5 Object Classes, each with several Object Class Properties.
 NOTE: A diagram is just a drawing board where it is possible to visualize a selection of objects in the solution (all existing objects are listet under «Object Classes»). Here you will automatically see the object relations. If you delete an object from the diagram, it will only disappear from this particular view. The object itself is not deleted from the solution.
 
 
 ## Exercise 2 - Object Classes and Properties
 Your first task will be to model/create Object Class "Contact" with all its required and essential Object Class Properties. To construct an Object Class in Genus Studio, an equivalent table that the object class can refer to must exist in the database.
 
-There are two ways of making new Object Classes: 
+There are two ways of making new Object Classes:
 
 - **Alt 1:** If you have experience with SQL, you can write a SQL statement from scratch to create the database tables and columns directly in SQL Server Management Studio. By referencing these tables, you can build the objects (Object Class/Object Class Properties) in Genus Studio. **If you choose this option, use the field descriptions from #2 below as the base for your SQL-query, add the table and go to #4.**
 - **Alt 2:** You wish to make a draft of the object in Genus Studio first, and then get the needed SQL statements generated. For this you will have to use the Object Class Diagram view. Here you can generate «Draft» Object Classes and «Draft» Object Class Properties that don't exist in the database yet. This feature can be very useful when you are in an object model design-phase, and want the model to be QAed before the tables are actually created in the database. It is easier to modify Draft-objects in Genus Studio than tables after they have been created and associated with Object Classes. If you want to add or remove an attribute/field, the latter requires changes in 2 places; both in the database and in Genus Studio.
@@ -27,11 +27,11 @@ In the first exercise, you will use alternative 2 to get familiar with this opti
 ####1. Create a Draft Object Class for «Contact».
 
 *Guidance: Navigate to «Object Class Diagram». Right-click -> Insert -> Class (Draft). In the dialog box that pops up, you'll set the Logical Name equal to the object in Genus ("Contact") and the Physical Name equal to the name of the table that is to be made in the database ("Contact").*
-  
+
 ![oppg2fig2.JPG](media/oppg2fig2.JPG)
- 
+
 The drafted object «Contact» is now made. Notice that the new object is gray-colored unlike the Object Classes that were already there. A property named «ID» is auto-generated for the object, and is the primary key of the table / object.
-   
+
 ####2. Add Properties to Contact:
 
 * FirstName (varchar(100))
@@ -47,11 +47,11 @@ The drafted object «Contact» is now made. Notice that the new object is gray-c
 * Modified By (Outbound reference to object «User»)
 
 *Guidance: Add Object Class Properties to the draft object by right-clicking it (Contact» -> Insert -> Property (Draft) / CTRL+Shift+'+').*
-  
+
 References to other classes can easily be made by pressing the Alt-key while selecting an object and dragging it into the drafted Object Class. If you do that, you will automatically get an outbound reference with correct data type set for you.
 
 ![oppg2fig3.JPG](media/oppg2fig3.JPG)
-  
+
 ![oppg2fig4.JPG](media/oppg2fig4.JPG)
 
 When you add a new draft Property, you define its Logical Name (the name of the field in Genus CRM), Physical Name (the name of the field in the database), Outbound reference (the object that the field is pointing at, e.g. «Company») and Data type (e.g. «varchar(120)» for text where 120 is the number of characters, «int» for integer, uniqueidentifier for primary keys or ID-reference, and so on. The data type is set automatically if you choose an Outbound Reference). Press OK.
@@ -69,7 +69,7 @@ Once again, we emphasize that you don't have to build Draft object classes, but 
 ####4. Build object class «Contact» in Studio.
 
 *Guidance: Navigate to Object Classes in Studio (left pane) and right-click -> New -> Object Domain. Go through the wizard.*
-   
+
 1. First step: Select the database from which the table will be read (it will be set by default if there is only one database, but an application in Genus might have tables in several databases).
 2. Second step: Select the table you will be modeling («Contact»). Here you have the oportunity to override the object's name as shown in Genus CRM (e.g. if the table has a technical name).
 3. Step «Table columns»: Choose which columns you want to model. By default, all of them are selected. Click on Next.

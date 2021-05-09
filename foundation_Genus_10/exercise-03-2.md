@@ -1,4 +1,4 @@
-## Exercise 3.2 - Forms
+## Exercise 3.2 - Views
 
 You will now add a list to the Company-form that shows all associated Contacts. You will also make actions to create new Contacts and open existing ones.
 

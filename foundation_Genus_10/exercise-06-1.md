@@ -2,7 +2,7 @@
 **SESSION BY INSTRUCTOR:** *The instructor will start off by giving you a brief introduction to the topic.*
 
 
-#### Actions
+### Actions
 
 You are now ready to add «Actions», which are logical user initialized actions, to the solution. Client Actions are executed when they are initiated from somewhere - for example from a right click menu or when clicking a button.
 
@@ -20,6 +20,8 @@ In Genus Studio, you find Actions several places:
   * Actions can also be found in Rules, Agents and Web Services in the main left menu of Genus Studio
 
   Even though the different places you find Actions are set up similarly, they are by nature different:
+
+
 -	Client Actions are triggered by a user initialized action, e.g. a click on a button.
 - Server Actions are run on the server, but can be triggered from e.g. a Client Action.
 - Global Actions are also often triggered by a user initialized action, but an exception is generic actions that are called from other actions, rules, agents or web services.
@@ -28,7 +30,7 @@ In Genus Studio, you find Actions several places:
 -	Web Services can be set up and triggered by a web-service call from for example an external system. The setup of Web Services are logic-wise equal to that of actions, but Web Services have additionally defined Schemas which describes the structure of input and output XML (more about this later).
 
 
-#### Events
+### Events
 An action can be triggered by an Event. An Event can be many things, among them; a user click, a value change, a selection, a page change.
 
 In Pages, both Views and Forms, you will see a menu section named Event Handlers. Within the Event Handler, there are three categories of Events; Page Events, Data Events and Control Events. In addition to these, each page has an Action Bar where actions can be triggered.
@@ -42,52 +44,6 @@ The different Events can be summarized as follows:
 
 - Action Bar Events are available at the Page level (the top level within the control view). Here both default and custom actions are available, as with certain control events.
 
-
-### 1. Change Responsible for Contact
-You will now make a simple Action, "Change Responsible for Contact" that can take one or more Contacts as input, and change their Resposible.
-#### Data Sources
-a. Contact - an unbounded datasource for which we will choose new responsible for.
-   i. Let the cardinality be Unbounded, and set the privacy to not Private (Private unchecked).
-   *Guidance: Right-click in the upper-left pane -> Add -> Object. Select «Contact». In the bottom pane (General) uncheck Private.
-
-b. Data Source:  User - a "One"-data source which will represent the new Responsible.*
-      i. Add the Data Source User with cardinality One and Private checked.
-
-#### Actions - Choose new responsible
-
-The first thing that we want to do is to make it possible for the user to choose a User which shall be the new Responsible for the contact. Here we use a useful input method which shows a table of Users to the user that the user can choose between.
-
-1. Add a "Read Object(s)"-effect
-2. Double-click the effect and choose "User" as the Data Source and "User.state=Active" as Data Filter.
-3. Switch to the tab item "User Interaction"
-   1. Check "Prompt the user to select objects".
-   2. Type in a meaningful Dialog Title like "Choose responsible" and Dialog Prompt "Please ..."
-   3. Choose fields that will be shown to the end user when he or she will choose the new Responsible
-   4. Use a meaningful sorting (E. g. First name, Last name)
-   ![oppg6fig1.JPG](media/oppg6fig1.JPG)
-
-Next is the effect which changes Contact.Responsible for all objects in the data source "Contact input" and saves it to the database.
-
-#### Set the chosen User as Responsible
-1. Add a Block "Scope".
-
-   *Note: By default, the Commit-option is checked. This means that all changes (Create or Modify) done by effects within the Scope will be saved.*
-2. Add a "Modify objects" effect which sets the Contact.Responsible field to the chosen User.
-
-   *Guidance: Set it up as illustrated below. This will generate a SQL query that changes the Responsible of all Contacts in "Contacts input".*
-![oppg6fig2.JPG](media/oppg6fig2.JPG)
-
-#### Security
-One important thing that we haven't considered yet is security. Access is given to security groups per action. All users of Genus CRM are members of security group "Users" og should have access to this action.
-1. Go to File -> Properties (upper-left corner of the action). Under Security, add security group "Users". Check "Find and List" and "Read and Execute". Note: The action has to be saved before you are allowed to open the Security-tab.
-
-*The action is finished, but not made available for the end user yet. To do so, you will have to publish it through an Event.*
-2. Navigate to table «Contacts». Add an Event that executes your action.
-   1. Effect Type = «Run a Action (Global Scope)».
-   2. Effect = "Change Responsible for Contact".
-   3. Enabling: Select "On selected objects" (the action should be enabled when one or more rows are marked).
-   4. Filter Data: Set "Two way binding to objects in the data source: Contact" with Objects: Selected.
-   *Note: Defining a data filter like this is a quick way of saying "I want my action's data source «Contacts input» to be populated with all contact persons marked in the table by the user". When clicking the Action «Change Responsible for Contact» in the Action pane, the chosen contact persons are copied into the action «Change Responsible for Contact» and the action's effects are executed.*
 
 <table>
    <tr><td><a href="exercise-05-2.md"><- Previous</a></td><td align="right"><a href="exercise-06-2.md">Next -></a></td></tr>

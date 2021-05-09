@@ -2,9 +2,7 @@
 
 
 
-
-
-### 3.2.3 Create Action for New Contact
+### 5.1.1 Create Action for New Contact
 In order to create a new Contact, we need to create a Client Action which creates a new Object and allows for user input. This action will be available within this module.
 
 1. Navigate to Client Actions and add new, name it "Add new contact".
@@ -31,7 +29,21 @@ Now we want to Create a new Contact which will be edited in the "Contact Details
   <img src="media/Exc2fig9.JPG" width="200" />
 </p> -->
 
-### 3.2.4 Utilize Action to Create New Contact
+
+
+
+## The Action Bar and Context Menu
+Both Forms and Tables can get a user friendly menu structure through the Action Bar and Context Menu. The Action Bar is a menu structure that most users are familiar and can be grouped similar to other Microsoft Office-products (here named Ribbon and styled slightly different). The Action Bar is placed on top of Pages. Actions can be run from the Action Bar, and one can use Context to show different menu elements for different parts of the interface (when navigating). Context menus are available for rows in Views, as well as some Controls (such as Kanban Cards and Tables), the same editor and principles applies here.
+
+In this exercise, you will use the Action Bar and Context Menu functionality. Both can enhance the user's learning and understanding of a new display (i.e. Form or Table), as relevant actions are made clearly visible.
+
+With a well-defined Action Bar and Context Menu, the user can quickly browse and categorize available actions and get a perception of what the form/table offers in terms of functionality. Consequently, the user gets an increased feeling of control.
+
+To create a well-functioning Action Bar or Context Menu, it is important to utilize all the customization-options offered. By choosing meaningful groupings of commands (Sections), symbols, texts, screen tips, conditional enabling and conditional visibility you can make the life of the user much simpler. For example, you should always try to highlight important and frequently used actions. Below, we start with some basic Action Bars and Context Menus.
+
+
+
+### 5.1.2 Utilize Action to Create New Contact
 
 6. Re-open the Contacts View. Navigate to View, open the Control View (Ctrl+Shift+L) and mark the top level - Contacts.
 7. In the Page-section on the right hand side. Click "Action Bar". Here, you can see built-in actions, as well as the Client Actions defined in the Module. Select "Add New Contact", set the label to "New" and an appropriate Icon (e.g. Basic-Contacts" or "Basic-AddButton". In the Data Exchange, we can see the Company data source defined in the Action. In order to send data into the Client Action, we need to define a corresponding data source in the View.
@@ -45,7 +57,7 @@ Now we want to Create a new Contact which will be edited in the "Contact Details
 11. When you return to the Company page, we see the new Contact in the Contact Tab. However, nothing happens when we click the row. We need to add functionality for showing Contact information when a row is activated/clicked.
 
 
-### 3.2.5 Open Contact Information
+### 5.1.3 Open Contact Information
 12. Return to the Client Actions-section and create a new one named "Navigate to Contact". In Action Flow, add the "Navigate to Page"-effect. Now we need a data source to filter into the Page.
 
 13. Navigate to Data Sets and add Contact as a Public Interface Data Source. Set Occurrense to One and Required as Yes. If we do not have a Contact to show, we do not want to navigate to the Contact page.
@@ -63,50 +75,22 @@ Now we want to Create a new Contact which will be edited in the "Contact Details
 
 
 
-<table>
-   <tr><td><a href="exercise-03-1.md"><- Previous</a></td><td align="right"><a href="exercise-04.md">Next -></a></td></tr>
-</table>
+### 5.1.4 Delete Contact
+1. Add a new Client Action "Delete Contact" in the Company Module. Define a Public Interface Data Source for Contact. The data source should be input, max occurence One and Required.
+
+2. In the Action Flow, add the Effect "Delete Objects" and set data binding to the Contact data source.
+
+3. Return to the Contact View in the Company Module. Highlight the Table-level in the Control View (Ctrl+Shift+L). Navigate to "Context Menu" on the right hand side.
+
+4. Add the newly created "Delete Contact" item to the Context menu. Set Data Exchange as "Contact (0:n)", which allows the View to send data from context to the delete action.
+
+5. Set Label to Text -> Delete and set Icon to "Fluent-Delete".
+
+6. Save and refresh your browser.
+
+7. In the Contact listing (either in a Company Form, or from the Contacts-list app site), hover over the first column in the Contact list. Click the menu and choose Delete.
 
 
-
-###1. Add Contact events to the Company-form:
-
-You will now add functionality to open, create and delete Contacts from the Company form.
-1. Add a command to open an existing Contact. Place the Command on the Contacts-tab by selecting the tab (you can mark the Contact grid and press Esc), and - under Properties - clicking Commands. In the dialog box, click Add.. Open a Form
-   1. Name: Open
-   2. Tip: Contact (this tip is only visble for modelers)
-   3. Effect: Contact (the form to open)
-   4. Data Binding: Default (One Way. If Two-way is chosen, the form will open modally and changes will be brought back to the Company-form where they will have to be saved with the Save-button)
-   5. Filter Data: Select "one way binding to objects in the data source". Click on Modify. In the dialog box, you will have to choose the data source to filter against (Contact) and "Single Selected". This allows the one active (selected) row in the Contact-grid to be filtered into the Contact-form. Check also the "Enable Browse Object"-box (makes it possible to use the up / down arrows to browse through a list of contact persons).
-2. Create an Event for executing the above command. We want the Contact-form to open when a row in the Contact grid is clicked, so place the Event on the grid itself (select the Contact-grid -> click the Events-property):
-   1. Type: On Context Meny Item Click
-   2. Menu Item: Open in a New Window (the event, which by default triggers «Open in a New Window» in Genus, will happen when a row is double-clicked.
-   3. Command: Open (The Command you just made)
-   4. Click OK
-3. Add a Command to create a new Contact. Place it on the Contacts-tab.
-   1. Name: New
-   2. Tip: Contact
-   3. Type: Open a Form
-   4. Effect: Contact
-   5. View: Default (Contact)
-   6. Data Binding: Default (One Way)
-   7. Create Data: Click … and push Add. Under Default Values you will have to set Contact.Company = Company (in other words, the new Contact's Company will be set to the Company that you have open when the "New"-button is clicked).
-   8. Assign a symbol: This will turn out to be useful later. You will find a suitable symbol if you search for "1081". Notice that you can choose both a main symbol and an "overlay". Try putting on an overlay. Before you push OK, right-click on the overlay and hit "Clear".
-4. Add an Event to the Contacts-grid for creating a new contact.
-   1. Type: On Context Menu Item Click
-   2. Menu Item: New
-   3. Command: New (The Command you just made).
-5. Add a Command to the Contacts-tab that deletes selected Contacts.
-  *Guidance: Look at the «Delete»-command which is placed on the ActivitiesTab-tab. In our case, the Delete-command should have Data Binding against Data Source «Contact». Tip: Use symbol #1195, and choose Enabling = Conditional with condition "Contact.Selected Objects has value" (illustration below).*
-![oppg3fig7.JPG](media/oppg3fig7.JPG)
-
-6. Add an Event to the Contacts-grid for deleting contacts.
-   1. Type: On Context Menu Item Click
-   2. Menu Item: Delete
-   3. Command: Delete (The Command that you just made).
-7. Restart Genus Desktop in order to try the new functionality for adding, editing and/or deleting a Contacts from a Company. Since we haven't define a Ribbon yet, you will have to click the close button ('X') and "Yes" to save. Check also that the default values on creation are as expected.
-
-   *Comment: In order to publish the changes to other users you would have had to deploy the blue or green namespace. This can be done under the "Deployment"-menu item in Genus Studio. Either the blue or the green namespace can be set as the active namepace - the namespace end users are using. When the active namespace is deployed the new appmodel becomes available for the end users.*
 
 <table>
    <tr><td><a href="exercise-04.md"><- Previous</a></td><td align="right"><a href="exercise-05-2.md">Next -></a></td></tr>

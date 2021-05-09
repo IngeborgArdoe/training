@@ -14,61 +14,42 @@
     href: exercise-02-1.md
   - name: 2.2 - Object Classes & Properties
     href: exercise-02-2.md
-- name: Exercises Part II - Forms, Views and Events (3-5)
+- name: Exercises Part II - Forms and Views (3-4)
   href: exercises3-5.md
   items:
   - name: 3.1 - Forms
     href: exercise-03-1.md
-  - name: 3.2 - Forms
+  - name: 3.2 - Views
     href: exercise-03-2.md
-  - name: 4 - Views
+  - name: 4 - App and Sitemap
     href: exercise-04.md
-  - name: 5.1 - Events
-    href: exercise-05-1.md
-  - name: 5.2 - Events
-    href: exercise-05-2.md
-- name: Exercises Part III - Logic, actions and Ribbon (6-8)
+- name: Exercises Part III - Logic, Actions and Events (5-8)
   href: exercise-06-1.md
   items:
-  - name: 6.1 - Logic & actions
-    href: exercise-06-1.md
-  - name: 6.2 - Logic & actions
-    href: exercise-06-2.md
-  - name: 7 - Ribbon
+  - name: 5.1 - Actions and Events
+    href: exercise-05-1.md
+  - name: 5.2 - Actions and Events
+    href: exercise-05-2.md
+  - name: 6 - Action Menus
     href: exercise-07.md
-  - name: 8 - Rules
+  - name: 7 - Rules
     href: exercise-08.md
-- name: Exercises Part IV - Documents and repetition (9-10)
-  href: exercise-09.md
+- name: Exercises Part IV - Repetition (8)
+  href: exercise-10-1.md
   items:
-  - name: 9 - Documents
-    href: exercise-09.md
-  - name: 10.1 - Request
+  - name: 8.1 - Request
     href: exercise-10-1.md
-  - name: 10.2 - Request
+  - name: 8.2 - Request
     href: exercise-10-2.md
-- name: Exercises Part V - Analytics and Insights (11)
-  href: exercise-11-1.md
-  items:
-  - name: 11.1 - Analyses
-    href: exercise-11-1.md
-  - name: 11.2 - Analytics and Insights
-    href: exercise-11-2.md
-- name: Exercises Part VI - REST and Web (12-13)
+- name: Exercises Part VI - REST (9)
   href: exercise-12.md
   items:
-  - name: 12 - REST Services
+  - name: 9 - REST Services
     href: exercise-12.md
-  - name: 13.1 Introduction to Web modeling
-    href: exercise-13intro.md
-  - name: 13.2 Web Exercises
-    href: exercise-13.md
-- name: Exercises Part VII - Mail Merge, Agents, Misc (14-15)
-  href: exercise-14.md
+- name: Exercises Part VII - Agents and Misc (10-11)
+  href: exercise-15.md
   items:
-  - name: 14 - Mail Merge
-    href: exercise-14.md
-  - name: 15 - Agents
+  - name: 10 - Agents
     href: exercise-15.md
-  - name: 16 - Miscellaneous
+  - name: 11 - Miscellaneous
     href: exercise-16.md

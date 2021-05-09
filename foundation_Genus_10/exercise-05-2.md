@@ -1,41 +1,49 @@
-## Exercise 5.2: Events in Genus Apps
+## Exercise 5.2: More Actions and User Interfaces in Genus
 
-####2. Create lists of Activities and Mail on Contacts (with functionality)
+###5.2.1 Create lists of Activities on Contacts (with functionality)
 
 1. Add a new field to Object Class «Activity» named "Contact".
    *Guidance: Add the field to the database by running SQL statement:
-   
+
    ```
    ALTER TABLE Activity
    Add ContactID uniqueidentifier
    ```
 
-   This adds a column ContactID to the Activity-table in the database, with data type identical to the primary key of Contact).*
-   Then, right-click on Activity in Studio and choose «Add Object Class Properties». Remember to set the Data Interpretation under «Property Definition» to «Contact»
-2. Add a new field called "Contact" to Object Class «Mail».
-   *Guidance: Similar to above - but for Mail, not Activitiy : )  
+   *This adds a column ContactID to the Activity-table in the database, with data type identical to the primary key of Contact).*
+
+   Then, right-click on Activity in Studio and choose «Add Object Class Properties». Remember to set the Data Interpretation under «Property Definition» to «Contact»  
 3. Make Activity.Contact available in the user interface.
-   1. Open form Activity, and include property "Contact" - from the Activity data source - to it as a field (ComboBox) below Company.
-   2. The drop-down should be limited to show only Active Contacts belonging to the Company of the selected Activity. Hence, you will have to define the field's Data Restriction.
-      *Guidance: See screenshot below:*
-   ![oppg3fig8.JPG](media/oppg3fig8.JPG)
+   1. Open form Activity, and include property "Contact" - from the Activity data source - to it as a field (Dropdown) below Company.
+<!--2. The drop-down should be limited to show only Active Contacts belonging to the Company of the selected Activity. Hence, you will have to define a new data filter in the module named "Active Contacts-->
+   3. Return to the Activity Form and highlight the Contact Control.
+
 4. Add activity-functionality to the Contact-form. First, you will have to make a list of all Activities associated with a contact person. Secondly, you will have to make it possible to register Activities on a contact.
-   1. Create a list (grid) of activities in the «Activities»-tab (Contact-form).
-      *Guidance: You will have to add object Activities to the form's list of data sources. Define its data filter (read Activities where Activity.Contact = Contact and Activity.State <> Canceled), and add a Grid to the Activities-tab. The grid needs to bound to Data Source «Activity». Remember also to select Columns and determine Sorting (e.g. descending Due Date). Try Grouping (on State) as well if you want to.*
-   2. Add a Command to the Activity-tab for opening Activities:
-      1. Command: Open a Form
-      2. Name: Open, Tip: Activity
-      3. Remember filtering!
-      4. Add an Event = Context Menu Item Click: Open in New Window to the grid which executes the above Command.
-   3. Additionally, create a Command + Event for «New» and «Delete». Place them on the Activities-grid. Remember to set Default values on «New» so that Activity is connected to both Contact and Company. Symbols #1198 and #1195 should suit «New» and «Delete», respectively. If you need inspiration, go back to exercise 3.3.
-   4. Deploy the solution to yourself and check that you are able to create Activities on a contact person.
-5. You will also have to list Mails associated with a Contact. The way of adding instances to the Mail-list in the Company-form is to paste new Mail from the Clipboard (i.e. drag-and-drop). You will make this functionality in a later task, so for now, you only need to focus on the list itself and how to open an e-mail from it.
-   1. Create a list (grid) in the «Mail»-tab of form «Contact» that shows Mail where Mail.Contact = Contact.
-   2. Add a Command of type "Invoke a File" to the Mail tab control. Next, add an Event to the grid that executes it (Type="On Contect Menu Item Click", Menu Item="Open in New Window").
+   1. Create a list (view) of activities in a new View named "Activities". Add relevant columns to the Table-section. **Set "On Activate" to "Navigate to Activity Form" and set up Data Exchange.
+      *Guidance: You will have to add a view "Activities" to the the modules pages. Remember also to select Columns and determine Sorting (e.g. descending Due Date). Try Grouping (on State) as well if you want to. Consider changing the width definition for columns.*
+   2. Navigate to the Contact form and hightlight the Tab Control. Click Pages and add an Item with target set to the "Activities" View, rename "Contact Activities". Set data filter to Read Related, by connecting to Contacts as a One to Many Relationship through Activity.Contact
 
-      *Comment: This allows the Mail to open in Outlook when a row has been double-clicked. If the object class contains File Data, File Size, File Type and File Name, the "Invoke a File"-effect will open it in its "default" program. You can look at how this is done in the Mail-grid of the Company-form.*
+5. We now need to be able to Create and Delete Activities. There's already a "Add New Activity"-action. Edit this as follows:
+    1. Add Public interface Data Source Contact, set up the same way as Company is.
+    2. Navigate to the Action Flow, highlight the Navigate to Page:Activity, and click the "Create Object" Data Filter. In the Contact Field in the Object editor, click and select "Select Field" and set the Data Source you just defined.
+    3. Now, when we send in Contact as input here, we may not send in data for the Company Data Source in the Action, but we still want to auto-fill fields we can know from context. In that case we want the Company-field in the Activity to inherit the Contact's Company. Click the Company field -> Enter an Expression and enter "if company <> null then company
+    else contact.company". This will use the Contact's Company as default when the Company data source is not set.
 
-####3. Add a Contact Log to Contact
+6. Return to the Activities View.
+
+7. Add a Public Interface Data Source Contact with One occurrence.
+
+8. Navigate to View and highlight the top level in the Control View or Esc all the way out. Click the Action Bar and add:
+    1. "Save Changes" with Icon 'Fluent-Save'
+    2. "Add New Activity" with Data Exchange set up for the Contact Data Source. Set Label as "new" and Icon as 'Fluent-account-activity'
+8. Highlight the Table level in the Control View. Click the Context Menu-setup on the right hand side and add:    
+  3. "Delete Activity" with data exchange as single selected Activity, Label "Delete" and Icon "Fluent-Delete"
+
+4. Refresh and check your work. Check that you are able to create Activities on a contact person. Note that the Contact and Company fields are set when you open the "New Activity" window from this context.
+
+
+<!--
+###3. Add a Contact Log to Contact
 
 This exercise is not strictly necessary for the remaining set of tasks. However, it contains an interesting new concept - «Part of composition».
 
@@ -78,7 +86,7 @@ We want the user to be able to write and add lines to a Contact log (similar to 
       2. Delete: *Guidance: Se screenshot below: (Command)*
       ![oppg3fig13.JPG](media/oppg3fig13.JPG)
 5. Deploy and test creation, modification and deletion of a Contact's log objects in the client.
-
+-->
 
 <table>
    <tr><td><a href="exercise-05-1.md"><- Previous</a></td><td align="right"><a href="exercise-06-1.md">Next -></a></td></tr>

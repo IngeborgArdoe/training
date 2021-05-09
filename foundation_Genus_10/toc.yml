@@ -1,0 +1,55 @@
+- name: Installation and setup
+  href: installation-of-genus-app-platform.md
+  items:
+  - name: Installation of Genus
+    href: installation-of-genus-app-platform.md
+  - name: Installation of SQL Server Management Studio
+    href: installation-of-sql-server-mgmt-studio.md
+- name: Exercises Part I - The case and modeling / client introduction
+  href: casedescription-genus-crm.md
+  items:
+  - name: 1 - The client
+    href: exercise-01.md
+  - name: 2.1 - Object Classes & Properties
+    href: exercise-02-1.md
+  - name: 2.2 - Object Classes & Properties
+    href: exercise-02-2.md
+- name: Exercises Part II - Forms and Views (3-4)
+  href: exercises3-5.md
+  items:
+  - name: 3.1 - Forms
+    href: exercise-03-1.md
+  - name: 3.2 - Views
+    href: exercise-03-2.md
+  - name: 4 - App and Sitemap
+    href: exercise-04.md
+- name: Exercises Part III - Logic, Actions and Events (5-8)
+  href: exercise-06-1.md
+  items:
+  - name: 5.1 - Actions and Events
+    href: exercise-05-1.md
+  - name: 5.2 - Actions and Events
+    href: exercise-05-2.md
+  - name: 6 - Action Menus
+    href: exercise-07.md
+  - name: 7 - Rules
+    href: exercise-08.md
+- name: Exercises Part IV - Repetition (8)
+  href: exercise-10-1.md
+  items:
+  - name: 8.1 - Request
+    href: exercise-10-1.md
+  - name: 8.2 - Request
+    href: exercise-10-2.md
+- name: Exercises Part VI - REST (9)
+  href: exercise-12.md
+  items:
+  - name: 9 - REST Services
+    href: exercise-12.md
+- name: Exercises Part VII - Agents and Misc (10-11)
+  href: exercise-15.md
+  items:
+  - name: 10 - Agents
+    href: exercise-15.md
+  - name: 11 - Miscellaneous
+    href: exercise-16.md

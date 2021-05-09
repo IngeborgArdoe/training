@@ -1,4 +1,6 @@
-####5. Contact's Data Properties
+## Security, validation and altering Object Classes
+
+###5. Contact's Data Properties
 
 Modify the following settings on the Data Properties of Contact (double-click on a Property):
 1. Company, First Name and Last Name: Tab «Data Validation», uncheck «Allow blank value». In other words, the fields become mandatory.
@@ -14,7 +16,7 @@ Modify the following settings on the Data Properties of Contact (double-click on
 
 The object «Contact» is now almost done. The last step is to assign a few properties to the object class «Contact» itself.
 
-####6. Modify settings on Object Class Contact
+###6. Modify settings on Object Class Contact
 
 Right-click on Object Class «Contact» -> Open.
 1. Tab «Auditing»: Check "Enable auditing" and then "Mandatory" on "Modify". Press Apply. This allows the user to right-click on a Contact in the client to look at its change history (which user has done what).
@@ -33,7 +35,7 @@ Right-click on Object Class «Contact» -> Open.
 
 Note that you can go back and modify the properties of an Object Class/Object Class Property at any time, with a few exceptions (e.g. Data Interpretation of an Object Class Property; if you want to change this, you will have to delete the property and add it again). You can obviously also add new Object Class Properties to an Object Class after creation (e.g. you want to add Photo to Contact). Then you will have to run the wizard «Add object class properties», which is available in Studio by right-clicking on an Object Class. Remember to expand the table in the database first.
 
-####7. Add field Responsible (user) to Contact.
+###7. Add field Responsible (user) to Contact.
 1. Create a new field called Responsible on Contact.
 
    *Guidance: A column must be added to the database first. Do this by running the SQL statement «alter table Contact add ResponsibleUserID uniqueidentifier». Navigate to object class «Contact» -> Right-click -> «Add Object Class Properties..». Click Next in the first dialog window. In the second, Genus reads all columns from the table that has not modelled yet. Click Next. Under «Property Definitions», double-click on the row and change the Data Interpretation to «User» (make sure you change the Display Name to «Responsible» afterwards). Click OK and Finish.*
@@ -44,7 +46,7 @@ Note that you can go back and modify the properties of an Object Class/Object Cl
 
 ![oppg2fig6.JPG](media/oppg2fig6.JPG)
 
-####8. Replace Draft Object with Object Class
+###8. Replace Draft Object with Object Class
 
 The Draft-object that you made in Exercise 2.2 is no longer needed. Navigate to Object Class Diagram -> Right-click on Draft-object «Contact» -> «Replace Draft». In the dialog box, select object class «Contact». This will remove the Draft-object from the view and replaced it with modeled object class «Contact».
 

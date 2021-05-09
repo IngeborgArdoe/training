@@ -69,7 +69,7 @@ Now we want to Create a new Contact which will be edited in the "Contact Details
 
 
 
-####1. Add Contact events to the Company-form:
+###1. Add Contact events to the Company-form:
 
 You will now add functionality to open, create and delete Contacts from the Company form.
 1. Add a command to open an existing Contact. Place the Command on the Contacts-tab by selecting the tab (you can mark the Contact grid and press Esc), and - under Properties - clicking Commands. In the dialog box, click Add.. Open a Form

@@ -4,10 +4,10 @@ The first part of these exercises will concern the creation of new object classe
 Common to all application models - whether this is full-scaled case management solutions, Business Intelligence solutions (corporate governance with focus on reports and analysis) or technical integration solutions - they all have an object model.
 An object model is simply the business objects of the customer, inter-connected. The object model often corresponds to the model in the database, but is also modelled/reflected in Genus Apps, and can have additional logical connections, information and even object classes that doesn't exist in the database. The advantage of creating the object model in Genus Apps, is that Genus Apps maintains connections, dependencies, primary keys, data consistency, data types, creation, modification and deletion of data. Deletion rules, duplication rules, validation rules, automatic rules (equivalent to "triggers" in the computer language) can all be controlled in Genus Apps.
 
-The object model is exposed to the end user through tables or "forms", combined with actions, searches and other functionality, in the Genus Desktop client (exercise 1). The developer sets up the object model, the logic of actions, the search properties and the GUI using Genus Studio, which you now will get to know even better.
+The object model is exposed to the end user through views or "forms", combined with actions, searches and other functionality, in the Genus client (exercise 1). The developer sets up the object model, the logic of actions, the search properties and the GUI using Genus Studio, which you now will get to know even better.
 
-In Genus Studio, we refer to an object (e.g. Company) as an «Object Class». The properties of the object (e.g. "Name" or "Org No") are called «Object Class Property» or just «Property».
-The proposed Genus CRM solution has a simple object model outlined in the Case-description. What is missing in your EDU-solution is Contact, Contact Log, Document and Request. Initially, you will have to expand the object model with Contact and Contact Log.
+In Genus Studio, we refer to an objectm or entity, (e.g. Company) as an «Object Class». The properties of the object (e.g. "Name" or "Org No") are called «Object Class Property» or just «Property».
+The proposed Genus CRM solution has a simple object model outlined in the Case-description. What is missing in your EDU-solution is Contact, Contact Log and Request. Initially, you will have to expand the object model with Contact and Contact Log.
 
 ![oppg1fig1.JPG](media/Exc1fig1.jpg)
 Fig.1.1.: The initial version of the Genus CRM object model. Click on «Object Class Diagram» in the menu on the left to open the diagram. Here we see 5 Object Classes, each with several Object Class Properties.
@@ -58,7 +58,7 @@ When you add a new draft Property, you define its Logical Name (the name of the 
 
 Best Practice when it comes to naming a database column (Physical Name) is to use the "camel cased" version of the Logical Name. E.g. a field with Logical Name «First Name» should be «FirstName» in the database (Physical Name). The exception is references to other objects. The property "Company" should have Physical Name "CompanyID" to indicate that the field is refering to another object's ID.
 
-####3. Generate SQL-script (forward engineer)
+###3. Generate SQL-script (forward engineer)
 
 Open the «Actions» menu (at the top), and push «Forward Engineering». Select object «Contact» and click Next twice. This will generate a SQL script that can be used to create the «Contact»-table in the database. Copy the script and run it in SQL Server Management Studio against your assigned database.
 
@@ -66,7 +66,7 @@ You have now made the table «Contact» in the database, and will soon model the
 
 Once again, we emphasize that you don't have to build Draft object classes, but that it can be a good thing whenever you want to verify the object model against others (internally / customers) before creating tables in the database and modeling actual object classes. It is easier to change a drafted object model than an actual object model. We always use a fairly large portion of time on the object model when we design business applications, since it is a well known fact that changes made on an application's "data layer" is more costly once GUI and logic has been added.
 
-####4. Build object class «Contact» in Studio.
+###4. Build object class «Contact» in Studio.
 
 *Guidance: Navigate to Object Classes in Studio (left pane) and right-click -> New -> Object Domain. Go through the wizard.*
 
@@ -74,7 +74,7 @@ Once again, we emphasize that you don't have to build Draft object classes, but 
 2. Second step: Select the table you will be modeling («Contact»). Here you have the oportunity to override the object's name as shown in Genus CRM (e.g. if the table has a technical name).
 3. Step «Table columns»: Choose which columns you want to model. By default, all of them are selected. Click on Next.
 4. Step «Primary key»: Select property «Contact ID» and check the «generate identifier automatically». The latter allows Genus to handle uniqueness and the creation of primary keys.
-5. Step «Property definitions»: Double-click on each row/propery to verify, and change if needed, the data type and data interpretation. It is important that Data interpretation is changed wherever needed. For instance, the field «Created by» is supposed to be a reference to the object «User». Genus will not be able to figure this out unless you specify it yourself. Double-click on the row and change the data interpretation to «User» (when you do this, the Display name is also changed to "User". Call it "Created by" instead). Repeat the process for properties Company (interpretation «Company»), State (interpretation «Object State»), Modified By (interpretation «User») og Mail (interpretation «E-mail»). The latter will give you free validation of e-mail addresses, as the E-mail object is built in object in Genus.
+5. Step «Property definitions»: Double-click on each row/propery to verify, and change if needed, the data type and data interpretation. **It is important that Data interpretation is changed wherever needed, as this affects the model interpretation and cannot be altered without re-adding the property again later.** For instance, the field **«Created by»** is supposed to be a reference to the object «User». Genus will not be able to figure this out unless you specify it yourself. Double-click on the row and change the data interpretation to «User» (when you do this, the Display name is also changed to "User". Call it "Created by" instead). Repeat the process for properties **Company** (interpretation «Company»), **State** (interpretation «Object State»), **Modified By** (interpretation «User») og **Mail** (interpretation «E-mail»). The latter will give you free validation of e-mail addresses, as the E-mail object is built in object in Genus.
 6. Step «Naming»: This is the attribute that sets the standard naming of the object. Here you can press Add.. and add First Name and Last Name. Click on Finish.
 
 If you expand the node «Object Classes» in Studio, you should now see the Contact-object. If you expand Contact further and click on Properties, you will find the list of Object Class Properties belonging to Contact.

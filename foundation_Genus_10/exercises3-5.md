@@ -3,7 +3,7 @@
 
 You have made the object Contact, but still it is not possible for the end user to see or register them. For that to happen, you must add Contacts to the user interface. Read the following information about user interface in Genus before you do the next exercise:
 
-In Genus Desktop there are two main constrcutions which are used to show information; Forms and Views. Both Views and Forms can have a Ribbon. A Ribbon is a toolbar situated at the top of the window which shows functionality relevant to the context.
+In Genus Desktop there are two main constrcutions which are used to show information; Forms and Views. Both Views and Forms can have a Ribbon or Action Bar. An Action Bar is a toolbar situated at the top of the window which shows functionality relevant to the context.
 
 ##Forms
 Forms are tailor-made displays that can show fields, lists, buttons, file-previews, etc., with very little limitations in terms of layout (a bunch of traditional and "bleeding edge" layout controls are available). Forms can be used to show data from one or multiple objects together in the same view. One can also switch between different views (to create "wizard"-like functionality). A Form can be customized to Desktop or Apps - the latter implies that you model a whole platform independent mobile app or website in Genus Studio.

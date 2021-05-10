@@ -1,4 +1,3 @@
-# ! Under Construction
 ## Exercise 8-2 - Request
 
 ###8.2.1. Create Object Class «Request»
@@ -23,19 +22,17 @@ You have now created the object itself. Next, you will make it possible to drag 
 
 
 
-###8.2.2. Make a "Requests"-tab in the Company-form
+###8.2.2. Make a view for "Requests" in the Tab control in the Company-form
 
-Create a Form for Request in the Company Module.
-
-Add a list of Requests to the Company-form in a separate Request-tab. Remember to create commands+events for creating new and opening existing requests through the Request-form. It should not be possible to delete Requests. However, the grid should filter out Requests with State="Canceled".
+Create a View for Requests and add it in the Company Form. It should not be possible to delete Requests. However, the view in the Company form should filter out Requests with State="Canceled".
 
 *Comment: Feel free to add the "New" command to the Action Bar. Find a meaningful symbol for Request.*
 
-###8.2.3. Create a view for Requests
+###8.2.3. Create a form for Requests
 
-Model a Request-view with a view that displays all Requests with State="Open". Name the view "Open Requests".
+Model a Request-form with a view that displays all Request info. Add an activation from the Requests view.
 
-*Guidance: If needed, take a look at the earlier View exercise. Make sure you include columns, create a data filter in the Module, and enable Search. Make sure Activating a row opens the relevant Request, and add support for adding new Requests.*
+*Guidance: If needed, take a look at the earlier View/Form exercise. Make sure Activating a row opens the relevant Request, and add support for adding new Requests.*
 
 ###8.2.4. Add a Request View to the Apps Sitemap
 

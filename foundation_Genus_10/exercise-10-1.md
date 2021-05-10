@@ -1,5 +1,4 @@
-# ! Under Construction
-## Exercise 8-1 - Request
+# Exercise 8-1 - Request
 
 In this exercise, you will make a new business object «Request» that allows the user to register inquiries from customers. «Request» will be used in later exercises to generate order confirmations and reports, so the most important thing is to model the object. As you have seen before, some exercises are mandatory and some are optional. Do the optional ones if you have time.
 

@@ -24,11 +24,11 @@ In Genus Studio, you will see Actions in the «Logic»-section of the left menu.
 You will now make a simple Action, "Change Responsible for Contact" that can take one or more Contacts as input, and change their Resposible.
 #### Data Sources
 a. Contact - an unbounded datasource for which we will choose new responsible for.
-   i. Let the cardinality be Unbounded, and set the privacy to not Private (Private unchecked).
-   *Guidance: Right-click in the upper-left pane -> Add -> Object. Select «Contact». In the bottom pane (General) uncheck Private.
+   i. Let the cardinality be Unbounded, and set the Data Flow to input/output.
+   *Guidance: Right-click in the upper-left pane -> Add -> Object. Select «Contact». In the bottom pane change data flow to input/output.
    
 b. Data Source:  User - a "One"-data source which will represent the new Responsible.*
-      i. Add the Data Source User with cardinality One and Private checked.
+      i. Add the Data Source User with cardinality One. This data source should have Data Flow: Private.
       
 #### Actions - Choose new responsible
 

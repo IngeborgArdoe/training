@@ -7,9 +7,10 @@ This site contains the training material for some of the Genus courses.
 * [Analytics and Insights](analytics_and_insights/index.md)
 * [Advanced](advanced/index.md)
 * [Free](free/index.md)
+<!-- * [Academy](academy/index.md) -->
+
 
 ---
 
 **Quick links**
 * [Terminology](https://docs.genus.no/terminology.html)
-

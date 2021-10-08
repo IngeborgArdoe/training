@@ -20,7 +20,7 @@ Add a Page and set target to your View named "Contacts", and set an appropriate 
 
 7. Save and refresh the app in your browser. Navigate to a Company. We can now see the Contact Tab, at the bottom of the Company page. As the database table is empty, no Companies has any contacts yet.
 
-8. Now that we can view the table with relevant contacts, we want to be able to view more details about a single contact or even create a new one.
+Now that we can view the table with relevant contacts, we want to be able to view more details about a single contact or even create a new one. First, we will add the Contact view to our app so we can view our changes. 
 
   ![Exc2fig6.JPG](media/Exc2fig6.JPG)
 

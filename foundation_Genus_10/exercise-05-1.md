@@ -7,21 +7,41 @@ In order to create a new Contact, we need to create a Client Action which create
 
 1. Navigate to Client Actions and add new, name it "Add new contact".
 2. Go to Action Flow. Navigate to "Effects" on the left hand side. Add a Scope Block by double clicking or dragging it into the working area.
-Now we want to Create a new Contact which will be edited in the "Contact Details" Form we created initially. The Form is a type of Page, and we add a "Navigate to Page"-effect into the scope. Select Contact Details as the Page.
-3. In the Data Filter-section, click the menu and select "Create Object". Some values here are preset, and some must be given as input. Some can be left blank for the user to fill in and some, like State, should have default values (State = active) which can be edited by the user later. Note that Company is mandatory and blank. As we plan on trigging this Action from the Company form, we will know which Company we want to fill inn here and should send it in as input to the action.
+Now we want to Create a new Contact which will be edited in the "Contact Details" Form we created initially. The Form is a type of Page, and we add a "Navigate to Page"-effect into the scope. Select Contact Details as the Page. In change handling, you can determine what happens with changes in the current context.
 
-  ![Exc2fig7.JPG](media/Exc2fig7.JPG)
+Navigate to Page         |
+:-------------------------:|
+![Exc2fig8.JPG](media/Exercise5.1.1-Navigate.JPG)   |
+
+<ol start="3">
+  <li>In the Data Filter-section, click the menu and select "Create Object". Some values here are preset, and some must be given as input. Some can be left blank for the user to fill in and some, like State, should have default values (State = active) which can be edited by the user later. Note that Company is mandatory and blank. As we plan on trigging this Action from the Company form, we will know which Company we want to fill inn here and should send it in as input to the action.</li>
+</ol>
 
 
-4. Navigate to Data Sets and add a Data Source for Company in the Public Interface section. Keep Flow set to In, since we want to receive this information *from* the Company Form. The Company Data Source does not have to be Required. We may want to trigger this action other places within the Company Module where the Company is not pre-defined from context. In these cases, Company value can be set within the "Company Details" Form, along with values such as first name and last name.
 
-5. Return to Action Flow. Re-open the "Create Object" data filter. In the menu for the Company field, choose Select Field and choose the Company data source you just added.
 
-6. Save and close.
+
+Data Filtering  |
+:-------------------------:|
+![Exc2fig9.JPG](media/Exercise5.1.1-Filter.JPG)|
+
+<!--  ![Exc2fig7.JPG](media/Exc2fig7.JPG)-->
+
+<ol start="4">
+  <li>Navigate to Data Sets and add a Data Source for Company in the Public Interface section. Keep Flow set to In, since we want to receive this information *from* the Company Form. The Company Data Source does not have to be Required. We may want to trigger this action other places within the Company Module where the Company is not pre-defined from context. In these cases, Company value can be set within the "Company Details" Form, along with values such as first name and last name.</li>
+  <li> Return to Action Flow. Re-open the "Create Object" data filter. In the menu for the Company field, choose Select Field and choose the Company data source you just added.</li>
+</ol>
 
   Create Object           |  Data Source selection
   :-------------------------:|:-------------------------:
   ![Exc2fig8.JPG](media/Exc2fig8.JPG)  | ![Exc2fig9.JPG](media/Exc2fig9.JPG)
+
+
+<ol start="6">
+  <li> Save and close. </li>
+</ol>
+
+
 
 
 <!-- <p float="left">

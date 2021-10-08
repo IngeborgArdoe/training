@@ -1,0 +1,25 @@
+- name: Exercises Part I - Introduction to Case and Genus
+  href: case-description-fs.md
+  items:
+  - name: 1 - Case
+    href: case-description-fs.md
+  - name: 1.1 - Genus Clients
+    href: e1.1-genus-clients.md
+  - name: 1.2 - Genus Studio
+    href: e1.2-genus-studio.md
+- name: Exercises Part II - Data Modeling
+  href: data-model.md
+  items:
+  - name: 2.1 - Sketching New Object Classes
+    href: .md
+  - name: 2.2 - Creating a New Object Class
+    href: .md
+  - name: 2.2 - Object Class Properties
+    href: .md
+- name: Exercises Part III - Web Interfaces
+  href: web-terminology.md
+  items:
+  - name: 3.1 - Views
+    href: .md
+  - name: 3.2 - Pages
+    href: .md

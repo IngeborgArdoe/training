@@ -1,0 +1,72 @@
+- name: Installation and setup
+  href: installation-of-genus-app-platform.md
+  items:
+  - name: Installation of Genus Apps
+    href: installation-of-genus-app-platform.md
+  - name: Installation of SQL Server Management Studio
+    href: installation-of-sql-server-mgmt-studio.md
+- name: Exercises Part I - The case and modeling / client introduction
+  href: casedescription-genus-crm.md
+  items:
+  - name: 1 - The client
+    href: exercise-01.md
+  - name: 2.1 - Object Classes & Properties
+    href: exercise-02-1.md
+  - name: 2.2 - Object Classes & Properties
+    href: exercise-02-2.md
+- name: Exercises Part II - Forms, Tables and actions (3-5)
+  href: exercises3-5.md
+  items:
+  - name: 3.1 - Forms
+    href: exercise-03-1.md
+  - name: 3.2 - Forms
+    href: exercise-03-2.md
+  - name: 4 - Tables
+    href: exercise-04.md
+  - name: 5.1 - Actions
+    href: exercise-05-1.md
+  - name: 5.2 - Actions
+    href: exercise-05-2.md
+- name: Exercises Part III - Logic, tasks and Ribbon (6-8)
+  href: exercise-06-1.md
+  items:
+  - name: 6.1 - Logic & tasks
+    href: exercise-06-1.md
+  - name: 6.2 - Logic & tasks
+    href: exercise-06-2.md
+  - name: 7 - Ribbon
+    href: exercise-07.md
+  - name: 8 - Rules
+    href: exercise-08.md
+- name: Exercises Part IV - Documents and repetition (9-11)
+  href: exercise-09.md
+  items:
+  - name: 9 - Documents
+    href: exercise-09.md
+  - name: 10.1 - Request
+    href: exercise-10-1.md
+  - name: 10.2 - Request
+    href: exercise-10-2.md
+- name: Exercises Part V - Reports and analysis (11)
+  href: exercise-11-1.md
+  items:
+  - name: 11.1 - Reports
+    href: exercise-11-1.md
+  - name: 11.2 - Analysis
+    href: exercise-11-2.md
+- name: Exercises Part VI - REST and Genus Apps (12-13)
+  href: exercise-12.md
+  items:
+  - name: 12 - REST Services
+    href: exercise-12.md
+  - name: 13 - Genus Apps
+    href: exercise-13.md
+- name: Exercises Part VII - Mail Merge, Agents, Misc (14-15)
+  href: exercise-14.md
+  items:
+  - name: 14 - Mail Merge
+    href: exercise-14.md
+  - name: 15 - Agents
+    href: exercise-15.md
+  - name: 16 - Miscellaneous
+    href: exercise-16.md

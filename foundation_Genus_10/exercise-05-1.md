@@ -5,7 +5,7 @@
 ### 5.1.1 Create Action for New Contact
 In order to create a new Contact, we need to create a Client Action which creates a new Object and allows for user input. This action will be available within this module.
 
-1. Navigate to Client Actions and add new, name it "Add new contact".
+1. Navigate to Client Actions and add new, name it "Add new contact". Make sure to add Data Sets. For the Contact Data Set, you want Occurence = One, and Public Interface = Out (so the action can return the newly created Contact to the context where the action is initiated from).
 2. Go to Action Flow. Navigate to "Effects" on the left hand side. Add a Scope Block by double clicking or dragging it into the working area.
 Now we want to Create a new Contact which will be edited in the "Contact Details" Form we created initially. The Form is a type of Page, and we add a "Navigate to Page"-effect into the scope. Select Contact Details as the Page. In change handling, you can determine what happens with changes in the current context.
 
@@ -98,7 +98,7 @@ To create a well-functioning Action Bar or Context Menu, it is important to util
 ### 5.1.4 Delete Contact
 1. Add a new Client Action "Delete Contact" in the Company Module. Define a Public Interface Data Source for Contact. The data source should be input, max occurence One and Required.
 
-2. In the Action Flow, add the Effect "Delete Objects" and set data binding to the Contact data source.
+2. In the Action Flow, add the Effect "Delete Objects" and set data binding to the Contact data source, ensure that the data set is available in the public interface.
 
 3. Return to the Contact View in the Company Module. Highlight the Table-level in the Control View (Ctrl+Shift+L). Navigate to "Context Menu" on the right hand side.
 

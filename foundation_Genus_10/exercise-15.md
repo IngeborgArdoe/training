@@ -25,5 +25,5 @@ Last but not least, add a Modify Objects effect (remember to put it in a Commit 
 
 
 <table>
-   <tr><td><a href="exercise-14.md"><- Previous</a></td><td align="right"><a href="exercise-16.md">Next -></a></td></tr>
+   <tr><td><a href="exercise-12.md"><- Previous</a></td><td align="right"><a href="exercise-16.md">Next -></a></td></tr>
 </table>

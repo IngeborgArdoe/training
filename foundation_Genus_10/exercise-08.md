@@ -27,5 +27,5 @@ Save and reload browser, verify that when you set a Company (which is inactive) 
 
 
 <table>
-   <tr><td><a href="exercise-07.md"><- Previous</a></td><td align="right"><a href="exercise-09.md">Next -></a></td></tr>
+   <tr><td><a href="exercise-07.md"><- Previous</a></td><td align="right"><a href="exercise-10-1.md">Next -></a></td></tr>
 </table>

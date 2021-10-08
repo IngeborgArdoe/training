@@ -21,7 +21,7 @@ Modules are interchangeable and can be used for assembly of apps of differing si
 Within a module you can define the following elements:
 
 A Module is a named collection or boundary containing the following elements:
-* [Data Sources](#data-source): The module is restricted to the data sources explicitly selected. None of the elements below can read, change or delete data outside of the Data Source space.
+* [Data Sources](#data-diagram-and-sources): The module is restricted to the data sources explicitly selected. None of the elements below can read, change or delete data outside of the Data Source space.
 * [Pages](#page): A visual presentation of data for displaying, editing and deleting data.
 * [Components](#component): An assembly of UI controls that can be reused in Pages or other Components.
 * [Client Actions](#client-action) A sequence of effects initiated by an event in the user interface, and executed on the web client
@@ -63,7 +63,7 @@ A Page always belongs to a [Module](#module), and all data for View, Form and Ca
 
 
 
-### Data Sets
+### Data Set
 Data Sets fall into one of two categories:
 * **Filtered Data**: These are subsets of data from the Page's [Module](#module) Data Sources and are filled when a Page opens.
 * **Refined Set**: These are criteria based subsets of data from either Public Interface Data Sets, Filtered Data or Writeable Sets. Refined Sets are read only and contains all objects which satisfies the given criteria at any time.
@@ -97,7 +97,7 @@ A Form presents data in a schematic layout, where you can place traditional UI c
 A Form has - similar to [View](#page-type-view) - a Master Data Set which connects to a Data Source. Thus, a Form can be used as a default presentation of a single object (and any related objects) for a Data Source.
 
 Unlike a View, you can do the following inside a Form:
-* Specify a [Viewport](user-interface-terminology.md#viewport-and-content-area). A Viewport divides your Form into a grid of rows and columns. These provide an important tool for responsive user interfaces.
+* Specify a [Viewport]. A Viewport divides your Form into a grid of rows and columns. These provide an important tool for responsive user interfaces.
 * Reuse [Components](#component). Components are assemblies of UI controls reusable across all types of Pages.
 
 
@@ -167,7 +167,7 @@ An App is a named [Sitemap](#sitemap), which provides access to [Pages](#page) a
 
 An App has fields like Name, Title and Path Segment.
 
-The Path Segment is the last part of an App's URL, to be able to open the App directly without going through the [Start Page](start-page.md).
+The Path Segment is the last part of an App's URL, to be able to open the App directly without going through the Start Page.
 
 A Sitemap - and thereby also an App - has a Landing Page, which is the [Page](#page) that opens by default when you launch the App.
 

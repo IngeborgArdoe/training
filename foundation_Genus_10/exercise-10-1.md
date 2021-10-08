@@ -45,5 +45,5 @@ In step 3, select the column that will hold the counter:
 Click Finish.
 
 <table>
-   <tr><td><a href="exercise-09.md"><- Previous</a></td><td align="right"><a href="exercise-10-2.md">Next -></a></td></tr>
+   <tr><td><a href="exercise-08.md"><- Previous</a></td><td align="right"><a href="exercise-10-2.md">Next -></a></td></tr>
 </table>

@@ -129,30 +129,6 @@ In summary, Component is a powerful building block in your user interface. Speci
 
 
 
-
-## Client Action
-
-A Client Action is a sequence of side effects initiated by an event in the user interface, such as a click on a button. Various side effects are provided to support common tasks such as CRUD operations for objects, navigation between pages and dashboards, displaying messages and notifications, uploading and downloading files, and executing other Client- and [Server Actions](#server-action).
-
-Block constructs such as decisions, for each loops, and catch exception provides functionality for conditional execution, enumeration of objects, and handling exceptions.
-
-Within a Client Action you can determine which data the Client Action should operate on by specifying:
-* A **Public Interface**: A Public Interface consists of [Data Sets](#data-set) received from "the outside" of the Client Action. These Data Sets are always filled when a Client Action is invoked.
-* **Private Data Sets**: Private Data Sets, on the other hand, are internal to the Client Action and not visible outside the Client Action.
-
-As with Page data sets, Data Sets here can be one of two types:
-* **Filtered Data**: These are subsets of data from the Page's [Module](#module) Data Sources and are filled when a Page opens.
-* **Refined Set**: These are criteria based subsets of data from Public Interface Data Sets or Writeable Sets. Refined Sets are read only and contains all objects which satisfies the given criteria at any time.
-
-## Server Action
-As the name implies, these actions are executed on the server side. The set of side effects supported by Server Actions is a bit more powerful than the set supported by [Client Actions](#client-action), and some of the effects are not possible to execute on the client side.
-
-A Server Action can be defined within a Module (Local Server Action), or as an action which can be used from anywhere in your solution (Global Server Action). Local Server Actions can access data within your module. Global Server Actions cannot, but they provide a public interface for exchanging data.
-
-Server Actions can be executed from a [Client Action](#client-action) using the "Run a Local Server Action" and "Run a Global Server Action". This makes it possible to share business logic in a hybrid desktop/web experience.
-
-
-
 ## App
 
 An App is a named [Sitemap](#sitemap), which provides access to [Pages](#page) and more, to support a business process or function.

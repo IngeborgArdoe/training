@@ -16,4 +16,6 @@
 - name: Free
   href: free/
   homepage: free/index.md
-
+- name: Academy
+  href: academy/
+  homepage: academy/index.md  

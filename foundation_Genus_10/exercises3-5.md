@@ -12,7 +12,7 @@ Before building web applications in Genus Studio, there are some concepts and te
 
 
 ## Module
-Modules are a way to split the functionality of your App Modelinto separate parts. For example, in a CRM solution, you may create one module for sales management, and another for customer and product management. Genus Studio does not enforce any kind of module structure. It is up to you to choose how to split the functionality into different modules.
+Modules are a way to split the functionality of your App Model into separate parts. For example, in a CRM solution, you may create one module for sales management, and another for customer and product management. Genus Studio does not enforce any kind of module structure. It is up to you to choose how to split the functionality into different modules.
 
 The purpose of modules is to avoid too tight coupling between parts of larger [Apps](#app), or common app models including many apps. That means, there should be low coupling between modules and high cohesion within them - elements within a module should have a higly relevant connection to the other elements within the same module. Modularity also allow for larger teams of Business Engineers working together on a common app model, in our example with seperate modules for sales, customer and product manager; 3 business engineers could be working on their own module and simultaneously contribute to the resulting app. Well-chosen modules bring together elements of the common app model with particularly rich conceptual relationships. This high cohesion of objects with related responsibilities allows modeling and design work to concentrate within a single module.
 
@@ -66,7 +66,7 @@ A Page always belongs to a [Module](#module), and all data for View, Form and Ca
 ### Data Set
 Data Sets fall into one of two categories:
 * **Filtered Data**: These are subsets of data from the Page's [Module](#module) Data Sources and are filled when a Page opens.
-* **Refined Set**: These are criteria based subsets of data from either Public Interface Data Sets, Filtered Data or Writeable Sets. Refined Sets are read only and contains all objects which satisfies the given criteria at any time.
+* **Refined Set**: These are criteria based subsets of data from Filtered Data Sets. Refined Data Sets always contains all objects from the associated Filtered Data Set which satisfies the given criteria at any time.
 
 Within a Page you can determine which data the Page should operate on by specifying:
 * A **Public Interface**: A Public Interface consists of [Data Sets](#data-set) that can received data from a context "outside of" the Page. These Data Sets can be filled when a Page opens.

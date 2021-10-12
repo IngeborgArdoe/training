@@ -4,10 +4,11 @@
 ## Exercise 1 - The Web Client
 Familiarize yourself with your own solution. Access the application from your provided link (https://edu-usr{X}-origin.edu.genus.net/).
 
-1. Open a Company.
-2. Register a new Activity. Return to the Company site using the Action Bar.
-3. Add a new line to the Company's log, return to the Company site.
-4. Search: Navigate back to the list of Companies. Search for specific ones, for instance based on their names.
+1. Open the Customer Relationship Management app
+2. Look at the list of Customers, and Open a Company.
+3. Register a new Activity. Return to the Company site using the Back button in the Action Bar.
+4. Add a new line to the Company's log, return to the Company site.
+5. Search: Navigate back to the list of Companies. Search for specific ones, for instance based on their names.
 6. Navigate to the Administration app. Take a look at Users and General Codes.
 
 <table>

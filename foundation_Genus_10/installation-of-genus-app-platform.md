@@ -1,7 +1,7 @@
 # Installation of Genus
 
 **Download Genus**
-   https://edu-usr1-origin.edu.genus.net/download/Setup.exe
+   https://edu-usr1-origin.edu.genus.net/--/download/Setup.exe
 
 **Open Genus Desktop and Genus Studio from your environment.**
 

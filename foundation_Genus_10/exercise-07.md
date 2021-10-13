@@ -1,4 +1,4 @@
-## Exercise 7 - Action Menus
+## Exercise 6 - Action Menus
 **SESSION BY INSTRUCTOR:** *The instructor will start off by giving you a brief introduction to the topic.*
 
 ### The Action Bar and Context Menu
@@ -7,7 +7,7 @@
 ###1. Context Menu
 
 1. Navigate to the Kanban Card in the Company Form. Enter the Context Menu editor.
-2. Add a new Section named "Satus" with an appropriate icon.
+2. Add a new Section named "Status" with an appropriate icon.
 3. Drag the Items "Complete", "Re-Open" and "Cancel" into the Section.
 4. Reload your browser and take a look at the results.
 

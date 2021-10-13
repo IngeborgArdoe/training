@@ -36,7 +36,7 @@
 
 8. Navigate to View and highlight the top level in the Control View or Esc all the way out. Click the Action Bar and add:
     1. "Save Changes"
-    2. "Add New Activity" with Data Exchange set up for the Contact Data Source. Set Label as "new" and Icon as 'Fluent-account-activity'
+    2. "Add New Activity" with Data Exchange set up for the Contact Data Source. Set Label as "new" and Icon as 'Fluent-accountActivity'
 8. Highlight the Table level in the Control View. Click the Context Menu-setup on the right hand side and add:    
   3. "Delete Activity" with data exchange as single selected Activity, Label "Delete" and Icon "Delete-Fluent"
 

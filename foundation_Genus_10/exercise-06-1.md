@@ -46,5 +46,5 @@ The different Events can be summarized as follows:
 
 
 <table>
-   <tr><td><a href="exercise-05-2.md"><- Previous</a></td><td align="right"><a href="exercise-06-2.md">Next -></a></td></tr>
+   <tr><td><a href="exercise-05-2.md"><- Previous</a></td><td align="right"><a href="exercise-07.md">Next -></a></td></tr>
 </table>

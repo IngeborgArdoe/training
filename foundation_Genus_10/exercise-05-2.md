@@ -19,8 +19,9 @@
    3. Return to the Activity Form and highlight the Contact Control.
 
 4. Add activity-functionality to the Contact-form. First, you will have to make a list of all Activities associated with a contact person. Secondly, you will have to make it possible to register Activities on a contact.
-   1. Create a list (view) of activities in a new View named "Activities". Add relevant columns to the Table-section. **Set "On Activate" to "Navigate to Activity Form" and set up Data Exchange.
-      **Guidance: You will have to add a view "Activities" to the the modules pages. Remember also to select Columns and determine Sorting (e.g. descending Due Date). Try Grouping (on State) as well if you want to. Consider changing the width definition for columns.**
+   1. Create a list (view) of activities in a new View named "Activities". Add relevant columns to the Table-section. 
+      * Set "On Activate" to "Navigate to Activity Form" and set up Data Exchange.
+      * Guidance: You will have to add a view "Activities" to the the modules pages. Remember also to select Columns and determine Sorting (e.g. descending Due Date). Try Grouping (on State) as well if you want to. Consider changing the width definition for columns.
    2. Navigate to the Contact form and hightlight the Tab Control. Click Pages and add an Item with target set to the "Activities" View, rename "Contact Activities". Set data filter to Read Related, by connecting to Contacts as a One to Many Relationship through Activity.Contact
 
 5. We now need to be able to Create and Delete Activities. There's already a "Add New Activity"-action. Edit this as follows:
@@ -34,10 +35,10 @@
 7. Add a Public Interface Data Source Contact with One occurrence.
 
 8. Navigate to View and highlight the top level in the Control View or Esc all the way out. Click the Action Bar and add:
-    1. "Save Changes" with Icon 'Fluent-Save'
+    1. "Save Changes"
     2. "Add New Activity" with Data Exchange set up for the Contact Data Source. Set Label as "new" and Icon as 'Fluent-account-activity'
 8. Highlight the Table level in the Control View. Click the Context Menu-setup on the right hand side and add:    
-  3. "Delete Activity" with data exchange as single selected Activity, Label "Delete" and Icon "Fluent-Delete"
+  3. "Delete Activity" with data exchange as single selected Activity, Label "Delete" and Icon "Delete-Fluent"
 
 4. Refresh and check your work. Check that you are able to create Activities on a contact person. Note that the Contact and Company fields are set when you open the "New Activity" window from this context.
 

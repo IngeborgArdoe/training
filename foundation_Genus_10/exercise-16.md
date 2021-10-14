@@ -2,15 +2,15 @@
 
 This optional exercise contains various extensions to improve you CRM solution. As always, we recommend you to at least read through it.
 
-###1. OPTIONAL: Create views for "My Activities" and "My Recently Completed"
+###1. OPTIONAL: Create data filters for "My Activities" and "My Recently Completed"
 
-Define 2 new views in the Activities-table for "My Activities" and "My Recently Completed" which list non-completed activities that the user is responsible for and activities that was completed the last 3 months, respectively. Add shortcuts in the Navigation Pane (under "Company") and rename menu "Company" to "CRM".
+Define 2 new data filters "My Activities" and "My Recently Completed" for Activities in the Company module, which list non-completed activities that the user is responsible for and activities that was completed the last 3 months, respectively. Use "Pages" in the Sitemap to show the same Activities view with three different filters.
 
-*Tip: A quick way to make a new "almost identical" view is to right-click on an existing view and select "Copy".*
+*Tip: A quick way to make a new "almost identical" data filter is to right-click on an existing view and select "Clone...".*
 
-###2. OPTIONAL: Create a view for "My Customers"
+###2. OPTIONAL: Create a data filter for "My Customers"
 
-Add a new view in table "Companies" called "My customers". This view should show customers/companies that the user is responsible for or companies where he/she is responsible for the Contact. Add a shortcut in the Navigation Pane.
+Add a new data filter in the Company module called "My customers" (Data source: Company). This data filter should show customers/companies that the user is responsible for or companies where he/she is responsible for the Contact. Use "Pages" in the Sitemap to display the new filter together with "All Customers"
 
 ###3. OPTIONAL: Define Search Properties on Contact/Request
 

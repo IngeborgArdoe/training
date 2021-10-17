@@ -1,14 +1,27 @@
-# Welcome to our course in the Foundations of Genus Apps!
+# Welcome to Genus Academy Foundations
 
-We have tailored a relevant and educational training program for new modelers, new business engineers and others who want to learn more about model driven development, low-code/nocode and Genus Apps.
+We have tailored a relevant and educational training program for new modelers, new business engineers and others who want to learn more about model driven development, low-code/no-code and the Genus as an application development tool.
 
-The training program gives participants a half-finished solution, as well as access to a "blueprint" solution. Through assigned tasks, participants are guided in the process from a half-finished solution in the direction of the blueprint solution. Note that the word "blueprint" is not strict - it is more a _suggested_ solution out of many possible. Participants can log on to the blueprint solution at any time to see how it works and how it is designed - to get some help if stuck.
+The training program gives participants a basis solution, which will be further developed throughout the course. Through assigned tasks, participants are guided in the process from a basic solution in the direction of a "blueprint solution" - the desired end result. Note that the word "blueprint" is not strict - it is more a _suggested_ solution out of many possible. <!-- Participants can log on to the blueprint solution at any time to see how it works and how it is designed - to get some help if stuck. -->
 
-The training program consists of a combination of sessions and presentations from the trainer - theme by theme - followed by task-solving. The tasks can be found here at the menu to the left. The tasks start with step-by-step descriptions of what to do and become less restricted along the way in the program. You always have the suggested solution available. Emphasis should be placed on understanding _what you do_ rather than _rushing through, looking at the blueprint_. Ask your supervisor if there are concepts and tasks that seem unclear.
+The training program consists of a combination of sessions and presentations from the lecturer - theme by theme - followed by task-solving. The tasks are provided following this introductory chapter. The tasks start with step-by-step descriptions of what to do and become less guiding along the way in the program. You always have the suggested solution available. Emphasis should be placed on understanding _what you do_ rather than _rushing through_. Ask your supervisor if there are concepts and tasks that seem unclear.
 
-The suggested solution is _Genus CRM_: A Customer Relationship Management solution similar to e.g. [SuperOffice](https://www.superoffice.com/), which mainly offers sales support, customer relationship management, customer request handling, document archives, email archives & mailing etc.
-The half-finished solution you start with, contains parts of the blueprint solution. Your task is to expand the solution with new objects, functionality and user interface forms.
 
-The solution is in a "sandbox environment" and will be reset after the training program - in other words - you can play freely in your solution.
+The course material revolves around a Property Management solution. We have a base solution in Genus, and will expand functionality and user interfaces to provide Facility Services to property tenants. Facility services typically provide tools to support property functionality, safety and infrastructure. It often includes, but is not limited to, fire safety, cleaning services, operating cafeterias, custodial services and servicing property infrastructure. We will focus on allowing tenants (subscribers) to view their ongoing tenancies and _report concerns they have about their property_.
 
-The assigned tasks assume to some extent that you refer to Genus Apps' documentation, or that you ask your supervisor if you are stuck. Genus Apps' documentation can be found at [docs.genus.no] (https://docs.genus.no/). The documentation may not answer all your questions, so please ask your supervisor - or the other course participants!
+The course environment provides a web application interface providing property tenants an overview of ongoing maintenance and services, and a "backroom" application for property management to ensure handling of infrastructure tasks etc.
+
+The solution is in a "sandbox environment" and will be reset after the training program - in other words - you can play freely in your provided environment.
+
+The assigned tasks assume to some extent that you refer to Genus' documentation, or that you ask your supervisor if you are stuck. Genus' documentation can be found at [docs.genus.no] (https://docs.genus.no/). The documentation may not answer all your questions, so please ask your supervisor - or the other course participants!
+
+
+
+
+<br/>
+<br/>
+
+
+<table>
+   <tr><td></a></td><td align="right"><a href="installation-of-genus-app-platform.md">Next -></a></td></tr>
+</table>

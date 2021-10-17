@@ -3,7 +3,7 @@
 **Download Genus**
    https://edu-usr2-origin.edu.genus.net/download/Setup.exe
 
-**Open Genus Desktop and Genus Studio from your environment.**
+**Open Genus Studio from your environment.**
 
 An environment will be assigned to you:
 
@@ -27,6 +27,13 @@ The same username and password can be used to access both your own environment a
 
 You will be doing all your training exercises in the assigned environment. In addition, you will get access to a blueprint, http://edu-fasit-origin.edu.genus.net, of a complete Genus CRM-model which can be used when you want to verify your work get some inspiration.
 
+
+
+<br/>
+<br/>
+
+
+
 <table>
-   <tr><td align="right"><a href="installation-of-sql-server-mgmt-studio.md">Next -></a></td></tr>
+   <tr><td><a href="index.md"><- Previous</a></td><td align="right"><a href="installation-of-sql-server-mgmt-studio.md">Next -></a></td></tr>
 </table>

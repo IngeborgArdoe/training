@@ -1,4 +1,6 @@
 # Data Model in Genus
+**SESSION BY INSTRUCTOR:** *The instructor will start off by giving you a brief introduction to the topic. The session will include a review of the components that build a Genus application.*
+
 
 Now that you're familiar with the Genus Clients, we're going to have a look at the Data Model.
 
@@ -92,7 +94,7 @@ A variety of features and restrictions can be applied to each Object Class - the
 <table>
   <tr>
     <td>General</td>
-    <td>This is where you see the general information about the property - what datatype it consists of and whether the field should be interpreted as another object class, an email string etc. **Data interpretation is a crucial in the data model, and determines how your property fields are treated and displayed throughout the entire Genus model - it cannot be altered after you initially define it so make sure to double check it!** </td>
+    <td>This is where you see the general information about the property - what datatype it consists of and whether the field should be interpreted as another object class, an email string etc. **Data interpretation is crucial in the data model, and determines how your property fields are treated and displayed throughout the entire Genus model - it cannot be altered after you initially define it so make sure to double check it!** </td>
   </tr>
   <tr>
     <td>Data Calculation</td>
@@ -108,4 +110,35 @@ A variety of features and restrictions can be applied to each Object Class - the
     <td>Like with the Object Class, Object Class Properties access and alteration access can be restricted. For instance, you can restrict whether the property can be modified after creation or not. You can also allow access granting on a Security Group level, if the property contains sensitive information that should not be accessible for all users who have access to the data object as a whole. </td>
 
   </tr>
+</table>
+
+
+<br/>
+<br/>
+
+
+
+## Object Class Diagrams
+
+In the "Data Structure"-section of Genus, you also find the "Object Class Diagram" tool. This is a visualization tool, used to document or develop the data model. Here, you can create visually intuitive diagrams that display Object Classes, their properties and how these properties refer to other Object Classes. Object Class Diagrams are especially useful when familiarizing yourself with a new domain or Genus environment, as well as when modelling new Object Classes to get a visualization of how the new objects will fit into the existing data model.
+
+While there are no strict categories of data diagrams, but we want to highlight a few different use cases:
+
+### Data Driven Diagrams
+
+These diagram provides an overview of the subsection of the data model concerning itself with a somewhat contained topic (such as agreements in the below example) in the solution, including it's most important references to other objects(such as Company and Category). These data driven data diagrams are very useful when new business engineers are introduced to the data model, or when expanding an existing data model. When you introduce a new part of the domain into the data model, consider if adding a data diagram may be a useful way to document your work in an easily digestible format. If you use the data diagram as a supporting tool to model you new data objects, a lot of this work is already done by the time your data model is in place. Remember that the data diagram does not have to be complete - leaving some less important connections out to increase readability may be preferable.
+
+![Agreement_Diagram.JPG](media/Agreement_Diagram.JPG)
+**Agreement:** **
+
+### Functionality/Domain Driven Diagrams
+
+This diagram does not display a separate subsection of the data model, or data domain, but rather which parts of the data model is considered a part of the functionality domain "Facility Services". Data diagrams like this can provide a useful overview of interconnectedness at a higher level that data driven data diagrams, and can present the solution from specific users' perspective.
+
+![FacilityServices_Diagram.JPG](media/FacilityServices_Diagram.JPG)
+**Facility Services:** *The Object Classes included in the Facility Services domain, and their connections, are presented here. Note that Object Class Properties are hidden, as this level of detail is not the main concern here. A modeling user can always expand these details as needed. Also note that several Object Classes refer back to itself - this is not uncommon and simply represents that a property for the object class contains a reference to a different instance of the same object class.*
+
+
+<table>
+   <tr><td><a href="e1.2-genus-studio.md"><- Previous</a></td><td align="right"><a href="e2.1-object-class.md">Next -></a></td></tr>
 </table>

@@ -1,3 +1,10 @@
+- name: Installation and Setup
+  href: installation-of-genus-app-platform.md
+  items:
+  - name: Installation of Genus
+    href: installation-of-genus-app-platform.md
+  - name: Installation of SQL Server Management Studio
+    href: installation-of-sql-server-mgmt-studio.md
 - name: Exercises Part I - Introduction to Case and Genus Clients
   href: case-description-fs.md
   items:
@@ -10,16 +17,61 @@
 - name: Exercises Part II - Data Modeling
   href: data-model.md
   items:
-  - name: 2.1 - Sketching New Object Classes
-    href: 
+  - name: 2.1 - Designing New Object Classes
+    href: e2.1-object-class.md
   - name: 2.2 - Creating a New Object Class
-    href:
-  - name: 2.2 - Object Class Properties
-    href:
+    href: e2.2-importing-OC.md
+  - name: 2.3 - Object Class Properties
+    href: e2.3-OC-properties.md
+  - name: 2.4 - Short Repetition
+    href: e2.4-OC-repetition.md
 - name: Exercises Part III - Web Interfaces
   href: web-terminology.md
   items:
   - name: 3.1 - Views
-    href:
+    href: e3.1-view.md
   - name: 3.2 - Pages
+    href: e3.2-form.md
+- name: Exercises Part IV - Actions
+  href: actions.md
+  items:
+  - name: 4.1 User Actions
+    href:
+  - name: 4.2 Global Actions and Rules
+    href:
+- name: Exercises Part V - Analytics and Insights
+  href: analysis.md
+  items:
+  - name: 5.1 Visualization
+    href:
+  - name: 5.2 Formula and Actions
+    href:
+  - name: 5.3 Data Mart
+    href:
+  - name: 5.4 Advances Analysis
+    href:
+- name: Exercises Part VI - Desktop
+  href: desktop.md
+  items:
+  - name: 6.1 Task from Concern
+    href:
+- name: Exercises Part VII - REST Services
+  href: rest-services.md
+  items:
+  - name: 7 REST Service
+    href: e7.1-rest-service.md
+- name: Exercises Part VIII - Repetition and Documents
+  href: .md
+  items:
+  - name: Documents
+    href:
+- name: Exercises Part IX - Tools and Troubleshooting
+  href:
+  items:
+  - name: Genus Log
+    href:
+- name: Exercises Part X - Agents, Mail Merge, Misc
+  href:
+  items:
+  - name:
     href:

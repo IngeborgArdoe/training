@@ -27,11 +27,11 @@ A Client Action is a sequence of side effects initiated by an event in the user 
 Block constructs such as decisions, for each loops, and catch exception provides functionality for conditional execution, enumeration of objects, and handling exceptions.
 
 Within a Client Action you can determine which data the Client Action should operate on by specifying:
-* A **Public Interface**: A Public Interface consists of [Data Sets](#data-set) received from "the outside" of the Client Action. These Data Sets are always filled when a Client Action is invoked.
+* A **Public Interface**: A Public Interface consists of data sets received from "the outside" of the Client Action. These Data Sets are always filled when a Client Action is invoked.
 * **Private Data Sets**: Private Data Sets, on the other hand, are internal to the Client Action and not visible outside the Client Action.
 
 As with Page data sets, Data Sets here can be one of two types:
-* **Filtered Data**: These are subsets of data from the Page's [Module](#module) Data Sources and are filled when a Page opens.
+* **Filtered Data**: These are subsets of data from the Page's Module Data Sources and are filled when a Page opens.
 * **Refined Set**: These are criteria based subsets of data from Public Interface Data Sets or Writeable Sets. Refined Sets are read only and contains all objects which satisfies the given criteria at any time.
 
 ## Server Action

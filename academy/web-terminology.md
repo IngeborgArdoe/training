@@ -17,8 +17,8 @@ A Module is a named collection or boundary containing the following elements:
 * [Data Sources](#data-diagram-and-sources): The module is restricted to the data sources explicitly selected. None of the elements below can read, change or delete data outside of the Data Source space.
 * [Pages](#page): A visual presentation of data for displaying, editing and deleting data.
 * [Components](#component): An assembly of UI controls that can be reused in Pages or other Components.
-* [Client Actions](#client-action) A sequence of effects initiated by an event in the user interface, and executed on the web client
-* [Server Actions](#server-action) A sequence of effects initiated by an event in the user interface, and executed on the server - for instance doing more complex database loopkups based on related objects and logged in user.
+* Client Actions: A sequence of effects initiated by an event in the user interface, and executed on the web client
+* Server Actions: A sequence of effects initiated by an event in the user interface, and executed on the server - for instance doing more complex database loopkups based on related objects and logged in user.
 * [Data Filters](#data-filter): Restrictions on data that are guaranteed to be SQL compatible at the time of definition. In a future version of Genus, it will be possible to define such filters at the place of use, effectively removing the need for explicitly named Data Filters here.
 <!-- TODO: Replace description when data filters are obsolete -->
 
@@ -40,13 +40,11 @@ A Data Filter is a criteria for restricting the selection of objects in a Data S
 
 
 ## Page
-A Page is a visual presentation of data for displaying, editing and deleting data.
+A Page is a visual presentation of data for displaying, editing and deleting data. All Pages fall into one of three categories - View, Form and Canvas:
 
-A Page can be of three types - View, Form and Canvas.
-
-* [View](#page-type-view): A collection of data presented in a tabular format used for presenting more than one object, but also searching among objects.
-* [Form](#page-type-form): Presents data in a schematic layout typically used for presenting and editing a single mail object, along with any related objects.
-* [Canvas](#page-type-canvas): For solving problems involving multiple object types of equal importance.
+* [View](#pages-view): A collection of data presented in a tabular format used for presenting more than one object, but also searching among objects.
+* [Form](#pages-form): Presents data in a schematic layout typically used for presenting and editing a single object in focus, along with objects related to the main object.
+* [Canvas](#pages-canvas): For solving problems involving multiple object types of equal importance, where no one object is singularly in focus.
 
 A View can be used as a default presentation of a collection of objects. A Form can be used as a default presentation of a single object. A Canvas cannot be used as a default presentation, because there is no main data source in focus.
 
@@ -69,7 +67,7 @@ All Data Sets (whether public or private) need to fall within the data restricti
 
 
 
-### Page type View
+### Pages: View
 
 A View presents data in a tabular format like a Table or Repeating Container.
 
@@ -81,11 +79,11 @@ If you are a first time reader well accustomed to pre-Oak versions, think of **V
 
 Note that Repeating Container is not implemented yet in Oak as of April 2020.
 
-### Page type Form
+### Pages: Form
 
 A Form presents data in a schematic layout, where you can place traditional UI controls and [Components](#component) rather freely.
 
-A Form has - similar to [View](#page-type-view) - a Master Data Set which connects to a Data Source. A Form can be used as a default presentation of a single object (and any related objects) for a Data Source.
+A Form has - similar to [View](#pages-view) - a Master Data Set which connects to a Data Source. A Form can be used as a default presentation of a single object (and any related objects) for a Data Source.
 
 Unlike a View, you can do the following inside a Form:
 * Specify a [Viewport]. A Viewport divides your Form into a grid of rows and columns.
@@ -93,7 +91,7 @@ Unlike a View, you can do the following inside a Form:
 
 If you are a first time reader well accustomed to pre-Oak versions, think of **Forms** as the successor of pre-Oak **forms**, but with some improvements and some differences.
 
-### Page type Canvas
+### Pages: Canvas
 
 Both View and Form are focused on specific tasks and both optimized for handling a single Data source (through the concept of a Master Data Set). A Canvas does not have a Master Data Set, and thus cannot be used as a default presentation of an object.
 
@@ -110,16 +108,16 @@ A Link points to an Analysis, an URL or a set of one or more [Pages](#page).
 
 If a Link points to more than one [Page](#page), the user can choose (switch) Pages at run time. This is useful for Pages users change between quite often, instead of adding the Pages as new Links to the Sitemap (and thereby "cluttering" the Sitemap).
 
-You will probably most often link your Links to Pages of type [View](#page-type-view), which presents data in a tabular format.
+You will probably most often link your Links to Pages of type [View](#pages-view), which presents data in a tabular format.
 
 
 ## Component
 A Component is an assembly of UI controls that can be reused in [Pages](#page) within the same [Module](#module) or in other Modules.
 
 Components can be of the three same types as Page, namely Form, View or Canvas, and the meaning of these three types are similar, i.e.:
-* [Canvas](#page-type-canvas): For solving simpler or more unstructured problems than provided by View or Form.
-* [View](#page-type-view): A collection of data presented in a tabular format used for presenting more than one object, but also searching among objects.
-* [Form](#page-type-form): Presents data in a schematic layout typically used for presenting and editing one object (and any related objects).
+* [Canvas](#pages-canvas): For solving simpler or more unstructured problems than provided by View or Form.
+* [View](#pages-view): A collection of data presented in a tabular format used for presenting more than one object, but also searching among objects.
+* [Form](#pages-form): Presents data in a schematic layout typically used for presenting and editing one object (and any related objects).
 
 Components - unlike Pages - cannot be used in a [Sitemap](#sitemap) (and thereby not in an [App](#app)), but has to be placed inside other Pages or other Components. In such respect, Component is a concept on the same level as UI controls, which also can be placed in the content area of Pages or Components. This means that a Component can contain other Components.
 
@@ -138,3 +136,8 @@ An App has fields like Name, Title and Path Segment.
 The Path Segment is the last part of an App's URL, to be able to open the App directly without going through the Start Page.
 
 A Sitemap - and thereby also an App - has a Landing Page, which is the [Page](#page) that opens by default when you launch the App.
+
+
+
+<br/>
+<br/>

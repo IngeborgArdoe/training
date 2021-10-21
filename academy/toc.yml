@@ -21,9 +21,7 @@
     href: e2.1-object-class.md
   - name: 2.2 - Creating a New Object Class
     href: e2.2-importing-OC.md
-  - name: 2.3 - Object Class Properties
-    href: e2.3-OC-properties.md
-  - name: 2.4 - Short Repetition
+  - name: 2.3 - Short Repetition
     href: e2.4-OC-repetition.md
 - name: Exercises Part III - Web Interfaces
   href: web-terminology.md

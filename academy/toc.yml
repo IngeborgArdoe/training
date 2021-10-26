@@ -34,7 +34,7 @@
   href: actions.md
   items:
   - name: 4.1 User Actions
-    href:
+    href: e4.1-Actions.md
   - name: 4.2 Global Actions and Rules
     href:
 - name: Exercises Part V - Analytics and Insights
@@ -59,14 +59,20 @@
   - name: 7 REST Service
     href: e7.1-rest-service.md
 - name: Exercises Part VIII - Repetition and Documents
-  href: .md
+  href: Documents.md
   items:
-  - name: Documents
-    href:
+  - name: Photo
+    href: e8.1-document.md
+  - name: Mail Merge
+    href: e8.2-mail-merge.md
 - name: Exercises Part IX - Tools and Troubleshooting
   href:
   items:
   - name: Genus Log
+    href:
+  - name: Genus Developer Tools
+    href:
+  - name: Genus Docs
     href:
 - name: Exercises Part X - Agents, Mail Merge, Misc
   href:

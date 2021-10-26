@@ -15,7 +15,7 @@ Actions in Genus Apps are modeled with the same mindset that you would use if yo
 -	An Action can have user dialogs, e.g. show the user dialog boxes with options that be used to control the execution path through the sequence of effects.
 In Genus Studio, you will see Actions in the «Logic»-section of the left menu. Here are also Rules, Agents and Web Services. Even though the 4 of them are set up similarly, they are by nature different:
 -	Actions are triggered by a user initialized action, e.g. a click on a button. The exception is generic actions that are called from other actions, rules, agents or web services.
--	Rules are triggered by business events in the solution, e.g. "after Company.Responsible has been modified, run this rule". The setup of effects is equal to that of actions.
+-	Rules are triggered by business events in the solution, e.g. "after Concern.Company has been modified, run this rule". The setup of effects is equal to that of actions.
 -	Agents are triggered by times, e.g. "every morning, send an e-mail to users with activity reminders". They are schematic actions.
 -	Web Services can be set up and triggered by a web-service call from for example an external system. The setup of Web Services are logic-wise equal to that of actions, but Web Services have additionally defined Schemas which describes the structure of input and output XML (more about this later).
 
@@ -40,3 +40,11 @@ As the name implies, these actions are executed on the server side. The set of s
 A Server Action can be defined within a Module (Local Server Action), or as an action which can be used from anywhere in your solution (Global Server Action). Local Server Actions can access data within your module. Global Server Actions cannot, but they provide a public interface for exchanging data.
 
 Server Actions can be executed from a [Client Action](#client-action) using the "Run a Local Server Action" and "Run a Global Server Action". This makes it possible to share business logic in a hybrid desktop/web experience.
+
+## Effects
+
+### Blocks
+
+### Execution Flow
+
+### Effects

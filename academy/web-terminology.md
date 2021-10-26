@@ -63,8 +63,9 @@ Within a Page you can determine which data the Page should operate on by specify
 * **Private Data Sets**: Private Data Sets, on the other hand, are internal to the Page and not visible outside the Page.
 
 
-All Data Sets (whether public or private) need to fall within the data restrictions set for the Data Sources given by the Page's [Module](#data-diagram-and-sources). Data Sets defined within a page can have various filters or restrictions on which data you can *view* in a particular page, but ll pages are still referring to, or mirroring, the same data source in the end.
+All Data Sets (whether public or private) need to fall within the data restrictions set for the Data Sources given by the Page's [Module](#data-diagram-and-sources). Data Sets defined within a page can have various filters or restrictions on which data you can *view* in a particular page, but ll pages are still referring to, or mirroring, the same data source in the end:
 
+![DataSets.JPG](media/DataSets.JPG)
 
 
 ### Pages: View

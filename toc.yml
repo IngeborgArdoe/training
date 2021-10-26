@@ -4,18 +4,21 @@
 - name: Foundation (2019.2)
   href: foundation_2019_2/
   homepage: foundation_2019_2/index.md
-- name: Foundation Genus 10
-  href: foundation_genus_10/
-  homepage: foundation_genus_10/index.md
-- name: Analytics and Insights
-  href: analytics_and_insights/
-  homepage: analytics_and_insights/index.md
-- name: Advanced
-  href: advanced/
-  homepage: advanced/index.md
-- name: Free
-  href: free/
-  homepage: free/index.md
+# - name: Foundation Genus 10
+#   href: foundation_genus_10/
+#   homepage: foundation_genus_10/index.md
+# - name: Analytics and Insights
+#   href: analytics_and_insights/
+#   homepage: analytics_and_insights/index.md
+# - name: Advanced
+#   href: advanced/
+#   homepage: advanced/index.md
+# - name: Free
+#   href: free/
+#   homepage: free/index.md
 - name: Academy
   href: academy/
-  homepage: academy/index.md  
+  homepage: academy/index.md
+- name: Analytics and Insights
+  href: academy/
+  homepage: analytics_and_insights_academy/index.md

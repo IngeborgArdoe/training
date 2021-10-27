@@ -28,8 +28,10 @@
   items:
   - name: 3.1 - Views
     href: e3.1-view.md
-  - name: 3.2 - Pages
+  - name: 3.2 - Form
     href: e3.2-form.md
+  - name: 3.3 - Repetition and overview
+    href: e3.3-repetition-and-overview.md
 - name: Exercises Part IV - Actions
   href: actions.md
   items:

@@ -1,10 +1,8 @@
 - name: Overview
   href: index.md
-- name: Installation and Setup
-  href: installation_setup.md
-- name: Introduction to the Model 
+- name: Introduction to the Model
   href: introduction_model.md
-- name: Analysis Part 1 - Visualization 
+- name: Analysis Part 1 - Visualization
   href: analysis_part1.md
 - name: Anlysis Part 2 - Formula and Actions
   href: analysis_part2.md
@@ -17,4 +15,4 @@
 - name: Analysis Part 4 - Advanced Analysis
   href: analysis_part4.md
 - name: Finalization
-  href: finalization.md 
+  href: finalization.md

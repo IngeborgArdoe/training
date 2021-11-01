@@ -4,7 +4,7 @@
 
 Throughout the course material, we will be working within a Property Management environment. We have a base solution in Genus, and will expand functionality and user interfaces to provide Facility Services to property tenants. Facility services typically provide tools to support property functionality, safety and infrastructure. It often includes, but is not limited to, fire safety, maintenance, cleaning services, operating cafeterias, custodial services and servicing property infrastructure.
 
-The course environment provides a web application interface providing property tenants an overview of ongoing maintenance and services, and a very basic "backroom" application for property management to ensure handling of infrastructure tasks etc.
+The course environment provides a web application interface providing property tenants an overview of ongoing maintenance and services, and a very basic "backroom" application for administration of code domains, data and users.
 
 
 ## Starting Point
@@ -21,9 +21,9 @@ The core business entities that are already introduced in the solution are;
 
 
 ## Expansion
-We want to improve the solution by allowing tenants to submit concerns about the properties through their web applications. These concerns can be followed up though tasks, if action is required from the property manager.
+We want to improve the solution by allowing tenants to submit concerns about the properties through their web application. These concerns can be followed up though tasks, if action is required from the property manager.
 
-Concerns are reported by service subscribers, or even other representatives of the tenants eventually, and connected to a location. Finally, we would like to enable uploading photos and support communication between the concern reporter and the property management.
+Concerns are reported by service subscribers, or even other representatives of the tenants eventually, and connected to their property location. Finally, we would like to enable uploading photos and support communication between the concern reporter and the property management.
 
 
 <br/>

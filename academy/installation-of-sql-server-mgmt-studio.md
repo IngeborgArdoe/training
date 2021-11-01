@@ -2,7 +2,7 @@
 
 To be able to develop/model in Genus Apps, you often have to create new tables and columns in the associated database. For this you will need SQL Server Management Studio (SSMS) on your computer.
 
-If you for some reason don't want to (or are not allowed to) install SSMS on your computer, you will find one in the training room on which you can run your SQL queries, or you can ask the instructor to run them for you. That being said, we do recommend you to install it on your own computer if possible.
+If you for some reason don't want to (or are not allowed to) install SSMS on your computer, you can ask the instructor to run them for you. That being said, we do recommend you to install it on your own computer if possible.
 
 ## Download the latest release of SQL Server Management Studio (SSMS)
 https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms.

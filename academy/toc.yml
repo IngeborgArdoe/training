@@ -30,15 +30,17 @@
     href: e3.1-view.md
   - name: 3.2 - Form
     href: e3.2-form.md
-  - name: 3.3 - Repetition and overview
-    href: e3.3-repetition-and-overview.md
+  - name: 3.3 - Repetition
+    href: e3.3-repetition.md
 - name: Exercises Part IV - Actions
   href: actions.md
   items:
   - name: 4.1 User Actions
     href: e4.1-Actions.md
-  - name: 4.2 Global Actions and Rules
-    href:
+  - name: 4.2 Rule and Server Action
+    href: e4.2-Action-2.md
+  - name: 4.3 Repetition
+    href: e.4.3-Actions-repetition.md
 - name: Exercises Part V - Analytics and Insights
   href: analysis.md
   items:
@@ -50,34 +52,27 @@
     href:
   - name: 5.4 Advances Analysis
     href:
-- name: Exercises Part VI - Desktop
-  href: desktop.md
-  items:
-  - name: 6.1 Task from Concern
-    href:
-- name: Exercises Part VII - REST Services
+- name: Exercises Part VI - REST Services
   href: rest-services.md
   items:
-  - name: 7 REST Service
-    href: e7.1-rest-service.md
-- name: Exercises Part VIII - Repetition and Documents
+  - name: 6 REST Service
+    href: e6.1-rest-service.md
+- name: Exercises Part VII - Repetition and Documents
   href: Documents.md
   items:
   - name: Photo
-    href: e8.1-document.md
+    href: e7.1-document.md
   - name: Mail Merge
-    href: e8.2-mail-merge.md
-- name: Exercises Part IX - Tools and Troubleshooting
-  href:
-  items:
-  - name: Genus Log
-    href:
-  - name: Genus Developer Tools
-    href:
-  - name: Genus Docs
-    href:
+    href: e7.2-mail-merge.md
+- name: Exercises Part VIII - Tools and Troubleshooting
+  href: e8.1-Troubleshooting.md
 - name: Exercises Part X - Agents, Mail Merge, Misc
   href:
   items:
   - name:
+    href:
+- name: Exercises Part X - Desktop
+  href: desktop.md
+  items:
+  - name: 6.1 Task from Concern
     href:

@@ -31,7 +31,7 @@ This application model, or description, can be split into three main parts:
 
 These three parts – the data model, the business and application logic, and user interfaces - sum up to the Genus Application Model – the model you create in Genus Studio to meet your business needs.
 
-Because the Business Logic is applied to, or utilizes, some knowledge or stored data relating to the data model and user interfaces also are dependent on data to display - we will start looking at our Data Model.
+Because the Business Logic is applied to, or utilizes, some knowledge or stored data relating to the data model and user interfaces also are dependent on data to display, we will start looking at our Data Model.
 
 
 
@@ -44,7 +44,7 @@ A persisted Object Class always corresponds to a database table, which is where 
 
 ### Object Class Settings
 There are a lot of settings you can define on the Object Class level - ranging from display related (naming, searching and sorting) to requirements for data uniqueness and access privileges.
-The most commonly used may be
+The most commonly used may be:
 
 
 
@@ -55,7 +55,7 @@ The most commonly used may be
   </tr>
   <tr>
     <td>Search</td>
-    <td>Here, you can define which Object Class Properties can be used to lookup data for the Object Class.</td>
+    <td>Here, you can define which Object Class Properties can be used to look up data for the Object Class.</td>
   </tr>
   <tr>
     <td>Explore</td>
@@ -94,7 +94,7 @@ A variety of features and restrictions can be applied to each Object Class - the
 <table>
   <tr>
     <td>General</td>
-    <td>This is where you see the general information about the property - what datatype it consists of and whether the field should be interpreted as another object class, an email string etc. **Data interpretation is crucial in the data model, and determines how your property fields are treated and displayed throughout the entire Genus model - it cannot be altered after you initially define it so make sure to double check it!** </td>
+    <td>This is where you see the general information about the property - what datatype it consists of and whether the field should be interpreted as another object class, an email string etc. **Data interpretation is crucial in the data model, and determines how your property fields are treated and displayed throughout the entire Genus model - it cannot be altered after you initially define it so always make sure to double check it!** </td>
   </tr>
   <tr>
     <td>Data Calculation</td>

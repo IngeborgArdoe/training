@@ -45,25 +45,23 @@ Try to recreate the analysis shown in class/analysis in the solution environment
 
 ### Total number of tasks
 
-1. In the Discovery-panel click **Analysis** and create a new analysis. Remember to save.  
+1. Enter the "Insights and Analytics"-app from your landing page, head to "Dashboards" and add a new dashboard using the pre-existing data mart.
 
-2. In the analysis edit mode, create a new tile by clicking the red circular plus button on the bottom right.
+2. All visualization options are presented in the Tile list, double-click "Measure".
 
 3. Scale the tile to match the solution environment and give the tile a header. The header can be configured in **Format**. Click on Header -> Title.  
 
-4. Choose visualization **Measure**.
+4. Customize **Measure**.
 
     a. In Data - Value - choose a data source and aggregation. A value can be a count of objects in a data source, a field (or function) of an object in a data source, an aggregated numeric property of a set of objects, or the result of a formula. In this case we want to count the number of objects in the data source Tasks.  
 
-    b. In Format - Body - change font size and colour.
+    b. In Format - Body - change font size
 
 5. Save and preview.
 
 ### Number of tasks per month
 
-1. Create a new tile. Scale tile and give it a header.
-
-2. Choose visualization **Lines**.
+1. Choose a **Lines**-tile next.
 
     a. In Data - Horizontal category - choose a data source. A category is a data source binding, and defines how the data is displayed. A visualization can contain one or more categories. In this case we want to show the months as the horizontal category.  
 
@@ -71,19 +69,19 @@ Try to recreate the analysis shown in class/analysis in the solution environment
 
     c. In Format - Legend - set a legend position.
 
-    d. In Format - Axes - Primary Value Axis - Change number format to zero decimals.
+    d. In Format - Axes - Primary Value Axis - Change number format to zero decimals and show nulls as Zero.
 
-    e. In Format - Values - change number format to zero decimals and change data series colour. Also set data point label to **custom** and write **{value}**. This will make the values of each datapoint visible.
+		e. In Format - Categories - Check off Trim and Hide excluded, so the line chart is limited to a time frame there exists data for
 
-    f. In Analytics - Trend - Add a line. Choose your own style, color and line label. Value is Task.
+    f. In Format - Values - change number format to zero decimals, nulls to zeros and change data series colour. Also set data point label to **custom** and write **{value}**. This will make the values of each datapoint visible in the line chart without hovering.
+
+    g. In Analytics - Trend - Add a line. Choose your own style, color and line label. Value is Task.
 
 3. Save and preview.
 
 ### Selections with selector
 
-1. Create a new tile. Scale tile and give it a header.
-
-2. Choose a visualization **Selector**
+1. Create a new tile with visualization **Selector**
 
     a. Choose a data source. The data source will appear in the analysis and be available for selection.  
 
@@ -112,4 +110,4 @@ Try to recreate the analysis shown in class/analysis in the solution environment
 ## Extra work
 
 - Create a tile that shows _% tasks per category_
-- Create a tile that shows _total amount per task type_
+- Create a tile that shows _total number per task type_

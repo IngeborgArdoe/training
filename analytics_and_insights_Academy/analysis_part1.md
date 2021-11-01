@@ -19,10 +19,8 @@ _The instructor will start of by giving you an introduction to creating an analy
 
 To create an analysis, enter your environment at https://edu-usr{x}.edu.genus.net and choose the built-in application "Analytics and Insights". This is where both **Data Marts** and **Analysis** are available. In the Discovery panel click on **Analysis** and **New**. Remember to save. To reopen an analysis in edit mode, right click the analysis and choose **Edit**.  
 
-To preview an analysis, either:
+To preview an analysis click on Open Dashboard, either in the dashboard editor, or the list of dashboards
 
-- double click on the saved analysis in Discovery Desktop
-- in the analysis editor click on **Action**. In the action dropdown there are two preview choices, one for Genus Desktop preview and one for internet browser preview.   
 
 ## Analysis
 
@@ -31,7 +29,9 @@ An **Analysis** is a set of **Tiles** where each tile uses one of many **Visuali
 In the analysis, tiles are located in the grey area to the left, while the tile pane is located to the right. The different visualizations are located on top of the tile pane, while configurations to the visualization are made in the bottom part of the tile pane. The tile pane configuration part consists of **Data**, **Format** and **Actions** sections.
 
 Visualizations and Data, Format and Actions:   
-![tile_pane.jpg](media/tile_pane.jpg)
+Tiles          |  options
+:-------------------------:|:-------------------------:
+![Exc2fig8.JPG](media/tile1.JPG)  | ![Exc2fig9.JPG](media/tile2.JPG)
 
 The visualization decides what type of configurations can be made to the tile. Read more on visualizations in [Analysis concepts](https://docs.genus.no/users/analyze-report-and-discover/analysis/concepts.html).  
 
@@ -58,6 +58,8 @@ Try to recreate the analysis shown in class/analysis in the solution environment
     b. In Format - Body - change font size
 
 5. Save and preview.
+
+6. Add another Measure-tile like this first one, but apply the subset "Completed Tasks"
 
 ### Number of tasks per month
 

@@ -41,38 +41,36 @@
     href: e4.2-Action-2.md
   - name: 4.3 Repetition
     href: e.4.3-Actions-repetition.md
-- name: Exercises Part V - Analytics and Insights
-  href: analysis.md
-  items:
-  - name: 5.1 Visualization
-    href:
-  - name: 5.2 Formula and Actions
-    href:
-  - name: 5.3 Data Mart
-    href:
-  - name: 5.4 Advances Analysis
-    href:
-- name: Exercises Part VI - REST Services
+# - name: Exercises Part V - Analytics and Insights
+#   href: analysis.md
+#   items:
+#   - name: 5.1 Visualization
+#     href:
+#   - name: 5.2 Formula and Actions
+#     href:
+#   - name: 5.3 Data Mart
+#     href:
+#   - name: 5.4 Advances Analysis
+#     href:
+- name: Exercises Part V - REST Services
   href: rest-services.md
   items:
-  - name: 6 REST Service
+  - name: 5 REST Service
     href: e6.1-rest-service.md
-- name: Exercises Part VII - Repetition and Documents
+- name: Exercises Part VI - Repetition and Documents
   href: Documents.md
   items:
-  - name: Photo
+  - name: 6.1 Photo
     href: e7.1-document.md
-  - name: Mail Merge
+  - name: 6.2 Mail Merge
     href: e7.2-mail-merge.md
-- name: Exercises Part VIII - Tools and Troubleshooting
+- name: Exercises Part VII - Tools and Troubleshooting
   href: e8.1-Troubleshooting.md
-- name: Exercises Part X - Agents, Mail Merge, Misc
-  href:
-  items:
-  - name:
-    href:
-- name: Exercises Part X - Desktop
-  href: desktop.md
-  items:
-  - name: 6.1 Task from Concern
-    href:
+- name: Exercises Part VIII - Agents, Mail Merge, Misc
+  href: e8.1-misc.md
+
+# - name: Exercises Part XI - Desktop
+#   href: desktop.md
+#   items:
+#   - name: 6.1 Task from Concern
+#     href:

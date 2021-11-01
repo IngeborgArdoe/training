@@ -18,7 +18,7 @@ An environment will be assigned to you:
 
    ```
    Username = USER{X}
-   Password = Useruser{X}
+   Password = {X}Useruser
    ```
 
 where {X} is the number of your assigned environment.
@@ -31,7 +31,6 @@ You will be doing all your training exercises in the assigned environment.
 
 <br/>
 <br/>
-
 
 
 <table>

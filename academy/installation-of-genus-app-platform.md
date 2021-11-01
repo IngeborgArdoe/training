@@ -17,8 +17,8 @@ An environment will be assigned to you:
    **Login credentials**
 
    ```
-   Username = USER{X}
-   Password = {X}Useruser
+   Username = USR{X}
+   Password = usrusr
    ```
 
 where {X} is the number of your assigned environment.

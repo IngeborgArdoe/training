@@ -31,7 +31,7 @@ In this section, you select the parts of the complete data model that pertains t
 
 ### Data Diagram and Sources
 
-In both the Data Diagram and the Data Source section, you can define the partial, or restricted, data model that is relevant to this particular module. The Data Diagram is the same visual representation we used when we first added the Contact Object Class, and the Data Sources-section is a more tabular visualization of the same information.
+In both the Data Diagram and the Data Source section, you can define the partial, or restricted, data model that is relevant to this particular module. The Data Diagram is the same visual representation we used when we first added the Concern Object Class, and the Data Sources-section is a more tabular visualization of the same information.
 
 ### Data Filter
 

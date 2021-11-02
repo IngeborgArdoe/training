@@ -46,12 +46,10 @@ Data sources that should be included in the data mart:
 * Task Category
 * Concern State
 * Task State
-* Completion Code
-* Part of Fire Safety
 * Completed Month
 * Started Month
 
-Data Sources that are added more than once, represent different connections, in this case _Month_ and _Category. For example, the two data sources for Month represents different timestamps.  
+Data Sources that are added more than once, represent different connections, in this case _Month_ and _Category_. For example, the two data sources for Month represents different timestamps.  
 
 For each data source, you should evaluate the data sources' max occurences, if it should be private and if it should **Allow Aggreagate Requests Only**.
 

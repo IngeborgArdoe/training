@@ -1,9 +1,9 @@
-# Analysis Part Three - Applying subsets and calculated fields to analyses 
+# Analysis Part Three - Applying subsets and calculated fields to analyses
 
 #### Session by instructor
 _In this section the participants will learn how the subsets and calculated fields made in the previous section can be applied in different analyses._
 
-#### Agenda 
+#### Agenda
 
 - Subsets
 - Calculated fields
@@ -13,28 +13,28 @@ _In this section the participants will learn how the subsets and calculated fiel
 ## Exercise
 
 Try to recreate the analysis shown in class. 	
-	
+
 ### Subsets
 The objective of this exercise is to use the subsets created in the data mart in the analysis tool.
 
 **Applying subsets on Value**
-	
-1. Copy the analysis made in [Analysis Part Two - Formula editor and data manipulation](http://training.genus.no/discovery/analysis_part2.html) 
+
+1. Copy the analysis made in [Analysis Part Two - Formula editor and data manipulation](http://training.genus.no/discovery/analysis_part2.html)
 
 2. Keep the tile showing number of trips per payment type, and remove all other tiles.
 
-3. Duplicate the tile, so that you have two identical tiles. 
+3. Duplicate the tile, so that you have two identical tiles.
 
-	![subsetduplicate.png](media/subsetduplicate.png) 
+	![subsetduplicate.png](media/subsetduplicate.png)
 
 
-4. Pick a tile and in Data, go to **Value (# Yellow Trip)** and add a subset. Choose the subset "Total amount > $200". 
+4. Pick a tile and in Data, go to **Value (# Yellow Trip)** and add a subset. Choose the subset "Total amount > $200".
 
 5. Save and preview your analysis. You should now see the difference between the original tile and the tile using the subset.
 
 6. Go back to the same tile where you added the subset. On **Value (# Yellow Trip)** , open the subset selector and add the subset "Total tip > $50". You now have two subsets on the same tile.
 
-7. Save and preview. 
+7. Save and preview.
 
 **Applying subsets using the Subset visualization**
 
@@ -67,11 +67,11 @@ The objective of this exercise is to apply the calculated fields created in the 
 
 **Calculate values using the analysis tool**
 
-1. In the table tile, choose the column showing the calculated field for average trip speed per "Yellow Trip". Under **Aggregation**, choose **Average**. 
+1. In the table tile, choose the column showing the calculated field for average trip speed per "Yellow Trip". Under **Aggregation**, choose **Average**.
 
 2. Save and preview. The altered column should now be identical to the column showing the calculated field for average trip speed per community district.
 
-3. Next, go to the same column, and add the subset for tip > $50. 
+3. Next, go to the same column, and add the subset for tip > $50.
 
 4. Save and preview. The altered column should now be identical to the column showing the calculated field for average trip speed per community district with tip > $50.
 
@@ -83,13 +83,12 @@ The objective of this exercise is to apply the calculated fields created in the 
 
 3. Under Data, open the formula editor. Here the existing columns from your table should already be available under Tile values.
 
-4. Create a new formula using the tile values, or by adding new fields, that shows average trip speed divided by total amount paid. 
+4. Create a new formula using the tile values, or by adding new fields, that shows average trip speed divided by total amount paid.
 
-5. Repeat steps 2-4, but now find average trip speed/amount when tip > $50. 
+5. Repeat steps 2-4, but now find average trip speed/amount when tip > $50.
 
 6. Save and preview. What does the resulting columns tell you?
 
 **Extra work**
 
 1. Add an intial selection to your analysis. Inital selections can be set under the Settings pane in your analysis editor.
-

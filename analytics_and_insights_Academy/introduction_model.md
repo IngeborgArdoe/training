@@ -10,12 +10,10 @@ The data model used for this course represents the Facility Services you've been
 * Tasks
 * Concern
 * Company
-* Property
 * Concerns
 * Category
 * State
 * Completion Code
-* Part of Fire Safety
 * Month
 
 

@@ -46,12 +46,13 @@ Data sources that should be included in the data mart:
 * Task Category
 * Concern State
 * Task State
-* Completed Month
 * Started Month
+* Started Day
 
-Data Sources that are added more than once, represent different connections, in this case _Month_ and _Category_. For example, the two data sources for Month represents different timestamps.  
+Data Sources that are added more than once, represent different connections, in this case _Category_.  
 
-For each data source, you should evaluate the data sources' max occurences, if it should be private and if it should **Allow Aggreagate Requests Only**.
+For each data source, you should evaluate the data sources' max occurences, if it should be private
+ <!-- and if it should **Allow Aggreagate Requests Only**. -->
 
 There are multiple methods of adding data sources to the data mart. Use the method you prefer and add data sources to the data mart. The methods are summarised below.
 
@@ -74,13 +75,16 @@ Another way of adding data sources is to start with a data source and add new on
 
 To make data available for analysis **Property Fields** must also be specified. They can be added in Data View. Right click on each data source -> Published fields -> Add/Remove.
 
-If a property is not among the published fields, it will not be available in any analysis using the data mart. It is a good rule of thumb to only publish fields required to fulfil the purpose of the data mart to keep the complexity down.  
+If a property is not among the published fields, it will not be available in any analysis using the data mart. It is a good rule of thumb to only publish fields required to fulfil the purpose of the data mart to keep the complexity down.  A suggestion is:
+
+
+![DM_connections_final.png](media/FM2.jpg)
 
 ### Data Filter
 
 Each data source is by default set to read "All objects", but for object classes with millions of rows the data filter should be restricted. Data Filter can be restricted in Data Sources or Data View.  
 
-In this data model, most of the object classes are small and don't need to be limited, except for Taxi Trips which has millions of rows. The data filter for Yellow Trip should be included if the boolean **Include in data mart** is equal to true.
+In this data model, most of the object classes are small and don't **need** to be limited. Even so, it is **always best practice to add a data filter**. Data volumes can change over time, and for instance calendar datatypes can often make the creation of analysis more cluttered if they aren't limited.
 
 If all objects are read for large data sources, the data mart will take a long time to load or the server can potentially crash due to the server running out of memory.  
 
@@ -94,19 +98,20 @@ To connect data sources, or change existing connection, click on data view -> ri
 
 Add connections by choosing which field in the data source is connected to another data source in the data mart.
 
-Complete list of connections from Yellow Trip is displayed below:
+Complete list of connections from Task is displayed below:
 
-![DM_connections_final.png](media/DM_connections_final.png)
+![DM_connections_final.png](media/connections.jpg)
 
 ### Data Mart Load Plan
 
-A data mart needs to be loaded before it is ready to provide data for analyses. Create a data mart load plan that loads the data mart twice per day starting at 11.00 AM and only auto loads between 07.00-20.00.
+A data mart needs to be loaded before it is ready to provide data for analyses. Load Plans can be accessed from the "Analytics and Insights" app. In the "Data Marts"-navigation, you can click "Data Mart Monitor" in the action bar to check status of loading. Create a data mart load plan that loads the data mart every 1 hour.
 
-- In Genus Desktop click on Discovery -> expand Data Marts shortcut -> click on **Load Plans** -> "New"
-- General is a summary of **Reload** and **Auto Load** plans.
-- In reload set up the data mart to load every day at 11.00, then click Advanced... and set up reload every 12 hours for 24 hours. ![DM_loadplan.jpg](media/DM_loadplan.jpg)
-- In auto load set up to not auto load in interval 00.00-07.00 and 20.00-00.00 ![DM_loadplan_autoload.jpg](media/DM_loadplan_autoload.jpg)
+- Highlight your new data mart and toggle "Load Plan" in the action bar.
+- Set Availability to 0600-23:00
+- Demand that the data mart is never older than 60 minutes.
+
+ ![DM_loadplan_autoload.jpg](media/loadplan.jpg)
 
 ## Extra
 
-- Try to create a circular reference
+- Try to create a circular reference (for instance by adding a connection between Company and Concern)

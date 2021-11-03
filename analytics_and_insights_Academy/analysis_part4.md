@@ -6,10 +6,10 @@ _In this section the participants will learn how to use more advanced analysis t
 #### Agenda
 
 - Sankey
-- Map
+<!-- - Map
 	- GeoJSON
 	- Heat spots
-	- Vector layer
+	- Vector layer -->
 
 ## Exercise
 
@@ -48,7 +48,7 @@ Objective: Create a diagram that shows the flow from concern categories to task 
 3. Add two new values. Since we want to show the same data flowing through all the categories, both of the new values should be assigned to the same data source and aggregation as the first one.
 
 4. Save and preview.
-
+<!--
 ### Map
 
 The objective of this exercise is to visualize the task data by using maps.
@@ -150,4 +150,4 @@ You can read more about maps in the [Genus Documentation](https://docs.genus.no/
 
 2. In Data, select Borough DO as **Row Category** and Borough PU as **Column Category**. Under **Row Category Columns**, select Borough DO as **Data Source**, and Borough as **Field**.
 
-3. Under **Matrix Columns** select Taxi Trip as **Data Source**. Keep Count as **Aggregation**. Save and Preview. The grid should now show the relation between pick up and drop off borough (same as the sankey analysis).
+3. Under **Matrix Columns** select Taxi Trip as **Data Source**. Keep Count as **Aggregation**. Save and Preview. The grid should now show the relation between pick up and drop off borough (same as the sankey analysis). -->

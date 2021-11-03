@@ -59,7 +59,7 @@ Try to recreate the analysis shown in class/analysis in the solution environment
 
 5. Save and preview.
 
-6. Add another Measure-tile like this first one, but apply the subset "Completed Tasks"
+6. Copy the Measure-tile, apply the subset "Completed Tasks" and rename appropriately. Preview again.
 
 ### Number of tasks per month
 
@@ -67,9 +67,9 @@ Try to recreate the analysis shown in class/analysis in the solution environment
 
     a. In Data - Horizontal category - choose a data source. A category is a data source binding, and defines how the data is displayed. A visualization can contain one or more categories. In this case we want to show the months as the horizontal category.  
 
-    b. In Data - Values - choose a data source. In this case we want to know how many Tasks are made per category month.
+    b. In Data - Values - choose a data source. In this case we want to know how many Tasks are made per **category and month**.
 
-    c. In Format - Legend - set a legend position.
+    c. In Format - Legend - change a legend position.
 
     d. In Format - Axes - Primary Value Axis - Change number format to zero decimals and show nulls as Zero.
 

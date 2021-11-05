@@ -64,7 +64,9 @@
     href: e7.1-document.md
   - name: 6.2 Mail Merge
     href: e7.2-mail-merge.md
-- name: Exercises Part VII - Tools and Troubleshooting
+- name: Exercises Part VII - Analysis
+  href:  e7.1-reporter.md
+- name: Exercises Part VIII - Tools and Troubleshooting
   href: e8.1-Troubleshooting.md
 - name: Exercises Part VIII - Agents, Mail Merge, Misc
   href: e8.1-misc.md

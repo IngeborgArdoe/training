@@ -25,6 +25,7 @@ where {X} is the number of your assigned environment.
 
 The same username and password can be used to access both your own environment and the the blueprint solution.
 
+
 You will be doing all your training exercises in the assigned environment.
 
 
